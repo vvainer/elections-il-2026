@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "results": [
+    {
+      "file": "data/validated/2026-09-12/topics/welfare_reform.json",
+      "valid": true,
+      "schema_errors": [],
+      "broken_urls": [],
+      "verified_urls": [
+        "https://yashar.org.il",
+        "https://www.themarker.com",
+        "https://shoresh.institute",
+        "https://www.themarker.com",
+        "https://www.gov.il/he/pages/hamiluimnikim-vehakalkalit_list16",
+        "https://www.haaretz.co.il",
+        "https://www.calcalist.co.il/local_news/article/ry116kwhht",
+        "https://beytenu.org.il/economic-plan/",
+        "https://www.idi.org.il/articles/51820",
+        "https://www.ynet.co.il",
+        "https://democrats.org.il/welfare-policy",
+        "https://main.knesset.gov.il/news/pressreleases/pages/press140224.aspx",
+        "https://www.yeshatid.org.il/welfare-and-economy",
+        "https://www.calcalist.co.il/local_news/article/ryr7b8qaa",
+        "https://www.themarker.com",
+        "https://www.calcalist.co.il/local_news/article/sjqll011ja",
+        "https://www.calcalist.co.il/local_news/article/bjvvhfqca",
+        "https://main.knesset.gov.il/news/pressreleases/pages/press280523.aspx",
+        "https://www.calcalist.co.il/local_news/article/rk11h9o32t",
+        "https://main.knesset.gov.il/activity/plenum/pages/sessions.aspx",
+        "https://www.calcalist.co.il/local_news/article/by00l00bpa",
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=18",
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=35",
+        "https://main.knesset.gov.il/activity/plenum/pages/sessions.aspx",
+        "https://www.makorrishon.co.il",
+        "https://www.israelhayom.co.il"
+      ],
+      "total_citations": 28
+    }
+  ]
+}

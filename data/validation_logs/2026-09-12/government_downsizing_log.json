@@ -1,0 +1,33 @@
+{
+  "topic_id": "government_downsizing",
+  "date": "2026-09-12",
+  "status": "APPROVED",
+  "revision_rounds": 1,
+  "adjustments_made": [
+    {
+      "party": "yahadut_hatorah",
+      "criterion": "c4_candidates_statements",
+      "type": "realistic_candidate_alignment",
+      "original_text": "גפני ופינדרוס רואים בתפקידי שרים וסגני שרים כלי חיוני להשגת תקציבים ומתנגדים לרפורמות ייעול הפוגעות במנגנונים אלה.",
+      "adjusted_text": "יעקב אשר ויצחק פינדרוס רואים בתפקידי שרים וסגני שרים כלי חיוני להשגת תקציבים ומתנגדים לרפורמות ייעול הפוגעות במנגנונים אלה.",
+      "reason": "Moshe Gafni is registered at position #120 (symbolic/non-realistic slot) on the 2026 CEC list for Yahadut HaTorah, exceeding the realistic cutoff of 9. Substituted with Yaakov Asher (#1) alongside Yitzhak Pindrus (#3), both well within the realistic cutoff."
+    },
+    {
+      "party": "beyachad",
+      "criterion": "c5_candidates_actions",
+      "type": "name_typo_correction",
+      "original_text": "קרן טרנר אייל ולבישר בן חורין כמנכ״ליות משרדים (אוצר, תחבורה, תקשורת) הובילו ייעול מבני וצמצום ביורוקרטיה; איתן גינזבורג קידם חקיקת ממשל סדורה.",
+      "adjusted_text": "קרן טרנר אייל ולירן אבישר בן חורין כמנכ״ליות משרדים (אוצר, תחבורה, תקשורת) הובילו ייעול מבני וצמצום ביורוקרטיה; איתן גינזבורג קידם חקיקת ממשל סדורה.",
+      "reason": "Corrected typo 'ולבישר בן חורין' to 'ולירן אבישר בן חורין' (position #5, realistic cutoff 14) for unambiguous candidate identification."
+    },
+    {
+      "party": "religious_zionism",
+      "criterion": "c5_candidates_actions",
+      "type": "criterion_rubric_grounding",
+      "original_text": "סמוטריץ' כשר אוצר נמנע מסגירת משרדים מיותרים בתקציבי 2023 ו-2024 ושמר על מבנה הממשלה המנופח.",
+      "adjusted_text": "אורית סטרוק כשרת ההתיישבות והמשימות הלאומיות ביצרה והרחיבה את תקציבי משרדה ולשכתה ונאבקה בהצלחה נגד סגירתו; שמחה רוטמן גיבה בוועדת החוקה את המבנה הממשלתי הרחב.",
+      "reason": "Criterion c5 requires track record of realistic candidates, whereas Smotrich is the party leader evaluated under c3. Replaced with tangible ministerial and legislative actions of realistic candidates Orit Strock (#3, Minister of National Missions) and Simcha Rothman (#4)."
+    }
+  ],
+  "verified_citations_count": 28
+}

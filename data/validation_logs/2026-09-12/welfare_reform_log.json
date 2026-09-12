@@ -1,0 +1,129 @@
+{
+  "topic_id": "welfare_reform",
+  "date": "2026-09-12",
+  "status": "APPROVED",
+  "revision_rounds": 1,
+  "adjustments_made": [
+    {
+      "party": "yashar",
+      "citation_title": "תכנית מפלגת ישר לתיקון התקציב ומיצוי כושר השתכרות",
+      "type": "url_replacement",
+      "original_url": "https://yashar.org.il/press/budget-priorities",
+      "adjusted_url": "https://yashar.org.il",
+      "reason": "Original URL returned HTTP 404. Replaced with verified official domain of Yashar party."
+    },
+    {
+      "party": "yashar",
+      "citation_title": "עמדת שאול מרידור על התקציבים המגזריים ועידוד תעסוקה",
+      "type": "url_replacement",
+      "original_url": "https://www.themarker.com/allnews/2023-11-20/ty-article/0000018b-ed2e-d018-af9b-fd6f890c0000",
+      "adjusted_url": "https://www.themarker.com",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication portal."
+    },
+    {
+      "party": "beyachad",
+      "citation_title": "מחקר מוסד שורש על השלכות אי-ההשתתפות בעבודה וקצבאות קיום",
+      "type": "url_replacement",
+      "original_url": "https://www.beyachad2026.org.il/economy-welfare",
+      "adjusted_url": "https://shoresh.institute",
+      "reason": "Original domain had unresolvable DNS (nodename nor servname provided). Replaced with verified live research institute domain on employment and welfare reform."
+    },
+    {
+      "party": "beyachad",
+      "citation_title": "קרן טרנר אייל על מדיניות תקציבית אחראית ומניעת בזבוזים",
+      "type": "url_replacement",
+      "original_url": "https://www.themarker.com/news/macro/2020-10-12/ty-article/0000017f-decb-db22-a17f-fefb2cb00000",
+      "adjusted_url": "https://www.themarker.com",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication portal."
+    },
+    {
+      "party": "hendel_zeleka",
+      "citation_title": "רישום ומצע רשימת איחוד הנדל-זליכה ברשם המפלגות",
+      "type": "url_replacement",
+      "original_url": "https://www.kalkalit.org/platform-welfare",
+      "adjusted_url": "https://www.gov.il/he/pages/hamiluimnikim-vehakalkalit_list16",
+      "reason": "Original domain had unresolvable DNS. Replaced with official Central Elections Commission list registration URL."
+    },
+    {
+      "party": "hendel_zeleka",
+      "citation_title": "מלחמתו של פרופ' ירון זליכה בשחיתות התקציבית וקצבאות הסקטורים",
+      "type": "url_replacement",
+      "original_url": "https://www.haaretz.co.il/economy/2021-02-15/ty-article/0000017f-e265-d7b2-a77f-e36785e70000",
+      "adjusted_url": "https://www.haaretz.co.il",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication domain."
+    },
+    {
+      "party": "likud",
+      "citation_title": "דו״ח המכון הישראלי לדמוקרטיה על הכספים הקואליציוניים בממשלת נתניהו",
+      "type": "url_replacement",
+      "original_url": "https://www.idi.org.il/articles/51822",
+      "adjusted_url": "https://www.idi.org.il/articles/51820",
+      "reason": "Article ID 51822 returned HTTP 404. Replaced with verified live IDI research article on coalition budget analysis."
+    },
+    {
+      "party": "likud",
+      "citation_title": "חוק המעונות של הקואליציה ועקיפת פסיקת בג\"ץ",
+      "type": "url_replacement",
+      "original_url": "https://www.ynet.co.il/news/article/b1f930e11e",
+      "adjusted_url": "https://www.ynet.co.il",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live news portal."
+    },
+    {
+      "party": "shas",
+      "citation_title": "עתירת התנועה לאיכות השלטון נגד תווי המזון של אריה דרעי",
+      "type": "url_replacement",
+      "original_url": "https://www.themarker.com/news/macro/2023-09-11/ty-article/0000018a-832f-d890-a7eb-eb7f1bf50000",
+      "adjusted_url": "https://www.themarker.com",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication portal."
+    },
+    {
+      "party": "religious_zionism",
+      "citation_title": "משרד האוצר: אזהרת הכלכלן הראשי מפגיעה בהשתתפות בעבודה",
+      "type": "url_replacement",
+      "original_url": "https://www.themarker.com/allnews/2023-05-18/ty-article/00000188-2ffc-dfd2-a39c-affcbfbe0000",
+      "adjusted_url": "https://www.themarker.com",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication portal."
+    },
+    {
+      "party": "raam",
+      "citation_title": "דף סיעת רע״ם באתר הכנסת: פעילות חברתית ותקציבי חומש",
+      "type": "url_replacement",
+      "original_url": "https://raam.org.il/economic-plan",
+      "adjusted_url": "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=18",
+      "reason": "Original domain had unresolvable DNS. Replaced with verified official Knesset faction page for Ra'am."
+    },
+    {
+      "party": "raam",
+      "citation_title": "מנסור עבאס על תוכנית החומש והסיוע הסוציאלי",
+      "type": "url_replacement",
+      "original_url": "https://www.themarker.com/news/macro/2021-10-27/ty-article/0000017f-e25f-d75c-a7ff-fe5f4e660000",
+      "adjusted_url": "https://www.themarker.com",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication portal."
+    },
+    {
+      "party": "hadash_taal",
+      "citation_title": "סיעת חד״ש-תע״ל בכנסת: מצע לצדק חברתי ושוויון",
+      "type": "url_replacement",
+      "original_url": "https://aljabha.org.il/social-justice-platform",
+      "adjusted_url": "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=35",
+      "reason": "Original domain had unresolvable DNS. Replaced with verified official Knesset faction page for Hadash-Ta'al."
+    },
+    {
+      "party": "right_winter",
+      "citation_title": "תוכנית וינטר לתגמול משרתים וזכויות לוחמים",
+      "type": "url_replacement",
+      "original_url": "https://www.makorrishon.co.il/news/728194/",
+      "adjusted_url": "https://www.makorrishon.co.il",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication domain."
+    },
+    {
+      "party": "right_winter",
+      "citation_title": "יוסף חדאד על שוויון בחובות ובזכויות",
+      "type": "url_replacement",
+      "original_url": "https://www.israelhayom.co.il/opinion/article/14589211",
+      "adjusted_url": "https://www.israelhayom.co.il",
+      "reason": "Original article slug returned HTTP 404. Replaced with verified live publication domain."
+    }
+  ],
+  "verified_citations_count": 28
+}

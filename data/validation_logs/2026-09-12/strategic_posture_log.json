@@ -1,0 +1,44 @@
+{
+  "topic_id": "strategic_posture",
+  "date": "2026-09-12",
+  "status": "APPROVED",
+  "revision_rounds": 1,
+  "adjustments_made": [
+    {
+      "party": "religious_zionism",
+      "criterion": "c5_candidates_actions",
+      "original_score": 25.0,
+      "adjusted_score": 25.0,
+      "reason": "Removed candidate Zvi Sukkot (position 7), who exceeds the realistic cutoff of 6 defined in config/polls.yaml. Preserved evaluation of realistic candidates Orit Strock (pos 3), Simcha Rothman (pos 4), and Itamar Eitam (pos 6)."
+    },
+    {
+      "party": "right_winter",
+      "criterion": "c2_leader_statements",
+      "original_score": 85.0,
+      "adjusted_score": 80.0,
+      "reason": "Separated candidate statements (Yosef Haddad, pos 2) from party leader statements (Ofer Winter). Calibrated score from 85.0 to 80.0 to reflect Winter's focus on military victory and deterrence while noting lack of comprehensive diplomatic posture."
+    },
+    {
+      "party": "right_winter",
+      "criterion": "c3_leader_actions",
+      "original_score": 85.0,
+      "adjusted_score": 65.0,
+      "reason": "Corrected score inflation and attribution error. Removed candidate #5 Fleur Hassan-Nahoum's regional diplomacy from leader's action criterion. Clamped Winter's c3 score from 85.0 to 65.0 to reflect his operational/tactical command record in IDF while accounting for absence of ministerial, parliamentary, or national executive track record."
+    },
+    {
+      "party": "hadash_taal",
+      "criterion": "c3_leader_actions",
+      "original_score": -100.0,
+      "adjusted_score": -100.0,
+      "reason": "Clarified attribution in c3 note: focused leader actions on party heads Ayman Odeh and Ahmad Tibi (systematic parliamentary votes against defense budgets and Abraham Accords), while moving MK Ofer Cassif's ICJ petition signature to c5 (candidates actions)."
+    },
+    {
+      "party": "hadash_taal",
+      "criterion": "c5_candidates_actions",
+      "original_score": -100.0,
+      "adjusted_score": -100.0,
+      "reason": "Incorporated MK Ofer Cassif's (pos 6) signing of the ICJ petition against Israel into realistic candidates actions."
+    }
+  ],
+  "verified_citations_count": 28
+}

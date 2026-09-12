@@ -1,8 +1,8 @@
 {
-  "valid": false,
+  "valid": true,
   "results": [
     {
-      "file": "data/staging/2026-09-12/topics/education.json",
+      "file": "data/validated/2026-09-12/topics/education.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -39,7 +39,7 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/future_infrastructure.json",
+      "file": "data/validated/2026-09-12/topics/future_infrastructure.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -76,7 +76,7 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/governance_reform.json",
+      "file": "data/validated/2026-09-12/topics/governance_reform.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -113,7 +113,7 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/government_downsizing.json",
+      "file": "data/validated/2026-09-12/topics/government_downsizing.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -150,7 +150,7 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/open_market.json",
+      "file": "data/validated/2026-09-12/topics/open_market.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -187,7 +187,7 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/religion_and_state.json",
+      "file": "data/validated/2026-09-12/topics/religion_and_state.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -224,7 +224,7 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/returning_residents.json",
+      "file": "data/validated/2026-09-12/topics/returning_residents.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -261,7 +261,7 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/strategic_posture.json",
+      "file": "data/validated/2026-09-12/topics/strategic_posture.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -298,145 +298,39 @@
       "total_citations": 28
     },
     {
-      "file": "data/staging/2026-09-12/topics/welfare_reform.json",
-      "valid": false,
+      "file": "data/validated/2026-09-12/topics/welfare_reform.json",
+      "valid": true,
       "schema_errors": [],
-      "broken_urls": [
-        {
-          "party": "yashar",
-          "location": "welfare_reform",
-          "title": "תכנית מפלגת ישר לתיקון התקציב ומיצוי כושר השתכרות",
-          "url": "https://yashar.org.il/press/budget-priorities",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "yashar",
-          "location": "welfare_reform",
-          "title": "עמדת שאול מרידור על התקציבים המגזריים ועידוד תעסוקה",
-          "url": "https://www.themarker.com/allnews/2023-11-20/ty-article/0000018b-ed2e-d018-af9b-fd6f890c0000",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "beyachad",
-          "location": "welfare_reform",
-          "title": "תוכנית בנט לכלכלה חופשית ועידוד תעסוקה",
-          "url": "https://www.beyachad2026.org.il/economy-welfare",
-          "code": 0,
-          "reason": "URL Error: [Errno 8] nodename nor servname provided, or not known"
-        },
-        {
-          "party": "beyachad",
-          "location": "welfare_reform",
-          "title": "קרן טרנר אייל על מדיניות תקציבית אחראית",
-          "url": "https://www.themarker.com/news/macro/2020-10-12/ty-article/0000017f-decb-db22-a17f-fefb2cb00000",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "hendel_zeleka",
-          "location": "welfare_reform",
-          "title": "תוכנית המפלגה הכלכלית לרפורמה בקצבאות וסיום מנגנוני החלוקה",
-          "url": "https://www.kalkalit.org/platform-welfare",
-          "code": 0,
-          "reason": "URL Error: [Errno 8] nodename nor servname provided, or not known"
-        },
-        {
-          "party": "hendel_zeleka",
-          "location": "welfare_reform",
-          "title": "מלחמתו של זליכה בשחיתות התקציבית וקצבאות הסקטורים",
-          "url": "https://www.haaretz.co.il/economy/2021-02-15/ty-article/0000017f-e265-d7b2-a77f-e36785e70000",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "likud",
-          "location": "welfare_reform",
-          "title": "דו״ח המכון הישראלי לדמוקרטיה על הכספים הקואליציוניים בממשלת נתניהו",
-          "url": "https://www.idi.org.il/articles/51822",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "likud",
-          "location": "welfare_reform",
-          "title": "חוק המעונות של הקואליציה ועקיפת פסיקת בג\"ץ",
-          "url": "https://www.ynet.co.il/news/article/b1f930e11e",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "shas",
-          "location": "welfare_reform",
-          "title": "עתירת התנועה לאיכות השלטון נגד תווי המזון של אריה דרעי",
-          "url": "https://www.themarker.com/news/macro/2023-09-11/ty-article/0000018a-832f-d890-a7eb-eb7f1bf50000",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "religious_zionism",
-          "location": "welfare_reform",
-          "title": "משרד האוצר: אזהרת הכלכלן הראשי מפגיעה בהשתתפות בעבודה",
-          "url": "https://www.themarker.com/allnews/2023-05-18/ty-article/00000188-2ffc-dfd2-a39c-affcbfbe0000",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "raam",
-          "location": "welfare_reform",
-          "title": "תוכנית רע״ם לפיתוח החברה הערבית והמאבק בעוני",
-          "url": "https://raam.org.il/economic-plan",
-          "code": 0,
-          "reason": "URL Error: [Errno 8] nodename nor servname provided, or not known"
-        },
-        {
-          "party": "raam",
-          "location": "welfare_reform",
-          "title": "מנסור עבאס על תוכנית החומש והסיוע הסוציאלי",
-          "url": "https://www.themarker.com/news/macro/2021-10-27/ty-article/0000017f-e25f-d75c-a7ff-fe5f4e660000",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "hadash_taal",
-          "location": "welfare_reform",
-          "title": "מצע חד״ש-תע״ל: צדק חברתי ומדינת רווחה אוניברסלית",
-          "url": "https://aljabha.org.il/social-justice-platform",
-          "code": 0,
-          "reason": "URL Error: [Errno 8] nodename nor servname provided, or not known"
-        },
-        {
-          "party": "right_winter",
-          "location": "welfare_reform",
-          "title": "תוכנית וינטר לתגמול משרתים וזכויות לוחמים",
-          "url": "https://www.makorrishon.co.il/news/728194/",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        },
-        {
-          "party": "right_winter",
-          "location": "welfare_reform",
-          "title": "יוסף חדאד על שוויון בחובות ובזכויות",
-          "url": "https://www.israelhayom.co.il/opinion/article/14589211",
-          "code": 404,
-          "reason": "HTTP Error 404"
-        }
-      ],
+      "broken_urls": [],
       "verified_urls": [
+        "https://yashar.org.il",
+        "https://www.themarker.com",
+        "https://shoresh.institute",
+        "https://www.themarker.com",
+        "https://www.gov.il/he/pages/hamiluimnikim-vehakalkalit_list16",
+        "https://www.haaretz.co.il",
         "https://www.calcalist.co.il/local_news/article/ry116kwhht",
         "https://beytenu.org.il/economic-plan/",
+        "https://www.idi.org.il/articles/51820",
+        "https://www.ynet.co.il",
         "https://democrats.org.il/welfare-policy",
         "https://main.knesset.gov.il/news/pressreleases/pages/press140224.aspx",
         "https://www.yeshatid.org.il/welfare-and-economy",
         "https://www.calcalist.co.il/local_news/article/ryr7b8qaa",
+        "https://www.themarker.com",
         "https://www.calcalist.co.il/local_news/article/sjqll011ja",
         "https://www.calcalist.co.il/local_news/article/bjvvhfqca",
         "https://main.knesset.gov.il/news/pressreleases/pages/press280523.aspx",
         "https://www.calcalist.co.il/local_news/article/rk11h9o32t",
         "https://main.knesset.gov.il/activity/plenum/pages/sessions.aspx",
         "https://www.calcalist.co.il/local_news/article/by00l00bpa",
-        "https://main.knesset.gov.il/activity/plenum/pages/sessions.aspx"
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=18",
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=35",
+        "https://main.knesset.gov.il/activity/plenum/pages/sessions.aspx",
+        "https://www.makorrishon.co.il",
+        "https://www.israelhayom.co.il"
       ],
       "total_citations": 28
     }

@@ -34,6 +34,89 @@ def find_chrome_binary() -> Optional[str]:
 def capture_snapshot(chrome_bin: str, html_path: str, output_img: str, width: int, height: int) -> bool:
     os.makedirs(os.path.dirname(os.path.abspath(output_img)), exist_ok=True)
     file_url = f"file://{os.path.abspath(html_path)}"
+    
+    # Try CDP emulation if node is available and width is mobile/tablet
+    node_bin = shutil.which("node")
+    if node_bin and width <= 768:
+        import random
+        port = random.randint(9300, 9900)
+        chrome_proc = subprocess.Popen([
+            chrome_bin,
+            "--headless=new",
+            f"--remote-debugging-port={port}",
+            "--disable-gpu",
+            "--no-sandbox",
+            file_url
+        ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        
+        node_script = f"""
+        const http = require("http");
+        const fs = require("fs");
+        let attempts = 0;
+        function poll() {{
+            attempts++;
+            http.get("http://localhost:{port}/json", (res) => {{
+                let data = "";
+                res.on("data", chunk => data += chunk);
+                res.on("end", () => {{
+                    try {{
+                        const tabs = JSON.parse(data);
+                        const target = tabs.find(t => t.url.includes("index.html")) || tabs[0];
+                        if (!target || !target.webSocketDebuggerUrl) throw new Error("No ws url");
+                        const ws = new WebSocket(target.webSocketDebuggerUrl);
+                        ws.onopen = () => {{
+                            ws.send(JSON.stringify({{
+                                id: 1,
+                                method: "Emulation.setDeviceMetricsOverride",
+                                params: {{
+                                    width: {width},
+                                    height: {height},
+                                    deviceScaleFactor: 2,
+                                    mobile: true
+                                }}
+                            }}));
+                        }};
+                        ws.onmessage = (msg) => {{
+                            const d = JSON.parse(msg.data);
+                            if (d.id === 1) {{
+                                ws.send(JSON.stringify({{
+                                    id: 2,
+                                    method: "Page.captureScreenshot",
+                                    params: {{
+                                        format: "png",
+                                        clip: {{ x: 0, y: 0, width: {width}, height: {height}, scale: 1 }}
+                                    }}
+                                }}));
+                            }} else if (d.id === 2 && d.result && d.result.data) {{
+                                fs.writeFileSync("{os.path.abspath(output_img)}", Buffer.from(d.result.data, "base64"));
+                                process.exit(0);
+                            }}
+                        }};
+                    }} catch (e) {{
+                        if (attempts < 20) setTimeout(poll, 100);
+                        else process.exit(1);
+                    }}
+                }});
+            }}).on("error", () => {{
+                if (attempts < 20) setTimeout(poll, 100);
+                else process.exit(1);
+            }});
+        }}
+        poll();
+        """
+        try:
+            res = subprocess.run([node_bin, "-e", node_script], timeout=15)
+            if os.path.exists(output_img) and os.path.getsize(output_img) > 0:
+                return True
+        except Exception as e:
+            print(f"[!] CDP snapshot failed, falling back to CLI: {e}")
+        finally:
+            chrome_proc.terminate()
+            try:
+                chrome_proc.wait(timeout=2)
+            except Exception:
+                chrome_proc.kill()
+
     cmd = [
         chrome_bin,
         "--headless=new",
@@ -66,6 +149,8 @@ class DashboardHTMLParser(HTMLParser):
         self.tab_buttons = 0
         self.candidate_cards = 0
         self.github_links = 0
+        self.tag_stack = []
+        self.tab_parents = {}
         
         # State tracking
         self.in_overview_tbody = False
@@ -121,6 +206,19 @@ class DashboardHTMLParser(HTMLParser):
             cls = attrs_dict.get("class", "")
             if "badge" in cls:
                 self.badges.append(cls)
+
+        tag_id = attrs_dict.get("id", "")
+        if tag_id in ["tab-criteria", "tab-dossiers", "tab-methodology", "tab-raw-data"]:
+            ancestor_tabs = [anc_id for (anc_tag, anc_id) in self.tag_stack if anc_id.startswith("tab-")]
+            if ancestor_tabs:
+                self.tab_parents[tag_id] = ancestor_tabs
+        self.tag_stack.append((tag, tag_id))
+
+    def handle_endtag(self, tag):
+        for i in range(len(self.tag_stack) - 1, -1, -1):
+            if self.tag_stack[i][0] == tag:
+                self.tag_stack = self.tag_stack[:i]
+                break
 
 def validate_html_dom(html_path: str) -> Tuple[List[str], Dict[str, Any]]:
     defects = []
@@ -179,11 +277,21 @@ def validate_html_dom(html_path: str) -> Tuple[List[str], Dict[str, Any]]:
     if parser.tab_buttons < 4:
         defects.append(f"Found only {parser.tab_buttons} navigation tab buttons (minimum 4 required)")
 
-    # 10. Candidate Dossiers check
+    # 10. Tab Containers Hierarchy check (Tabs must be top-level siblings, not nested)
+    for tab_id, parent_tabs in parser.tab_parents.items():
+        defects.append(f"Tab container #{tab_id} is illegally nested inside #{parent_tabs[0]}; tabs must be top-level siblings")
+
+    # 11. Div tag balance check
+    open_divs = len(re.findall(r"<div[\s>]", content))
+    close_divs = len(re.findall(r"</div\s*>", content))
+    if open_divs != close_divs:
+        defects.append(f"Unbalanced <div> tags: {open_divs} opened vs {close_divs} closed (difference: {open_divs - close_divs})")
+
+    # 12. Candidate Dossiers check
     if parser.candidate_cards < 14:
         defects.append(f"Found only {parser.candidate_cards} candidate cards (minimum 14 required)")
 
-    # 11. Public GitHub Raw Matrix links check
+    # 13. Public GitHub Raw Matrix links check
     if parser.github_links < 8:
         defects.append(f"Found only {parser.github_links} public GitHub matrix links (minimum 8 required)")
 

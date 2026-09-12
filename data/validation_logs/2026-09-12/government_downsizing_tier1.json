@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "results": [
+    {
+      "file": "data/validated/2026-09-12/topics/government_downsizing.json",
+      "valid": true,
+      "schema_errors": [],
+      "broken_urls": [],
+      "verified_urls": [
+        "https://www.themarker.com",
+        "https://www.idi.org.il",
+        "https://main.knesset.gov.il",
+        "https://www.themarker.com",
+        "https://www.globes.co.il",
+        "https://www.themarker.com",
+        "https://beytenu.org.il",
+        "https://www.maariv.co.il",
+        "https://democrats.org.il",
+        "https://www.ynet.co.il",
+        "https://www.yeshatid.org.il",
+        "https://www.idi.org.il",
+        "https://main.knesset.gov.il",
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il",
+        "https://www.mako.co.il",
+        "https://main.knesset.gov.il",
+        "https://www.ynet.co.il",
+        "https://zionutdatit.org.il",
+        "https://www.themarker.com",
+        "https://www.ynet.co.il",
+        "https://main.knesset.gov.il",
+        "https://main.knesset.gov.il",
+        "https://www.maariv.co.il",
+        "https://www.themarker.com",
+        "https://www.globes.co.il",
+        "https://www.israelhayom.co.il",
+        "https://www.maariv.co.il"
+      ],
+      "total_citations": 28
+    }
+  ]
+}

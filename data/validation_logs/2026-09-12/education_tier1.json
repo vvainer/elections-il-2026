@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "results": [
+    {
+      "file": "data/staging/2026-09-12/topics/education.json",
+      "valid": true,
+      "schema_errors": [],
+      "broken_urls": [],
+      "verified_urls": [
+        "https://www.kan.org.il",
+        "https://www.kan.org.il",
+        "https://www.mako.co.il",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/864",
+        "https://www.calcalist.co.il",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/832",
+        "https://beytenu.org.il/platform",
+        "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=8",
+        "https://www.calcalist.co.il",
+        "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=1",
+        "https://democrats.org.il/platform",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/1045",
+        "https://www.yeshatid.org.il/education",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/852",
+        "https://www.calcalist.co.il",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/1039",
+        "https://www.mako.co.il",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/34",
+        "https://www.inn.co.il",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/1046",
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/916",
+        "https://main.knesset.gov.il",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/1005",
+        "https://main.knesset.gov.il",
+        "https://main.knesset.gov.il/mk/Apps/mk/mk-personal-details/926",
+        "https://www.inn.co.il",
+        "https://main.knesset.gov.il/Activity/Committees/Education/Pages/default.aspx"
+      ],
+      "total_citations": 28
+    }
+  ]
+}

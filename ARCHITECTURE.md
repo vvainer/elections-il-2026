@@ -304,6 +304,17 @@ The system is decomposed into 4 specialized Antigravity Skills:
   4. Enforce strict lexical candidate name validation across the entire pipeline (`scripts/scrape_cec.py`, `scripts/sync_cec_data.py`, and `scripts/build_static_kb.py --verify`): strictly reject any candidate name containing digits, dates (such as `09.2026` from gov.il publication headers), non-Hebrew characters, or metadata terms.
 * **Consequences**: Enables 100% automated, fully verifiable synchronization of official Knesset 2026 candidate rosters directly from `gov.il`, eliminating manual data entry, preventing legacy 25th Knesset candidate leakage, and guaranteeing zero date/metadata pollution in candidate rosters.
 
+### ADR-015: Top-Level Tab Container Isolation, Tag Balance, and Mobile Viewport Dropdown Containment
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**: The Phase 4 UI audit revealed that `#tab-criteria` was missing a closing `</div>` tag, causing downstream tabs (`#tab-dossiers`, `#tab-methodology`, `#tab-raw-data`) to become illegally nested children of `#tab-criteria`. Switching tabs rendered the page blank. Furthermore, long Hebrew profile names caused `#profileSelect` to exceed mobile viewport boundaries on 375px screens.
+* **Decision**:
+  1. Mandate strict tab container hierarchy validation in `scripts/validate_ui.py`: enforce that all tab content containers (`.tab-content`) are top-level siblings and strictly forbid nesting tabs within each other.
+  2. Implement global `<div>` tag balance checking in `scripts/validate_ui.py` (`open_divs == close_divs`).
+  3. Support Chrome DevTools Protocol (CDP) device metrics emulation (`Emulation.setDeviceMetricsOverride`) for high-fidelity 375x812 mobile snapshot capture in headless Chrome.
+  4. Ensure `.profile-dropdown` and `.profile-selector-box` implement `box-sizing: border-box`, `max-width: 100%`, and column reflow under `@media (max-width: 768px)` to prevent horizontal layout overflow.
+* **Consequences**: Guarantees rock-solid DOM structural validity across all tabs and prevents mobile viewport overflows across various screen sizes.
+
 ---
 
 ## 6. Verification and Deployment Pipeline Matrix

@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "results": [
+    {
+      "file": "data/staging/2026-09-12/topics/open_market.json",
+      "valid": true,
+      "schema_errors": [],
+      "broken_urls": [],
+      "verified_urls": [
+        "https://www.calcalist.co.il/local_news/article/byh79a7cc",
+        "https://main.knesset.gov.il",
+        "https://www.gov.il/he/pages/beyahad_list1",
+        "https://www.themarker.com",
+        "https://www.globes.co.il",
+        "https://www.themarker.com",
+        "https://www.globes.co.il",
+        "https://main.knesset.gov.il",
+        "https://www.gov.il/he/pages/halikud-tikvahadasha_iist29",
+        "https://www.globes.co.il/news/article.aspx?did=1001416972",
+        "https://www.calcalist.co.il",
+        "https://main.knesset.gov.il",
+        "https://www.ynet.co.il/economy",
+        "https://www.globes.co.il",
+        "https://www.globes.co.il",
+        "https://main.knesset.gov.il",
+        "https://www.themarker.com",
+        "https://www.calcalist.co.il",
+        "https://www.israelhayom.co.il/business",
+        "https://www.inn.co.il",
+        "https://www.globes.co.il",
+        "https://main.knesset.gov.il",
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il",
+        "https://www.calcalist.co.il",
+        "https://main.knesset.gov.il",
+        "https://www.inn.co.il",
+        "https://www.israelhayom.co.il/business"
+      ],
+      "total_citations": 28
+    }
+  ]
+}

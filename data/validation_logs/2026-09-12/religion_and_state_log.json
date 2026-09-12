@@ -1,0 +1,16 @@
+{
+  "topic_id": "religion_and_state",
+  "date": "2026-09-12",
+  "status": "APPROVED",
+  "revision_rounds": 1,
+  "adjustments_made": [
+    {
+      "party": "hadash_taal",
+      "criterion": "c6_designated_executive",
+      "original_score": 55.0,
+      "adjusted_score": 20.0,
+      "reason": "Clamped c6 from 55.0 to 20.0 to prevent score inflation. Hadash-Taal does not participate in government coalitions or designate ministers for executive portfolios. Score reflects parliamentary leadership without executive appointee."
+    }
+  ],
+  "verified_citations_count": 28
+}

@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "results": [
+    {
+      "file": "data/staging/2026-09-12/topics/governance_reform.json",
+      "valid": true,
+      "schema_errors": [],
+      "broken_urls": [],
+      "verified_urls": [
+        "https://yashar.org.il",
+        "https://www.kan.org.il",
+        "https://be-yahad.org.il",
+        "https://www.globes.co.il",
+        "https://www.maariv.co.il",
+        "https://www.calcalist.co.il",
+        "https://beytenu.org.il/governance",
+        "https://www.maariv.co.il",
+        "https://www.mako.co.il",
+        "https://www.calcalist.co.il",
+        "https://democrats.org.il/justice",
+        "https://www.haaretz.co.il",
+        "https://www.yeshatid.org.il/constitution",
+        "https://www.ynet.co.il",
+        "https://www.ynet.co.il",
+        "https://www.kikar.co.il",
+        "https://www.inn.co.il",
+        "https://www.kikar.co.il",
+        "https://www.israelhayom.co.il",
+        "https://www.now14.co.il",
+        "https://zionutdatit.org.il",
+        "https://www.inn.co.il",
+        "https://www.maariv.co.il",
+        "https://news.walla.co.il",
+        "https://maki.org.il",
+        "https://www.haaretz.co.il",
+        "https://www.makorrishon.co.il",
+        "https://www.maariv.co.il"
+      ],
+      "total_citations": 28
+    }
+  ]
+}

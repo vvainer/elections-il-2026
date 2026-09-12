@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "results": [
+    {
+      "file": "data/staging/2026-09-12/topics/strategic_posture.json",
+      "valid": true,
+      "schema_errors": [],
+      "broken_urls": [],
+      "verified_urls": [
+        "https://www.inss.org.il",
+        "https://www.maariv.co.il",
+        "https://www.inss.org.il",
+        "https://www.ynet.co.il",
+        "https://www.haaretz.co.il",
+        "https://hashiloach.org.il",
+        "https://news.walla.co.il",
+        "https://beytenu.org.il",
+        "https://www.gov.il/he/departments/news/abraham_accords",
+        "https://www.israelhayom.co.il",
+        "https://democrats.org.il/diplomacy",
+        "https://www.haaretz.co.il",
+        "https://www.ynet.co.il",
+        "https://www.gov.il/he/departments/news/negev_summit",
+        "https://www.haaretz.co.il",
+        "https://www.kikar.co.il",
+        "https://www.kikar.co.il",
+        "https://www.israelhayom.co.il",
+        "https://www.inn.co.il",
+        "https://www.maariv.co.il",
+        "https://hashiloach.org.il/israels-decisive-plan/",
+        "https://www.israelhayom.co.il",
+        "https://www.haaretz.co.il",
+        "https://www.maariv.co.il",
+        "https://www.haaretz.co.il",
+        "https://www.haaretz.co.il",
+        "https://www.ynet.co.il",
+        "https://www.israelhayom.co.il"
+      ],
+      "total_citations": 28
+    }
+  ]
+}

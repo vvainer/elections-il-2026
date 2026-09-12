@@ -1,0 +1,42 @@
+{
+  "valid": true,
+  "results": [
+    {
+      "file": "data/staging/2026-09-12/topics/future_infrastructure.json",
+      "valid": true,
+      "schema_errors": [],
+      "broken_urls": [],
+      "verified_urls": [
+        "https://www.themarker.com",
+        "https://yashar.org.il",
+        "https://www.themarker.com",
+        "https://www.calcalist.co.il",
+        "https://www.themarker.com",
+        "https://www.calcalist.co.il",
+        "https://www.calcalist.co.il",
+        "https://beytenu.org.il",
+        "https://www.yeshatid.org.il",
+        "https://www.themarker.com",
+        "https://www.themarker.com",
+        "https://www.israelhayom.co.il",
+        "https://democrats.org.il",
+        "https://www.ynet.co.il",
+        "https://www.inn.co.il",
+        "https://www.israelhayom.co.il",
+        "https://www.israelhayom.co.il",
+        "https://www.inn.co.il",
+        "https://www.ynet.co.il",
+        "https://www.themarker.com",
+        "https://www.themarker.com",
+        "https://main.knesset.gov.il",
+        "https://www.inn.co.il",
+        "https://www.ynet.co.il",
+        "https://www.calcalist.co.il",
+        "https://www.ynet.co.il",
+        "https://www.themarker.com",
+        "https://www.mako.co.il"
+      ],
+      "total_citations": 28
+    }
+  ]
+}
