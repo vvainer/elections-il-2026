@@ -6,6 +6,9 @@
 🌐 **דשבורד אינטראקטיבי פעיל ב-GitHub Pages**:  
 **[https://vvainer.github.io/elections-il-2026/](https://vvainer.github.io/elections-il-2026/)**
 
+📐 **ארכיטקטורת המערכת והחלטות תכנון (ADRs)**:  
+**[ARCHITECTURE.md](ARCHITECTURE.md)** — מסמך הארכיטקטורה הקנוני, תרשימי זרימה ויומן החלטות ארכיטקטוניות (ADR-001 עד ADR-007).
+
 ---
 
 ## 🛠️ מיומנויות Antigravity (Skills)

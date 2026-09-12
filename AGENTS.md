@@ -8,9 +8,10 @@ It is implemented using dedicated **Antigravity Skills**:
 3. **`interview-worldview`** (`.agents/skills/interview-worldview/SKILL.md`): Interactively interviews the user via `ask_question` to configure custom voter profiles and weighting preferences.
 4. **`election-analyst`** (`.agents/skills/election-analyst/SKILL.md`): Domain scoring methodology, rubric guidelines, and reference prompt templates.
 
-> ⚠️ **STRICT MANDATE: NO MONOLITHIC SHORTCUTS & ZERO INLINE DATA**  
+> ⚠️ **STRICT MANDATE: NO MONOLITHIC SHORTCUTS, ZERO INLINE DATA & REPO ARCHITECTURE TRACKING**  
 > 1. Running an election analysis round MUST NEVER be executed as a monolithic script or by copying past data. You MUST use Antigravity subagent tools (`define_subagent` and `invoke_subagent`).  
-> 2. No political data (policy stances, candidate names, scores, evaluations) may appear in instructions or documentation files. All data resides exclusively in rebuildable artifacts under `data/` and `config/`.
+> 2. No political data (policy stances, candidate names, scores, evaluations) may appear in instructions or documentation files. All data resides exclusively in rebuildable artifacts under `data/` and `config/`.  
+> 3. **Mandatory Architecture Maintenance**: Whenever modifying system structure, data contracts, agent roles, or pipeline stages, you **MUST** update [`ARCHITECTURE.md`](file:///Users/i048709/private/election_analysis/ARCHITECTURE.md) and record any new architectural decisions (ADRs) directly in the repo. Architecture decisions must NEVER remain only in chat logs or temporary scratchpads.
 
 ## 2. Language & Communication Rules
 - **Technical Discussion, Scripts, Code, Architecture, and Git**: English.
@@ -110,3 +111,4 @@ Define the 4 subagent types using `define_subagent` if not already defined:
   - `evaluations/`: Scored evaluation datasets per date and profile.
 - `reports/YYYY-MM-DD/`: Weekly Markdown reports per profile.
 - `docs/index.html`: Responsive RTL HTML dashboard deployed to GitHub Pages.
+- `ARCHITECTURE.md`: Canonical system architecture specification and Architecture Decision Records (ADRs).
