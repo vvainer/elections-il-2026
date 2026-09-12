@@ -1,0 +1,4556 @@
+{
+  "likud": {
+    "title": "הליכוד עם בנימין נתניהו לראשות הממשלה",
+    "url": "https://www.gov.il/he/pages/halikud-tikvahadasha_iist29",
+    "total_candidates": 120,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "נתניהו בנימין"
+      },
+      {
+        "position": 2,
+        "name": "כהן אליהו"
+      },
+      {
+        "position": 3,
+        "name": "אוחנה אמיר"
+      },
+      {
+        "position": 4,
+        "name": "לוין יריב גדעון"
+      },
+      {
+        "position": 5,
+        "name": "רגב מרים"
+      },
+      {
+        "position": 6,
+        "name": "כץ ישראל"
+      },
+      {
+        "position": 7,
+        "name": "סער גדעון משה"
+      },
+      {
+        "position": 8,
+        "name": "כץ אופיר"
+      },
+      {
+        "position": 9,
+        "name": "גואילי טלי"
+      },
+      {
+        "position": 10,
+        "name": "קיש יואב"
+      },
+      {
+        "position": 11,
+        "name": "ברדוגו יעקב"
+      },
+      {
+        "position": 12,
+        "name": "זוהר מכלוף"
+      },
+      {
+        "position": 13,
+        "name": "כהן אלמוג"
+      },
+      {
+        "position": 14,
+        "name": "שיקלי עמיחי"
+      },
+      {
+        "position": 15,
+        "name": "מדן אלישע"
+      },
+      {
+        "position": 16,
+        "name": "פטר דוד"
+      },
+      {
+        "position": 17,
+        "name": "סעדה משה"
+      },
+      {
+        "position": 18,
+        "name": "כץ חיים"
+      },
+      {
+        "position": 19,
+        "name": "אמסלם דוד"
+      },
+      {
+        "position": 20,
+        "name": "עטייה חוה"
+      },
+      {
+        "position": 21,
+        "name": "ביסמוט בעז"
+      },
+      {
+        "position": 22,
+        "name": "ביטן דוד"
+      },
+      {
+        "position": 23,
+        "name": "קרעי שלמה"
+      },
+      {
+        "position": 24,
+        "name": "ברקת ניר"
+      },
+      {
+        "position": 25,
+        "name": "גמליאל דמרי גילה"
+      },
+      {
+        "position": 26,
+        "name": "גולדשמידט אלי"
+      },
+      {
+        "position": 27,
+        "name": "תדמור ארז"
+      },
+      {
+        "position": 28,
+        "name": "לרנר שלמה יוסף"
+      },
+      {
+        "position": 29,
+        "name": "בונצל יצחק"
+      },
+      {
+        "position": 30,
+        "name": "פרץ משה בנימין"
+      },
+      {
+        "position": 31,
+        "name": "אוחנה שוקי יהושע"
+      },
+      {
+        "position": 32,
+        "name": "אלקין זאב"
+      },
+      {
+        "position": 33,
+        "name": "הלוי עמית"
+      },
+      {
+        "position": 34,
+        "name": "אטיאס בובליל קרן"
+      },
+      {
+        "position": 35,
+        "name": "בוארון אביחי אברהם"
+      },
+      {
+        "position": 36,
+        "name": "נוה אפרים"
+      },
+      {
+        "position": 37,
+        "name": "סעדה שרון"
+      },
+      {
+        "position": 38,
+        "name": "מלביצקי חנוך דב"
+      },
+      {
+        "position": 39,
+        "name": "אוחיון נתנאל"
+      },
+      {
+        "position": 40,
+        "name": "בדרה גולן פלורה מאי"
+      },
+      {
+        "position": 41,
+        "name": "מולא מולא"
+      },
+      {
+        "position": 42,
+        "name": "רובין צביאל"
+      },
+      {
+        "position": 43,
+        "name": "וורקו גברה"
+      },
+      {
+        "position": 44,
+        "name": "שיטרית קטרין"
+      },
+      {
+        "position": 45,
+        "name": "פרידמן אלכסנדר"
+      },
+      {
+        "position": 46,
+        "name": "סילמן עידית"
+      },
+      {
+        "position": 47,
+        "name": "קלנר אריאל"
+      },
+      {
+        "position": 48,
+        "name": "דיכטר אברהם משה"
+      },
+      {
+        "position": 49,
+        "name": "גואטה ששון ששי"
+      },
+      {
+        "position": 50,
+        "name": "דנינו שלום"
+      },
+      {
+        "position": 51,
+        "name": "קטש שבתאי"
+      },
+      {
+        "position": 52,
+        "name": "הכהן רבין חיימוב אלישיב שר שלום"
+      },
+      {
+        "position": 53,
+        "name": "פיטוסי יוסף"
+      },
+      {
+        "position": 54,
+        "name": "עבד פארס"
+      },
+      {
+        "position": 55,
+        "name": "גלילי שי"
+      },
+      {
+        "position": 56,
+        "name": "יוגב מוטי"
+      },
+      {
+        "position": 57,
+        "name": "אלי אייל"
+      },
+      {
+        "position": 58,
+        "name": "קלך שי שמואל יצחק"
+      },
+      {
+        "position": 59,
+        "name": "דיין עוזי"
+      },
+      {
+        "position": 60,
+        "name": "טל אבשלום"
+      },
+      {
+        "position": 61,
+        "name": "חדד אלון"
+      },
+      {
+        "position": 62,
+        "name": "קאפח דרור"
+      },
+      {
+        "position": 63,
+        "name": "זידאן סמיר"
+      },
+      {
+        "position": 64,
+        "name": "דז'ורייב אברהם"
+      },
+      {
+        "position": 65,
+        "name": "שקלים אושר"
+      },
+      {
+        "position": 66,
+        "name": "אלוש גבי גבריאל"
+      },
+      {
+        "position": 67,
+        "name": "חייקין ויטלי"
+      },
+      {
+        "position": 68,
+        "name": "זרו אלמז"
+      },
+      {
+        "position": 69,
+        "name": "טמשוט יורם"
+      },
+      {
+        "position": 70,
+        "name": "מזמר טוב יוחנן"
+      },
+      {
+        "position": 71,
+        "name": "גורל משה חיים"
+      },
+      {
+        "position": 72,
+        "name": "שטרית יוחאי"
+      },
+      {
+        "position": 73,
+        "name": "כהן אדי"
+      },
+      {
+        "position": 74,
+        "name": "שמש זאב"
+      },
+      {
+        "position": 75,
+        "name": "שתיוי אליהו"
+      },
+      {
+        "position": 76,
+        "name": "עבד עפיף"
+      },
+      {
+        "position": 77,
+        "name": "הדר מאי"
+      },
+      {
+        "position": 78,
+        "name": "בר גיל יעקב"
+      },
+      {
+        "position": 79,
+        "name": "חרלפ דור"
+      },
+      {
+        "position": 80,
+        "name": "שאשא כהן אבישי ציון"
+      },
+      {
+        "position": 81,
+        "name": "ברוך עדי"
+      },
+      {
+        "position": 82,
+        "name": "מילוא דין"
+      },
+      {
+        "position": 83,
+        "name": "בן-שושן יואל שלמה"
+      },
+      {
+        "position": 84,
+        "name": "לנקרי ציון"
+      },
+      {
+        "position": 85,
+        "name": "מור דודו"
+      },
+      {
+        "position": 86,
+        "name": "בוכניק אריאל"
+      },
+      {
+        "position": 87,
+        "name": "מיכאליס אמציה אהרון"
+      },
+      {
+        "position": 88,
+        "name": "סבאן אופיר"
+      },
+      {
+        "position": 89,
+        "name": "ניניו אהוד"
+      },
+      {
+        "position": 90,
+        "name": "סושרד עודד יהודה"
+      },
+      {
+        "position": 91,
+        "name": "לסקר מרציאנו גוליאט"
+      },
+      {
+        "position": 92,
+        "name": "שטגמן איריס רחל"
+      },
+      {
+        "position": 93,
+        "name": "פינברג צפורה"
+      },
+      {
+        "position": 94,
+        "name": "בן פנחס יוסף-איל"
+      },
+      {
+        "position": 95,
+        "name": "אברהם דוד"
+      },
+      {
+        "position": 96,
+        "name": "מתתיהו כוכבה"
+      },
+      {
+        "position": 97,
+        "name": "שרעבי רצון"
+      },
+      {
+        "position": 98,
+        "name": "דה מרקדו רחל"
+      },
+      {
+        "position": 99,
+        "name": "אלוני ממו מדינה"
+      },
+      {
+        "position": 100,
+        "name": "קליינר מיכאל"
+      },
+      {
+        "position": 101,
+        "name": "אוחנה מאיר שמעון"
+      },
+      {
+        "position": 102,
+        "name": "סלמון צפריר"
+      },
+      {
+        "position": 103,
+        "name": "לנדא אילה"
+      },
+      {
+        "position": 104,
+        "name": "מלמד יונתן גמליאל"
+      },
+      {
+        "position": 105,
+        "name": "יפרח אורנה"
+      },
+      {
+        "position": 106,
+        "name": "שלוח אליהו"
+      },
+      {
+        "position": 107,
+        "name": "קיסטר יוסף"
+      },
+      {
+        "position": 108,
+        "name": "דניאלי יצחק"
+      },
+      {
+        "position": 109,
+        "name": "נתח ברוך"
+      },
+      {
+        "position": 110,
+        "name": "החרמוני בת שבע"
+      },
+      {
+        "position": 111,
+        "name": "שישיצקי יצחק מאיר"
+      },
+      {
+        "position": 112,
+        "name": "רייף מיכאל"
+      },
+      {
+        "position": 113,
+        "name": "שמרגד יעל"
+      },
+      {
+        "position": 114,
+        "name": "שפיגל חדוה"
+      },
+      {
+        "position": 115,
+        "name": "בלומנטל נעמי"
+      },
+      {
+        "position": 116,
+        "name": "טימור אסתר"
+      },
+      {
+        "position": 117,
+        "name": "גל ענבל פריטנה"
+      },
+      {
+        "position": 118,
+        "name": "ביטון בנימין"
+      },
+      {
+        "position": 119,
+        "name": "ברוט צביקה"
+      },
+      {
+        "position": 120,
+        "name": "ביבס חיים"
+      }
+    ]
+  },
+  "yashar": {
+    "title": "ישר! עם איזנקוט לראשות הממשלה מאחדים את ישראל",
+    "url": "https://www.gov.il/he/pages/yashar_list_2",
+    "total_candidates": 120,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "איזנקוט גד"
+      },
+      {
+        "position": 2,
+        "name": "כהן יורם"
+      },
+      {
+        "position": 3,
+        "name": "פרקש הכהן אורית"
+      },
+      {
+        "position": 4,
+        "name": "אלטשולר עדי"
+      },
+      {
+        "position": 5,
+        "name": "כהנא מתן"
+      },
+      {
+        "position": 6,
+        "name": "טרופר יחיאל משה"
+      },
+      {
+        "position": 7,
+        "name": "מרידור שאול"
+      },
+      {
+        "position": 8,
+        "name": "איפרגן תאיר סולי"
+      },
+      {
+        "position": 9,
+        "name": "גני גונן אושרת"
+      },
+      {
+        "position": 10,
+        "name": "שפירא שירה"
+      },
+      {
+        "position": 11,
+        "name": "הרוש גיטי עינבר"
+      },
+      {
+        "position": 12,
+        "name": "שטרן אלעזר"
+      },
+      {
+        "position": 13,
+        "name": "אבו רוקן כמיל"
+      },
+      {
+        "position": 14,
+        "name": "בכר דבורה"
+      },
+      {
+        "position": 15,
+        "name": "ריף אלקס"
+      },
+      {
+        "position": 16,
+        "name": "יחזקאלי בליליוס ענבר"
+      },
+      {
+        "position": 17,
+        "name": "פולקמן רועי שמואל"
+      },
+      {
+        "position": 18,
+        "name": "זרי ישראל"
+      },
+      {
+        "position": 19,
+        "name": "אוחנה טל"
+      },
+      {
+        "position": 20,
+        "name": "פרץ אליסף"
+      },
+      {
+        "position": 21,
+        "name": "טבג'ה יפה"
+      },
+      {
+        "position": 22,
+        "name": "חג'בי ניר"
+      },
+      {
+        "position": 23,
+        "name": "ברקאי רון"
+      },
+      {
+        "position": 24,
+        "name": "פישר שי אנדראה"
+      },
+      {
+        "position": 25,
+        "name": "פולק דוד ליאן"
+      },
+      {
+        "position": 26,
+        "name": "כהן רועי"
+      },
+      {
+        "position": 27,
+        "name": "רוזן זיו"
+      },
+      {
+        "position": 28,
+        "name": "באש גוסלין"
+      },
+      {
+        "position": 29,
+        "name": "פוטרמן אלון צבי"
+      },
+      {
+        "position": 30,
+        "name": "מולנר טלי"
+      },
+      {
+        "position": 31,
+        "name": "אבריאל גיל"
+      },
+      {
+        "position": 32,
+        "name": "בן דוד עוזרי שירן"
+      },
+      {
+        "position": 33,
+        "name": "אליה אלירן"
+      },
+      {
+        "position": 34,
+        "name": "גלבר הלן"
+      },
+      {
+        "position": 35,
+        "name": "יחיאב שלומי"
+      },
+      {
+        "position": 36,
+        "name": "מאיר הילה"
+      },
+      {
+        "position": 37,
+        "name": "בן-עטיה יצקן רן"
+      },
+      {
+        "position": 38,
+        "name": "זקס אליענה מיי"
+      },
+      {
+        "position": 39,
+        "name": "זאגא גדעון"
+      },
+      {
+        "position": 40,
+        "name": "משה דוידוביץ"
+      },
+      {
+        "position": 41,
+        "name": "אברבוך אלכסנדר"
+      },
+      {
+        "position": 42,
+        "name": "ירון שי"
+      },
+      {
+        "position": 43,
+        "name": "רז רחלי"
+      },
+      {
+        "position": 44,
+        "name": "גוזלן דוד"
+      },
+      {
+        "position": 45,
+        "name": "ישראלוביץ נטע"
+      },
+      {
+        "position": 46,
+        "name": "גושן אדם"
+      },
+      {
+        "position": 47,
+        "name": "קוריאט אבי"
+      },
+      {
+        "position": 48,
+        "name": "מלמד ארז"
+      },
+      {
+        "position": 49,
+        "name": "אלמלם אבו מיכל"
+      },
+      {
+        "position": 50,
+        "name": "עמר אליאור"
+      },
+      {
+        "position": 51,
+        "name": "אלימלך ליאור"
+      },
+      {
+        "position": 52,
+        "name": "נממי שי"
+      },
+      {
+        "position": 53,
+        "name": "נחום רותם-יהב"
+      },
+      {
+        "position": 54,
+        "name": "היב יחיא"
+      },
+      {
+        "position": 55,
+        "name": "פליישר אלעד"
+      },
+      {
+        "position": 56,
+        "name": "אזיה ג'ני ג'נט"
+      },
+      {
+        "position": 57,
+        "name": "הירשפלד יהונתן נמרוד"
+      },
+      {
+        "position": 58,
+        "name": "בכר פזית"
+      },
+      {
+        "position": 59,
+        "name": "קמינסקי מיכל"
+      },
+      {
+        "position": 60,
+        "name": "צמח אוראל רתם"
+      },
+      {
+        "position": 61,
+        "name": "לביא בן-שימול סול"
+      },
+      {
+        "position": 62,
+        "name": "יואל בר"
+      },
+      {
+        "position": 63,
+        "name": "וידריך דידיו תל אביב לי"
+      },
+      {
+        "position": 64,
+        "name": "בר דוד אהוד"
+      },
+      {
+        "position": 65,
+        "name": "פרי דניאל שרית"
+      },
+      {
+        "position": 66,
+        "name": "שרבי יונגר עדי"
+      },
+      {
+        "position": 67,
+        "name": "צדקיה שלומי"
+      },
+      {
+        "position": 68,
+        "name": "קרבר אריאל"
+      },
+      {
+        "position": 69,
+        "name": "צלנר אסף צבי"
+      },
+      {
+        "position": 70,
+        "name": "קימברג אילה"
+      },
+      {
+        "position": 71,
+        "name": "זבולוני עמיר"
+      },
+      {
+        "position": 72,
+        "name": "יואלי לרנר מרב"
+      },
+      {
+        "position": 73,
+        "name": "עיאש דניאל"
+      },
+      {
+        "position": 74,
+        "name": "גלבוע שי חיים"
+      },
+      {
+        "position": 75,
+        "name": "זריהן הלר כרמל"
+      },
+      {
+        "position": 76,
+        "name": "דוד בשמת"
+      },
+      {
+        "position": 77,
+        "name": "ברנשטיין אילן"
+      },
+      {
+        "position": 78,
+        "name": "אלמוג אלירן"
+      },
+      {
+        "position": 79,
+        "name": "אברהם הלוי דוד"
+      },
+      {
+        "position": 80,
+        "name": "נעים ענבל"
+      },
+      {
+        "position": 81,
+        "name": "טייץ אורנה"
+      },
+      {
+        "position": 82,
+        "name": "קפלן ניבה בינה"
+      },
+      {
+        "position": 83,
+        "name": "נוימרק זוהר"
+      },
+      {
+        "position": 84,
+        "name": "קלוגר הדר שרית"
+      },
+      {
+        "position": 85,
+        "name": "בנסטי ליאור"
+      },
+      {
+        "position": 86,
+        "name": "ברויטמן אבי"
+      },
+      {
+        "position": 87,
+        "name": "מזרחי מיכל"
+      },
+      {
+        "position": 88,
+        "name": "פוטשניק איל"
+      },
+      {
+        "position": 89,
+        "name": "באשא לי"
+      },
+      {
+        "position": 90,
+        "name": "גריפין ירדן"
+      },
+      {
+        "position": 91,
+        "name": "איתן אורן"
+      },
+      {
+        "position": 92,
+        "name": "עמרי לוין"
+      },
+      {
+        "position": 93,
+        "name": "פרנקל ישראלי גלי"
+      },
+      {
+        "position": 94,
+        "name": "חיים כץ עינת"
+      },
+      {
+        "position": 95,
+        "name": "חביש מולא סילין"
+      },
+      {
+        "position": 96,
+        "name": "דז'יאן דוד הרבה"
+      },
+      {
+        "position": 97,
+        "name": "רן חסיה"
+      },
+      {
+        "position": 98,
+        "name": "מזרחי אפרת חיה"
+      },
+      {
+        "position": 99,
+        "name": "גרנות יאיר אריה"
+      },
+      {
+        "position": 100,
+        "name": "הררי אילן"
+      },
+      {
+        "position": 101,
+        "name": "זמורה עמיר"
+      },
+      {
+        "position": 102,
+        "name": "עפרוני אסתר"
+      },
+      {
+        "position": 103,
+        "name": "בורושק מתי"
+      },
+      {
+        "position": 104,
+        "name": "יזהר טל"
+      },
+      {
+        "position": 105,
+        "name": "ז'אן עידן"
+      },
+      {
+        "position": 106,
+        "name": "שרון חן"
+      },
+      {
+        "position": 107,
+        "name": "גל מירלה"
+      },
+      {
+        "position": 108,
+        "name": "כמיסה רז שאול"
+      },
+      {
+        "position": 109,
+        "name": "מזרחי אברהם"
+      },
+      {
+        "position": 110,
+        "name": "מרידור דן"
+      },
+      {
+        "position": 111,
+        "name": "גרשטיין מרקל הרטל"
+      },
+      {
+        "position": 112,
+        "name": "זהב חממי ספיר"
+      },
+      {
+        "position": 113,
+        "name": "אלבג אלי"
+      },
+      {
+        "position": 114,
+        "name": "אלבג שירה"
+      },
+      {
+        "position": 115,
+        "name": "טרכטנברג מנואל"
+      },
+      {
+        "position": 116,
+        "name": "לוי יהונתן"
+      },
+      {
+        "position": 117,
+        "name": "עבאס ג'דעאן"
+      },
+      {
+        "position": 118,
+        "name": "בר שלום עדינה"
+      },
+      {
+        "position": 119,
+        "name": "שפר גדעון"
+      },
+      {
+        "position": 120,
+        "name": "בן-עמי אהד"
+      }
+    ]
+  },
+  "beyachad": {
+    "title": "ביחד בראשות נפתלי בנט",
+    "url": "https://www.gov.il/he/pages/beyahad_list1",
+    "total_candidates": 120,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "בנט נפתלי"
+      },
+      {
+        "position": 2,
+        "name": "לפיד יאיר"
+      },
+      {
+        "position": 3,
+        "name": "טרנר אייל קרן"
+      },
+      {
+        "position": 4,
+        "name": "בן ארי מירב"
+      },
+      {
+        "position": 5,
+        "name": "אבישר בן חורין לירן"
+      },
+      {
+        "position": 6,
+        "name": "תיבון נעם משה"
+      },
+      {
+        "position": 7,
+        "name": "הירש נגרי מיכל טליה"
+      },
+      {
+        "position": 8,
+        "name": "גינזבורג איתן"
+      },
+      {
+        "position": 9,
+        "name": "כהן מירב"
+      },
+      {
+        "position": 10,
+        "name": "שלו יונתן"
+      },
+      {
+        "position": 11,
+        "name": "נעים ארמן ברוריה"
+      },
+      {
+        "position": 12,
+        "name": "בן ברק רם"
+      },
+      {
+        "position": 13,
+        "name": "סטרוגו אמיר"
+      },
+      {
+        "position": 14,
+        "name": "שירי נאור"
+      },
+      {
+        "position": 15,
+        "name": "זאבי ניסן"
+      },
+      {
+        "position": 16,
+        "name": "בליאק ולדימיר"
+      },
+      {
+        "position": 17,
+        "name": "אלידן-הראל אורלי"
+      },
+      {
+        "position": 18,
+        "name": "להב הרצנו יוראי"
+      },
+      {
+        "position": 19,
+        "name": "ורון שחר"
+      },
+      {
+        "position": 20,
+        "name": "פרידמן יסמין"
+      },
+      {
+        "position": 21,
+        "name": "איילון קובו אסתי"
+      },
+      {
+        "position": 22,
+        "name": "אטיאס מויאל נטע"
+      },
+      {
+        "position": 23,
+        "name": "סלטן ג'רמי"
+      },
+      {
+        "position": 24,
+        "name": "טור-פז משה יהודה"
+      },
+      {
+        "position": 25,
+        "name": "פלוטניצקי צבי גריגורי"
+      },
+      {
+        "position": 26,
+        "name": "קנטור אולסיה"
+      },
+      {
+        "position": 27,
+        "name": "דוידסון סימון"
+      },
+      {
+        "position": 28,
+        "name": "גיל מתי"
+      },
+      {
+        "position": 29,
+        "name": "טל מירון שלי"
+      },
+      {
+        "position": 30,
+        "name": "וינר תומר"
+      },
+      {
+        "position": 31,
+        "name": "איריש מלכאי רוני"
+      },
+      {
+        "position": 32,
+        "name": "מזאל שחר תמר"
+      },
+      {
+        "position": 33,
+        "name": "צרפתי הרכבי מטי"
+      },
+      {
+        "position": 34,
+        "name": "לין שטרן יעל"
+      },
+      {
+        "position": 35,
+        "name": "ברדה עמית"
+      },
+      {
+        "position": 36,
+        "name": "עזוז עדי עליזה"
+      },
+      {
+        "position": 37,
+        "name": "ארקוס ליאת חדוה"
+      },
+      {
+        "position": 38,
+        "name": "חיים עוז"
+      },
+      {
+        "position": 39,
+        "name": "קרן עידו"
+      },
+      {
+        "position": 40,
+        "name": "ויס אסף"
+      },
+      {
+        "position": 41,
+        "name": "מלאכי יחזקאל משה"
+      },
+      {
+        "position": 42,
+        "name": "גול חנה"
+      },
+      {
+        "position": 43,
+        "name": "צימרמן מרב"
+      },
+      {
+        "position": 44,
+        "name": "אבו אל היג'א מוחמד"
+      },
+      {
+        "position": 45,
+        "name": "כהן ז'אנה"
+      },
+      {
+        "position": 46,
+        "name": "לוי הילה אינס"
+      },
+      {
+        "position": 47,
+        "name": "אדלר דבורה"
+      },
+      {
+        "position": 48,
+        "name": "עוז רוזגוביץ אלעד"
+      },
+      {
+        "position": 49,
+        "name": "סבג יוסף"
+      },
+      {
+        "position": 50,
+        "name": "סלבני כבביה מיכל"
+      },
+      {
+        "position": 51,
+        "name": "ברק אבנר"
+      },
+      {
+        "position": 52,
+        "name": "שוייצר הדר"
+      },
+      {
+        "position": 53,
+        "name": "ערד עופר"
+      },
+      {
+        "position": 54,
+        "name": "חיימוביץ יהודה"
+      },
+      {
+        "position": 55,
+        "name": "קליין בר נוי אמונה חן"
+      },
+      {
+        "position": 56,
+        "name": "כראם גסאן"
+      },
+      {
+        "position": 57,
+        "name": "אחרק אליס"
+      },
+      {
+        "position": 58,
+        "name": "שאשא שי-לי"
+      },
+      {
+        "position": 59,
+        "name": "רז חוה שרון"
+      },
+      {
+        "position": 60,
+        "name": "שילה אלידור"
+      },
+      {
+        "position": 61,
+        "name": "מרגוליס מישאל אסנת"
+      },
+      {
+        "position": 62,
+        "name": "ורהפטיג זיו"
+      },
+      {
+        "position": 63,
+        "name": "מרגלית רועי"
+      },
+      {
+        "position": 64,
+        "name": "שחר פאר-לי פנינה"
+      },
+      {
+        "position": 65,
+        "name": "לוין אליעזר"
+      },
+      {
+        "position": 66,
+        "name": "זנקו אברהם אורי"
+      },
+      {
+        "position": 67,
+        "name": "משה גוטרמן נטלי"
+      },
+      {
+        "position": 68,
+        "name": "גובזה דמוז"
+      },
+      {
+        "position": 69,
+        "name": "מאור עפר פליקס"
+      },
+      {
+        "position": 70,
+        "name": "דוד רואי"
+      },
+      {
+        "position": 71,
+        "name": "דרורי ארז"
+      },
+      {
+        "position": 72,
+        "name": "ארקין יוני"
+      },
+      {
+        "position": 73,
+        "name": "קציר אורן"
+      },
+      {
+        "position": 74,
+        "name": "צוקרמן חטואל לידיה"
+      },
+      {
+        "position": 75,
+        "name": "ברוך נמרוד"
+      },
+      {
+        "position": 76,
+        "name": "יובל רונית"
+      },
+      {
+        "position": 77,
+        "name": "אלקובי בת שבע"
+      },
+      {
+        "position": 78,
+        "name": "קוניק-הופמן גלית"
+      },
+      {
+        "position": 79,
+        "name": "גרושקא אוריה"
+      },
+      {
+        "position": 80,
+        "name": "אברמוביץ אסף"
+      },
+      {
+        "position": 81,
+        "name": "כרמל עינת"
+      },
+      {
+        "position": 82,
+        "name": "סבג אפק משה"
+      },
+      {
+        "position": 83,
+        "name": "נוברוזוב פרצוב בטוליה טלי"
+      },
+      {
+        "position": 84,
+        "name": "הויגר טל"
+      },
+      {
+        "position": 85,
+        "name": "פולאק איתי דוד"
+      },
+      {
+        "position": 86,
+        "name": "קלריך ילי"
+      },
+      {
+        "position": 87,
+        "name": "אקרמן נמרוד"
+      },
+      {
+        "position": 88,
+        "name": "עבו שגית"
+      },
+      {
+        "position": 89,
+        "name": "מן עדי"
+      },
+      {
+        "position": 90,
+        "name": "אגרונוב טלי"
+      },
+      {
+        "position": 91,
+        "name": "אברהמי מאירי סתיו"
+      },
+      {
+        "position": 92,
+        "name": "ווגלטר עידו"
+      },
+      {
+        "position": 93,
+        "name": "בר גלעד"
+      },
+      {
+        "position": 94,
+        "name": "סימון הרצוג צביה"
+      },
+      {
+        "position": 95,
+        "name": "סטון אריק"
+      },
+      {
+        "position": 96,
+        "name": "דנה קרין אליז"
+      },
+      {
+        "position": 97,
+        "name": "פייבל אייל"
+      },
+      {
+        "position": 98,
+        "name": "יעקובובסקי איב חיים"
+      },
+      {
+        "position": 99,
+        "name": "בן ישי יעקב"
+      },
+      {
+        "position": 100,
+        "name": "הראל תומר"
+      },
+      {
+        "position": 101,
+        "name": "כחלון סימה"
+      },
+      {
+        "position": 102,
+        "name": "גבע רחל"
+      },
+      {
+        "position": 103,
+        "name": "גולן נגה"
+      },
+      {
+        "position": 104,
+        "name": "כהן אסתר"
+      },
+      {
+        "position": 105,
+        "name": "מוזס יוכבד אבגיל"
+      },
+      {
+        "position": 106,
+        "name": "טופז נורית"
+      },
+      {
+        "position": 107,
+        "name": "כהן אוריאן לי"
+      },
+      {
+        "position": 108,
+        "name": "פוקסמן אילן"
+      },
+      {
+        "position": 109,
+        "name": "אפריאט יצחק"
+      },
+      {
+        "position": 110,
+        "name": "בוחבוט נטע"
+      },
+      {
+        "position": 111,
+        "name": "וונגר מייקלסון מור"
+      },
+      {
+        "position": 112,
+        "name": "גור כהן דלית"
+      },
+      {
+        "position": 113,
+        "name": "לוי גיורא"
+      },
+      {
+        "position": 114,
+        "name": "טבצ'ניק אביטל"
+      },
+      {
+        "position": 115,
+        "name": "אוגש עופר"
+      },
+      {
+        "position": 116,
+        "name": "שחר סיגל"
+      },
+      {
+        "position": 117,
+        "name": "ביטון זיו"
+      },
+      {
+        "position": 118,
+        "name": "בראל אנטולי"
+      },
+      {
+        "position": 119,
+        "name": "ויינשטיין דבורה"
+      },
+      {
+        "position": 120,
+        "name": "סומק רוני"
+      }
+    ]
+  },
+  "yisrael_beiteinu": {
+    "title": "ישראל ביתנו בראשות אביגדור ליברמן",
+    "url": "https://www.gov.il/he/pages/israel-beitenu_list11",
+    "total_candidates": 34,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "ליברמן אביגדור"
+      },
+      {
+        "position": 2,
+        "name": "בן שטרית רפאל"
+      },
+      {
+        "position": 3,
+        "name": "לנקרי טליה"
+      },
+      {
+        "position": 4,
+        "name": "פורר עודד"
+      },
+      {
+        "position": 5,
+        "name": "מלינובסקי קונין יוליה"
+      },
+      {
+        "position": 6,
+        "name": "שרעבי שרון"
+      },
+      {
+        "position": 7,
+        "name": "עמאר חמד"
+      },
+      {
+        "position": 8,
+        "name": "סובה יבגני"
+      },
+      {
+        "position": 9,
+        "name": "קוליחמן אלוירה"
+      },
+      {
+        "position": 10,
+        "name": "אילוז דן אליהו יעקב"
+      },
+      {
+        "position": 11,
+        "name": "בן עמי לילי"
+      },
+      {
+        "position": 12,
+        "name": "בנבנישתי יעל"
+      },
+      {
+        "position": 13,
+        "name": "אזולאי דוד"
+      },
+      {
+        "position": 14,
+        "name": "מגן תלם לימור"
+      },
+      {
+        "position": 15,
+        "name": "בן שיטרית ישראל יאיר"
+      },
+      {
+        "position": 16,
+        "name": "רופא אופיר שרון אסתר"
+      },
+      {
+        "position": 17,
+        "name": "דקל מור"
+      },
+      {
+        "position": 18,
+        "name": "לוין שמיר מיכאלה אנה"
+      },
+      {
+        "position": 19,
+        "name": "רפוביץ אוליביה"
+      },
+      {
+        "position": 20,
+        "name": "מוזס יעקב"
+      },
+      {
+        "position": 21,
+        "name": "קור עמנואל עמי"
+      },
+      {
+        "position": 22,
+        "name": "פלומבוים כץ מאיה"
+      },
+      {
+        "position": 23,
+        "name": "מורדוכייב אדוארד אדי"
+      },
+      {
+        "position": 24,
+        "name": "אורון-עזני מיכל"
+      },
+      {
+        "position": 25,
+        "name": "בויאנגו מצא סתו"
+      },
+      {
+        "position": 26,
+        "name": "ביזברג אסף"
+      },
+      {
+        "position": 27,
+        "name": "רובין סטיבן יעקב"
+      },
+      {
+        "position": 28,
+        "name": "שמיר קינן שולי שולמית"
+      },
+      {
+        "position": 29,
+        "name": "שקד ברק מירית"
+      },
+      {
+        "position": 30,
+        "name": "רובין בילי"
+      },
+      {
+        "position": 31,
+        "name": "בן-טל עומר"
+      },
+      {
+        "position": 32,
+        "name": "בק משה"
+      },
+      {
+        "position": 33,
+        "name": "אסקרוב ברוך"
+      },
+      {
+        "position": 34,
+        "name": "גדלקין אלכסנדר"
+      }
+    ]
+  },
+  "democrats": {
+    "title": "הדמוקרטים בראשות יאיר גולן",
+    "url": "https://www.gov.il/he/pages/hademokratim_list17",
+    "total_candidates": 120,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "גולן יאיר"
+      },
+      {
+        "position": 2,
+        "name": "לזימי נעמה"
+      },
+      {
+        "position": 3,
+        "name": "קריב גלעד"
+      },
+      {
+        "position": 4,
+        "name": "רייטן מרום אפרת"
+      },
+      {
+        "position": 5,
+        "name": "פינק יאיר"
+      },
+      {
+        "position": 6,
+        "name": "לסקי שוץ גבריאלה"
+      },
+      {
+        "position": 7,
+        "name": "רונן עמרי"
+      },
+      {
+        "position": 8,
+        "name": "רוזין מיכל"
+      },
+      {
+        "position": 9,
+        "name": "רדמן משה"
+      },
+      {
+        "position": 10,
+        "name": "בשיר סומייה"
+      },
+      {
+        "position": 11,
+        "name": "שפר נמרוד"
+      },
+      {
+        "position": 12,
+        "name": "זר קצנשטיין מורן"
+      },
+      {
+        "position": 13,
+        "name": "דאבוש אבי"
+      },
+      {
+        "position": 14,
+        "name": "מואטי אמילי חיה"
+      },
+      {
+        "position": 15,
+        "name": "אביטל תומר"
+      },
+      {
+        "position": 16,
+        "name": "רוזוליו נאווה חיה"
+      },
+      {
+        "position": 17,
+        "name": "שפע רם"
+      },
+      {
+        "position": 18,
+        "name": "סלאלחה עלי"
+      },
+      {
+        "position": 19,
+        "name": "סיון הופמן רתם"
+      },
+      {
+        "position": 20,
+        "name": "עציון ערן"
+      },
+      {
+        "position": 21,
+        "name": "מישל מורן"
+      },
+      {
+        "position": 22,
+        "name": "רז מוסי"
+      },
+      {
+        "position": 23,
+        "name": "סלאמנה גאלב"
+      },
+      {
+        "position": 24,
+        "name": "פיאסצקי מורג קטי"
+      },
+      {
+        "position": 25,
+        "name": "ח'ניפס אמיר"
+      },
+      {
+        "position": 26,
+        "name": "ברוך רון מהרטה"
+      },
+      {
+        "position": 27,
+        "name": "בדיר עאיד"
+      },
+      {
+        "position": 28,
+        "name": "אריאלי חן"
+      },
+      {
+        "position": 29,
+        "name": "ביילין גיל"
+      },
+      {
+        "position": 30,
+        "name": "כהן פארן יעל"
+      },
+      {
+        "position": 31,
+        "name": "ניסן ערן שלמה"
+      },
+      {
+        "position": 32,
+        "name": "רגולסקי הדס"
+      },
+      {
+        "position": 33,
+        "name": "באר אביתר"
+      },
+      {
+        "position": 34,
+        "name": "וורטמן שהם ענבל"
+      },
+      {
+        "position": 35,
+        "name": "מיניץ' בנימין דניאל"
+      },
+      {
+        "position": 36,
+        "name": "הופמן אגיב לי"
+      },
+      {
+        "position": 37,
+        "name": "ניב ירון"
+      },
+      {
+        "position": 38,
+        "name": "גולדמן אליס"
+      },
+      {
+        "position": 39,
+        "name": "אגמי יואב"
+      },
+      {
+        "position": 40,
+        "name": "ליכטנשטיין אבישי"
+      },
+      {
+        "position": 41,
+        "name": "דה לם אולביה עמנואל"
+      },
+      {
+        "position": 42,
+        "name": "בן שאול ישראל צבי"
+      },
+      {
+        "position": 43,
+        "name": "לובטון-גרנות עומר"
+      },
+      {
+        "position": 44,
+        "name": "ייגר זלינגר הדס"
+      },
+      {
+        "position": 45,
+        "name": "ראובני הגר"
+      },
+      {
+        "position": 46,
+        "name": "גיל און יהודית"
+      },
+      {
+        "position": 47,
+        "name": "נבו אביטבול טל"
+      },
+      {
+        "position": 48,
+        "name": "אלפסי סימון"
+      },
+      {
+        "position": 49,
+        "name": "רזניק תומר"
+      },
+      {
+        "position": 50,
+        "name": "לוין דגן"
+      },
+      {
+        "position": 51,
+        "name": "חוסקוביץ סילביו גבריאל"
+      },
+      {
+        "position": 52,
+        "name": "מורג דרור איש שלום"
+      },
+      {
+        "position": 53,
+        "name": "כהן חיה"
+      },
+      {
+        "position": 54,
+        "name": "ביטי (שלוח) אורלי"
+      },
+      {
+        "position": 55,
+        "name": "נורי שקד מאיה"
+      },
+      {
+        "position": 56,
+        "name": "בן יהודה ערן"
+      },
+      {
+        "position": 57,
+        "name": "ברזילי רועי"
+      },
+      {
+        "position": 58,
+        "name": "פרדס אברהם"
+      },
+      {
+        "position": 59,
+        "name": "זועבי עבד אלכרים"
+      },
+      {
+        "position": 60,
+        "name": "בוטנסקי נגה"
+      },
+      {
+        "position": 61,
+        "name": "אורליק שאנה"
+      },
+      {
+        "position": 62,
+        "name": "בונה רות מלכה"
+      },
+      {
+        "position": 63,
+        "name": "שוורץ יובל"
+      },
+      {
+        "position": 64,
+        "name": "אבו ריאש פרחאן"
+      },
+      {
+        "position": 65,
+        "name": "בן דוד גל"
+      },
+      {
+        "position": 66,
+        "name": "זאנגי הדס"
+      },
+      {
+        "position": 67,
+        "name": "ברקאי מירב"
+      },
+      {
+        "position": 68,
+        "name": "זקהיים גראוס אסתי"
+      },
+      {
+        "position": 69,
+        "name": "אפרתי יוסף"
+      },
+      {
+        "position": 70,
+        "name": "מסעד ניקולא"
+      },
+      {
+        "position": 71,
+        "name": "לוינשטין לימור"
+      },
+      {
+        "position": 72,
+        "name": "פאנץ טל"
+      },
+      {
+        "position": 73,
+        "name": "מרנדה אורית"
+      },
+      {
+        "position": 74,
+        "name": "סלע-וגר מגי"
+      },
+      {
+        "position": 75,
+        "name": "גדות זרצנסקי ירון"
+      },
+      {
+        "position": 76,
+        "name": "כהן דפנה"
+      },
+      {
+        "position": 77,
+        "name": "בית הלחמי חנה"
+      },
+      {
+        "position": 78,
+        "name": "כהן תניה סוניה"
+      },
+      {
+        "position": 79,
+        "name": "צמח פז"
+      },
+      {
+        "position": 80,
+        "name": "אזולאי דניאל"
+      },
+      {
+        "position": 81,
+        "name": "שלום שרון"
+      },
+      {
+        "position": 82,
+        "name": "מיכאלי עידו"
+      },
+      {
+        "position": 83,
+        "name": "כהן דקלה"
+      },
+      {
+        "position": 84,
+        "name": "סגמן רועי"
+      },
+      {
+        "position": 85,
+        "name": "פלד אבשלום"
+      },
+      {
+        "position": 86,
+        "name": "איזקוב נינה רחל"
+      },
+      {
+        "position": 87,
+        "name": "ניר צביקה"
+      },
+      {
+        "position": 88,
+        "name": "רובינשטיין ינאי"
+      },
+      {
+        "position": 89,
+        "name": "דבורי אברהם מנצ'ר"
+      },
+      {
+        "position": 90,
+        "name": "קנדל יורם"
+      },
+      {
+        "position": 91,
+        "name": "שיינדורף מאשה"
+      },
+      {
+        "position": 92,
+        "name": "ורטון לורה"
+      },
+      {
+        "position": 93,
+        "name": "פרץ חנה שיינדל"
+      },
+      {
+        "position": 94,
+        "name": "פילמוס אירית"
+      },
+      {
+        "position": 95,
+        "name": "רוז אליגון תלמה"
+      },
+      {
+        "position": 96,
+        "name": "דור שמואל"
+      },
+      {
+        "position": 97,
+        "name": "רדאי פרנסס רות"
+      },
+      {
+        "position": 98,
+        "name": "צוקר דוד"
+      },
+      {
+        "position": 99,
+        "name": "מורציאנו יוסף"
+      },
+      {
+        "position": 100,
+        "name": "צוייג בנימין"
+      },
+      {
+        "position": 101,
+        "name": "ליפשיץ יוכבד"
+      },
+      {
+        "position": 102,
+        "name": "בירן מיכל"
+      },
+      {
+        "position": 103,
+        "name": "גבארה חוסניה"
+      },
+      {
+        "position": 104,
+        "name": "מאור ענת"
+      },
+      {
+        "position": 105,
+        "name": "לובלסקי מאשה"
+      },
+      {
+        "position": 106,
+        "name": "סרטני אמירה"
+      },
+      {
+        "position": 107,
+        "name": "פורז פוזמנטיר אברהם"
+      },
+      {
+        "position": 108,
+        "name": "ביילין יוסף"
+      },
+      {
+        "position": 109,
+        "name": "זנדברג תמר"
+      },
+      {
+        "position": 110,
+        "name": "מצנע עמרם"
+      },
+      {
+        "position": 111,
+        "name": "גולדמן מיכה"
+      },
+      {
+        "position": 112,
+        "name": "כהן רן"
+      },
+      {
+        "position": 113,
+        "name": "כהן רענן"
+      },
+      {
+        "position": 114,
+        "name": "וילן אבשלום"
+      },
+      {
+        "position": 115,
+        "name": "שיטרית שמעון"
+      },
+      {
+        "position": 116,
+        "name": "גלאון זהבה"
+      },
+      {
+        "position": 117,
+        "name": "אביטל קולט"
+      },
+      {
+        "position": 118,
+        "name": "אורון חיים"
+      },
+      {
+        "position": 119,
+        "name": "סנה אפרים"
+      },
+      {
+        "position": 120,
+        "name": "בר עם עוזי"
+      }
+    ]
+  },
+  "shas": {
+    "title": "התאחדות הספרדים שומרי תורה תנועתו של מרן הרב עובדיה יוסף זצ\"ל",
+    "url": "https://www.gov.il/he/pages/shas_list19",
+    "total_candidates": 120,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "דרעי אריה מכלוף"
+      },
+      {
+        "position": 2,
+        "name": "אזולאי ינון"
+      },
+      {
+        "position": 3,
+        "name": "מלכיאלי מיכאל משה"
+      },
+      {
+        "position": 4,
+        "name": "בן צור יואב"
+      },
+      {
+        "position": 5,
+        "name": "ביטון חיים"
+      },
+      {
+        "position": 6,
+        "name": "עמוס דרור דוד"
+      },
+      {
+        "position": 7,
+        "name": "אבוטבול משה"
+      },
+      {
+        "position": 8,
+        "name": "בוסו אוריאל מנחם"
+      },
+      {
+        "position": 9,
+        "name": "טייב יוסף"
+      },
+      {
+        "position": 10,
+        "name": "מישרקי יונתן"
+      },
+      {
+        "position": 11,
+        "name": "אילנתנוב יוסי"
+      },
+      {
+        "position": 12,
+        "name": "מלול ארז"
+      },
+      {
+        "position": 13,
+        "name": "מושיאשוילי סימיון"
+      },
+      {
+        "position": 14,
+        "name": "כהן אוריאל"
+      },
+      {
+        "position": 15,
+        "name": "צדקה יעקב ישראל"
+      },
+      {
+        "position": 16,
+        "name": "נמני רפאל"
+      },
+      {
+        "position": 17,
+        "name": "בן נאים משה"
+      },
+      {
+        "position": 18,
+        "name": "רפאל ערן אביחי משיח"
+      },
+      {
+        "position": 19,
+        "name": "אשר בנימין אריאל"
+      },
+      {
+        "position": 20,
+        "name": "מור יוסף נתנאל"
+      },
+      {
+        "position": 21,
+        "name": "בוטבול יהודה"
+      },
+      {
+        "position": 22,
+        "name": "קקון יוסי יוסף חיים"
+      },
+      {
+        "position": 23,
+        "name": "זבולון אלחנן"
+      },
+      {
+        "position": 24,
+        "name": "אלמלח יצחק"
+      },
+      {
+        "position": 25,
+        "name": "אלפלס נתנאל"
+      },
+      {
+        "position": 26,
+        "name": "אמסלם אברהם אבי"
+      },
+      {
+        "position": 27,
+        "name": "כהן רפאל"
+      },
+      {
+        "position": 28,
+        "name": "גבאי אורן"
+      },
+      {
+        "position": 29,
+        "name": "אלחרר שלמה"
+      },
+      {
+        "position": 30,
+        "name": "סברלי חיים"
+      },
+      {
+        "position": 31,
+        "name": "עזרן שלמה"
+      },
+      {
+        "position": 32,
+        "name": "סיתאלכיל בני"
+      },
+      {
+        "position": 33,
+        "name": "ברנז רפאל"
+      },
+      {
+        "position": 34,
+        "name": "מרציאנו יעקב דוד"
+      },
+      {
+        "position": 35,
+        "name": "ביטון עמי"
+      },
+      {
+        "position": 36,
+        "name": "אשש מאור מאיר"
+      },
+      {
+        "position": 37,
+        "name": "גדסי אלדד פנחס"
+      },
+      {
+        "position": 38,
+        "name": "וקנין יחיאל"
+      },
+      {
+        "position": 39,
+        "name": "פרץ יגאל"
+      },
+      {
+        "position": 40,
+        "name": "חנו יניב"
+      },
+      {
+        "position": 41,
+        "name": "מלכה שלמה"
+      },
+      {
+        "position": 42,
+        "name": "אדמוני יעקב"
+      },
+      {
+        "position": 43,
+        "name": "ויזגן מרדכי"
+      },
+      {
+        "position": 44,
+        "name": "טנגי יצחק"
+      },
+      {
+        "position": 45,
+        "name": "סויונוב שלמה זלמן"
+      },
+      {
+        "position": 46,
+        "name": "אשרם יגאל כלפו"
+      },
+      {
+        "position": 47,
+        "name": "דוד בצלאל"
+      },
+      {
+        "position": 48,
+        "name": "שושן אליהו דוד"
+      },
+      {
+        "position": 49,
+        "name": "כהן נפתלי"
+      },
+      {
+        "position": 50,
+        "name": "צרויה יחיאל"
+      },
+      {
+        "position": 51,
+        "name": "אמרון חיים"
+      },
+      {
+        "position": 52,
+        "name": "מרציאנו שמואל"
+      },
+      {
+        "position": 53,
+        "name": "אסולין צבי"
+      },
+      {
+        "position": 54,
+        "name": "גולן אריאל יקותיאל"
+      },
+      {
+        "position": 55,
+        "name": "מועלם יוסף חיים"
+      },
+      {
+        "position": 56,
+        "name": "מתתיהו טל"
+      },
+      {
+        "position": 57,
+        "name": "עובדיה כפיר"
+      },
+      {
+        "position": 58,
+        "name": "אנקונינה אלי"
+      },
+      {
+        "position": 59,
+        "name": "אוקנין יוסף"
+      },
+      {
+        "position": 60,
+        "name": "דוד מנחם"
+      },
+      {
+        "position": 61,
+        "name": "פרץ שלמה נתנאל"
+      },
+      {
+        "position": 62,
+        "name": "זיגדון חנן גבי"
+      },
+      {
+        "position": 63,
+        "name": "קרעי אליהו"
+      },
+      {
+        "position": 64,
+        "name": "אוזן אורי"
+      },
+      {
+        "position": 65,
+        "name": "רבוך יעקב ישראל"
+      },
+      {
+        "position": 66,
+        "name": "חדד יצחק"
+      },
+      {
+        "position": 67,
+        "name": "שרביט אברהם"
+      },
+      {
+        "position": 68,
+        "name": "חדד שלמה"
+      },
+      {
+        "position": 69,
+        "name": "פנחסי מרדכי חי"
+      },
+      {
+        "position": 70,
+        "name": "תורגמן יוסף"
+      },
+      {
+        "position": 71,
+        "name": "יפת משה"
+      },
+      {
+        "position": 72,
+        "name": "בראנס יוסף-חיים"
+      },
+      {
+        "position": 73,
+        "name": "קייקוב רוברט ראובן"
+      },
+      {
+        "position": 74,
+        "name": "מצליח ינון"
+      },
+      {
+        "position": 75,
+        "name": "כפרי רענן"
+      },
+      {
+        "position": 76,
+        "name": "טקטוק דורון שושן"
+      },
+      {
+        "position": 77,
+        "name": "נימני אפריים אפי"
+      },
+      {
+        "position": 78,
+        "name": "מנחם אלעד"
+      },
+      {
+        "position": 79,
+        "name": "פילו ראובן יוסף"
+      },
+      {
+        "position": 80,
+        "name": "ברנס מאיר דוד"
+      },
+      {
+        "position": 81,
+        "name": "חיים יהודה"
+      },
+      {
+        "position": 82,
+        "name": "ממליה שלום"
+      },
+      {
+        "position": 83,
+        "name": "באחג' אליהו דוד"
+      },
+      {
+        "position": 84,
+        "name": "בוטבול מלאכי"
+      },
+      {
+        "position": 85,
+        "name": "אביטל אברהם"
+      },
+      {
+        "position": 86,
+        "name": "נדר ישראל"
+      },
+      {
+        "position": 87,
+        "name": "מנחם יונתן"
+      },
+      {
+        "position": 88,
+        "name": "בלעיש אליהו מאיר"
+      },
+      {
+        "position": 89,
+        "name": "בצלאלי אבטליון"
+      },
+      {
+        "position": 90,
+        "name": "קזיוף שי"
+      },
+      {
+        "position": 91,
+        "name": "טרוזמן עדי"
+      },
+      {
+        "position": 92,
+        "name": "דנינו יהודה"
+      },
+      {
+        "position": 93,
+        "name": "אטיאס אברהם ישראל"
+      },
+      {
+        "position": 94,
+        "name": "דרעי אבי"
+      },
+      {
+        "position": 95,
+        "name": "זגדון ראובן"
+      },
+      {
+        "position": 96,
+        "name": "מלייב ישראל"
+      },
+      {
+        "position": 97,
+        "name": "קקון מאיר ישראל"
+      },
+      {
+        "position": 98,
+        "name": "אבוחצירא דן בנימין"
+      },
+      {
+        "position": 99,
+        "name": "דנינו יעקב"
+      },
+      {
+        "position": 100,
+        "name": "חקשורי שי"
+      },
+      {
+        "position": 101,
+        "name": "סויסה אשר"
+      },
+      {
+        "position": 102,
+        "name": "כלפון עמי"
+      },
+      {
+        "position": 103,
+        "name": "כהן רועי"
+      },
+      {
+        "position": 104,
+        "name": "חדד אברהם"
+      },
+      {
+        "position": 105,
+        "name": "אבולוף הכהן יניב"
+      },
+      {
+        "position": 106,
+        "name": "נגר אסף"
+      },
+      {
+        "position": 107,
+        "name": "אביטן שמעון"
+      },
+      {
+        "position": 108,
+        "name": "בנסל דוד"
+      },
+      {
+        "position": 109,
+        "name": "קסטוריאנו עמיאל"
+      },
+      {
+        "position": 110,
+        "name": "דוידוב מיכאל"
+      },
+      {
+        "position": 111,
+        "name": "נגר אברהם"
+      },
+      {
+        "position": 112,
+        "name": "אברקי דוד"
+      },
+      {
+        "position": 113,
+        "name": "יניב מיכאל"
+      },
+      {
+        "position": 114,
+        "name": "כהן אהרן מרדכי"
+      },
+      {
+        "position": 115,
+        "name": "בן-שטרית עדן"
+      },
+      {
+        "position": 116,
+        "name": "פרץ שלמה"
+      },
+      {
+        "position": 117,
+        "name": "חוגי איציק"
+      },
+      {
+        "position": 118,
+        "name": "אביטל חגי"
+      },
+      {
+        "position": 119,
+        "name": "חזן שמואל"
+      },
+      {
+        "position": 120,
+        "name": "מרגי יעקב"
+      }
+    ]
+  },
+  "yahadut_hatorah": {
+    "title": "יהדות התורה והשבת אגודת ישראל - דגל התורה",
+    "url": "https://www.gov.il/he/pages/yahadut-degel_list37",
+    "total_candidates": 120,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "אשר יעקב"
+      },
+      {
+        "position": 2,
+        "name": "גולדקנופ יצחק יששכר"
+      },
+      {
+        "position": 3,
+        "name": "פינדרוס יצחק זאב"
+      },
+      {
+        "position": 4,
+        "name": "פרוש מאיר"
+      },
+      {
+        "position": 5,
+        "name": "רוזנטל משה עזריאל"
+      },
+      {
+        "position": 6,
+        "name": "שטארק אלי"
+      },
+      {
+        "position": 7,
+        "name": "וויספיש יהודה לייב"
+      },
+      {
+        "position": 8,
+        "name": "טסלר יואל יעקב"
+      },
+      {
+        "position": 9,
+        "name": "זלץ דוד"
+      },
+      {
+        "position": 10,
+        "name": "אוחנה דוד"
+      },
+      {
+        "position": 11,
+        "name": "רוט משה"
+      },
+      {
+        "position": 12,
+        "name": "ברוכי אליהו"
+      },
+      {
+        "position": 13,
+        "name": "פרוש ישראל"
+      },
+      {
+        "position": 14,
+        "name": "רייך יצחק"
+      },
+      {
+        "position": 15,
+        "name": "באהם יוסף"
+      },
+      {
+        "position": 16,
+        "name": "גוטרמן יעקב אשר"
+      },
+      {
+        "position": 17,
+        "name": "דייטש יוסי"
+      },
+      {
+        "position": 18,
+        "name": "גרינברג שמואל"
+      },
+      {
+        "position": 19,
+        "name": "וינגרטן יחיאל אריה"
+      },
+      {
+        "position": 20,
+        "name": "רביץ יצחק"
+      },
+      {
+        "position": 21,
+        "name": "אברמוביץ פרץ"
+      },
+      {
+        "position": 22,
+        "name": "שפירא מנחם מנדל"
+      },
+      {
+        "position": 23,
+        "name": "כץ חיים מאיר"
+      },
+      {
+        "position": 24,
+        "name": "מורגנשטרן משה דוד"
+      },
+      {
+        "position": 25,
+        "name": "וובר אפרים"
+      },
+      {
+        "position": 26,
+        "name": "ראוכברגר אליעזר צבי"
+      },
+      {
+        "position": 27,
+        "name": "רושגולד אברהם צבי"
+      },
+      {
+        "position": 28,
+        "name": "דייטש אברהם בן ציון"
+      },
+      {
+        "position": 29,
+        "name": "אלבוים מנחם"
+      },
+      {
+        "position": 30,
+        "name": "אלפר מרדכי מיכאל"
+      },
+      {
+        "position": 31,
+        "name": "ויזל חיים מאיר"
+      },
+      {
+        "position": 32,
+        "name": "קלרמן שמעון ישראל"
+      },
+      {
+        "position": 33,
+        "name": "ויסמן ישעיהו יצחק"
+      },
+      {
+        "position": 34,
+        "name": "גולומב ישראל יצחק"
+      },
+      {
+        "position": 35,
+        "name": "ברסלר אברהם אלכסנדר זיסקינד"
+      },
+      {
+        "position": 36,
+        "name": "שטרית יוסף שאול"
+      },
+      {
+        "position": 37,
+        "name": "הקר בנימין זאב"
+      },
+      {
+        "position": 38,
+        "name": "בדוש פנחס שלום"
+      },
+      {
+        "position": 39,
+        "name": "מנדל יהושע"
+      },
+      {
+        "position": 40,
+        "name": "יברוב יהודה"
+      },
+      {
+        "position": 41,
+        "name": "קליין נחום יחיאל"
+      },
+      {
+        "position": 42,
+        "name": "בלוי מרדכי זאב"
+      },
+      {
+        "position": 43,
+        "name": "דירנפלד עמרם"
+      },
+      {
+        "position": 44,
+        "name": "סירוקה פנחס דוד"
+      },
+      {
+        "position": 45,
+        "name": "טירהויז אהרן"
+      },
+      {
+        "position": 46,
+        "name": "ברנר יצחק דב"
+      },
+      {
+        "position": 47,
+        "name": "דייטש שלמה"
+      },
+      {
+        "position": 48,
+        "name": "יפה מאיר"
+      },
+      {
+        "position": 49,
+        "name": "לוצקין ברוך אליעזר"
+      },
+      {
+        "position": 50,
+        "name": "סברדלוב ישראל מאיר"
+      },
+      {
+        "position": 51,
+        "name": "רובינשטיין הלל"
+      },
+      {
+        "position": 52,
+        "name": "שטרן אברהם פנחס"
+      },
+      {
+        "position": 53,
+        "name": "גולדברג שמעון"
+      },
+      {
+        "position": 54,
+        "name": "פולק שלמה אפרים"
+      },
+      {
+        "position": 55,
+        "name": "קליין יצחק אהרן"
+      },
+      {
+        "position": 56,
+        "name": "ברונר אליהו יוסף"
+      },
+      {
+        "position": 57,
+        "name": "פרנקל אברהם נחמן"
+      },
+      {
+        "position": 58,
+        "name": "ויזל אפרים פישל"
+      },
+      {
+        "position": 59,
+        "name": "שכטר מאיר"
+      },
+      {
+        "position": 60,
+        "name": "דיסלר משה אורי"
+      },
+      {
+        "position": 61,
+        "name": "לברון צבי יוסף"
+      },
+      {
+        "position": 62,
+        "name": "גיטלר נחום אהרן"
+      },
+      {
+        "position": 63,
+        "name": "רוטנר דוד נחמן"
+      },
+      {
+        "position": 64,
+        "name": "סילברסטין ישראל מרדכי"
+      },
+      {
+        "position": 65,
+        "name": "גרליץ מיכאל דוב"
+      },
+      {
+        "position": 66,
+        "name": "רוזנשטין יעקב צבי"
+      },
+      {
+        "position": 67,
+        "name": "שוק שמואל"
+      },
+      {
+        "position": 68,
+        "name": "ברילנט שלמה"
+      },
+      {
+        "position": 69,
+        "name": "ברים יצחק מאיר"
+      },
+      {
+        "position": 70,
+        "name": "בן גד אפרים יוחנן"
+      },
+      {
+        "position": 71,
+        "name": "ויכלדר חיים ברוך"
+      },
+      {
+        "position": 72,
+        "name": "פינקל דוד"
+      },
+      {
+        "position": 73,
+        "name": "בקנרוט יחזקאל שרגא"
+      },
+      {
+        "position": 74,
+        "name": "רייכמן חיים יהודה"
+      },
+      {
+        "position": 75,
+        "name": "כהן ישראל חיים"
+      },
+      {
+        "position": 76,
+        "name": "גרבר יעקב"
+      },
+      {
+        "position": 77,
+        "name": "מילר ישראל"
+      },
+      {
+        "position": 78,
+        "name": "יעקבי אבשלום"
+      },
+      {
+        "position": 79,
+        "name": "שפיצר דוד"
+      },
+      {
+        "position": 80,
+        "name": "עמר לירון"
+      },
+      {
+        "position": 81,
+        "name": "זורגר יעקב חיים"
+      },
+      {
+        "position": 82,
+        "name": "גולד מנחם מנדל"
+      },
+      {
+        "position": 83,
+        "name": "פרויליך יואל"
+      },
+      {
+        "position": 84,
+        "name": "הר אבן אביר"
+      },
+      {
+        "position": 85,
+        "name": "שטרן אברהם"
+      },
+      {
+        "position": 86,
+        "name": "אלקיים עופר"
+      },
+      {
+        "position": 87,
+        "name": "גליק בנימין זאב"
+      },
+      {
+        "position": 88,
+        "name": "עזרא עופר"
+      },
+      {
+        "position": 89,
+        "name": "גרינוולד יעקב"
+      },
+      {
+        "position": 90,
+        "name": "ויסנשטרן אלקנה"
+      },
+      {
+        "position": 91,
+        "name": "גנץ יעקב יוסף"
+      },
+      {
+        "position": 92,
+        "name": "זיסמן אריה יהודה"
+      },
+      {
+        "position": 93,
+        "name": "לייזר ישראל"
+      },
+      {
+        "position": 94,
+        "name": "גולדנטל שלמה יהודה"
+      },
+      {
+        "position": 95,
+        "name": "רודיך מנחם מנדל"
+      },
+      {
+        "position": 96,
+        "name": "מילר דוד"
+      },
+      {
+        "position": 97,
+        "name": "פרנקל ישראל"
+      },
+      {
+        "position": 98,
+        "name": "וייס אפרים"
+      },
+      {
+        "position": 99,
+        "name": "גרוס חיים"
+      },
+      {
+        "position": 100,
+        "name": "מושקוביץ יונה"
+      },
+      {
+        "position": 101,
+        "name": "לוין אברהם יעקב"
+      },
+      {
+        "position": 102,
+        "name": "פרנק משה"
+      },
+      {
+        "position": 103,
+        "name": "ברים חיים אורי"
+      },
+      {
+        "position": 104,
+        "name": "ארנטרוי אלחנן"
+      },
+      {
+        "position": 105,
+        "name": "ברנשטיין מנחם שמעון שלמה אריה"
+      },
+      {
+        "position": 106,
+        "name": "מן משה"
+      },
+      {
+        "position": 107,
+        "name": "קליין חיים"
+      },
+      {
+        "position": 108,
+        "name": "שורץ מנחם"
+      },
+      {
+        "position": 109,
+        "name": "גפני אליהו"
+      },
+      {
+        "position": 110,
+        "name": "ויזבינסקי יעקב"
+      },
+      {
+        "position": 111,
+        "name": "לנדאו יחזקאל שאול"
+      },
+      {
+        "position": 112,
+        "name": "חדד שמעון"
+      },
+      {
+        "position": 113,
+        "name": "יעקובוביץ יוסף צבי"
+      },
+      {
+        "position": 114,
+        "name": "בוימל אריה צבי"
+      },
+      {
+        "position": 115,
+        "name": "ברטלר יצחק"
+      },
+      {
+        "position": 116,
+        "name": "סורוצקין אליעזר"
+      },
+      {
+        "position": 117,
+        "name": "שורץ אברהם"
+      },
+      {
+        "position": 118,
+        "name": "מקלב ישראל מאיר אורי"
+      },
+      {
+        "position": 119,
+        "name": "זייברט חנוך"
+      },
+      {
+        "position": 120,
+        "name": "גפני משה רפאל"
+      }
+    ]
+  },
+  "otzma_yehudit": {
+    "title": "עוצמה יהודית",
+    "url": "https://www.gov.il/he/pages/yehudit-meuhedet_list14",
+    "total_candidates": 35,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "בן גביר איתמר"
+      },
+      {
+        "position": 2,
+        "name": "גוטליב רויטל טלי"
+      },
+      {
+        "position": 3,
+        "name": "וסרלאוף יצחק שמעון"
+      },
+      {
+        "position": 4,
+        "name": "אליהו עמיחי"
+      },
+      {
+        "position": 5,
+        "name": "סון הר-מלך לימור"
+      },
+      {
+        "position": 6,
+        "name": "קרויזר יצחק"
+      },
+      {
+        "position": 7,
+        "name": "דורפמן חנמאל שיראי"
+      },
+      {
+        "position": 8,
+        "name": "אליהו צחי יצחק"
+      },
+      {
+        "position": 9,
+        "name": "גולדברגר יוסף יצחק"
+      },
+      {
+        "position": 10,
+        "name": "ניימן איתיאל יעקב"
+      },
+      {
+        "position": 11,
+        "name": "בבלי דוד מנחם"
+      },
+      {
+        "position": 12,
+        "name": "פליישר ישי יעקב"
+      },
+      {
+        "position": 13,
+        "name": "מירזאי שירן"
+      },
+      {
+        "position": 14,
+        "name": "גולן שימי"
+      },
+      {
+        "position": 15,
+        "name": "בדלוב יניב"
+      },
+      {
+        "position": 16,
+        "name": "מסלה אייצ'לותם"
+      },
+      {
+        "position": 17,
+        "name": "מזוז גד אפרים"
+      },
+      {
+        "position": 18,
+        "name": "פריזיס מרדכי"
+      },
+      {
+        "position": 19,
+        "name": "עמר אהרון"
+      },
+      {
+        "position": 20,
+        "name": "יומטוביאן אור אליה"
+      },
+      {
+        "position": 21,
+        "name": "פוני שירה"
+      },
+      {
+        "position": 22,
+        "name": "זיתונה תירן"
+      },
+      {
+        "position": 23,
+        "name": "מיוחס פנחס יעקב"
+      },
+      {
+        "position": 24,
+        "name": "שוקר לירן"
+      },
+      {
+        "position": 25,
+        "name": "חממי משה"
+      },
+      {
+        "position": 26,
+        "name": "בידוש קרן"
+      },
+      {
+        "position": 27,
+        "name": "שאלתיאל רועי"
+      },
+      {
+        "position": 28,
+        "name": "גרוסמן ידידיה-חיים"
+      },
+      {
+        "position": 29,
+        "name": "אוחנה דרור מאיר"
+      },
+      {
+        "position": 30,
+        "name": "איסאקוב רוני רונן"
+      },
+      {
+        "position": 31,
+        "name": "סגל יהונתן יצחק"
+      },
+      {
+        "position": 32,
+        "name": "גולדברג אברהם"
+      },
+      {
+        "position": 33,
+        "name": "פינטו שלמה חכם"
+      },
+      {
+        "position": 34,
+        "name": "גפשטיין דביר רחמים"
+      },
+      {
+        "position": 35,
+        "name": "רחמים שמעון מאיר"
+      }
+    ]
+  },
+  "religious_zionism": {
+    "title": "הציונות הדתית בראשות בצלאל סמוטריץ' וזהות בראשות משה פייגלין",
+    "url": "https://www.gov.il/he/pages/tzionutdatit-zehut_list31",
+    "total_candidates": 34,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "סמוטריץ בצלאל יואל"
+      },
+      {
+        "position": 2,
+        "name": "פייגלין משה זלמן"
+      },
+      {
+        "position": 3,
+        "name": "סטרוק אורית מלכה"
+      },
+      {
+        "position": 4,
+        "name": "רוטמן שמחה דן"
+      },
+      {
+        "position": 5,
+        "name": "מור צבי"
+      },
+      {
+        "position": 6,
+        "name": "איתם איתמר מרדכי"
+      },
+      {
+        "position": 7,
+        "name": "סוכות צבי ידידיה"
+      },
+      {
+        "position": 8,
+        "name": "זאגא יצחק חי"
+      },
+      {
+        "position": 9,
+        "name": "בן חיים רעות"
+      },
+      {
+        "position": 10,
+        "name": "פציניאש וולדמן עומר"
+      },
+      {
+        "position": 11,
+        "name": "מוטר ארקדי"
+      },
+      {
+        "position": 12,
+        "name": "טל אוהד"
+      },
+      {
+        "position": 13,
+        "name": "קירשברג רועי"
+      },
+      {
+        "position": 14,
+        "name": "רחמים עומר"
+      },
+      {
+        "position": 15,
+        "name": "חסון סימון"
+      },
+      {
+        "position": 16,
+        "name": "ששון שמואל"
+      },
+      {
+        "position": 17,
+        "name": "נהיר שיראל"
+      },
+      {
+        "position": 18,
+        "name": "וישינגרד צבי"
+      },
+      {
+        "position": 19,
+        "name": "ברנשטיין איריס"
+      },
+      {
+        "position": 20,
+        "name": "תם איתן"
+      },
+      {
+        "position": 21,
+        "name": "שוורצמן יהודה"
+      },
+      {
+        "position": 22,
+        "name": "פלד משה"
+      },
+      {
+        "position": 23,
+        "name": "איזבוצקי אלעד"
+      },
+      {
+        "position": 24,
+        "name": "בכר יוסף"
+      },
+      {
+        "position": 25,
+        "name": "גרינצייג חגי"
+      },
+      {
+        "position": 26,
+        "name": "זאוברמן נתן משה"
+      },
+      {
+        "position": 27,
+        "name": "טובלסקי סטניסלב"
+      },
+      {
+        "position": 28,
+        "name": "דיסקין אברהם חיים אלבר"
+      },
+      {
+        "position": 29,
+        "name": "לייבלר שולמית אסתר"
+      },
+      {
+        "position": 30,
+        "name": "וולדיגר מיכל מרים"
+      },
+      {
+        "position": 31,
+        "name": "לייבלר אברהם שמואל"
+      },
+      {
+        "position": 32,
+        "name": "שושן יוסף חיים"
+      },
+      {
+        "position": 33,
+        "name": "מענדלסון אלישע"
+      },
+      {
+        "position": 34,
+        "name": "נויבר פליקס"
+      }
+    ]
+  },
+  "raam": {
+    "title": "רע\"ם - הרשימה הערבית המאוחדת",
+    "url": "https://www.gov.il/he/pages/raam_list18",
+    "total_candidates": 73,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "עבאס מנסור"
+      },
+      {
+        "position": 2,
+        "name": "סגלוביץ יואב"
+      },
+      {
+        "position": 3,
+        "name": "טאהא ווליד"
+      },
+      {
+        "position": 4,
+        "name": "אל הואשלה ואליד"
+      },
+      {
+        "position": 5,
+        "name": "ח'טיב יאסין אימאן"
+      },
+      {
+        "position": 6,
+        "name": "חוג'יראת יאסר"
+      },
+      {
+        "position": 7,
+        "name": "אל טורי איברהים"
+      },
+      {
+        "position": 8,
+        "name": "מסרי עבד אל כרים"
+      },
+      {
+        "position": 9,
+        "name": "עזאם עבד אל כרים"
+      },
+      {
+        "position": 10,
+        "name": "אבו לבן אברהים"
+      },
+      {
+        "position": 11,
+        "name": "הייב מוחמד"
+      },
+      {
+        "position": 12,
+        "name": "אבו מוך המאם"
+      },
+      {
+        "position": 13,
+        "name": "אלחרומי יאסר"
+      },
+      {
+        "position": 14,
+        "name": "זבידאת מוחמד"
+      },
+      {
+        "position": 15,
+        "name": "עישאן כמאל"
+      },
+      {
+        "position": 16,
+        "name": "עדוי אשרף"
+      },
+      {
+        "position": 17,
+        "name": "אל עמור סוהיב"
+      },
+      {
+        "position": 18,
+        "name": "זועבי נסר אלדין"
+      },
+      {
+        "position": 19,
+        "name": "חוסין נימר"
+      },
+      {
+        "position": 20,
+        "name": "דהאמשה יחיא"
+      },
+      {
+        "position": 21,
+        "name": "עפאן דאוד"
+      },
+      {
+        "position": 22,
+        "name": "גנאים ראפת"
+      },
+      {
+        "position": 23,
+        "name": "חג'אזי סאלח אנהאר"
+      },
+      {
+        "position": 24,
+        "name": "דראושה באסם"
+      },
+      {
+        "position": 25,
+        "name": "ותד אחמד"
+      },
+      {
+        "position": 26,
+        "name": "אלטורי אדם"
+      },
+      {
+        "position": 27,
+        "name": "חרוב איימן"
+      },
+      {
+        "position": 28,
+        "name": "חמודה חנאן"
+      },
+      {
+        "position": 29,
+        "name": "חמדאן יאסמין"
+      },
+      {
+        "position": 30,
+        "name": "בשותי פאטמה"
+      },
+      {
+        "position": 31,
+        "name": "אמארה דאהר"
+      },
+      {
+        "position": 32,
+        "name": "עתמה עבדו"
+      },
+      {
+        "position": 33,
+        "name": "הייב מוחמד"
+      },
+      {
+        "position": 34,
+        "name": "חסן אחמד"
+      },
+      {
+        "position": 35,
+        "name": "עאסי ריאן חנין"
+      },
+      {
+        "position": 36,
+        "name": "נעראני מוחמד"
+      },
+      {
+        "position": 37,
+        "name": "עבאס מוחמד"
+      },
+      {
+        "position": 38,
+        "name": "חסן מנאל"
+      },
+      {
+        "position": 39,
+        "name": "מנסור זהרה"
+      },
+      {
+        "position": 40,
+        "name": "זריקאת מנאר"
+      },
+      {
+        "position": 41,
+        "name": "חמדאן אדיב"
+      },
+      {
+        "position": 42,
+        "name": "מחאמיד נאיל"
+      },
+      {
+        "position": 43,
+        "name": "עג'אוי פאדי"
+      },
+      {
+        "position": 44,
+        "name": "עוד אללה תחריר"
+      },
+      {
+        "position": 45,
+        "name": "אגבאריה וטפה"
+      },
+      {
+        "position": 46,
+        "name": "ג'לג'ולי עדן"
+      },
+      {
+        "position": 47,
+        "name": "חאמד מוחמד"
+      },
+      {
+        "position": 48,
+        "name": "הייב מייתא"
+      },
+      {
+        "position": 49,
+        "name": "אגבאריה אבראהים"
+      },
+      {
+        "position": 50,
+        "name": "קאדרייה טארק"
+      },
+      {
+        "position": 51,
+        "name": "מוהרה מגד"
+      },
+      {
+        "position": 52,
+        "name": "עפאן ח'ייר"
+      },
+      {
+        "position": 53,
+        "name": "בדר ג'ביילי ח'יתאם"
+      },
+      {
+        "position": 54,
+        "name": "מרעי אחמד"
+      },
+      {
+        "position": 55,
+        "name": "גיוסי עפיף"
+      },
+      {
+        "position": 56,
+        "name": "עומרי אמיר"
+      },
+      {
+        "position": 57,
+        "name": "חוג'יראת חסן"
+      },
+      {
+        "position": 58,
+        "name": "סאלח מחמוד"
+      },
+      {
+        "position": 59,
+        "name": "מינזל זיאד"
+      },
+      {
+        "position": 60,
+        "name": "סמארה מאגדה"
+      },
+      {
+        "position": 61,
+        "name": "אשווי סאמי"
+      },
+      {
+        "position": 62,
+        "name": "טאהא כאיד"
+      },
+      {
+        "position": 63,
+        "name": "הייב ממדוח"
+      },
+      {
+        "position": 64,
+        "name": "רעד מוחמד"
+      },
+      {
+        "position": 65,
+        "name": "הינדאוי שימא"
+      },
+      {
+        "position": 66,
+        "name": "אבו עראר טלב"
+      },
+      {
+        "position": 67,
+        "name": "אל עמור אבראהים"
+      },
+      {
+        "position": 68,
+        "name": "אבו מדע'ם עטא"
+      },
+      {
+        "position": 69,
+        "name": "אל קצאצי גומעה"
+      },
+      {
+        "position": 70,
+        "name": "גנאים מסעוד"
+      },
+      {
+        "position": 71,
+        "name": "גנאים מאזן"
+      },
+      {
+        "position": 72,
+        "name": "צרצור אברהים"
+      },
+      {
+        "position": 73,
+        "name": "דהאמשה עבד אלמאלכ"
+      }
+    ]
+  },
+  "hadash_taal": {
+    "title": "הרשימה המשותפת",
+    "url": "https://www.gov.il/he/pages/hareshima-hameshutefet_list35",
+    "total_candidates": 120,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "גבארין יוסף"
+      },
+      {
+        "position": 2,
+        "name": "טיבי אחמד"
+      },
+      {
+        "position": 3,
+        "name": "אבו שחאדה סאמי"
+      },
+      {
+        "position": 4,
+        "name": "ג'טאס פאתן"
+      },
+      {
+        "position": 5,
+        "name": "עואודה בכר"
+      },
+      {
+        "position": 6,
+        "name": "כסיף עופר"
+      },
+      {
+        "position": 7,
+        "name": "עטאונה יוסף"
+      },
+      {
+        "position": 8,
+        "name": "כרכבי סבאח מהא"
+      },
+      {
+        "position": 9,
+        "name": "דראושה אחמד"
+      },
+      {
+        "position": 10,
+        "name": "ושאחי נהאיה"
+      },
+      {
+        "position": 11,
+        "name": "אלנסאסרה חסן"
+      },
+      {
+        "position": 12,
+        "name": "זחאלקה האיתם"
+      },
+      {
+        "position": 13,
+        "name": "נאטור איאס"
+      },
+      {
+        "position": 14,
+        "name": "עבדאללה ג'סאן"
+      },
+      {
+        "position": 15,
+        "name": "נוי אורלי"
+      },
+      {
+        "position": 16,
+        "name": "סטולר מור שושן"
+      },
+      {
+        "position": 17,
+        "name": "קעדאן איעתמאד"
+      },
+      {
+        "position": 18,
+        "name": "ואכד עומר"
+      },
+      {
+        "position": 19,
+        "name": "מיעארי מואייד"
+      },
+      {
+        "position": 20,
+        "name": "גזאווי גאנם"
+      },
+      {
+        "position": 21,
+        "name": "זועבי אומניה"
+      },
+      {
+        "position": 22,
+        "name": "סנעאללה נסר"
+      },
+      {
+        "position": 23,
+        "name": "ח'וריה סרי"
+      },
+      {
+        "position": 24,
+        "name": "כבהה לאית"
+      },
+      {
+        "position": 25,
+        "name": "קעדאן וליד"
+      },
+      {
+        "position": 26,
+        "name": "נועה לוי"
+      },
+      {
+        "position": 27,
+        "name": "טאהא עמאר"
+      },
+      {
+        "position": 28,
+        "name": "אבו גררה יונס"
+      },
+      {
+        "position": 29,
+        "name": "חזאן רים"
+      },
+      {
+        "position": 30,
+        "name": "אבו אחמד ואפי"
+      },
+      {
+        "position": 31,
+        "name": "שוקיר משעור רודינה"
+      },
+      {
+        "position": 32,
+        "name": "ג'בארה אלמאסה"
+      },
+      {
+        "position": 33,
+        "name": "אבו יונס ג'יהאד"
+      },
+      {
+        "position": 34,
+        "name": "פאהום שמא רנא"
+      },
+      {
+        "position": 35,
+        "name": "עודה סלאם"
+      },
+      {
+        "position": 36,
+        "name": "יורן אבינעם"
+      },
+      {
+        "position": 37,
+        "name": "ויצמן דיאמונד עינאת"
+      },
+      {
+        "position": 38,
+        "name": "אבו אל זלף פוואז"
+      },
+      {
+        "position": 39,
+        "name": "עואד מרים"
+      },
+      {
+        "position": 40,
+        "name": "פרח מרים"
+      },
+      {
+        "position": 41,
+        "name": "מרגלית דויד"
+      },
+      {
+        "position": 42,
+        "name": "זהר רנא"
+      },
+      {
+        "position": 43,
+        "name": "אגבאריה מוחמד"
+      },
+      {
+        "position": 44,
+        "name": "עלי סאלח וסאם"
+      },
+      {
+        "position": 45,
+        "name": "קיים תאופיק"
+      },
+      {
+        "position": 46,
+        "name": "רביע עומר"
+      },
+      {
+        "position": 47,
+        "name": "עמר שיף נטע"
+      },
+      {
+        "position": 48,
+        "name": "נח'אש בשאר"
+      },
+      {
+        "position": 49,
+        "name": "חידר ראמי"
+      },
+      {
+        "position": 50,
+        "name": "שואהנה זכי"
+      },
+      {
+        "position": 51,
+        "name": "אבו חוסין גמיל"
+      },
+      {
+        "position": 52,
+        "name": "ראס מגד"
+      },
+      {
+        "position": 53,
+        "name": "עמר תאודור אריאל"
+      },
+      {
+        "position": 54,
+        "name": "עואד חוסין"
+      },
+      {
+        "position": 55,
+        "name": "שקור בסאם"
+      },
+      {
+        "position": 56,
+        "name": "אחמד כמאל"
+      },
+      {
+        "position": 57,
+        "name": "סכסכ עומר"
+      },
+      {
+        "position": 58,
+        "name": "בדר נוהא"
+      },
+      {
+        "position": 59,
+        "name": "זידאן שווירי שאדי"
+      },
+      {
+        "position": 60,
+        "name": "סאלם יוסף"
+      },
+      {
+        "position": 61,
+        "name": "רינאוי מוחמד"
+      },
+      {
+        "position": 62,
+        "name": "חאג' יחיא מטאנע"
+      },
+      {
+        "position": 63,
+        "name": "אגבאריה וסאם"
+      },
+      {
+        "position": 64,
+        "name": "חמוד עאישה"
+      },
+      {
+        "position": 65,
+        "name": "מריסאת טלאל"
+      },
+      {
+        "position": 66,
+        "name": "ג'סאר חסאן"
+      },
+      {
+        "position": 67,
+        "name": "שלבי מחמוד"
+      },
+      {
+        "position": 68,
+        "name": "ואכד חתאם"
+      },
+      {
+        "position": 69,
+        "name": "זועבי פאדי"
+      },
+      {
+        "position": 70,
+        "name": "סעיד יוסף"
+      },
+      {
+        "position": 71,
+        "name": "בסיוני עזיז"
+      },
+      {
+        "position": 72,
+        "name": "בדראן סלימאן אמיר"
+      },
+      {
+        "position": 73,
+        "name": "בכרי קאסם"
+      },
+      {
+        "position": 74,
+        "name": "ג'ומעה פאוזי"
+      },
+      {
+        "position": 75,
+        "name": "עווידה זיאד"
+      },
+      {
+        "position": 76,
+        "name": "מוסלמאני סאג'דה"
+      },
+      {
+        "position": 77,
+        "name": "מחאג'נה חאלד"
+      },
+      {
+        "position": 78,
+        "name": "חביבאללה אחמד"
+      },
+      {
+        "position": 79,
+        "name": "מונייר רסאן"
+      },
+      {
+        "position": 80,
+        "name": "עיראקי סאמח"
+      },
+      {
+        "position": 81,
+        "name": "מישרקי מרואן"
+      },
+      {
+        "position": 82,
+        "name": "אבו פול מוחמד"
+      },
+      {
+        "position": 83,
+        "name": "ראבי איאד"
+      },
+      {
+        "position": 84,
+        "name": "אבו סריחאן ראפת"
+      },
+      {
+        "position": 85,
+        "name": "אבו ליל עבדאללה"
+      },
+      {
+        "position": 86,
+        "name": "טנוס נחלה"
+      },
+      {
+        "position": 87,
+        "name": "כנאנה עימראן"
+      },
+      {
+        "position": 88,
+        "name": "עוידה עואד ערין"
+      },
+      {
+        "position": 89,
+        "name": "שנאוי אניס"
+      },
+      {
+        "position": 90,
+        "name": "דוידי אפרים"
+      },
+      {
+        "position": 91,
+        "name": "מוסא נימר"
+      },
+      {
+        "position": 92,
+        "name": "אסעד סוהיל"
+      },
+      {
+        "position": 93,
+        "name": "עלי אלדין מינא"
+      },
+      {
+        "position": 94,
+        "name": "ח'טיב סמיר"
+      },
+      {
+        "position": 95,
+        "name": "חאג' מוחמד אחמד"
+      },
+      {
+        "position": 96,
+        "name": "שחאדה עסאם"
+      },
+      {
+        "position": 97,
+        "name": "ניקולא עיסא"
+      },
+      {
+        "position": 98,
+        "name": "כנאעני תאופיק"
+      },
+      {
+        "position": 99,
+        "name": "שביטה עבד אל מנאן"
+      },
+      {
+        "position": 100,
+        "name": "דהאמשה מנסור"
+      },
+      {
+        "position": 101,
+        "name": "יוספיה זוהיר"
+      },
+      {
+        "position": 102,
+        "name": "אזברגה ג'מעה"
+      },
+      {
+        "position": 103,
+        "name": "אבו מערוף עבדאללה"
+      },
+      {
+        "position": 104,
+        "name": "חורי סמירה"
+      },
+      {
+        "position": 105,
+        "name": "חנין דב-בוריס"
+      },
+      {
+        "position": 106,
+        "name": "שלחת אנטואן"
+      },
+      {
+        "position": 107,
+        "name": "עבד אל חלים מואנס"
+      },
+      {
+        "position": 108,
+        "name": "אגבאריה עפו"
+      },
+      {
+        "position": 109,
+        "name": "שחאדה אנטאנס"
+      },
+      {
+        "position": 110,
+        "name": "עודה איימן"
+      },
+      {
+        "position": 111,
+        "name": "תומא סלימאן עאידה"
+      },
+      {
+        "position": 112,
+        "name": "יזבק היבא"
+      },
+      {
+        "position": 113,
+        "name": "גוז'נסקי תמר"
+      },
+      {
+        "position": 114,
+        "name": "עאמר עאדל"
+      },
+      {
+        "position": 115,
+        "name": "סוייד חנא"
+      },
+      {
+        "position": 116,
+        "name": "גטאס ראיד"
+      },
+      {
+        "position": 117,
+        "name": "סעדיה אוסאמה"
+      },
+      {
+        "position": 118,
+        "name": "ח'טיב שאוקי"
+      },
+      {
+        "position": 119,
+        "name": "ג'ראיסי ראמז"
+      },
+      {
+        "position": 120,
+        "name": "ברכה מוחמד"
+      }
+    ]
+  },
+  "hendel_zeleka": {
+    "title": "המילואימניקים והכלכלית בראשות יועז הנדל וירון זליכה",
+    "url": "https://www.gov.il/he/pages/hamiluimnikim-vehakalkalit_list16",
+    "total_candidates": 39,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "הנדל יועז"
+      },
+      {
+        "position": 2,
+        "name": "זליכה ירון"
+      },
+      {
+        "position": 3,
+        "name": "וילף עינת"
+      },
+      {
+        "position": 4,
+        "name": "ווליבוביץ חביב"
+      },
+      {
+        "position": 5,
+        "name": "אדומי יואב שלמה"
+      },
+      {
+        "position": 6,
+        "name": "לנגמן אופיר שי"
+      },
+      {
+        "position": 7,
+        "name": "דמרי שלומי"
+      },
+      {
+        "position": 8,
+        "name": "גלבוע ליאור"
+      },
+      {
+        "position": 9,
+        "name": "פרץ תהילה"
+      },
+      {
+        "position": 10,
+        "name": "ביטון שלום"
+      },
+      {
+        "position": 11,
+        "name": "קינן עמליה"
+      },
+      {
+        "position": 12,
+        "name": "בורנשטיין הילה"
+      },
+      {
+        "position": 13,
+        "name": "גיטלר איתי"
+      },
+      {
+        "position": 14,
+        "name": "אלישע משה"
+      },
+      {
+        "position": 15,
+        "name": "בהט יונתן"
+      },
+      {
+        "position": 16,
+        "name": "פז מאור"
+      },
+      {
+        "position": 17,
+        "name": "רום אלמוג"
+      },
+      {
+        "position": 18,
+        "name": "שבח דוד"
+      },
+      {
+        "position": 19,
+        "name": "לוי דוד"
+      },
+      {
+        "position": 20,
+        "name": "נקי סתיו"
+      },
+      {
+        "position": 21,
+        "name": "טגן בתאל"
+      },
+      {
+        "position": 22,
+        "name": "כריסי חוברה הדס רנה"
+      },
+      {
+        "position": 23,
+        "name": "לוי רוית"
+      },
+      {
+        "position": 24,
+        "name": "לזמי אליאן"
+      },
+      {
+        "position": 25,
+        "name": "נתן גבריאל"
+      },
+      {
+        "position": 26,
+        "name": "ספירט חפציבה"
+      },
+      {
+        "position": 27,
+        "name": "עמית אריה אליעד"
+      },
+      {
+        "position": 28,
+        "name": "ששון יניב"
+      },
+      {
+        "position": 29,
+        "name": "סלונימסקי יוגב יבגני"
+      },
+      {
+        "position": 30,
+        "name": "אליהו ניר"
+      },
+      {
+        "position": 31,
+        "name": "מזרחי איתמר חי"
+      },
+      {
+        "position": 32,
+        "name": "קארבאט יזהר"
+      },
+      {
+        "position": 33,
+        "name": "בן דוד דור רון"
+      },
+      {
+        "position": 34,
+        "name": "נגר מנחם"
+      },
+      {
+        "position": 35,
+        "name": "מיקיטן יעקב-גל"
+      },
+      {
+        "position": 36,
+        "name": "ליליאן ברק"
+      },
+      {
+        "position": 37,
+        "name": "שמיאן בר"
+      },
+      {
+        "position": 38,
+        "name": "פורמן גיא"
+      },
+      {
+        "position": 39,
+        "name": "עזיז זדה אמיר"
+      }
+    ]
+  },
+  "amcha-israel_list6": {
+    "title": "עמך ישראל",
+    "url": "https://www.gov.il/he/pages/amcha-israel_list6",
+    "total_candidates": 18,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "ווינטר עופר"
+      },
+      {
+        "position": 2,
+        "name": "חדאד יוסף"
+      },
+      {
+        "position": 3,
+        "name": "שם טוב נטעלי"
+      },
+      {
+        "position": 4,
+        "name": "בן ארי ערן"
+      },
+      {
+        "position": 5,
+        "name": "חסן-נחום פלר"
+      },
+      {
+        "position": 6,
+        "name": "דרעי ללי"
+      },
+      {
+        "position": 7,
+        "name": "בודנרו רונן"
+      },
+      {
+        "position": 8,
+        "name": "בן ציון דוד נחום"
+      },
+      {
+        "position": 9,
+        "name": "עזרא אביב חיים"
+      },
+      {
+        "position": 10,
+        "name": "ג'ינו אלי"
+      },
+      {
+        "position": 11,
+        "name": "קראוניק זריפה סגלית"
+      },
+      {
+        "position": 12,
+        "name": "רובין אריק מת'יו"
+      },
+      {
+        "position": 13,
+        "name": "אבראהים עלמאדין"
+      },
+      {
+        "position": 14,
+        "name": "הר ציון משה"
+      },
+      {
+        "position": 15,
+        "name": "חיים אידלברג לילך"
+      },
+      {
+        "position": 16,
+        "name": "טולדנו משה"
+      },
+      {
+        "position": 17,
+        "name": "מלכה רז"
+      },
+      {
+        "position": 18,
+        "name": "לוי דור יצחק"
+      }
+    ]
+  },
+  "kachol-lavan_list30": {
+    "title": "כחול לבן",
+    "url": "https://www.gov.il/he/pages/kachol-lavan_list30",
+    "total_candidates": 41,
+    "candidates": [
+      {
+        "position": 1,
+        "name": "גנץ בנימין"
+      },
+      {
+        "position": 2,
+        "name": "תמנו פנינה (פנחש)"
+      },
+      {
+        "position": 3,
+        "name": "בלוך גאולה עליזה"
+      },
+      {
+        "position": 4,
+        "name": "קונקול רועי"
+      },
+      {
+        "position": 5,
+        "name": "אבידר צאליק רתם"
+      },
+      {
+        "position": 6,
+        "name": "שוסטר אלון נתן"
+      },
+      {
+        "position": 7,
+        "name": "מרעי מופיד"
+      },
+      {
+        "position": 8,
+        "name": "אוליאל מלכה יהודית"
+      },
+      {
+        "position": 9,
+        "name": "בזיז אריאל"
+      },
+      {
+        "position": 10,
+        "name": "סילפן מוריה"
+      },
+      {
+        "position": 11,
+        "name": "בן אברהם ג'וליאנה"
+      },
+      {
+        "position": 12,
+        "name": "לב-כהן מוניקה יעל"
+      },
+      {
+        "position": 13,
+        "name": "זולדן שי"
+      },
+      {
+        "position": 14,
+        "name": "קידר לילי"
+      },
+      {
+        "position": 15,
+        "name": "דוד שי"
+      },
+      {
+        "position": 16,
+        "name": "פרץ בן"
+      },
+      {
+        "position": 17,
+        "name": "עמר שרונה"
+      },
+      {
+        "position": 18,
+        "name": "שלו וודיסלבסקי רות"
+      },
+      {
+        "position": 19,
+        "name": "הרשקוביץ עירד"
+      },
+      {
+        "position": 20,
+        "name": "יוסף נאהי"
+      },
+      {
+        "position": 21,
+        "name": "אסייג דוד"
+      },
+      {
+        "position": 22,
+        "name": "מנטבר נעה"
+      },
+      {
+        "position": 23,
+        "name": "סטרבורבדיס עמנואל אליהו"
+      },
+      {
+        "position": 24,
+        "name": "רהב ציון"
+      },
+      {
+        "position": 25,
+        "name": "גרבי מיכאל שי"
+      },
+      {
+        "position": 26,
+        "name": "אדרי משה מור"
+      },
+      {
+        "position": 27,
+        "name": "שקד ישעיהו"
+      },
+      {
+        "position": 28,
+        "name": "זימבריס יוסף"
+      },
+      {
+        "position": 29,
+        "name": "ולנטי רות"
+      },
+      {
+        "position": 30,
+        "name": "שושני אמיר"
+      },
+      {
+        "position": 31,
+        "name": "גוטליב מיכאל"
+      },
+      {
+        "position": 32,
+        "name": "אבן זיו יגאל"
+      },
+      {
+        "position": 33,
+        "name": "אומיאל פדידה אפרת"
+      },
+      {
+        "position": 34,
+        "name": "ארדיטי יסמין"
+      },
+      {
+        "position": 35,
+        "name": "עמית עומר"
+      },
+      {
+        "position": 36,
+        "name": "סאלם רועי"
+      },
+      {
+        "position": 37,
+        "name": "עמית טליה חוה"
+      },
+      {
+        "position": 38,
+        "name": "רבינוביץ משה עדי"
+      },
+      {
+        "position": 39,
+        "name": "מאירמן רז"
+      },
+      {
+        "position": 40,
+        "name": "ענבר פקלמן ברק"
+      },
+      {
+        "position": 41,
+        "name": "פלד אמיר"
+      }
+    ]
+  }
+}

@@ -12,6 +12,7 @@ import os
 import sys
 import json
 import argparse
+import re
 
 try:
     import yaml
@@ -161,7 +162,7 @@ PARTIES_CATALOG = {
     "beyachad": {
         "id": "beyachad",
         "name_he": "ביחד",
-        "ballot_letters": "פה",
+        "ballot_letters": "בי",
         "leader": "נפתלי בנט",
         "leader_title": "יו״ר מפלגת ביחד, ראש הממשלה לשעבר",
         "official_website": "https://be-yahad.org.il",
@@ -492,8 +493,8 @@ def verify_static_kb():
                     if not u.startswith("https://"):
                         errors.append(f"[{p_id}] party.json '{ukey}' is not HTTPS: {u}")
                 cec_u = pj.get("official_cec_url", "")
-                if not (cec_u.startswith("https://www.gov.il/he/pages/candidates-lists-26") or cec_u.startswith("https://bechirot.gov.il")):
-                    errors.append(f"[{p_id}] party.json 'official_cec_url' must point to Central Elections Committee (https://www.gov.il/he/pages/candidates-lists-26): {cec_u}")
+                if not (cec_u.startswith("https://www.gov.il/he/pages/") or cec_u.startswith("https://bechirot.gov.il")):
+                    errors.append(f"[{p_id}] party.json 'official_cec_url' must point to Central Elections Committee (https://www.gov.il/he/pages/...): {cec_u}")
             except Exception as e:
                 errors.append(f"[{p_id}] Invalid JSON in party.json: {e}")
 
@@ -510,8 +511,8 @@ def verify_static_kb():
                 total_candidates_count += cand_count
 
                 src = cj.get("official_source", "")
-                if "candidates-lists-26" not in src and "bechirot.gov.il" not in src:
-                    errors.append(f"[{p_id}] candidates.json missing official_source referencing Central Elections Committee (https://www.gov.il/he/pages/candidates-lists-26)")
+                if "gov.il/he/pages/" not in src and "bechirot.gov.il" not in src:
+                    errors.append(f"[{p_id}] candidates.json missing official_source referencing Central Elections Committee (https://www.gov.il/he/pages/...)")
 
                 if cand_count < required_min:
                     errors.append(f"[{p_id}] Candidates count {cand_count} < required minimum {required_min} (cutoff={cutoff})")
@@ -523,6 +524,29 @@ def verify_static_kb():
                     cname = c.get("name", "").strip()
                     if not cname:
                         errors.append(f"[{p_id}] Candidate #{pos} missing name")
+                    else:
+                        # Strict Candidate Name Quality & Integrity Checks
+                        # 1. Reject digits (prevents date leakage like '09.2026')
+                        if re.search(r"\d", cname):
+                            errors.append(f"[{p_id}] Candidate #{pos} name contains digits/date: '{cname}'")
+
+                        # 2. Must contain Hebrew alphabetic characters
+                        if not re.search(r"[\u0590-\u05FF]", cname):
+                            errors.append(f"[{p_id}] Candidate #{pos} name lacks Hebrew characters: '{cname}'")
+
+                        # 3. Minimum length check
+                        if len(cname) < 3:
+                            errors.append(f"[{p_id}] Candidate #{pos} name is too short: '{cname}'")
+
+                        # 4. Prohibited metadata and publishing keywords
+                        prohibited_kws = ["09.2026", "2026", "תאריך", "פרסום", "עדכון", "סוג", "יחידות", "שתפו", "ועדת הבחירות", "הבחירות לכנסת", "רשימת המועמדים"]
+                        for pkw in prohibited_kws:
+                            if pkw in cname:
+                                errors.append(f"[{p_id}] Candidate #{pos} name contains prohibited keyword '{pkw}': '{cname}'")
+
+                        # 5. Character set check: only Hebrew letters, spaces, hyphens, quotes, apostrophes, parentheses
+                        if not re.match(r"^[\u0590-\u05FF\s\'\"\-\.\(\)]+$", cname):
+                            errors.append(f"[{p_id}] Candidate #{pos} name contains invalid characters: '{cname}'")
 
                     is_real = c.get("is_realistic_zone", False)
                     expected_real = (pos <= cutoff)

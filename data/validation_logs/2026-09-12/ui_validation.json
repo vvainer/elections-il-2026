@@ -10,13 +10,13 @@
     "has_viewport": true,
     "tab_buttons": 4,
     "leaderboard_cards": 4,
-    "candidate_cards": 294,
+    "candidate_cards": 2386,
     "topic_accordions": 126,
     "criteria_tables": 126,
-    "total_badges": 1197,
+    "total_badges": 2243,
     "total_links": 184,
     "github_links": 12,
-    "file_size_kb": 1444.4
+    "file_size_kb": 6746.1
   },
   "snapshots": {
     "desktop": "data/validation_logs/2026-09-12/snapshots/desktop.png",
