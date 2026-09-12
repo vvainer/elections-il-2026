@@ -268,11 +268,36 @@ The system is decomposed into 4 specialized Antigravity Skills:
 
 ---
 
+### ADR-012: Comprehensive Static KB Verification & Candidate Depth Enforcement
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**: Previous static verification only checked for file presence on disk without validating candidate depth, realistic cutoff thresholds from `config/polls.yaml`, or enforcing rich, non-placeholder CV records for realistic-zone candidates.
+* **Decision**:
+  1. Mandate dynamic candidate depth calculation: rosters must reach at least `max(realistic_cutoff + 5, 12)` candidates.
+  2. Implement strict content verification in `scripts/build_static_kb.py --verify` ensuring that 100% of candidates flagged with `is_realistic_zone: true` possess non-empty, non-boilerplate records across `education`, `career`, `public_service`, `key_votes`, `major_achievements`, and `notable_failures_or_controversies`.
+  3. Validate HTTP/HTTPS URLs and faction IDs for all 14 parties to eliminate domain collisions and dead links.
+* **Consequences**: Guarantees high-integrity, verifiable static dossiers for all 14 qualifying factions and eliminates placeholder biographical content.
+
+---
+
+### ADR-013: Canonical Official Candidate Roster Sourcing via Central Elections Committee
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**: Initial candidate rosters risked drifting into approximations based on the 25th Knesset, party primary rumors, or unverified media commentary rather than official submissions.
+* **Decision**:
+  1. Mandate that candidate rosters for the 2026 Knesset elections MUST be sourced strictly from the official portal of the Central Elections Committee (ועדת הבחירות המרכזית): `https://www.gov.il/he/pages/candidates-lists-26` (where each party links to its full registered candidate roster).
+  2. Forbid subagents and scripts from using historical 25th Knesset lists or media speculation as candidate rosters.
+  3. Enrich the data contract: `party.json` must include `ballot_letters` (אותיות הרשימה) and `official_cec_url` pointing to the official Central Elections Committee page; `candidates.json` must reference `official_source: "https://www.gov.il/he/pages/candidates-lists-26"`.
+  4. Equip `scripts/build_static_kb.py` with an import/ingestion utility (`--import-cec-source`) and enforce CEC source validation in `--verify`.
+* **Consequences**: Ensures 100% legal fidelity to the officially submitted Knesset 2026 ballots, completely decoupling candidate lineups from past Knesset composition.
+
+---
+
 ## 6. Verification and Deployment Pipeline Matrix
 
 | Stage | Command | Enforced Preconditions | Exit Criteria |
 | :--- | :--- | :--- | :--- |
-| **Static KB Audit** | `python3 scripts/build_static_kb.py --verify` | All qualified parties in `config/parties.yaml` have directories | 14/14 parties verified, 3 static catalog/rubric/coalition files valid |
+| **Static KB Audit** | `python3 scripts/build_static_kb.py --verify` | All qualified parties in `config/polls.yaml` have directories | 14/14 parties verified, candidate depth >= cutoff+5, 100% rich CVs in realistic zones, catalog/rubric/coalition files valid |
 | **Tier 1 Validation** | `python3 scripts/validate_links.py <path> --report <log>` | JSON topic files in staging or validated | 0 broken URLs, 0 schema errors |
 | **Topic Merge** | `python3 scripts/merge_topics.py --topics-dir <dir>` | 9 validated topic files present | Central `data/evaluations/{DATE}.json` created |
 | **Multi-Profile Eval** | `python3 scripts/run_analysis.py --date {DATE}` | Profiles exist in `config/profiles/` | 4-section Markdown reports & 4-tab `docs/index.html` built |
