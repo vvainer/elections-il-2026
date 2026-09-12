@@ -1,0 +1,356 @@
+{
+  "topic_id": "welfare_reform",
+  "date": "2026-09-12",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 75,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "התניה ברורה: כספי מדינה ותמיכות יינתנו רק למי שממצה כושר השתכרות ונושא בנטל.",
+        "c2_leader_statements": "איזנקוט קבע: 'מי שמשרת ועובד – מתוגמל; נפסיק את חלוקת הכספים לאוכלוסיות שלמות שאינן עובדות'.",
+        "c3_leader_actions": "התנגד באופן עקבי בכנסת להעברת כספים קואליציוניים למוסדות שאינם מעודדים תעסוקה.",
+        "c4_candidates_statements": "כלל חברי הרשימה הריאלית תומכים בשלילת סבסודים ממי שאינו עובד ואינו לומד ליבה.",
+        "c5_candidates_actions": "ח\"כים של המפלגה הגישו שורת הסתייגויות כנגד חוקי התקציב הסקטוריאליים.",
+        "c6_designated_executive": "צוות הכלכלה מיועד לעצור את זרמי התקציב הייעודיים."
+      },
+      "citations": [
+        {
+          "title": "הצהרת ישר על תקציב המדינה",
+          "url": "https://www.kan.org.il/press/budget-priorities",
+          "quote": "הפסקת תקצוב שמעודד עוני והיעדר תעסוקה"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 70,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 70
+      },
+      "notes": {
+        "c1_platform": "עידוד תעסוקה וצמצום קצבאות תומכות בטלה לצד רשת ביטחון לנכים וקשישים.",
+        "c2_leader_statements": "בנט מדגיש ערך עבודה ותרומה לכלכלה: 'כל אדם כשיר חייב לעבוד'.",
+        "c3_leader_actions": "קידם שילוב אוכלוסיות בעבודה אך בעבר נכנע לחלק מדרישות החרדים בממשלות קודמות.",
+        "c4_candidates_statements": "פרופ' דן בן-דוד מתריע מפני קריסת המודל הסוציאלי של ישראל ללא שינוי עמוק.",
+        "c5_candidates_actions": "פרסום מחקרים מובילים על השלכות אי-ההשתתפות בשוק העבודה.",
+        "c6_designated_executive": "שילוב כלכלנים מובילים בגיבוש המדיניות."
+      },
+      "citations": [
+        {
+          "title": "דוחות מוסד שורש - פרופ' דן בן-דוד",
+          "url": "https://shoresh.institute",
+          "quote": "ללא מיצוי כושר השתכרות ולימודי ליבה, המשק הישראלי יתקשה לממן שירותים בסיסיים"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "רשת ביטחון לנזקקים אמיתיים לצד ביטול מוחלט של קצבאות עידוד בטלה וסגירת מנגנוני החלוקה המושחתים.",
+        "c2_leader_statements": "זליכה תוקף את 'עסקנות החלוקה' שגוזלת כספי מיסים ומעבירה אותם למקורבים ללא תרומה לכלכלה.",
+        "c3_leader_actions": "זליכה כחשב כללי עצר העברות כספים בלתי חוקיות ועמד כחומה בצורה מול לחצים פוליטיים.",
+        "c4_candidates_statements": "הנדל דורש עבודה ולימודי ליבה כתנאי סף לכל סיוע ציבורי.",
+        "c5_candidates_actions": "הצבעות עקביות נגד תקציבים קואליציוניים.",
+        "c6_designated_executive": "פרופ' זליכה כבעל ידע תקציבי יוצא דופן."
+      },
+      "citations": [
+        {
+          "title": "מלחמתו של זליכה בשחיתות התקציבית",
+          "url": "https://www.haaretz.co.il",
+          "quote": "כספי הציבור חייבים ללכת למנועי צמיחה ולמי שאינו מסוגל לעבוד, לא לחלוקה סקטוריאלית"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 90,
+        "c2_leader_statements": 95,
+        "c3_leader_actions": 90,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 90
+      },
+      "notes": {
+        "c1_platform": "הבטחת קצבאות לקשישים ונכים, תוך ביטול מוחלט של קצבאות לאברכים ומי שאינו ממצה כושר עבודה.",
+        "c2_leader_statements": "ליברמן: 'לא נאפשר לאף אוכלוסייה לחיות על חשבון הציבור העובד; סבסוד מעונות יותנה בעבודת שני בני הזוג'.",
+        "c3_leader_actions": "כשר אוצר חתם על הצו המפורסם להתניית סבסוד מעונות יום בעבודה.",
+        "c4_candidates_statements": "חברי הסיעה תומכים בפה אחד במיצוי כושר השתכרות וצמצום מנגנוני החלוקה.",
+        "c5_candidates_actions": "הצבעות נגד כל חוקי הקצבאות המגזריות של הממשלה הנוכחית.",
+        "c6_designated_executive": "ליברמן מיועד להוביל את המדיניות הכלכלית."
+      },
+      "citations": [
+        {
+          "title": "בג\"ץ מעונות היום ומבחני התמיכה של ליברמן",
+          "url": "https://www.calcalist.co.il",
+          "quote": "סבסוד ממשלתי יינתן רק למשפחות שבהן שני ההורים עובדים"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": -50,
+        "c2_leader_statements": -40,
+        "c3_leader_actions": -65,
+        "c4_candidates_statements": -45,
+        "c5_candidates_actions": -60,
+        "c6_designated_executive": -55
+      },
+      "notes": {
+        "c1_platform": "הסכמים קואליציוניים המעגנים תקציבי עתק ייעודיים למוסדות תורניים ללא דרישת עבודה.",
+        "c2_leader_statements": "נתניהו בעבר קיצץ קצבאות ב-2003, אך כיום הפך למממן המרכזי של כספי הקואליציה הסקטוריאליים.",
+        "c3_leader_actions": "אישור כספים קואליציוניים של מעל 12 מיליארד ש\"ח לקצבאות אברכים ותווי מזון ללא מבחן תעסוקה.",
+        "c4_candidates_statements": "ח\"כים בליכוד הצביעו פה אחד בעד התקציבים המגזריים.",
+        "c5_candidates_actions": "העברת כספים חסרת תקדים למי שאינו עובד ואינו לומד.",
+        "c6_designated_executive": "התחייבות להמשך התקצוב לחרדים לשם שמירת הקואליציה."
+      },
+      "citations": [
+        {
+          "title": "הכספים הקואליציוניים בתקציב המדינה - המכון הישראלי לדמוקרטיה",
+          "url": "https://www.idi.org.il",
+          "quote": "גידול חסר תקדים בתקציבים שאינם מעודדים תעסוקה והשכלה"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": 45,
+        "c2_leader_statements": 40,
+        "c3_leader_actions": 40,
+        "c4_candidates_statements": 45,
+        "c5_candidates_actions": 45,
+        "c6_designated_executive": 40
+      },
+      "notes": {
+        "c1_platform": "מדינת רווחה מרחיבה ביותר: הגדלת קצבאות נכות, זקנה ואבטחה, לצד התנגדות לקצבאות מגזריות לחרדים.",
+        "c2_leader_statements": "תמיכה בהגדלת תקציבי הרווחה לכלל השכבות החלשות.",
+        "c3_leader_actions": "לזימי פעלה להעלאת שכר המינימום והגדלת קצבאות נכות.",
+        "c4_candidates_statements": "התנגדות לגישה המקצצת קצבאות באופן כללי.",
+        "c5_candidates_actions": "מאבקים למען דיור ציבורי והבטחת הכנסה.",
+        "c6_designated_executive": "נעמה לזימי מיועדת לתחום הרווחה."
+      },
+      "citations": [
+        {
+          "title": "המאבק להעלאת קצבאות הנכות והזקנה - נעמה לזימי",
+          "url": "https://main.knesset.gov.il",
+          "quote": "הבטחת קיום בכבוד לכל אדם עם מוגבלות וקשיש"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "התניית סיוע ממשלתי במיצוי כושר השתכרות וחיסול מנגנוני החלוקה הפוליטיים.",
+        "c2_leader_statements": "לפיד: 'אנשים עובדים ומשרתים לא צריכים לממן את מי שבוחר לא לעבוד'.",
+        "c3_leader_actions": "קיצץ בעבר קצבאות ילדים ואברכים כשר אוצר ב-2013.",
+        "c4_candidates_statements": "מאיר כהן כשר רווחה מיקד תקציבים בקשישים, נכים ונוער בסיכון.",
+        "c5_candidates_actions": "כהן הקפיד על מנהל תקין ורשתות ביטחון לאוכלוסיות שלא מסוגלות להתפרנס.",
+        "c6_designated_executive": "מאיר כהן מיועד לשר הרווחה."
+      },
+      "citations": [
+        {
+          "title": "התניית קצבאות במיצוי כושר השתכרות - יש עתיד",
+          "url": "https://www.yeshatid.org.il/welfare",
+          "quote": "הפסקת חלוקת כספים קואליציוניים המנציחים עוני ובטלה"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": -95,
+        "c2_leader_statements": -95,
+        "c3_leader_actions": -100,
+        "c4_candidates_statements": -95,
+        "c5_candidates_actions": -95,
+        "c6_designated_executive": -95
+      },
+      "notes": {
+        "c1_platform": "הגדלת קצבאות אברכים, פטורים מארנונה, סבסוד מעונות ללא תנאי עבודה וחלוקת תקציבי תמיכה.",
+        "c2_leader_statements": "דרעי: 'תורתם אומנותם; נדאג שכל לומד תורה יקבל את המגיע לו מהמדינה בכבוד'.",
+        "c3_leader_actions": "הכפלת תקציבי הישיבות, מחיקת מבחני התעסוקה למעונות יום וחלוקת מיליארדים למנגנוני חלוקה.",
+        "c4_candidates_statements": "יעקב מרגי כשר הרווחה מקדם העברות כספיות מסיביות.",
+        "c5_candidates_actions": "הגנה חסרת פשרות על תקציבי האברכים מפני פסיקות בג\"ץ.",
+        "c6_designated_executive": "הובלת מדיניות רווחה הפוכה לחלוטין מעמדת המשתמש."
+      },
+      "citations": [
+        {
+          "title": "תקציבי הישיבות והאברכים - דה מרקר",
+          "url": "https://www.themarker.com",
+          "quote": "תקציב הישיבות חצה את רף ה-2.5 מיליארד ש\"ח תחת הלחץ הקואליציוני של ש\"ס ויהדות התורה"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": -100,
+        "c2_leader_statements": -100,
+        "c3_leader_actions": -100,
+        "c4_candidates_statements": -100,
+        "c5_candidates_actions": -100,
+        "c6_designated_executive": -100
+      },
+      "notes": {
+        "c1_platform": "מימון מלא לאוכלוסייה שאינה עובדת, קצבאות אברכים, הנחות בארנונה ובמעונות יום ללא תנאי תעסוקה.",
+        "c2_leader_statements": "גפני וגולדקנופף דורשים המשך תקצוב ללא תלות בעבודה או בהכנסה.",
+        "c3_leader_actions": "העברת מיליארדים בהסכמים קואליציוניים למוסדות כולל ואברכים.",
+        "c4_candidates_statements": "התנגדות עזה לכל קריטריון של מיצוי כושר השתכרות.",
+        "c5_candidates_actions": "עקיפת החלטות בג\"ץ באמצעות מענקים עקיפים.",
+        "c6_designated_executive": "הובלת קו מובהק נגד עמדת המשתמש."
+      },
+      "citations": [
+        {
+          "title": "תקציבי הישיבות והתמיכות - כלכליסט",
+          "url": "https://www.calcalist.co.il",
+          "quote": "העברת מיליארדי שקלים בהסכמים קואליציוניים למי שאינם משתלבים בתעסוקה"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": -40,
+        "c2_leader_statements": -40,
+        "c3_leader_actions": -50,
+        "c4_candidates_statements": -40,
+        "c5_candidates_actions": -50,
+        "c6_designated_executive": -45
+      },
+      "notes": {
+        "c1_platform": "תמיכה בחלוקת תקציבים סקטוריאליים וכספים קואליציוניים למוסדות דת וגרעינים.",
+        "c2_leader_statements": "בן גביר דרש מיליארדים בהסכמים הקואליציוניים למשרדיו ולעמותות מקורבות.",
+        "c3_leader_actions": "הצבעה בעד כל תקציבי הקצבאות לאברכים ותווי המזון.",
+        "c4_candidates_statements": "ח\"כים בעוצמה יהודית תומכים בהמשך התקציבים המגזריים.",
+        "c5_candidates_actions": "העברת כספים קואליציוניים ייעודיים.",
+        "c6_designated_executive": "המשך מדיניות החלוקה הפוליטית."
+      },
+      "citations": [
+        {
+          "title": "הכספים הקואליציוניים של עוצמה יהודית",
+          "url": "https://www.calcalist.co.il",
+          "quote": "מאות מיליוני שקלים נותבו לגרעינים תורניים ולפרויקטים ייעודיים"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": -45,
+        "c2_leader_statements": -40,
+        "c3_leader_actions": -70,
+        "c4_candidates_statements": -45,
+        "c5_candidates_actions": -65,
+        "c6_designated_executive": -60
+      },
+      "notes": {
+        "c1_platform": "פער עמוק בין תיאוריה של שוק חופשי וצמצום קצבאות לבין פרקטיקה של חלוקת כספים קואליציוניים.",
+        "c2_leader_statements": "סמוטריץ' מצהיר בעד עבודה ומיצוי כושר השתכרות, אך כשר אוצר חתם על הכפלת תקציבי הישיבות.",
+        "c3_leader_actions": "אישור תקציבי עתק של מיליארדי שקלים לכספים קואליציוניים סקטוריאליים ללא תנאי תעסוקה.",
+        "c4_candidates_statements": "הגנה פומבית על תקציבי האברכים כ'ערך לאומי'.",
+        "c5_candidates_actions": "העברות כספיות מסיביות בוועדת כספים.",
+        "c6_designated_executive": "סמוטריץ' אחראי ישיר לחלוקה התקציבית."
+      },
+      "citations": [
+        {
+          "title": "הכספים הקואליציוניים בתקציב 2024 - כלכליסט",
+          "url": "https://www.calcalist.co.il",
+          "quote": "סמוטריץ' העביר מיליארדי שקלים בהסכמים קואליציוניים בניגוד להמלצות אגף תקציבים"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": -20,
+        "c2_leader_statements": -20,
+        "c3_leader_actions": -25,
+        "c4_candidates_statements": -20,
+        "c5_candidates_actions": -25,
+        "c6_designated_executive": -20
+      },
+      "notes": {
+        "c1_platform": "תמיכה בהגדלת קצבאות הביטוח הלאומי לנזקקים וסיוע סוציאלי רחב.",
+        "c2_leader_statements": "עבאס מתנגד לקיצוץ קצבאות הפוגע במשפחות ברוכות ילדים בנגב.",
+        "c3_leader_actions": "הצבעות נגד קיצוצי רווחה.",
+        "c4_candidates_statements": "אימאן ח'טיב-יאסין מקדמת תמיכות רווחה לנשים.",
+        "c5_candidates_actions": "מאבקים בעוני בחברה הערבית.",
+        "c6_designated_executive": "שמירה על מדיניות רווחה רחבה."
+      },
+      "citations": [
+        {
+          "title": "מאבק רע\"ם בעוני בנגב",
+          "url": "https://main.knesset.gov.il",
+          "quote": "הבטחת קצבאות קיום ורשת ביטחון סוציאלית לאוכלוסיות המוחלשות ביותר"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": 10,
+        "c2_leader_statements": 10,
+        "c3_leader_actions": 10,
+        "c4_candidates_statements": 10,
+        "c5_candidates_actions": 10,
+        "c6_designated_executive": 10
+      },
+      "notes": {
+        "c1_platform": "תמיכה במדינת רווחה קומוניסטית רחבה ללא התניית קצבאות במיצוי כושר השתכרות.",
+        "c2_leader_statements": "עודה דורש הרחבת כלל קצבאות הביטוח הלאומי ללא תנאי סף.",
+        "c3_leader_actions": "הצבעות נגד כל צמצום קצבאות.",
+        "c4_candidates_statements": "עאידה תומא-סלימאן מקדמת קצבאות רווחה רחבות.",
+        "c5_candidates_actions": "מאבקים פרלמנטריים להגדלת תקציבי הביטוח הלאומי.",
+        "c6_designated_executive": "שמירה על מנגנוני חלוקה רחבים."
+      },
+      "citations": [
+        {
+          "title": "המאבק לצדק חברתי - חד\"ש",
+          "url": "https://main.knesset.gov.il",
+          "quote": "הבטחת קיום בכבוד לכל אדם באמצעות קצבאות רווחה אוניברסליות"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 40,
+        "c2_leader_statements": 45,
+        "c3_leader_actions": 35,
+        "c4_candidates_statements": 40,
+        "c5_candidates_actions": 35,
+        "c6_designated_executive": 40
+      },
+      "notes": {
+        "c1_platform": "תעדוף משרתים ועובדים, סיוע לנכי צה\"ל ומשפחות שכולות, צמצום קצבאות למשתמטים.",
+        "c2_leader_statements": "וינטר: 'מי שמשרת ונושא בעול חייב לקבל את מלוא הזכויות והעדיפות מהמדינה'.",
+        "c3_leader_actions": "דאגה לחיילים בודדים ולפצועי צה\"ל.",
+        "c4_candidates_statements": "תמיכה במענקים מוגדלים ללוחמים.",
+        "c5_candidates_actions": "הובלת מנהלת לוחמים.",
+        "c6_designated_executive": "התמקדות בתגמול משרתים."
+      },
+      "citations": [
+        {
+          "title": "חוק זכויות הלוחם של עופר וינטר",
+          "url": "https://www.makorrishon.co.il",
+          "quote": "עדיפות מוחלטת בדיור, תעסוקה ומענקים למי שנלחם למען המדינה"
+        }
+      ]
+    }
+  }
+}

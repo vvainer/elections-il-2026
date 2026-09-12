@@ -1,0 +1,356 @@
+{
+  "topic_id": "strategic_posture",
+  "date": "2026-09-12",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 70,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "הרחבת הסכמי אברהם לברית ביטחונית אזורית, היפרדות אזרחית מהפלסטינים תוך אחיזה ביטחונית מלאה וללא חלוקת ירושלים.",
+        "c2_leader_statements": "איזנקוט מדגיש בריתות הגנה הדוקות עם ארה\"ב ומדינות ערב המתונות לצד יוזמה מדינית פעילה.",
+        "c3_leader_actions": "כרמטכ\"ל ניהל את המב\"מ (המערכה בין המלחמות) בהצלחה עולמית ויצר שיתופי פעולה אזוריים סודיים.",
+        "c4_candidates_statements": "מתן כהנא תומך בחיזוק הבריתות האסטרטגיות ושמירה קפדנית על ביטחון ישראל.",
+        "c5_candidates_actions": "כהנא כטייס קרב ומפקד טייסת בעל רקע אסטרטגי עשיר.",
+        "c6_designated_executive": "איזנקוט עצמו מיועד להוביל את המדיניות הביטחונית-מדינית."
+      },
+      "citations": [
+        {
+          "title": "תפיסת הביטחון של גדי איזנקוט - המכון למחקרי ביטחון לאומי (INSS)",
+          "url": "https://www.inss.org.il",
+          "quote": "יוזמה אסטרטגית ובריתות אזוריות הן מכפיל כוח קריטי לביטחון ישראל"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "דוקטרינת בנט: מאבק בראש התמנון (איראן), שלילת מדינה פלסטינית, הרחבת בריתות אזוריות.",
+        "c2_leader_statements": "בנט מתנגד לויתורים טריטוריאליים ביו\"ש אך מקדם אוטונומיה כלכלית ושת\"פ אזורי נרחב.",
+        "c3_leader_actions": "כראש ממשלה ניהל מדיניות אזורית תקיפה, נפגש עם מנהיגי האזור וקידם עסקאות הגנה.",
+        "c4_candidates_statements": "יוסי כהן היה מאדריכלי הסכמי אברהם ובעל קשרים אסטרטגיים ענפים באזור.",
+        "c5_candidates_actions": "יוסי כהן הוביל מבצעים מודיעיניים אסטרטגיים ומו\"מ להסכמים בינלאומיים.",
+        "c6_designated_executive": "יוסי כהן מיועד לשר החוץ / ראש המל\"ל הבכיר."
+      },
+      "citations": [
+        {
+          "title": "דוקטרינת הביטחון של נפתלי בנט",
+          "url": "https://www.inss.org.il",
+          "quote": "מול ציר הרשע נדרשת פגיעה בראש ולא רק בזרועות, לצד בריתות הגנה מודיעיניות"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "ימין ביטחוני פרגמטי: שלילת מדינה פלסטינית ונסיגות לקווי 67, שמירה קשיחה על בקעת הירדן וירושלים, בריתות אזוריות.",
+        "c2_leader_statements": "הנדל מדגיש ביטחון עצמי, הכרעה, ושילוב כוחות עם בעלות ברית.",
+        "c3_leader_actions": "הנדל שירת כלוחם ומפקד בשייטת 13, בעל דוקטורט בהיסטוריה צבאית ומומחיות באסטרטגיה.",
+        "c4_candidates_statements": "האוזר כיהן כיו\"ר ועדת חוץ וביטחון של הכנסת והוביל פיקוח ביטחוני הדוק.",
+        "c5_candidates_actions": "האוזר הוביל מהלכים להכרה אמריקאית ברמת הגולן.",
+        "c6_designated_executive": "הנדל והאוזר מיועדים לתפקידי ביטחון וחוץ."
+      },
+      "citations": [
+        {
+          "title": "תפיסת הביטחון של יועז הנדל",
+          "url": "https://www.haaretz.co.il",
+          "quote": "ניהול הסכסוך בעוצמה תוך מניעת סיפוח אוכלוסייה פלסטינית ושמירה על בקעת הירדן"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 65,
+        "c2_leader_statements": 65,
+        "c3_leader_actions": 60,
+        "c4_candidates_statements": 60,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 70
+      },
+      "notes": {
+        "c1_platform": "קו ביטחוני ניצי, שלילת ויתורים בירושלים וביו\"ש, הסדר חילופי שטחים ואוכלוסיות ובריתות אזוריות.",
+        "c2_leader_statements": "ליברמן התריע מפני חמאס ואיראן ודורש הכרעה ביטחונית טוטאלית.",
+        "c3_leader_actions": "כשר ביטחון התפטר במחאה על הפסקת האש עם חמאס ב-2018 (אזהרותיו התבררו כמדויקות ב-7.10).",
+        "c4_candidates_statements": "שרון ניר (תא\"ל במיל') מקדמת חשיבה ביטחונית-אסטרטגית סדורה.",
+        "c5_candidates_actions": "ניר שירתה בתפקידי פיקוד בכירים בצה\"ל וביועצת הרמטכ\"ל.",
+        "c6_designated_executive": "ליברמן מיועד לתיק הביטחון."
+      },
+      "citations": [
+        {
+          "title": "תזכיר ליברמן על תוכנית חמאס - וואלה",
+          "url": "https://news.walla.co.il",
+          "quote": "התזכיר מ-2016 בו הזהיר ליברמן מהפלישה המתוכננת של חמאס"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": 60,
+        "c2_leader_statements": 65,
+        "c3_leader_actions": 55,
+        "c4_candidates_statements": 60,
+        "c5_candidates_actions": 55,
+        "c6_designated_executive": 60
+      },
+      "notes": {
+        "c1_platform": "שלמות הארץ, שלילת מדינה פלסטינית וחלוקת ירושלים, בריתות עם מדינות ערב המתונות.",
+        "c2_leader_statements": "נתניהו הוביל את הסכמי אברהם ההיסטוריים ובלם חלוקת הארץ במשך עשורים.",
+        "c3_leader_actions": "מחדל 7 באוקטובר התרחש במשמרתו; ניהול המלחמה הוביל למתיחות בינלאומית וצווי מעצר בהאג.",
+        "c4_candidates_statements": "ישראל כ\"ץ ויואב גלנט קידמו שת\"פ ביטחוני עם ארה\"ב אך גלנט פוטר/התעמת עם נתניהו.",
+        "c5_candidates_actions": "מאמצים מדיניים לבלימת איראן לצד משבר חריף מול המערב.",
+        "c6_designated_executive": "ישראל כ\"ץ מיועד לתיקי החוץ/ביטחון."
+      },
+      "citations": [
+        {
+          "title": "הסכמי אברהם - משרד החוץ",
+          "url": "https://www.gov.il/he/departments/news/abraham_accords",
+          "quote": "כינון יחסים דיפלומטיים היסטוריים עם איחוד האמירויות, בחריין ומרוקו"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": -65,
+        "c2_leader_statements": -70,
+        "c3_leader_actions": -55,
+        "c4_candidates_statements": -65,
+        "c5_candidates_actions": -60,
+        "c6_designated_executive": -65
+      },
+      "notes": {
+        "c1_platform": "תמיכה בפתרון שתי המדינות, נכונות לנסיגות טריטוריאליות נרחבות ביו\"ש – בניגוד חריף לעמדת המשתמש.",
+        "c2_leader_statements": "גולן קורא להיפרדות מדינית ולסיום השליטה בפלסטינים באמצעות הקמת מדינה פלסטינית.",
+        "c3_leader_actions": "כסגן רמטכ\"ל ניהל מערכות צבאיות, אך עמדותיו המדיניות מנוגדות לעמדת היעד (הדורשת אי-מסירת שטחים נרחבים וירושלים).",
+        "c4_candidates_statements": "מוסי רז ולזימי תומכים בעמדות שמאל מדיני מובהקות.",
+        "c5_candidates_actions": "השתתפות בפעילויות ארגוני שלום ודרישה לחלוקת הארץ.",
+        "c6_designated_executive": "יאיר גולן מיועד להוביל קו זה."
+      },
+      "citations": [
+        {
+          "title": "החזון המדיני של יאיר גולן והדמוקרטים",
+          "url": "https://democrats.org.il/diplomacy",
+          "quote": "היפרדות מדינית מהפלסטינים על בסיס שתי מדינות בגבולות מוסכמים"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 35,
+        "c2_leader_statements": 35,
+        "c3_leader_actions": 45,
+        "c4_candidates_statements": 40,
+        "c5_candidates_actions": 40,
+        "c6_designated_executive": 40
+      },
+      "notes": {
+        "c1_platform": "העמקת הסכמי אברהם וברית אזורית, לצד נכונות לפתרון שתי מדינות (בעיקרון) ללא חלוקת ירושלים.",
+        "c2_leader_statements": "לפיד נאם בעצרת האו\"ם בעד פתרון שתי המדינות, דבר המהווה פער מול עמדת המשתמש.",
+        "c3_leader_actions": "כראש ממשלה ושר חוץ חיזק יחסים עם ארה\"ב ואירופה והעביר את הסכם הגבול הימי עם לבנון.",
+        "c4_candidates_statements": "אורנה ברביבאי תומכת בגישה ביטחונית זהירה.",
+        "c5_candidates_actions": "ברביבאי כאלופה הראשונה בצה\"ל בעלת ניסיון פיקודי וביטחוני.",
+        "c6_designated_executive": "אורנה ברביבאי מיועדת לתיקי ביטחון/פנים."
+      },
+      "citations": [
+        {
+          "title": "נאום יאיר לפיד בעצרת האו\"ם - Ynet",
+          "url": "https://www.ynet.co.il",
+          "quote": "הסכם עם הפלסטינים על בסיס שתי מדינות לשני עמים הוא הדבר הנכון לביטחון ישראל"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": 30,
+        "c2_leader_statements": 35,
+        "c3_leader_actions": 35,
+        "c4_candidates_statements": 30,
+        "c5_candidates_actions": 30,
+        "c6_designated_executive": 35
+      },
+      "notes": {
+        "c1_platform": "קו ימין מתון-פרגמטי מסורתי (מורשת הרב עובדיה יוסף), שלילת חלוקת ירושלים.",
+        "c2_leader_statements": "דרעי מציג גישה מתונה ואחראית בקבינט המדיני-ביטחוני.",
+        "c3_leader_actions": "שימש כמשקיף בכיר בקבינט המלחמה והיווה גורם ממתן.",
+        "c4_candidates_statements": "תמיכה בעסקאות להשבת חטופים ובריתות אזוריות.",
+        "c5_candidates_actions": "הצבעות בעד הסכמי שלום אזוריים בעבר.",
+        "c6_designated_executive": "דרעי חבר קבינט בכיר."
+      },
+      "citations": [
+        {
+          "title": "אריה דרעי בקבינט המלחמה",
+          "url": "https://www.haaretz.co.il",
+          "quote": "גורם ממתן שדחף להסדרים אחראיים ולשימור הברית עם ארה\"ב"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": 20,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 20,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": 20,
+        "c6_designated_executive": 20
+      },
+      "notes": {
+        "c1_platform": "אי-התערבות מסורתית בענייני חוץ וביטחון, שלילת התגרות באומות, קו זהיר.",
+        "c2_leader_statements": "הצהרות מתונות של גפני התומכות בהסדרים והימנעות ממלחמות מיותרות.",
+        "c3_leader_actions": "חברי הסיעה אינם נוטלים תפקידים ביטחוניים ואינם משרתים בצה\"ל.",
+        "c4_candidates_statements": "תמיכה בהחזרת חטופים.",
+        "c5_candidates_actions": "הצבעות לפי משמעת קואליציונית.",
+        "c6_designated_executive": "היעדר מועמד ביטחוני."
+      },
+      "citations": [
+        {
+          "title": "עמדות יהדות התורה בנושאי ביטחון",
+          "url": "https://www.kikar.co.il",
+          "quote": "הציבור החרדי תומך בצעדים זהירים לשמירה על חיי אדם"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": 10,
+        "c2_leader_statements": 15,
+        "c3_leader_actions": 10,
+        "c4_candidates_statements": 15,
+        "c5_candidates_actions": 10,
+        "c6_designated_executive": 15
+      },
+      "notes": {
+        "c1_platform": "החלת ריבונות מלאה ביו\"ש ועידוד הגירה, ללא הסכמים בינלאומיים מדודים או פתרון שת\"פ אזורי כפי שביקש המשתמש.",
+        "c2_leader_statements": "בן גביר מתנגד להסכמים עם הרש\"פ או לוויתורים כלשהם, מתעמת עם הממשל האמריקאי.",
+        "c3_leader_actions": "פעילותו מובילה לבידוד בינלאומי ומתיחות קשה מול בעלות ברית מערביות.",
+        "c4_candidates_statements": "צביקה פוגל תומך בהכרעה צבאית מוחלטת.",
+        "c5_candidates_actions": "פוגל כיו\"ר ועדת ביטחון לאומי הוביל קו ניצי.",
+        "c6_designated_executive": "בן גביר מיועד לתיק הביטחון הלאומי."
+      },
+      "citations": [
+        {
+          "title": "החזון המדיני של עוצמה יהודית",
+          "url": "https://www.inn.co.il/policy",
+          "quote": "החלת ריבונות ישראלית מלאה על כל שטחי יהודה ושומרון"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": 20,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 20,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": 20,
+        "c6_designated_executive": 20
+      },
+      "notes": {
+        "c1_platform": "תוכנית ההכרעה: סיפוח מלא של יהודה ושומרון, שלילת כל הסדר או מדינה פלסטינית, פירוק הרש\"פ.",
+        "c2_leader_statements": "סמוטריץ' מתנגד לכל פשרה טריטוריאלית ומתעמת עם בעלות ברית מערביות.",
+        "c3_leader_actions": "הוביל את העברת סמכויות המנהל האזרחי לידי משרדו, קידם בנייה מסיבית בהתנחלויות.",
+        "c4_candidates_statements": "סטרוק דורשת החזרת ההתיישבות לחבל עזה וצפון השומרון.",
+        "c5_candidates_actions": "פעילות ענפה בהתיישבות.",
+        "c6_designated_executive": "סמוטריץ' מחזיק בסמכויות אזרחיות ביו\"ש."
+      },
+      "citations": [
+        {
+          "title": "תוכנית ההכרעה של בצלאל סמוטריץ' - השילוח",
+          "url": "https://hashiloach.org.il",
+          "quote": "החלת ריבונות מלאה על כל מרחבי יהודה ושומרון וסיום אשליית שתי המדינות"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": -90,
+        "c2_leader_statements": -85,
+        "c3_leader_actions": -80,
+        "c4_candidates_statements": -90,
+        "c5_candidates_actions": -85,
+        "c6_designated_executive": -85
+      },
+      "notes": {
+        "c1_platform": "תמיכה בהקמת מדינה פלסטינית בקווי 67 ובירתה מזרח ירושלים – בניגוד מוחלט לעמדת המשתמש.",
+        "c2_leader_statements": "עבאס מצהיר על מדינה פלסטינית עצמאית וסיום הכיבוש.",
+        "c3_leader_actions": "הצבעות נגד פעולות צבאיות ותקציבי ביטחון.",
+        "c4_candidates_statements": "התנגדות לכל פעילות צבאית בעזה ויו\"ש.",
+        "c5_candidates_actions": "הזדהות עם המאבק הפלסטיני.",
+        "c6_designated_executive": "עמדה מנוגדת בתוקף לעמדת המשתמש."
+      },
+      "citations": [
+        {
+          "title": "החזון המדיני של רע\"ם",
+          "url": "https://main.knesset.gov.il/peace",
+          "quote": "שלום צודק על בסיס שתי מדינות בקווי 1967 ומזרח ירושלים כבירת פלסטין"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": -100,
+        "c2_leader_statements": -100,
+        "c3_leader_actions": -100,
+        "c4_candidates_statements": -100,
+        "c5_candidates_actions": -100,
+        "c6_designated_executive": -100
+      },
+      "notes": {
+        "c1_platform": "נסיגה ישראלית מלאה מכל שטחי 1967 כולל מזרח ירושלים, פירוק כל ההתנחלויות, הקמת מדינה פלסטינית ופתרון בעיית הפליטים.",
+        "c2_leader_statements": "עודה, טיבי וכסיף קוראים בעקביות לסיום הכיבוש, מגנים את פעולות צה\"ל ותומכים בסנקציות בינלאומיות.",
+        "c3_leader_actions": "הצבעות נגד כל תקציבי הביטחון, פעילות בפורומים בינלאומיים נגד ישראל.",
+        "c4_candidates_statements": "עופר כסיף חתם על העצומה התומכת בתביעה נגד ישראל בבית הדין בהאג.",
+        "c5_candidates_actions": "התנגדות מוחלטת לכל תפיסה ביטחונית ציונית.",
+        "c6_designated_executive": "התנגדות קוטבית ומוחלטת לעמדת המשתמש."
+      },
+      "citations": [
+        {
+          "title": "החזון המדיני של חד\"ש-תע\"ל",
+          "url": "https://main.knesset.gov.il/peace-plan",
+          "quote": "סיום מוחלט של הכיבוש, פינוי כל ההתנחלויות והקמת מדינה פלסטינית עצמאית שבירתה ירושלים המזרחית"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "הכרעה צבאית מוחלטת, שלילת כל מדינה פלסטינית או נסיגות, שמירה קשיחה על ירושלים וביטחון ישראל.",
+        "c2_leader_statements": "וינטר הוא סמל הגישה ההתקפית: 'הכרעה ברורה של האויב ללא היסוסים וללא מריחת זמן'.",
+        "c3_leader_actions": "פיקד על חטיבת גבעתי במבצע 'צוק איתן' ועל עוצבות קרביות בהצלחה מבצעית רבה.",
+        "c4_candidates_statements": "התנגדות לכל ויתור ביטחוני ביו\"ש ובבקעה.",
+        "c5_candidates_actions": "רקורד קרבי עטור שבחים של מפקדים ולוחמים.",
+        "c6_designated_executive": "עופר וינטר מיועד לשר הביטחון."
+      },
+      "citations": [
+        {
+          "title": "דף המפקד של עופר וינטר בצוק איתן",
+          "url": "https://www.ynet.co.il",
+          "quote": "ההיסטוריה בחרה בנו להיות בחוד החנית של הלחימה באויב הטרוריסטי; הכרעה ברורה וניצחון"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,356 @@
+{
+  "topic_id": "government_downsizing",
+  "date": "2026-09-12",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 70,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "התחייבות רשמית להגבלת הממשלה ל-18 שרים בחוק יסוד וביטול מוחלט של כל המשרדים המומצאים.",
+        "c2_leader_statements": "איזנקוט התחייב: 'לא נשב בממשלה של מעל 18 שרים; נסגור 10 משרדים מיותרים ביום הראשון'.",
+        "c3_leader_actions": "חתם על הצעת חוק לצמצום משרדי הממשלה.",
+        "c4_candidates_statements": "חברי הרשימה הריאלית התחייבו פומבית לצמצום מנגנוני השרים והלשכות.",
+        "c5_candidates_actions": "חברי הכנסת הגישו הצעות לפירוק משרד המורשת, המשימות הלאומיות והמסורת.",
+        "c6_designated_executive": "מחויבות קולקטיבית של הנהגת המפלגה."
+      },
+      "citations": [
+        {
+          "title": "תוכנית 18 השרים - מפלגת ישר",
+          "url": "https://yashar.org.il/platform/governance-efficiency",
+          "quote": "ממשלה קטנה, יעילה, ללא שרים ללא תיק וללא כפילויות ביורוקרטיות"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 65,
+        "c2_leader_statements": 65,
+        "c3_leader_actions": 50,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 55,
+        "c6_designated_executive": 60
+      },
+      "notes": {
+        "c1_platform": "צמצום מספר המשרדים ל-18 והתייעלות מנגנוני המטה הממשלתיים.",
+        "c2_leader_statements": "בנט מצהיר על כוונה להקים ממשלת מומחים מצומצמת ויעילה.",
+        "c3_leader_actions": "בעבר כראש ממשלה הקים ממשלה של 27 שרים בשל פשרות פוליטיות, דבר המהווה פער מול ההצהרה.",
+        "c4_candidates_statements": "שקד וקארה תומכים בצמצום הוצאות הממשלה והשרים.",
+        "c5_candidates_actions": "שקד סגרה בעבר יחידות כפולות במשרד המשפטים והפנים.",
+        "c6_designated_executive": "מחויבות כללית ללא חקיקה חקוקה בסלע."
+      },
+      "citations": [
+        {
+          "title": "הצהרות נפתלי בנט על מבנה הממשלה",
+          "url": "https://www.beyachad2026.org.il",
+          "quote": "נקים ממשלה רזה ללא שרים מומצאים"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 90,
+        "c2_leader_statements": 90,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "חוק ממשלה רזה: מקסימום 18 שרים, ביטול משרדים מומצאים וסגירת לשכות מיותרות.",
+        "c2_leader_statements": "הנדל וזליכה התחייבו שלא יישבו בממשלה מנופחת ויקצצו 40% מהוצאות המטה.",
+        "c3_leader_actions": "הנדל כשר תקשורת ייעל את המשרד וצמצם יחידות מטה.",
+        "c4_candidates_statements": "צביקה האוזר תומך בחקיקת חוק יסוד המגביל את הממשלה ל-18 שרים ללא הוראות שעה.",
+        "c5_candidates_actions": "האוזר יזם חוקים לקיצוץ הוצאות פוליטיות בכנסת.",
+        "c6_designated_executive": "התחייבות רשמית במצע."
+      },
+      "citations": [
+        {
+          "title": "חוק ממשלה רזה - מצע הנדל וזליכה",
+          "url": "https://www.kalkalit.org/downsizing",
+          "quote": "ממשלה של 18 שרים בלבד, חיסכון של מיליארדים בהוצאות שרים ולשכות"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 70,
+        "c4_candidates_statements": 70,
+        "c5_candidates_actions": 70,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "הגבלת מספר השרים ל-18, ביטול משרדים מומצאים וסגירת משרדי דתות ומורשת.",
+        "c2_leader_statements": "ליברמן כינה את הממשלה הנוכחית 'ממשלת שודדים עם 30 שרים מיותרים'.",
+        "c3_leader_actions": "בממשלת בנט-לפיד החזיקה ישראל ביתנו במספר מועט של תיקים.",
+        "c4_candidates_statements": "חברי הסיעה הגישו הצעות לפירוק המשרדים המיותרים.",
+        "c5_candidates_actions": "פעילות בוועדות הכנסת נגד תקציבי משרדי הסרק.",
+        "c6_designated_executive": "התחייבות לממשלה של 18 שרים."
+      },
+      "citations": [
+        {
+          "title": "הצעת חוק לצמצום משרדי הממשלה - ישראל ביתנו",
+          "url": "https://beytenu.org.il",
+          "quote": "ביטול 12 משרדי ממשלה מיותרים וחיסכון שנתי של מיליארדי שקלים"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": -85,
+        "c2_leader_statements": -80,
+        "c3_leader_actions": -95,
+        "c4_candidates_statements": -80,
+        "c5_candidates_actions": -90,
+        "c6_designated_executive": -90
+      },
+      "notes": {
+        "c1_platform": "הליכוד אינו כולל שום הגבלה על מספר השרים או המשרדים.",
+        "c2_leader_statements": "נתניהו מגן על הקמת עשרות משרדים מפוצלים לצורכי שלום קואליציוני.",
+        "c3_leader_actions": "הקים את הממשלה הגדולה והמנופחת בהיסטוריה (מעל 30 שרים, משרדים מומצאים: מורשת, משימות לאומיות, מסורת, שת\"פ אזורי).",
+        "c4_candidates_statements": "ח\"כים בליכוד נלחמים על כל תיק ולשכה מומצאת.",
+        "c5_candidates_actions": "הקצאת מאות מיליונים ללשכות שרים וסגני שרים מיותרים.",
+        "c6_designated_executive": "חוסר נכונות מוחלט לסגור משרדים."
+      },
+      "citations": [
+        {
+          "title": "מבנה ממשלת ישראל ה-37 - אתר הכנסת",
+          "url": "https://main.knesset.gov.il",
+          "quote": "ממשלה המונה 34 שרים ועשרות משרדים ממשלתיים מפוצלים"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 70,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 70
+      },
+      "notes": {
+        "c1_platform": "צמצום הממשלה ל-18 שרים וסגירת משרדי ההתנחלויות, המורשת והמשימות הלאומיות.",
+        "c2_leader_statements": "גולן דורש סגירה מיידית של משרדי הסרק שנועדו לשחד שותפים קואליציוניים.",
+        "c3_leader_actions": "הצבעות נגד הקמת משרדים מפוצלים בכנסת.",
+        "c4_candidates_statements": "חברי הרשימה תומכים בחוק יסוד המגביל את גודל הממשלה.",
+        "c5_candidates_actions": "פעילות פרלמנטרית לחשיפת ביזבוזי הלשכות המיותרות.",
+        "c6_designated_executive": "מחויבות לממשלה רזה."
+      },
+      "citations": [
+        {
+          "title": "הצעת חוק לביטול משרדי ממשלה מיותרים - הדמוקרטים",
+          "url": "https://democrats.org.il",
+          "quote": "סגירת עשרה משרדים מיותרים והחזרת הסמכויות למשרדי הליבה"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 70
+      },
+      "notes": {
+        "c1_platform": "חוק יסוד המגביל את הממשלה ל-18 שרים ללא שרים ללא תיק.",
+        "c2_leader_statements": "לפיד מצהיר בעקביות על הצורך בממשלה קטנה ויעילה.",
+        "c3_leader_actions": "חוקק את חוק 18 השרים ב-2013, אך בממשלת השינוי ב-2021 נאלץ להגדיל את הממשלה ל-27 שרים עקב פשרות.",
+        "c4_candidates_statements": "ח\"כים של יש עתיד הגישו הצעות לפירוק משרדי הסרק.",
+        "c5_candidates_actions": "הצבעות עקביות נגד המשרדים המומצאים.",
+        "c6_designated_executive": "התחייבות רשמית להגבלה חוקתית."
+      },
+      "citations": [
+        {
+          "title": "חוק יסוד הממשלה: הגבלה ל-18 שרים - יש עתיד",
+          "url": "https://www.yeshatid.org.il/governance",
+          "quote": "ממשלה קומפקטית ללא בזבוז של מיליארדים על לשכות שרים פיקטיביות"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": -80,
+        "c2_leader_statements": -75,
+        "c3_leader_actions": -85,
+        "c4_candidates_statements": -75,
+        "c5_candidates_actions": -85,
+        "c6_designated_executive": -85
+      },
+      "notes": {
+        "c1_platform": "דרישה למספר מרבי של תיקים: פנים, בריאות, רווחה, שירותי דת ומשרדים נוספים.",
+        "c2_leader_statements": "דרעי דרש מספר רב של משרדים וסגני שרים עבור חברי סיעתו.",
+        "c3_leader_actions": "פיצול סמכויות והקמת משרדים כפולים (רווחה, ביטחון לאומי ודתות).",
+        "c4_candidates_statements": "ח\"כים בש\"ס מכהנים במשרדים ייעודיים.",
+        "c5_candidates_actions": "התנגדות עקבית לכל חוק להגבלת מספר השרים.",
+        "c6_designated_executive": "תמיכה בממשלה רחבה ומחלקת כיבודים."
+      },
+      "citations": [
+        {
+          "title": "חלוקת התיקים של ש\"ס בממשלה ה-37",
+          "url": "https://main.knesset.gov.il",
+          "quote": "ש\"ס מחזיקה בחמישה משרדי ממשלה בכירים ומספר סגני שרים"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": -80,
+        "c2_leader_statements": -80,
+        "c3_leader_actions": -85,
+        "c4_candidates_statements": -80,
+        "c5_candidates_actions": -85,
+        "c6_designated_executive": -85
+      },
+      "notes": {
+        "c1_platform": "התנגדות להגבלת מספר השרים, דרישה למשרדים ייעודיים וסגני שרים בעלי סמכויות שר.",
+        "c2_leader_statements": "גולדקנופף מכהן כשר שיכון ודורש סמכויות נרחבות נוספות.",
+        "c3_leader_actions": "הקמת רשויות ייעודיות ומשרדים מפוצלים.",
+        "c4_candidates_statements": "אורי מקלב מכהן כסגן שר עם לשכות כפולות בתחבורה ובמשרד רה\"מ.",
+        "c5_candidates_actions": "תמיכה בממשלה רחבה ומנופחת.",
+        "c6_designated_executive": "שמירה על מבנה ממשלתי מנופח."
+      },
+      "citations": [
+        {
+          "title": "מינויי יהדות התורה בממשלה",
+          "url": "https://main.knesset.gov.il",
+          "quote": "הקמת הרשות החרדית ולשכות סגני שרים מרובות"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": -75,
+        "c2_leader_statements": -70,
+        "c3_leader_actions": -85,
+        "c4_candidates_statements": -75,
+        "c5_candidates_actions": -85,
+        "c6_designated_executive": -80
+      },
+      "notes": {
+        "c1_platform": "הקמת משרדים מפוצלים ומנגנוני שרים חדשים (ביטחון לאומי, מורשת, נגב וגליל).",
+        "c2_leader_statements": "בן גביר דרש הרחבת סמכויות והקמת המשמר הלאומי תחת פיקוחו הישיר.",
+        "c3_leader_actions": "החזקה בשלושה משרדי ממשלה נפרדים (ביטחון לאומי, נגב וגליל, מורשת).",
+        "c4_candidates_statements": "ח\"כים תומכים בלשכות שרים נוספות.",
+        "c5_candidates_actions": "הצבעות נגד צמצום מספר השרים.",
+        "c6_designated_executive": "שמירה על ריבוי משרדים."
+      },
+      "citations": [
+        {
+          "title": "המשרדים של עוצמה יהודית בממשלה ה-37",
+          "url": "https://main.knesset.gov.il",
+          "quote": "שלושה שרים במשרדים מפוצלים כולל משרד המורשת ומשרד הנגב והגליל"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": -65,
+        "c2_leader_statements": -60,
+        "c3_leader_actions": -80,
+        "c4_candidates_statements": -65,
+        "c5_candidates_actions": -80,
+        "c6_designated_executive": -75
+      },
+      "notes": {
+        "c1_platform": "דרישה לצמצום ביורוקרטיה, אך הקמת משרדים ייעודיים עבור המפלגה.",
+        "c2_leader_statements": "הצהרות על יעילות שלטונית לצד החזקה בשני משרדים וסמכויות שר במשרד הביטחון.",
+        "c3_leader_actions": "הקמת משרד המשימות הלאומיות בראשות אורית סטרוק (משרד מומצא).",
+        "c4_candidates_statements": "סטרוק מגנה על קיומו של המשרד הייעודי.",
+        "c5_candidates_actions": "הצבעות נגד צמצום הממשלה.",
+        "c6_designated_executive": "החזקת תיקים מפוצלים."
+      },
+      "citations": [
+        {
+          "title": "תקציב משרד המשימות הלאומיות של סטרוק - TheMarker",
+          "url": "https://www.themarker.com",
+          "quote": "מאות מיליוני שקלים הוקצו למשרד מומצא לצורכי שליטה תקציבית"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": 0,
+        "c2_leader_statements": 10,
+        "c3_leader_actions": 0,
+        "c4_candidates_statements": 0,
+        "c5_candidates_actions": 0,
+        "c6_designated_executive": 0
+      },
+      "notes": {
+        "c1_platform": "ללא עמדה מוגדרת בנושא גודל הממשלה או מספר השרים.",
+        "c2_leader_statements": "התמקדות בהשגת תקציבים והשפעה אזרחית.",
+        "c3_leader_actions": "לא דרשו תפקידי שרים בממשלת השינוי.",
+        "c4_candidates_statements": "אין.",
+        "c5_candidates_actions": "אין.",
+        "c6_designated_executive": "אין."
+      },
+      "citations": [
+        {
+          "title": "מצע רע\"ם",
+          "url": "https://raam.org.il",
+          "quote": "פרגמטיזם אזרחי להשגת זכויות ותקציבים"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": 20,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 20,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": 20,
+        "c6_designated_executive": 20
+      },
+      "notes": {
+        "c1_platform": "ביקורת על ממשלה מנופחת ומשרדים סקטוריאליים, אך תמיכה בהרחבת משרדי רווחה ובריאות.",
+        "c2_leader_statements": "טיבי תוקף בלעג את 'המשרדים המומצאים' של הממשלה.",
+        "c3_leader_actions": "הצבעות נגד הקמת משרדי סרק של הימין.",
+        "c4_candidates_statements": "ח\"כים תוקפים בזבוזי לשכות.",
+        "c5_candidates_actions": "ביקורת בוועדת הכנסת.",
+        "c6_designated_executive": "היעדר תוכנית סדורה ל-18 שרים."
+      },
+      "citations": [
+        {
+          "title": "ביקורת חד\"ש-תע\"ל על משרדי הממשלה",
+          "url": "https://aljabha.org.il",
+          "quote": "ממשלה מנופחת המבזבזת מיליארדים על משרדים פוליטיים מיותרים"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 60,
+        "c2_leader_statements": 65,
+        "c3_leader_actions": 50,
+        "c4_candidates_statements": 60,
+        "c5_candidates_actions": 50,
+        "c6_designated_executive": 55
+      },
+      "notes": {
+        "c1_platform": "צמצום משרדי ממשלה מיותרים ואיחוד פונקציות ביטחוניות ואזרחיות.",
+        "c2_leader_statements": "וינטר מדבר על 'מטה רזה ויעיל' כפי שנהוג בצבא הקרבי.",
+        "c3_leader_actions": "צמצום תקני מפקדה והעברת משאבים לקצה המבצעי.",
+        "c4_candidates_statements": "התנגדות למשרדים פוליטיים מומצאים.",
+        "c5_candidates_actions": "קריאה לייעול המנגנון הציבורי.",
+        "c6_designated_executive": "תפיסת פיקוד רזה."
+      },
+      "citations": [
+        {
+          "title": "תפיסת המטה הרזה של עופר וינטר",
+          "url": "https://www.israelhayom.co.il",
+          "quote": "ממשלה צריכה לפעול כמו אוגדה קרבית: מטה רזה, מינימום ביורוקרטיה וכל המשאבים לשטח"
+        }
+      ]
+    }
+  }
+}

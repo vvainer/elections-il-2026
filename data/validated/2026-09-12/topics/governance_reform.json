@@ -1,0 +1,356 @@
+{
+  "topic_id": "governance_reform",
+  "date": "2026-09-12",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 55,
+        "c2_leader_statements": 60,
+        "c3_leader_actions": 50,
+        "c4_candidates_statements": 55,
+        "c5_candidates_actions": 55,
+        "c6_designated_executive": 60
+      },
+      "notes": {
+        "c1_platform": "דגש על ממלכתיות וחיזוק השלטון המקומי, אך זהירות משינויים מרחיקי לכת ביועמ\"ש או בבג\"ץ.",
+        "c2_leader_statements": "איזנקוט קורא להסדרת יחסים מוסכמת בחוק יסוד חקיקה וביזור סמכויות לראשי ערים.",
+        "c3_leader_actions": "תמך בהידברות בבית הנשיא להסדרת מערכת המשפט.",
+        "c4_candidates_statements": "מיכאל ביטון דורש העברת סמכויות ותקציבים מהממשלה לשלטון המקומי.",
+        "c5_candidates_actions": "ביטון כראש מועצת ירוחם לשעבר הוביל מודלים מוצלחים של ניהול עצמי מוניציפלי.",
+        "c6_designated_executive": "מיכאל ביטון מיועד לתיק הפנים/שלטון מקומי."
+      },
+      "citations": [
+        {
+          "title": "עמדות ישר: ממלכתיות וביזור שלטוני",
+          "url": "https://www.kan.org.il/governance",
+          "quote": "העברת סמכויות ניהוליות לרשויות המקומיות היא תנאי לשירות איכותי לאזרח"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "רפורמה מבנית מאוזנת: פיצול תפקיד היועמ\"ש, ריסון אקטיביזם שיפוטי וביזור לשלטון המקומי.",
+        "c2_leader_statements": "בנט ושקד קוראים בעקביות לפיצול מוסד היועמ\"ש והחזרת האיזון בין הרשויות ללא אנרכיה.",
+        "c3_leader_actions": "שקד כשרת משפטים מינתה שופטים שמרנים, קידמה חוקים להגבלת עתירות ופעלה לריסון משפטי.",
+        "c4_candidates_statements": "איילת שקד מובילה את התפיסה המשפטית המובנית של המפלגה.",
+        "c5_candidates_actions": "רקורד עשיר ומעשי של שקד בהובלת שינויים במערכת המשפט ובמשרד הפנים.",
+        "c6_designated_executive": "איילת שקד מיועדת חד-משמעית לתיק המשפטים."
+      },
+      "citations": [
+        {
+          "title": "תוכנית שקד ובנט למערכת המשפט",
+          "url": "https://www.globes.co.il",
+          "quote": "פיצול תפקיד היועמ\"ש בין תובע כללי ליועץ משפטי לממשלה הוא כורח השעה"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 75,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "ממלכתיות, הגבלת כהונות, ביזור סמכויות לרשויות מקומיות, הסדרת יחסי כנסת-בג\"ץ ברוח שמרנית-ממלכתית.",
+        "c2_leader_statements": "הנדל קורא לימין ממלכתי השומר על שלטון החוק תוך תיקונים מוסכמים.",
+        "c3_leader_actions": "הנדל והאוזר הובילו קו ממלכתי בלתי מתפשר ומנעו פגיעה במוסדות השלטון.",
+        "c4_candidates_statements": "צביקה האוזר הוביל את 'חוק הלאום' ויוזמות חוקתיות ממלכתיות.",
+        "c5_candidates_actions": "רקורד חקיקתי ומשפטי עשיר בניהול מערכות ממשל.",
+        "c6_designated_executive": "האוזר מיועד לשר משפטים/חוץ."
+      },
+      "citations": [
+        {
+          "title": "מצע ממלכתיות ומשטר - יועז הנדל",
+          "url": "https://www.www.calcalist.co.il",
+          "quote": "ימין ממלכתי שמחזק את מוסדות המדינה והשלטון המקומי"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 70,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 65
+      },
+      "notes": {
+        "c1_platform": "מעבר למשטר נשיאותי, חוקה והסדרת היחסים בין הרשויות תוך שמירה על ממלכתיות.",
+        "c2_leader_statements": "ליברמן קורא לרפורמה במבנה השלטון וחיזוק המשילות והיציבות הפוליטית.",
+        "c3_leader_actions": "ניהל מערכות ציבוריות רבות ומשרדי ממשלה בכירים (ביטחון, אוצר, חוץ).",
+        "c4_candidates_statements": "יוליה מלינובסקי מציגה עמדות תקיפות לביזור סמכויות לרשויות המקומיות.",
+        "c5_candidates_actions": "מלינובסקי פעילה מרכזית בוועדות הכנסת בפיקוח על הממשלה.",
+        "c6_designated_executive": "עודד פורר מיועד לתפקידים בכירים."
+      },
+      "citations": [
+        {
+          "title": "תוכנית הממשל של אביגדור ליברמן",
+          "url": "https://beytenu.org.il/governance",
+          "quote": "חוקה לישראל, משטר נשיאותי וביזור סמכויות לרשויות המקומיות"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": 10,
+        "c2_leader_statements": 10,
+        "c3_leader_actions": -25,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": -20,
+        "c6_designated_executive": -10
+      },
+      "notes": {
+        "c1_platform": "רפורמה משפטית לריסון בג\"ץ, אך ללא ביזור סמכויות לשלטון מקומי וללא חיזוק עצמאי של הכנסת.",
+        "c2_leader_statements": "נתניהו הצהיר על תיקון מערכת המשפט, אך בפועל ניהל מאבקים אישיים מול היועמ\"שית.",
+        "c3_leader_actions": "הובלת 'הרפורמה המשפטית' של לוין יצרה קרע לאומי חסר תקדים ללא הסכמה רחבה.",
+        "c4_candidates_statements": "יריב לוין מוביל קו רדיקלי לשינוי הרכב הוועדה לבחירת שופטים.",
+        "c5_candidates_actions": "לוין שיתק את הוועדה לבחירת שופטים במשך חודשים ארוכים.",
+        "c6_designated_executive": "יריב לוין מיועד להמשיך בתפקידו."
+      },
+      "citations": [
+        {
+          "title": "הרפורמה המשפטית של יריב לוין - ויקיפדיה",
+          "url": "https://he.wikipedia.org/wiki/הרפורמה_המשפטית_בישראל_(2023)",
+          "quote": "רפורמה מקיפה שגררה מחאות ענק וביקורת כלכלית וביטחונית"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": -20,
+        "c2_leader_statements": -25,
+        "c3_leader_actions": -15,
+        "c4_candidates_statements": -20,
+        "c5_candidates_actions": -15,
+        "c6_designated_executive": -20
+      },
+      "notes": {
+        "c1_platform": "הגנה מוחלטת על מעמד בית המשפט העליון ומוסד היועמ\"ש, התנגדות לכל פיצול או ריסון.",
+        "c2_leader_statements": "גולן מתנגד בחריפות לכל פשרה ביחס לרשות השופטת או היועמ\"ש.",
+        "c3_leader_actions": "הוביל את מחאת הרחוב נגד הרפורמה המשפטית.",
+        "c4_candidates_statements": "גלעד קריב דוגל בשמירה על עליונות המשפט והתנגדות לפיצול היועמ\"ש.",
+        "c5_candidates_actions": "בלימת שינויים במערכת המשפט בוועדות הכנסת.",
+        "c6_designated_executive": "גלעד קריב מיועד לשר המשפטים בקו שמרני מוסדי."
+      },
+      "citations": [
+        {
+          "title": "עמדת הדמוקרטים בנושא מערכת המשפט",
+          "url": "https://democrats.org.il/justice",
+          "quote": "שמירה על עצמאות הרשות השופטת ואי-פגיעה במוסד היועץ המשפטי לממשלה"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 25,
+        "c2_leader_statements": 30,
+        "c3_leader_actions": 20,
+        "c4_candidates_statements": 25,
+        "c5_candidates_actions": 20,
+        "c6_designated_executive": 25
+      },
+      "notes": {
+        "c1_platform": "חוקה לישראל, הגבלת כהונת רה\"מ, אך התנגדות נחרצת לשינוי במעמד בג\"ץ או ביועמ\"ש.",
+        "c2_leader_statements": "לפיד מתנגד לכל פגיעה בעצמאות הייעוץ המשפטי ובבית המשפט העליון.",
+        "c3_leader_actions": "התנגדות מוחלטת ליוזמות פיצול יועמ\"ש או ריסון סמכויות.",
+        "c4_candidates_statements": "קארין אלהרר מגנה על שלטון החוק הקיים.",
+        "c5_candidates_actions": "נציגת האופוזיציה בוועדה לבחירת שופטים.",
+        "c6_designated_executive": "שמירה על המבנה המוסדי הקיים."
+      },
+      "citations": [
+        {
+          "title": "חוקה לישראל - יש עתיד",
+          "url": "https://www.yeshatid.org.il/constitution",
+          "quote": "כינון חוקה שתגן על הדמוקרטיה ועל עצמאות בית המשפט העליון"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": 20,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 15,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": 15,
+        "c6_designated_executive": 20
+      },
+      "notes": {
+        "c1_platform": "תמיכה בריסון בג\"ץ ופסקת התגברות (בשל פסילת דרעי), אך ללא ביזור סמכויות לרשויות מקומיות ליברליות.",
+        "c2_leader_statements": "דרעי תומך בהחלשת כוחם של שופטי בג\"ץ והיועמ\"ש.",
+        "c3_leader_actions": "חקיקת 'חוק דרעי' לפיקוח שיפוטי מצומצם.",
+        "c4_candidates_statements": "ח\"כים בש\"ס תומכים בהגבלת עילת הסבירות.",
+        "c5_candidates_actions": "הצבעות בעד כל סעיפי הרפורמה המשפטית.",
+        "c6_designated_executive": "דרעי מנווט את המדיניות המשפטית."
+      },
+      "citations": [
+        {
+          "title": "חוק דרעי ועילת הסבירות",
+          "url": "https://www.ynet.co.il",
+          "quote": "ש\"ס תומכת בחקיקה שתמנע מבית המשפט להתערב במינויי שרים"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": 15,
+        "c2_leader_statements": 20,
+        "c3_leader_actions": 15,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": 15,
+        "c6_designated_executive": 15
+      },
+      "notes": {
+        "c1_platform": "ריסון בג\"ץ באמצעות פסקת התגברות ברוב של 61 כדי למנוע גיוס חרדים והתערבות בתקציבים.",
+        "c2_leader_statements": "גפני תוקף את בג\"ץ בחריפות ומאשים אותו ברדיפת עולם התורה.",
+        "c3_leader_actions": "תמיכה בחוקי הרפורמה המשפטית.",
+        "c4_candidates_statements": "התנגדות לכל ביזור סמכויות לרשויות מקומיות שאינן חרדיות.",
+        "c5_candidates_actions": "הצבעה בעד חוקי הקואליציה המשפטיים.",
+        "c6_designated_executive": "גפני מוביל את העמדה בוועדת כספים."
+      },
+      "citations": [
+        {
+          "title": "גפני על בג\"ץ ופסקת ההתגברות",
+          "url": "https://www.inn.co.il",
+          "quote": "בג\"ץ הפך לגורם שמאיים על המשך קיומו של עולם הישיבות"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": 65,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 60,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 60,
+        "c6_designated_executive": 65
+      },
+      "notes": {
+        "c1_platform": "ריסון תקיף של בג\"ץ, פיטורי/פיצול היועמ\"ש והעברת סמכויות לממשלה ולשרים.",
+        "c2_leader_statements": "בן גביר תוקף בעקביות את היועמ\"שית ופרקליטות המדינה ודורש פיצול מיידי של התפקיד.",
+        "c3_leader_actions": "מאבקים משפטיים יומיומיים מול הייעוץ המשפטי לממשלה והתעקשות על משילות השר.",
+        "c4_candidates_statements": "צביקה פוגל דורש שלטון חוק נחוש וריסון הפקידות המשפטית.",
+        "c5_candidates_actions": "הצבעות בעד כל חוקי הרפורמה המשפטית.",
+        "c6_designated_executive": "איתמר בן גביר מוביל קו זה."
+      },
+      "citations": [
+        {
+          "title": "עימותי בן גביר והיועמ\"שית - Ynet",
+          "url": "https://www.ynet.co.il",
+          "quote": "בן גביר דורש פיצול מיידי של סמכויות היועמ\"ש והפסקת הווטו של הפקידות המשפטית"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 90,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 90,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 90
+      },
+      "notes": {
+        "c1_platform": "תוכנית 'חוק וסדר' לריסון מוחלט של בג\"ץ, פיצול תפקיד היועמ\"ש, שינוי הרכב הוועדה לשופטים וביטול עילת הסבירות.",
+        "c2_leader_statements": "סמוטריץ' ורוטמן הם הוגי ומנהלי הרפורמה המשפטית בישראל.",
+        "c3_leader_actions": "רוטמן כיו\"ר ועדת חוקה הוביל את חקיקת צמצום עילת הסבירות ומאבק בייעוץ המשפטי.",
+        "c4_candidates_statements": "שמחה רוטמן הוא הדמות המובילה בישראל לריסון האקטיביזם השיפוטי.",
+        "c5_candidates_actions": "ניהול עשרות דיונים וועדות לשינוי סדרי השלטון המשפטי.",
+        "c6_designated_executive": "שמחה רוטמן מיועד חד-משמעית לשר המשפטים."
+      },
+      "citations": [
+        {
+          "title": "תוכנית חוק וסדר - הציונות הדתית",
+          "url": "https://www.inn.co.il/law-and-order",
+          "quote": "פיצול תפקיד היועץ המשפטי לממשלה, שינוי הוועדה לבחירת שופטים ואיזון הרשויות"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": -25,
+        "c2_leader_statements": -20,
+        "c3_leader_actions": -15,
+        "c4_candidates_statements": -20,
+        "c5_candidates_actions": -15,
+        "c6_designated_executive": -20
+      },
+      "notes": {
+        "c1_platform": "הגנה על עצמאות בג\"ץ כמגן על מיעוטים, התנגדות לריסון שיפוטי או פיצול יועמ\"ש.",
+        "c2_leader_statements": "עבאס רואה בבג\"ץ בלם קריטי מפני עריצות הרוב.",
+        "c3_leader_actions": "הצבעה נגד כל סעיפי הרפורמה המשפטית.",
+        "c4_candidates_statements": "תמיכה בביזור סמכויות לרשויות מקומיות ערביות.",
+        "c5_candidates_actions": "התנגדות לשינויים במערכת המשפט.",
+        "c6_designated_executive": "שמירה על המבנה הקיים."
+      },
+      "citations": [
+        {
+          "title": "עמדת רע\"ם על הרפורמה המשפטית",
+          "url": "https://main.knesset.gov.il",
+          "quote": "פגיעה במערכת המשפט תפגע בראש ובראשונה באזרחים הערבים בישראל"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": -40,
+        "c2_leader_statements": -40,
+        "c3_leader_actions": -35,
+        "c4_candidates_statements": -40,
+        "c5_candidates_actions": -35,
+        "c6_designated_executive": -35
+      },
+      "notes": {
+        "c1_platform": "הגנה על בג\"ץ ושלטון החוק מפני הרפורמה, דרישה למדינת כל אזרחיה וביטול חוק הלאום.",
+        "c2_leader_statements": "עודה וטיבי מתנגדים לכל שינוי משפטי המחזק את השלטון הימני.",
+        "c3_leader_actions": "הצבעה עקבית נגד חוקי הרפורמה המשפטית.",
+        "c4_candidates_statements": "התנגדות לביזור סמכויות שעשוי לפגוע במיעוטים.",
+        "c5_candidates_actions": "הובלת עתירות רבות לבג\"ץ.",
+        "c6_designated_executive": "עמדות מנוגדות לעמדת המשתמש."
+      },
+      "citations": [
+        {
+          "title": "מאבק חד\"ש-תע\"ל בהפיכה המשטרית",
+          "url": "https://main.knesset.gov.il",
+          "quote": "הגנה על מרחב הדמוקרטיה וביטול חוקי הגזענות"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 65,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 60,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 60,
+        "c6_designated_executive": 65
+      },
+      "notes": {
+        "c1_platform": "החזרת המשילות, ריסון המשפטיזציה של הצבא ומערכת הביטחון, תיקון היחסים בין הדרג המדיני לפרקליטות.",
+        "c2_leader_statements": "וינטר התבטא בחריפות נגד עודף משפטיזציה הפוגעת בהכרעה ובלחימה.",
+        "c3_leader_actions": "התמודד מול לחצים משפטיים וחקירות צבאיות במהלך שירותו הקרבי.",
+        "c4_candidates_statements": "תמיכה במשילות מלאה ופיקוח על הפקידות.",
+        "c5_candidates_actions": "מאבק ציבורי למען חופש פעולה למפקדים.",
+        "c6_designated_executive": "וינטר מיועד להובלת תחום המשילות והביטחון."
+      },
+      "citations": [
+        {
+          "title": "מאמרי עופר וינטר על משילות ופיקוד",
+          "url": "https://www.makorrishon.co.il",
+          "quote": "עודף משפטיזציה וחשש מביקורת מסרסים את יכולת ההכרעה של המפקדים בשטח"
+        }
+      ]
+    }
+  }
+}

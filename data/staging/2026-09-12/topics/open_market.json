@@ -1,0 +1,356 @@
+{
+  "topic_id": "open_market",
+  "date": "2026-09-12",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 60,
+        "c2_leader_statements": 60,
+        "c3_leader_actions": 55,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 65
+      },
+      "notes": {
+        "c1_platform": "פתיחת השוק לייבוא והורדת יוקר המחיה, תוך שמירה על רשתות ביטחון סוציאליות.",
+        "c2_leader_statements": "איזנקוט מדגיש תחרות ומלחמה בקרטלים אך שומר על קו ממלכתי מרוסן.",
+        "c3_leader_actions": "תמך ברפורמות הכלכליות של ממשלת השינוי.",
+        "c4_candidates_statements": "שאול מרידור דוגל בריסוק חסמים בירוקרטיים ואימוץ תקנים אירופיים.",
+        "c5_candidates_actions": "שאול מרידור כראש אגף תקציבים לשעבר הוביל צעדים רבים לפתיחת השוק לתחרות.",
+        "c6_designated_executive": "שאול מרידור מיועד לתפקיד כלכלי בכיר."
+      },
+      "citations": [
+        {
+          "title": "תוכנית שאול מרידור למאבק ביוקר המחיה",
+          "url": "https://www.calcalist.co.il",
+          "quote": "ביטול תקינה ייחודית ופתיחה גורפת של יבוא מקביל"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 90,
+        "c2_leader_statements": 95,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 90,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 90
+      },
+      "notes": {
+        "c1_platform": "תוכנית שוק פתוח מלא: הסרת מכסים, אימוץ גורף של תקנים מערביים, ריסוק מונופולים וביטול רגולציה.",
+        "c2_leader_statements": "בנט: 'ישראל סובלת מחנק ביורוקרטי וקרטלים; נפסיק להמציא תקנים ונפתח את הנמלים והשווקים'.",
+        "c3_leader_actions": "ממשלת בנט העבירה את רפורמת היבוא המהפכנית ורפורמת הרישוי לעסקים.",
+        "c4_candidates_statements": "אביר קארה הוא סמל המאבק ברגולציה ומונופולים מטעם 'השולמנים'.",
+        "c5_candidates_actions": "קארה הוביל את 'חוק רישוי עסקים' וביטול עשרות תקנים מכבידים.",
+        "c6_designated_executive": "אביר קארה מיועד לשר הממונה על הרגולציה והורדת החסמים."
+      },
+      "citations": [
+        {
+          "title": "רפורמת היבוא מה שטוב לאירופה טוב לישראל",
+          "url": "https://www.gov.il/he/departments/news/reform_europe_israel",
+          "quote": "מוצר שמאושר לשיווק באיחוד האירופי יכנס לישראל ללא בדיקות מיותרות"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 95,
+        "c2_leader_statements": 95,
+        "c3_leader_actions": 90,
+        "c4_candidates_statements": 90,
+        "c5_candidates_actions": 90,
+        "c6_designated_executive": 95
+      },
+      "notes": {
+        "c1_platform": "ריסוק המונופולים, פירוק קרטל היבואנים הבלעדיים, פתיחת הנמלים, הורדת מכסים ועידוד יזמות.",
+        "c2_leader_statements": "זליכה הוא הדובר הבולט בישראל נגד הריכוזיות ומונופולי המזון והיבוא.",
+        "c3_leader_actions": "כחשב כללי לחם במונופולים, פיקח על תקציבים וחשף עיוותים מבניים במשק.",
+        "c4_candidates_statements": "הנדל פתח את שוק התקשורת לתחרות עזה והוריד מחירים.",
+        "c5_candidates_actions": "הנדל ביטל את פיצול התשתית והספק בתקשורת, חיסל ביורוקרטיה והוזיל עלויות.",
+        "c6_designated_executive": "פרופ' ירון זליכה מיועד חד-משמעית לשר האוצר."
+      },
+      "citations": [
+        {
+          "title": "ספר תוכנית החירום של ירון זליכה",
+          "url": "https://www.kalkalit.org/manifesto",
+          "quote": "פירוק 10 המונופולים הגדולים במשק יוריד את מחירי המזון ב-30%"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 90,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "הורדת מכסים, פתיחת שוק המזון והחקלאות ליבוא, הסרת רגולציה ופירוק קרטלים.",
+        "c2_leader_statements": "ליברמן פעל כשר אוצר לפתיחה אגרסיבית של השוק ליבוא ללא מכסים.",
+        "c3_leader_actions": "ביטל מכסים על פירות, ירקות, ביצים ומוצרי צריכה, והוריד חסמים בירוקרטיים.",
+        "c4_candidates_statements": "עודד פורר הוביל את הרפורמה בחקלאות מול הלובי החקלאי.",
+        "c5_candidates_actions": "יישום בפועל של פתיחת השוק לתחרות בענף המזון.",
+        "c6_designated_executive": "צוות הכלכלה מיועד להמשך פתיחת השוק."
+      },
+      "citations": [
+        {
+          "title": "רפורמת החקלאות והורדת המכסים של ליברמן ופורר",
+          "url": "https://www.globes.co.il",
+          "quote": "הפחתת מכסים מיידית על עשרות מוצרי יסוד להורדת יוקר המחיה"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": 55,
+        "c2_leader_statements": 65,
+        "c3_leader_actions": 50,
+        "c4_candidates_statements": 60,
+        "c5_candidates_actions": 45,
+        "c6_designated_executive": 55
+      },
+      "notes": {
+        "c1_platform": "כלכלה חופשית, יוזמה פרטית והורדת חסמים.",
+        "c2_leader_statements": "נתניהו התגאה בהפיכת ישראל לכלכלת שוק פתוחה ב-2003.",
+        "c3_leader_actions": "בעבר קידם רפורמות בנמלים, אך בממשלתו הנוכחית יוקר המחיה זינק ומכסים רבים הושבו/הועלו.",
+        "c4_candidates_statements": "ניר ברקת מוביל את תוכנית 'מה שטוב לאירופה טוב לישראל' כשר כלכלה.",
+        "c5_candidates_actions": "ברקת קידם חוקי יבוא אך נתקל בחסמים בוועדות הכנסת.",
+        "c6_designated_executive": "ניר ברקת מיועד לשר הכלכלה."
+      },
+      "citations": [
+        {
+          "title": "רפורמת ברקת מה שטוב לאירופה טוב לישראל",
+          "url": "https://www.gov.il/he/departments/news/europe_good_israel",
+          "quote": "אימוץ התקן האירופי על אלפי מוצרי צריכה ומזון"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": 10,
+        "c2_leader_statements": 15,
+        "c3_leader_actions": 0,
+        "c4_candidates_statements": 10,
+        "c5_candidates_actions": 5,
+        "c6_designated_executive": 10
+      },
+      "notes": {
+        "c1_platform": "סוציאל-דמוקרטיה קלאסית: תמיכה באיגודים מקצועיים, פיקוח מחירים וחיזוק המגזר הציבורי, פחות התלהבות מהסרת רגולציה.",
+        "c2_leader_statements": "גולן תומך בפיקוח הדוק על השוק ומאבק בטייקונים דרך מיסוי והתערבות.",
+        "c3_leader_actions": "נעמה לזימי הובילה מהלכים להרחבת חוקי עבודה והגנה על עובדים מאוגדים.",
+        "c4_candidates_statements": "לזימי מסתייגת מפתיחה גורפת של יבוא שתפגע בייצור מקומי.",
+        "c5_candidates_actions": "פעילות פרו-איגודית ענפה.",
+        "c6_designated_executive": "נעמה לזימי מיועדת לתיק העבודה/רווחה."
+      },
+      "citations": [
+        {
+          "title": "החזון הסוציאל-דמוקרטי של הדמוקרטים",
+          "url": "https://democrats.org.il/economy",
+          "quote": "חיזוק העבודה המאורגנת, השקעות ציבוריות ופיקוח על מחירי מצרכי יסוד"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 70,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 70,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "הורדת מכסים, פתיחה לתחרות והסרת חסמי יבוא.",
+        "c2_leader_statements": "לפיד תומך בכלכלה חופשית לצד רשת ביטחון למעמד הביניים.",
+        "c3_leader_actions": "ממשלתו העבירה את רפורמת היבוא הגדולה והפחיתה מכסים על מוצרי צריכה.",
+        "c4_candidates_statements": "אורנה ברביבאי הובילה כשרת כלכלה את 'חוק סימון מוצרים' והסרת תקינה.",
+        "c5_candidates_actions": "ברביבאי פתחה את השוק לתחרות מקבילה.",
+        "c6_designated_executive": "אורנה ברביבאי מיועדת לתיק הכלכלה."
+      },
+      "citations": [
+        {
+          "title": "הסרת מכסים והורדת יוקר המחיה - אורנה ברביבאי",
+          "url": "https://www.gov.il/he/departments/news/import_reform",
+          "quote": "ביטול בדיקות מעבדה כפולות למוצרים בעלי תקינה בינלאומית"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": -25,
+        "c2_leader_statements": -20,
+        "c3_leader_actions": -30,
+        "c4_candidates_statements": -25,
+        "c5_candidates_actions": -30,
+        "c6_designated_executive": -25
+      },
+      "notes": {
+        "c1_platform": "תמיכה בסובסידיות, פיקוח מחירים והגנה על יבואנים מסורתיים, התנגדות לרפורמות תחרות חופשית.",
+        "c2_leader_statements": "העדפת פיקוח מחירים וחלוקת תלושים על פני פתיחת שוק והורדת מכסים.",
+        "c3_leader_actions": "תמיכה בחוקי יבואנים בלעדיים ומונופולים בתמורה לתקציבים מגזריים.",
+        "c4_candidates_statements": "התנגדות לרפורמות ליברליות המאיימות על שוק הכשרות.",
+        "c5_candidates_actions": "סיכול רפורמות יבוא הדורשות תקינה אירופית ללא כשרות רבנות.",
+        "c6_designated_executive": "היעדר תמיכה בשוק חופשי."
+      },
+      "citations": [
+        {
+          "title": "חלוקת תלושי המזון של ש\"ס - גלובס",
+          "url": "https://www.globes.co.il",
+          "quote": "חלוקת תקציבי עתק בתלושים ללא קריטריון של מיצוי כושר עבודה"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": -40,
+        "c2_leader_statements": -35,
+        "c3_leader_actions": -45,
+        "c4_candidates_statements": -40,
+        "c5_candidates_actions": -45,
+        "c6_designated_executive": -40
+      },
+      "notes": {
+        "c1_platform": "התנגדות לרפורמות תקינה אירופית המאיימות על הכשרות, תמיכה בסובסידיות ומחירים מפוקחים.",
+        "c2_leader_statements": "גפני משתמש בוועדת הכספים לחסימת רפורמות ליברליות במשק.",
+        "c3_leader_actions": "עיכוב רפורמות יבוא ותחרות עד לקבלת כספים ייעודיים.",
+        "c4_candidates_statements": "הגנה על מונופולי יבוא העומדים בדרישות כשרות מיוחדות.",
+        "c5_candidates_actions": "חקיקה מעכבת תחרות חופשית.",
+        "c6_designated_executive": "משה גפני כיו\"ר ועדת כספים."
+      },
+      "citations": [
+        {
+          "title": "עיכובי ועדת הכספים ברפורמות יבוא - גלובס",
+          "url": "https://www.globes.co.il",
+          "quote": "ועדת הכספים בראשות גפני עיכבה אישור תקנות יבוא בשל דרישות כשרות"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": 40,
+        "c2_leader_statements": 40,
+        "c3_leader_actions": 35,
+        "c4_candidates_statements": 40,
+        "c5_candidates_actions": 35,
+        "c6_designated_executive": 35
+      },
+      "notes": {
+        "c1_platform": "תמיכה עקרונית בהורדת רגולציה ועסקים קטנים, לצד דרישה לתמיכות מגזריות.",
+        "c2_leader_statements": "וסרלאוף מקדם הקלות לעסקים בנגב ובגליל.",
+        "c3_leader_actions": "הקצאת מענקים לעסקים באזורי עימות.",
+        "c4_candidates_statements": "אלמוג כהן דורש הסרת חסמי ביטחון לעסקים בדרום.",
+        "c5_candidates_actions": "קידום הקלות ברישוי נשק לעצמאים.",
+        "c6_designated_executive": "יצחק וסרלאוף מיועד לשר הנגב והגליל."
+      },
+      "citations": [
+        {
+          "title": "סיוע לעסקים בנגב ובגליל - וסרלאוף",
+          "url": "https://www.gov.il/he/departments/news/negev_galilee_business",
+          "quote": "הקצאת תקציבים מיוחדים לסיוע לעסקים קטנים בקו העימות"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "כלכלה חופשית, צמצום כוחם של ועדי העובדים, ביטול מכסים והסרת רגולציה.",
+        "c2_leader_statements": "סמוטריץ' מציג תפיסה כלכלית ליברלית-ימנית נוסח מילטון פרידמן.",
+        "c3_leader_actions": "כשר אוצר ניסה לקדם רפורמות יבוא והורדת מכסים, אך התקשה בריסון יוקר המחיה והגירעון.",
+        "c4_candidates_statements": "משה פייגלין דוגל בחירות כלכלית מוחלטת ושוק חופשי ללא התערבות ממשלתית.",
+        "c5_candidates_actions": "קידום חוקים להגבלת זכות השביתה בשירותים חיוניים.",
+        "c6_designated_executive": "סמוטריץ' מכהן כשר האוצר."
+      },
+      "citations": [
+        {
+          "title": "התפיסה הכלכלית של בצלאל סמוטריץ' - גלובס",
+          "url": "https://www.globes.co.il",
+          "quote": "שוק חופשי, ריסון כוחם של ועדי השאלטר והורדת רגולציה מכבידה"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": 20,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 25,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": 20,
+        "c6_designated_executive": 20
+      },
+      "notes": {
+        "c1_platform": "פיתוח עסקים קטנים בחברה הערבית, הקלות אשראי והסרת חסמי תכנון.",
+        "c2_leader_statements": "עבאס דורש שילוב עסקים ערביים בכלכלה הישראלית.",
+        "c3_leader_actions": "קידום אזורי תעשייה ביישובים ערביים.",
+        "c4_candidates_statements": "דגש על מענקים ממשלתיים ולא על שוק פתוח בלבד.",
+        "c5_candidates_actions": "סיוע לעסקים מקומיים.",
+        "c6_designated_executive": "מועמדות כלכלית מקומית."
+      },
+      "citations": [
+        {
+          "title": "תוכנית הפיתוח הכלכלי לחברה הערבית - רע\"ם",
+          "url": "https://raam.org.il",
+          "quote": "הקמת אזורי תעשייה משותפים והנגשת אשראי בנקאי לעסקים ערביים"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": -70,
+        "c2_leader_statements": -75,
+        "c3_leader_actions": -70,
+        "c4_candidates_statements": -75,
+        "c5_candidates_actions": -70,
+        "c6_designated_executive": -75
+      },
+      "notes": {
+        "c1_platform": "אידיאולוגיה קומוניסטית/סוציאליסטית מרקסיסטית: התנגדות לקפיטליזם, שוק חופשי והפרטות, דרישה להלאמת משאבים.",
+        "c2_leader_statements": "עודה וכסיף מתנגדים בחריפות לשוק חופשי ורואים בו כלי לניצול מעמדי.",
+        "c3_leader_actions": "הצבעות עקביות נגד רפורמות שוק חופשי, יבוא ותחרות.",
+        "c4_candidates_statements": "עופר כסיף תוקף את 'הקפיטליזם החזירי'.",
+        "c5_candidates_actions": "תמיכה בשביתות עובדים והגנה על מונופולים ממשלתיים.",
+        "c6_designated_executive": "התנגדות מוחלטת לשוק פתוח."
+      },
+      "citations": [
+        {
+          "title": "החזון הכלכלי של המפלגה הקומוניסטית הישראלית (מק\"י/חד\"ש)",
+          "url": "https://aljabha.org.il/economy",
+          "quote": "מאבק בלתי מתפשר בקפיטליזם, בהפרטות ובשליטת ההון על החברה"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 45,
+        "c2_leader_statements": 45,
+        "c3_leader_actions": 35,
+        "c4_candidates_statements": 40,
+        "c5_candidates_actions": 35,
+        "c6_designated_executive": 40
+      },
+      "notes": {
+        "c1_platform": "תמיכה ביוזמה פרטית, עידוד עסקים קטנים וצמצום בירוקרטיה ממשלתית.",
+        "c2_leader_statements": "וינטר תומך בהורדת חסמים למשרתי מילואים ולעסקים עצמאיים.",
+        "c3_leader_actions": "ניהול מערכות תקציביות גדולות בצה\"ל.",
+        "c4_candidates_statements": "סיוע לעסקים של לוחמים.",
+        "c5_candidates_actions": "הקלת עול הרגולציה.",
+        "c6_designated_executive": "קו ימני כלכלי מתון."
+      },
+      "citations": [
+        {
+          "title": "עמדות כלכליות של מפלגת הימין הממלכתי",
+          "url": "https://www.inn.co.il",
+          "quote": "הורדת נטל המיסים והסרת חסמים בירוקרטיים למשרתי המילואים"
+        }
+      ]
+    }
+  }
+}

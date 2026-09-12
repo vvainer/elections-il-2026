@@ -1,0 +1,361 @@
+{
+  "topic_id": "education",
+  "date": "2026-09-12",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 70,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "מצע מפלגת ישר מדגיש את החינוך הממלכתי כערך יסוד ומחייב לימודי ליבה לכל מוסד מתוקצב.",
+        "c2_leader_statements": "איזנקוט הצהיר בעקביות: 'לימודי ליבה הם כרטיס הכניסה של כל ילד לחברה ולכלכלה בישראל'.",
+        "c3_leader_actions": "כרמטכ\"ל הוביל תוכניות שילוב והשכלה, ובכנסת פעל להגנת החינוך הממלכתי.",
+        "c4_candidates_statements": "מועמדים ריאליים כמו חילי טרופר ועדי אלטשולר מקדמים חינוך מכיל ומותאם אישית.",
+        "c5_candidates_actions": "חילי טרופר בעל רקורד מוכח כמנהל בי\"ס 'ברנקו וייס' וכאיש חינוך מוערך.",
+        "c6_designated_executive": "חילי טרופר מיועד בבירור לתיק החינוך, עומד בקנה אחד עם העמדה המבוקשת."
+      },
+      "citations": [
+        {
+          "title": "מצע מפלגת ישר - חינוך ממלכתי וליבה",
+          "url": "https://yashar.org.il/platform/education",
+          "quote": "לא יינתן שקל אחד מתקציב המדינה למוסד שאינו מלמד ליבה מלאה ומפוקחת"
+        },
+        {
+          "title": "ראיון גדי איזנקוט בכאן 11",
+          "url": "https://www.kan.org.il",
+          "quote": "מערכת החינוך חייבת לעבור ביזור סמכויות למנהלים בשטח"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 75,
+        "c4_candidates_statements": 70,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "תוכנית זינוק בחינוך: דגש על מצוינות מדעית, 5 יחידות מתמטיקה וביזור סמכויות למנהלים.",
+        "c2_leader_statements": "בנט מדגיש חדשנות, טכנולוגיה ומיומנויות המאה ה-21 לצד שכר מתגמל למורים מובילים.",
+        "c3_leader_actions": "כשר חינוך הוביל את מהפכת 5 יחידות מתמטיקה, אך נמנע מכפיית ליבה על חרדים.",
+        "c4_candidates_statements": "פרופ' דן בן-דוד מדגיש שמערכת החינוך היא תנאי לקיום כלכלי של ישראל בדור הבא.",
+        "c5_candidates_actions": "בן-דוד חקר ופרסם עשרות מחקרים המציגים את עומק משבר החינוך והליבה.",
+        "c6_designated_executive": "פרופ' דן בן-דוד מועמד מוביל לתפקיד ביצועי או ייעוצי עליון בתחום."
+      },
+      "citations": [
+        {
+          "title": "תוכנית בנט לחינוך ומצוינות",
+          "url": "https://www.beyachad2026.org.il/education",
+          "quote": "מתן עצמאות ניהולית ותקציבית מלאה למנהלי בתי הספר"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 75,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "חובת תוכנית ליבה לכל מוסד מתוקצב, שכר דיפרנציאלי והבאת מורים מובילים להוראה.",
+        "c2_leader_statements": "הנדל וזליכה תוקפים בעקביות את הפקרת לימודי הליבה והחינוך הממלכתי.",
+        "c3_leader_actions": "הנדל התנגד בכנסת לכל פשרה תקציבית הפוטרת מליבה.",
+        "c4_candidates_statements": "צביקה האוזר תומך בחינוך ממלכתי איכותי והתאמתו למאה ה-21.",
+        "c5_candidates_actions": "האוזר כמזכיר ממשלה ואיש ציבור פעל לחיזוק החינוך הציוני-ממלכתי.",
+        "c6_designated_executive": "מועמדות של אנשי חינוך ורוח ברשימה."
+      },
+      "citations": [
+        {
+          "title": "מצע המפלגה הכלכלית ויועז הנדל",
+          "url": "https://www.kalkalit.org",
+          "quote": "חינוך ממלכתי וליבה הם תנאי שאין בלתו לכל תמיכה עירונית או ממשלתית"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 90,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "לימודי ליבה חובה בכל מוסד מתוקצב, שכר דיפרנציאלי והעצמת מורים.",
+        "c2_leader_statements": "ליברמן חוזר ומדגיש: 'בלי לימודי ליבה – אין כסף. אפס שקלים למי שלא מלמד אנגלית, מתמטיקה ומדעים'.",
+        "c3_leader_actions": "כשר אוצר התנה תקציבים בלימודי ליבה וקיצץ סבסודים לאוכלוסיות שאינן משתלבות.",
+        "c4_candidates_statements": "שרון ניר מקדמת חוקי ליבה וחינוך ממלכתי.",
+        "c5_candidates_actions": "חברי הכנסת הגישו הצעות חוק לחיוב ליבה כתנאי לכל תקצוב.",
+        "c6_designated_executive": "מייעדים את התיק הכלכלי/חינוכי לאכיפת ליבה."
+      },
+      "citations": [
+        {
+          "title": "מצע ישראל ביתנו בנושא חינוך",
+          "url": "https://beytenu.org.il/platform",
+          "quote": "חובת לימודי ליבה לכל זרמי החינוך ללא פשרות וללא יוצאים מן הכלל"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": -20,
+        "c2_leader_statements": -10,
+        "c3_leader_actions": -45,
+        "c4_candidates_statements": -20,
+        "c5_candidates_actions": -40,
+        "c6_designated_executive": -30
+      },
+      "notes": {
+        "c1_platform": "מצע הליכוד אינו כולל חובת ליבה או פיקוח ממשלתי על מוסדות חרדיים.",
+        "c2_leader_statements": "נתניהו הגן על זכותם של חרדים לא ללמוד ליבה באומרו 'הם לומדים דברים אחרים מעמיקים'.",
+        "c3_leader_actions": "בממשלתו הועברו תוספות תקציב של מיליארדים למוסדות תורניים ללא כל דרישת ליבה או פיקוח.",
+        "c4_candidates_statements": "יואב קיש כשר חינוך התפשר עם החרדים בנושאי תקצוב ופיקוח.",
+        "c5_candidates_actions": "חוק אופק חדש הוחל על רשתות החינוך החרדיות ללא אכיפת ליבה מלאה.",
+        "c6_designated_executive": "יואב קיש ממשיך להוביל את המשרד בהתאם לאילוצים הקואליציוניים."
+      },
+      "citations": [
+        {
+          "title": "הסכמי התקציב של משרד החינוך והליכוד",
+          "url": "https://www.calcalist.co.il",
+          "quote": "העברת מאות מיליונים לרשתות החינוך ללא חובת פיקוח או לימודי ליבה"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 75,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "חובת ליבה מלאה בכל מוסד מתוקצב, שכר הוגן ותנאים מעולים למורים, חינוך ממלכתי שוויוני.",
+        "c2_leader_statements": "יאיר גולן דורש להפסיק כל תקצוב למוסדות שאינם מלמדים ליבה.",
+        "c3_leader_actions": "פעילות פרלמנטרית עקבית להגנת מערכת החינוך הממלכתית.",
+        "c4_candidates_statements": "אפרת רייטן וגלעד קריב מקדמים חינוך שוויוני ומכיל.",
+        "c5_candidates_actions": "קריב כיו\"ר ועדת חוקה לשעבר קידם שוויון תקציבי לחינוך הממלכתי.",
+        "c6_designated_executive": "אפרת רייטן מיועדת לתיק החינוך/רווחה."
+      },
+      "citations": [
+        {
+          "title": "מצע הדמוקרטים לחינוך",
+          "url": "https://democrats.org.il/platform",
+          "quote": "לא עוד פטור מלימודי ליבה; שוויון מלא ומעמד המורה בראש סדר העדיפויות"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "חובת לימודי ליבה כתנאי לתקצוב, קידום חינוך מדעי וטכנולוגי והעלאת שכר המורים.",
+        "c2_leader_statements": "לפיד בעקביות מעמיד את חובת הליבה בראש סדר היום.",
+        "c3_leader_actions": "בממשלת לפיד-בנט נחתם הסכם שכר חדש למורים וקודמו תוכניות ליבה.",
+        "c4_candidates_statements": "מירב בן ארי תומכת בהעצמת החינוך הממלכתי וביזור סמכויות.",
+        "c5_candidates_actions": "פעילות חקיקה ענפה בוועדת החינוך.",
+        "c6_designated_executive": "הקצאת תיק החינוך לאיש מקצוע ייעודי."
+      },
+      "citations": [
+        {
+          "title": "תוכנית יש עתיד לחינוך מתקדם",
+          "url": "https://www.yeshatid.org.il/education",
+          "quote": "כל ילד בישראל זכאי ללימודי ליבה; התקצוב יותנה באופן מלא בפיקוח על תוכנית הלימודים"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": -95,
+        "c2_leader_statements": -90,
+        "c3_leader_actions": -95,
+        "c4_candidates_statements": -90,
+        "c5_candidates_actions": -95,
+        "c6_designated_executive": -95
+      },
+      "notes": {
+        "c1_platform": "הגנה מוחלטת על רשת החינוך 'בני יוסף' ללא פיקוח ממשלתי וללא כפיית ליבה.",
+        "c2_leader_statements": "דרעי מתנגד לחלוטין להתניית תקציבים בלימודי ליבה.",
+        "c3_leader_actions": "השגת תקציבי עתק לרשת החינוך התורנית ללא עמידה ביעדי בגרות או ליבה.",
+        "c4_candidates_statements": "חיים ביטון כשר במשרד החינוך פעל לסיכול פיקוח על החינוך החרדי.",
+        "c5_candidates_actions": "השוואת תקציבים מלאה ללא חובות פדגוגיות.",
+        "c6_designated_executive": "חיים ביטון מוביל מדיניות זו."
+      },
+      "citations": [
+        {
+          "title": "תקציבי רשת החינוך של ש\"ס",
+          "url": "https://www.calcalist.co.il",
+          "quote": "השוואת תקציבי רשת החינוך החרדית תוך פטור מבחינות מיצ\"ב ופיקוח"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": -100,
+        "c2_leader_statements": -100,
+        "c3_leader_actions": -100,
+        "c4_candidates_statements": -100,
+        "c5_candidates_actions": -100,
+        "c6_designated_executive": -100
+      },
+      "notes": {
+        "c1_platform": "שלילת כל חובת לימודי ליבה או פיקוח; דרישה להשוואה מלאה של תקציבי מוסדות החינוך החרדיים לחינוך הממלכתי.",
+        "c2_leader_statements": "גולדקנופף הצהיר: 'מי שלא לומד תורה – מה הוא שווה? לימודי ליבה לא קידמו את הכלכלה יותר מתורה'.",
+        "c3_leader_actions": "התניית כל חקיקה והשתתפות בקואליציה בהזרמת תקציבי חינוך ללא ליבה וללא פיקוח.",
+        "c4_candidates_statements": "משה גפני נלחם בוועדת כספים להעברת כל תקציב למוסדות הפטור.",
+        "c5_candidates_actions": "חקיקת סעיפים עוקפי בג\"ץ להמשך תקצוב ללא ליבה.",
+        "c6_designated_executive": "מובילים קו נוקשה ביותר נגד ליבה."
+      },
+      "citations": [
+        {
+          "title": "התבטאות גולדקנופף על לימודי ליבה - N12",
+          "url": "https://www.mako.co.il",
+          "quote": "גולדקנופף: 'מי תרם יותר למדינה, מי שלומד תורה או מי שלומד מתמטיקה?'"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": 10,
+        "c2_leader_statements": 15,
+        "c3_leader_actions": 5,
+        "c4_candidates_statements": 10,
+        "c5_candidates_actions": 5,
+        "c6_designated_executive": 10
+      },
+      "notes": {
+        "c1_platform": "חיזוק החינוך הלאומי-יהודי והציוני, פחות דגש על חדשנות מדעית או ביזור סמכויות למנהלים.",
+        "c2_leader_statements": "בן גביר קורא להעמקת לימודי זהות יהודית ומורשת קרב.",
+        "c3_leader_actions": "תמך בהעברת תקציבים לחינוך דתי ולאומי.",
+        "c4_candidates_statements": "אלמוג כהן מדגיש חינוך למשילות וביטחון.",
+        "c5_candidates_actions": "קידום פרויקטים בנגב ובגליל.",
+        "c6_designated_executive": "היעדר מועמד ייעודי לחינוך מקצועי מודרני."
+      },
+      "citations": [
+        {
+          "title": "מצע עוצמה יהודית - חינוך לאומי",
+          "url": "https://ozma-yehudit.com",
+          "quote": "חיזוק ערכי הציונות, המורשת והזהות היהודית במערכת החינוך"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": 35,
+        "c2_leader_statements": 35,
+        "c3_leader_actions": 25,
+        "c4_candidates_statements": 30,
+        "c5_candidates_actions": 25,
+        "c6_designated_executive": 30
+      },
+      "notes": {
+        "c1_platform": "דגש על החינוך הממלכתי-דתי, לימודי מדעים וליבה לצד תורה, אך הזרמת כספים ייעודיים למגזר.",
+        "c2_leader_statements": "סמוטריץ' כשר אוצר תומך בלימודי ליבה לחלק מהמגזרים אך בפועל אישר תקציבים ללא ליבה לחרדים.",
+        "c3_leader_actions": "הגדלת תקציבי החמ\"ד והישיבות התיכוניות באופן חסר תקדים.",
+        "c4_candidates_statements": "שמחה רוטמן תומך במצוינות חינוכית.",
+        "c5_candidates_actions": "העברות תקציביות ייעודיות לחינוך הדתי.",
+        "c6_designated_executive": "אורית סטרוק מיועדת למשימות לאומיות."
+      },
+      "citations": [
+        {
+          "title": "תקציבי החינוך הדתי - TheMarker",
+          "url": "https://www.themarker.com",
+          "quote": "תוספות של מאות מיליונים לחמ\"ד ולגרעינים התורניים בתקציב המדינה"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": 40,
+        "c2_leader_statements": 45,
+        "c3_leader_actions": 40,
+        "c4_candidates_statements": 40,
+        "c5_candidates_actions": 40,
+        "c6_designated_executive": 40
+      },
+      "notes": {
+        "c1_platform": "צמצום פערים בחינוך הערבי, שכר מורים ותשתיות בתי ספר, ללא דגש על פיקוח ממשלתי.",
+        "c2_leader_statements": "עבאס דורש השוואת תקציבי החינוך בחברה הערבית.",
+        "c3_leader_actions": "השגת תקציבים במסגרת תוכנית 533 לפיתוח החברה הערבית.",
+        "c4_candidates_statements": "וליד טאהא מקדם חיזוק מעמד המורה.",
+        "c5_candidates_actions": "פעילות בוועדות הכנסת.",
+        "c6_designated_executive": "וליד טאהא מיועד לתיק הפנים/חינוך."
+      },
+      "citations": [
+        {
+          "title": "תוכנית רע\"ם לחינוך בחברה הערבית",
+          "url": "https://raam.org.il",
+          "quote": "השקעה בתשתיות החינוך בנגב ובכפרים הבלתי מוכרים"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": 30,
+        "c2_leader_statements": 35,
+        "c3_leader_actions": 30,
+        "c4_candidates_statements": 35,
+        "c5_candidates_actions": 30,
+        "c6_designated_executive": 30
+      },
+      "notes": {
+        "c1_platform": "שוויון תקציבי מלא לחינוך הערבי, שכר מורים, התנגדות מוחלטת לתכנים ציוניים.",
+        "c2_leader_statements": "עודה וטיבי דורשים עצמאות פדגוגית לחינוך הערבי.",
+        "c3_leader_actions": "מאבקים פרלמנטריים למען מבני בתי ספר וסגירת פערי תקצוב.",
+        "c4_candidates_statements": "עופר כסיף תומך בשוויון אזרחי וסוציאליזם בחינוך.",
+        "c5_candidates_actions": "פעילות בוועדת החינוך.",
+        "c6_designated_executive": "עופר כסיף מיועד לתחום החינוך."
+      },
+      "citations": [
+        {
+          "title": "מצע חד\"ש לחינוך",
+          "url": "https://aljabha.org.il",
+          "quote": "שוויון תקציבי מלא וביטול האפליה המבנית נגד בתי הספר הערביים"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 40,
+        "c2_leader_statements": 40,
+        "c3_leader_actions": 35,
+        "c4_candidates_statements": 35,
+        "c5_candidates_actions": 35,
+        "c6_designated_executive": 35
+      },
+      "notes": {
+        "c1_platform": "חיזוק החינוך הלאומי-ציוני, ערכי שליחות, גיוס משמעותי ומצוינות.",
+        "c2_leader_statements": "וינטר מדגיש חינוך לערכים, אומץ לב, גבורה ואחריות לאומית.",
+        "c3_leader_actions": "פיקוד על חטיבות ופרויקטים צבאיים שהדגישו ערכים ומנהיגות.",
+        "c4_candidates_statements": "דגש על הכנה לשירות קרבי ומנהיגות.",
+        "c5_candidates_actions": "פעילות בהכשרת לוחמים ומפקדים.",
+        "c6_designated_executive": "וינטר מוביל תחום זה."
+      },
+      "citations": [
+        {
+          "title": "עמדות עופר וינטר על מנהיגות וחינוך",
+          "url": "https://www.inn.co.il",
+          "quote": "חינוך דור הניצחון לערכי אמונה, גבורה ושליחות לאומית"
+        }
+      ]
+    }
+  }
+}

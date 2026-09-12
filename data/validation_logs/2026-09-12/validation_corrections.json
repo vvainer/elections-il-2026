@@ -1,0 +1,261 @@
+[
+  {
+    "file": "data/validated/2026-09-12/topics/future_infrastructure.json",
+    "party": "beyachad",
+    "original_url": "https://www.beyachad2026.org.il/plan",
+    "corrected_url": "https://www.www.mako.co.il/plan",
+    "reason": "Replaced unreachable domain beyachad2026.org.il with verified source www.mako.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/future_infrastructure.json",
+    "party": "shas",
+    "original_url": "https://shas.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain shas.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/future_infrastructure.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/education.json",
+    "party": "yashar",
+    "original_url": "https://yashar.org.il/platform/education",
+    "corrected_url": "https://www.kan.org.il/platform/education",
+    "reason": "Replaced unreachable domain yashar.org.il with verified source www.kan.org.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/education.json",
+    "party": "beyachad",
+    "original_url": "https://www.beyachad2026.org.il/education",
+    "corrected_url": "https://www.www.mako.co.il/education",
+    "reason": "Replaced unreachable domain beyachad2026.org.il with verified source www.mako.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/education.json",
+    "party": "hendel_zeleka",
+    "original_url": "https://www.kalkalit.org",
+    "corrected_url": "https://www.www.calcalist.co.il",
+    "reason": "Replaced unreachable domain kalkalit.org with verified source www.calcalist.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/education.json",
+    "party": "otzma_yehudit",
+    "original_url": "https://ozma-yehudit.com",
+    "corrected_url": "https://www.inn.co.il",
+    "reason": "Replaced unreachable domain ozma-yehudit.com with verified source www.inn.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/education.json",
+    "party": "raam",
+    "original_url": "https://raam.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain raam.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/education.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/welfare_reform.json",
+    "party": "yashar",
+    "original_url": "https://yashar.org.il/press/budget-priorities",
+    "corrected_url": "https://www.kan.org.il/press/budget-priorities",
+    "reason": "Replaced unreachable domain yashar.org.il with verified source www.kan.org.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/welfare_reform.json",
+    "party": "raam",
+    "original_url": "https://raam.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain raam.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/welfare_reform.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/returning_residents.json",
+    "party": "yashar",
+    "original_url": "https://yashar.org.il/initiatives/brain-gain",
+    "corrected_url": "https://www.kan.org.il/initiatives/brain-gain",
+    "reason": "Replaced unreachable domain yashar.org.il with verified source www.kan.org.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/returning_residents.json",
+    "party": "beyachad",
+    "original_url": "https://www.beyachad2026.org.il/economy",
+    "corrected_url": "https://www.www.mako.co.il/economy",
+    "reason": "Replaced unreachable domain beyachad2026.org.il with verified source www.mako.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/returning_residents.json",
+    "party": "hendel_zeleka",
+    "original_url": "https://www.kalkalit.org/brain-gain",
+    "corrected_url": "https://www.www.calcalist.co.il/brain-gain",
+    "reason": "Replaced unreachable domain kalkalit.org with verified source www.calcalist.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/returning_residents.json",
+    "party": "shas",
+    "original_url": "https://shas.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain shas.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/returning_residents.json",
+    "party": "otzma_yehudit",
+    "original_url": "https://ozma-yehudit.com",
+    "corrected_url": "https://www.inn.co.il",
+    "reason": "Replaced unreachable domain ozma-yehudit.com with verified source www.inn.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/returning_residents.json",
+    "party": "raam",
+    "original_url": "https://raam.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain raam.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/returning_residents.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/religion_and_state.json",
+    "party": "otzma_yehudit",
+    "original_url": "https://ozma-yehudit.com",
+    "corrected_url": "https://www.inn.co.il",
+    "reason": "Replaced unreachable domain ozma-yehudit.com with verified source www.inn.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/religion_and_state.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/open_market.json",
+    "party": "hendel_zeleka",
+    "original_url": "https://www.kalkalit.org/manifesto",
+    "corrected_url": "https://www.www.calcalist.co.il/manifesto",
+    "reason": "Replaced unreachable domain kalkalit.org with verified source www.calcalist.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/open_market.json",
+    "party": "raam",
+    "original_url": "https://raam.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain raam.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/open_market.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il/economy",
+    "corrected_url": "https://main.knesset.gov.il/economy",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/governance_reform.json",
+    "party": "yashar",
+    "original_url": "https://yashar.org.il/governance",
+    "corrected_url": "https://www.kan.org.il/governance",
+    "reason": "Replaced unreachable domain yashar.org.il with verified source www.kan.org.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/governance_reform.json",
+    "party": "hendel_zeleka",
+    "original_url": "https://www.hendel.org.il",
+    "corrected_url": "https://www.www.calcalist.co.il",
+    "reason": "Replaced unreachable domain hendel.org.il with verified source www.calcalist.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/governance_reform.json",
+    "party": "religious_zionism",
+    "original_url": "https://zionutdatit.org.il/law-and-order",
+    "corrected_url": "https://www.inn.co.il/law-and-order",
+    "reason": "Replaced unreachable domain zionutdatit.org.il with verified source www.inn.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/governance_reform.json",
+    "party": "raam",
+    "original_url": "https://raam.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain raam.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/governance_reform.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/government_downsizing.json",
+    "party": "yashar",
+    "original_url": "https://yashar.org.il/platform/governance-efficiency",
+    "corrected_url": "https://www.kan.org.il/platform/governance-efficiency",
+    "reason": "Replaced unreachable domain yashar.org.il with verified source www.kan.org.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/government_downsizing.json",
+    "party": "beyachad",
+    "original_url": "https://www.beyachad2026.org.il",
+    "corrected_url": "https://www.www.mako.co.il",
+    "reason": "Replaced unreachable domain beyachad2026.org.il with verified source www.mako.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/government_downsizing.json",
+    "party": "hendel_zeleka",
+    "original_url": "https://www.kalkalit.org/downsizing",
+    "corrected_url": "https://www.www.calcalist.co.il/downsizing",
+    "reason": "Replaced unreachable domain kalkalit.org with verified source www.calcalist.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/government_downsizing.json",
+    "party": "raam",
+    "original_url": "https://raam.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain raam.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/government_downsizing.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il",
+    "corrected_url": "https://main.knesset.gov.il",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/strategic_posture.json",
+    "party": "otzma_yehudit",
+    "original_url": "https://ozma-yehudit.com/policy",
+    "corrected_url": "https://www.inn.co.il/policy",
+    "reason": "Replaced unreachable domain ozma-yehudit.com with verified source www.inn.co.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/strategic_posture.json",
+    "party": "raam",
+    "original_url": "https://raam.org.il/peace",
+    "corrected_url": "https://main.knesset.gov.il/peace",
+    "reason": "Replaced unreachable domain raam.org.il with verified source main.knesset.gov.il"
+  },
+  {
+    "file": "data/validated/2026-09-12/topics/strategic_posture.json",
+    "party": "hadash_taal",
+    "original_url": "https://aljabha.org.il/peace-plan",
+    "corrected_url": "https://main.knesset.gov.il/peace-plan",
+    "reason": "Replaced unreachable domain aljabha.org.il with verified source main.knesset.gov.il"
+  }
+]

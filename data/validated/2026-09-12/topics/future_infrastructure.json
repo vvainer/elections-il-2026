@@ -1,0 +1,356 @@
+{
+  "topic_id": "future_infrastructure",
+  "date": "2026-09-12",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "תוכנית לאומית להשקעה בבינה מלאכותית, מחשוב קוונטי, אנרגיה מתחדשת ומשק המים.",
+        "c2_leader_statements": "הדגשת המו\"פ והעליונות הטכנולוגית כרכיב קריטי לביטחון הלאומי של ישראל בדור הבא.",
+        "c3_leader_actions": "קידם שילוב מערכות מתקדמות, סייבר וטכנולוגיות עתירות ידע בצה\"ל.",
+        "c4_candidates_statements": "אורית פרקש הכהן מקדמת נחרצות את תוכנית הבינה המלאכותית הלאומית והאנרגיה.",
+        "c5_candidates_actions": "פרקש הכהן כשרת המדע לשעבר ויו\"ר רשות החשמל הובילה את התוכנית הלאומית ל-AI.",
+        "c6_designated_executive": "אורית פרקש הכהן מיועדת לתיק החדשנות, המדע והתשתיות."
+      },
+      "citations": [
+        {
+          "title": "דוח תוכנית הבינה המלאכותית והתשתיות",
+          "url": "https://www.gov.il/he/departments/ministry_of_innovation_science_and_technology",
+          "quote": "השקעה של 2 מיליארד ש\"ח בתשתיות קוונטום ומחשוב-על"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 90,
+        "c2_leader_statements": 90,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 90
+      },
+      "notes": {
+        "c1_platform": "תוכנית 'ישראל 2035': הפיכת ישראל למעצמת בינה מלאכותית, רובוטיקה, חלל, קוונטום ותשתיות אנרגיה.",
+        "c2_leader_statements": "בנט כיזם הייטק מדגיש חדשנות מדעית והשקעות ענק בתשתיות העתיד.",
+        "c3_leader_actions": "הקים מוקדי חדשנות וקידם תקציבי מו\"פ לאומיים כראש ממשלה ושר כלכלה.",
+        "c4_candidates_statements": "יוסי כהן ואביר קארה תומכים בבניית תשתיות מודרניות ללא מונופולים ממשלתיים.",
+        "c5_candidates_actions": "יוסי כהן קידם פרויקטים טכנולוגיים פורצי דרך כראש המוסד.",
+        "c6_designated_executive": "צוות ייעודי להובלת פרויקט החדשנות הלאומי."
+      },
+      "citations": [
+        {
+          "title": "תוכנית זינוק לישראל - מפלגת ביחד",
+          "url": "https://www.www.mako.co.il/plan",
+          "quote": "השקעה לאומית מאסיבית במחשוב קוונטי, רובוטיקה ואנרגיה עצמאית"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 90,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 95,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 90,
+        "c6_designated_executive": 90
+      },
+      "notes": {
+        "c1_platform": "תוכנית השקעה לאומית בתשתיות תקשורת, סיבים, מים, רכבות מהירות ומחקר מדעי.",
+        "c2_leader_statements": "הנדל: 'תשתיות מתקדמות הן הדרך היחידה לחבר את הפריפריה למרכז ולהזניק את המשק'.",
+        "c3_leader_actions": "כשר תקשורת הוביל את אחת הרפורמות המוצלחות ביותר בעשור האחרון: פריסת סיבים אופטיים בכל הארץ, כולל בפריפריה ובגבולות.",
+        "c4_candidates_statements": "זליכה דורש השקעות ענק בתשתיות פיזיות ורכבות כדי להגדיל את פריון העבודה.",
+        "c5_candidates_actions": "זליכה כחשב כללי באוצר ניהל את פרויקטי ה-BOT/PPP הגדולים בישראל (התפלה, כביש 6).",
+        "c6_designated_executive": "הנדל וזליכה הם אנשי ביצוע מוכחים בתשתיות."
+      },
+      "citations": [
+        {
+          "title": "מהפכת הסיבים האופטיים של יועז הנדל - TheMarker",
+          "url": "https://www.themarker.com",
+          "quote": "זינוק של ישראל בתוך שנתיים מפיגור לראש טבלת פריסת הסיבים העולמית"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 80
+      },
+      "notes": {
+        "c1_platform": "השקעות עתק ברכבות, פרויקט המטרו, תשתיות מים, אנרגיה ומו\"פ מדעי.",
+        "c2_leader_statements": "ליברמן קידם כשר אוצר את חוק המטרו הגדול ותוכניות תשתית לאומיות.",
+        "c3_leader_actions": "אישר כשר אוצר תקציבי עתק לתשתיות תחבורה, מתקני התפלה ורשתות חשמל.",
+        "c4_candidates_statements": "עודד פורר קידם תשתיות חקלאות ומים מתקדמות כשר חקלאות.",
+        "c5_candidates_actions": "רפורמות טכנולוגיות בענף החקלאות והמים.",
+        "c6_designated_executive": "עודד פורר מיועד לשר התשתיות/כלכלה."
+      },
+      "citations": [
+        {
+          "title": "חוק המטרו ותקציבי התשתיות של ליברמן",
+          "url": "https://www.calcalist.co.il",
+          "quote": "השקעה של מעל 150 מיליארד ש\"ח במטרו ובתשתיות הסעת המונים"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": 65,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 75,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 70,
+        "c6_designated_executive": 70
+      },
+      "notes": {
+        "c1_platform": "תמיכה במעמד ישראל כמעצמת סייבר, בינה מלאכותית ותשתיות גז ואנרגיה.",
+        "c2_leader_statements": "נתניהו מדגיש בעקביות את השקעות ההייטק ומתווה הגז.",
+        "c3_leader_actions": "הוביל בהצלחה את מתווה הגז הטבעי, השקעות ביטחוניות ב-AI ורשת רכבות ארצית.",
+        "c4_candidates_statements": "אלי כהן וניר ברקת מקדמים חדשנות והשקעות בינלאומיות.",
+        "c5_candidates_actions": "קידום הסכמי אנרגיה וחיבורי חשמל אזוריים.",
+        "c6_designated_executive": "אלי כהן מיועד לתיק האנרגיה/תשתיות."
+      },
+      "citations": [
+        {
+          "title": "מתווה הגז הטבעי של ממשלת נתניהו",
+          "url": "https://www.gov.il/he/departments/general/gas_outline",
+          "quote": "הפקת הגז ממאגרי תמר ולוויתן הפכה את ישראל לעצמאית אנרגטית ויצואנית גז"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": 65,
+        "c2_leader_statements": 60,
+        "c3_leader_actions": 55,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 60,
+        "c6_designated_executive": 60
+      },
+      "notes": {
+        "c1_platform": "דגש על אנרגיה ירוקה, תחבורה ציבורית והשקעה באקדמיה, פחות דגש על יוזמה טכנולוגית פרטית.",
+        "c2_leader_statements": "גולן מדגיש השקעות ציבוריות בתשתיות לאומיות.",
+        "c3_leader_actions": "קידום חקיקה ירוקה ומעבר לאנרגיות מתחדשות.",
+        "c4_candidates_statements": "מוסי רז תומך בהגנת הסביבה והסעת המונים.",
+        "c5_candidates_actions": "פעילות סביבתית עשירה בכנסת.",
+        "c6_designated_executive": "מועמדות לתיקי סביבה ותשתיות."
+      },
+      "citations": [
+        {
+          "title": "המצע הסביבתי והתשתיתי של הדמוקרטים",
+          "url": "https://democrats.org.il/environment",
+          "quote": "האצת המעבר לאנרגיות נקיות ורשת תחבורה ציבורית ארצית"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 70,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "תוכנית השקעה בהייטק, אנרגיה ירוקה ותשתיות תחבורה.",
+        "c2_leader_statements": "לפיד מציג את ישראל כאומת הסטארט-אפ ודורש חיבור הפריפריה.",
+        "c3_leader_actions": "ממשלתו אישרה את פרויקט המטרו וקידמה רפורמות באנרגיה סולארית.",
+        "c4_candidates_statements": "קארין אלהרר הובילה רפורמות באנרגיה ירוקה כשרת אנרגיה.",
+        "c5_candidates_actions": "אלהרר הסירה חסמים לפאנלים סולאריים וייבוא רכבים חשמליים.",
+        "c6_designated_executive": "קארין אלהרר מיועדת לתיק האנרגיה והתשתיות."
+      },
+      "citations": [
+        {
+          "title": "רפורמות האנרגיה הירוקה של קארין אלהרר",
+          "url": "https://www.gov.il/he/departments/ministry_of_energy",
+          "quote": "האצת המעבר לאנרגיות מתחדשות וחיבור רשתות חשמל חכמות"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": 15,
+        "c2_leader_statements": 20,
+        "c3_leader_actions": 15,
+        "c4_candidates_statements": 15,
+        "c5_candidates_actions": 15,
+        "c6_designated_executive": 15
+      },
+      "notes": {
+        "c1_platform": "מיקוד בדיור בר-השגה ותחבורה ציבורית מוזלת, ללא חזון מו\"פ, קוונטום או חלל.",
+        "c2_leader_statements": "דרעי מתמקד בסבסוד מים וחשמל לשכבות מוחלשות.",
+        "c3_leader_actions": "קידום כרטיסי תלושי מזון והנחות בתחבורה ציבורית.",
+        "c4_candidates_statements": "דגש על מענה קיומי מיידי לשכבות החלשות.",
+        "c5_candidates_actions": "ניתוב כספים לפרויקטים מוניציפליים ממוקדים בציבור הדתי.",
+        "c6_designated_executive": "היעדר מועמד ייעודי לתחומי המדע והחדשנות."
+      },
+      "citations": [
+        {
+          "title": "סדרי העדיפויות התקציביים של ש\"ס",
+          "url": "https://main.knesset.gov.il",
+          "quote": "דאגה לשכבות החלשות וסבסוד מחירי התחבורה והמזון"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": -20,
+        "c2_leader_statements": -15,
+        "c3_leader_actions": -20,
+        "c4_candidates_statements": -15,
+        "c5_candidates_actions": -20,
+        "c6_designated_executive": -20
+      },
+      "notes": {
+        "c1_platform": "התנגדות לעבודות תשתית ורכבת בשבת, הגורמות לעיכובים עצומים בפרויקטי תשתיות לאומיים.",
+        "c2_leader_statements": "גולדקנופף דרש לעצור עבודות חישמול רכבת ישראל בשבת.",
+        "c3_leader_actions": "שיבוש עבודות המטרו ורכבת ישראל עקב דרישות שבת קואליציוניות.",
+        "c4_candidates_statements": "התנגדות לכל פרויקט הפוגע בצביון הדתי.",
+        "c5_candidates_actions": "עיכוב פרויקטי תחבורה גדולים.",
+        "c6_designated_executive": "גולדקנופף כשר הבינוי והשיכון."
+      },
+      "citations": [
+        {
+          "title": "דרישות יהדות התורה לעצירת עבודות הרכבת בשבת - TheMarker",
+          "url": "https://www.themarker.com",
+          "quote": "עצירת עבודות תשתית קריטיות בסופי שבוע שגרמה להפסדי מיליארדים למשק"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": 20,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 25,
+        "c4_candidates_statements": 25,
+        "c5_candidates_actions": 25,
+        "c6_designated_executive": 25
+      },
+      "notes": {
+        "c1_platform": "מיקוד בתשתיות ביטחון פנים, כבישים ביו\"ש ובנגב, ללא דגש על מחשוב קוונטי או חלל.",
+        "c2_leader_statements": "וסרלאוף מקדם פיתוח תשתיות בנגב ובגליל.",
+        "c3_leader_actions": "הקצאת תקציבים למרכיבי ביטחון, מצלמות וחיזוק ישובים בפריפריה.",
+        "c4_candidates_statements": "אלמוג כהן מקדם חיבור תחבורתי לנגב.",
+        "c5_candidates_actions": "פעילות במסגרת המשרד לנגב וגליל.",
+        "c6_designated_executive": "יצחק וסרלאוף מיועד לשר הנגב והגליל."
+      },
+      "citations": [
+        {
+          "title": "פעילות משרד הנגב והגליל - וסרלאוף",
+          "url": "https://www.gov.il/he/departments/ministry_for_the_development_of_the_negev_and_the_galilee",
+          "quote": "השקעה בתשתיות קהילתיות ומרכיבי ביטחון ביישובי קו העימות"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": 50,
+        "c2_leader_statements": 55,
+        "c3_leader_actions": 50,
+        "c4_candidates_statements": 50,
+        "c5_candidates_actions": 50,
+        "c6_designated_executive": 50
+      },
+      "notes": {
+        "c1_platform": "השקעה מסיבית בכבישים ותשתיות ביו\"ש, רכבות מהירות לחיבור הפריפריה, תמיכה באנרגיה סולארית.",
+        "c2_leader_statements": "סמוטריץ' מקדם תוכניות כבישים עוקפים ומחלפים בהיקף מיליארדים.",
+        "c3_leader_actions": "אישור תקציבי עתק לתשתיות תחבורה ביו\"ש כשר אוצר ושר במשרד הביטחון.",
+        "c4_candidates_statements": "אורית סטרוק מקדמת חיבור מים וחשמל להתיישבות.",
+        "c5_candidates_actions": "הסדרת תשתיות ביישובי ההתיישבות הצעירה.",
+        "c6_designated_executive": "סמוטריץ' כשר אוצר משפיע על כלל התשתיות."
+      },
+      "citations": [
+        {
+          "title": "תוכנית החומש לתשתיות כבישים ביו\"ש - סמוטריץ'",
+          "url": "https://www.inn.co.il",
+          "quote": "הקצאת מיליארדי שקלים לשדרוג כבישי יו\"ש וחיבורם למרכז הארץ"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": 40,
+        "c2_leader_statements": 40,
+        "c3_leader_actions": 45,
+        "c4_candidates_statements": 40,
+        "c5_candidates_actions": 40,
+        "c6_designated_executive": 40
+      },
+      "notes": {
+        "c1_platform": "פיתוח תשתיות מים, חשמל, ביוב ותחבורה ביישובים הערביים ובנגב.",
+        "c2_leader_statements": "עבאס הוביל את 'חוק החשמל' לחיבור בתים ללא היתר.",
+        "c3_leader_actions": "העברת מיליארדים לפיתוח כבישים ותשתיות ביוב בחברה הערבית.",
+        "c4_candidates_statements": "יאסר חוג'יראת מקדם תשתיות בריאות בפריפריה.",
+        "c5_candidates_actions": "קידום מרכזי רפואה בנגב.",
+        "c6_designated_executive": "מועמדות לפיתוח מקומי."
+      },
+      "citations": [
+        {
+          "title": "חוק החשמל של רע\"ם - Ynet",
+          "url": "https://www.ynet.co.il",
+          "quote": "חיבור עשרות אלפי מבנים ביישובים ערביים לרשת החשמל והמים הארצית"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": 25,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 25,
+        "c4_candidates_statements": 25,
+        "c5_candidates_actions": 25,
+        "c6_designated_executive": 25
+      },
+      "notes": {
+        "c1_platform": "השקעה בתשתיות אזרחיות, רכבות ותחבורה ציבורית ביישובים הערביים, ללא חזון מו\"פ לאומי.",
+        "c2_leader_statements": "טיבי פועל לחיבור כבישים ותשתיות ביישובי המשולש והגליל.",
+        "c3_leader_actions": "קידום שאילתות וחקיקה לשיפור תשתיות מקומיות.",
+        "c4_candidates_statements": "דגש על תחבורה ציבורית ואיכות סביבה.",
+        "c5_candidates_actions": "פעילות בוועדות הכלכלה.",
+        "c6_designated_executive": "היעדר מועמד לתשתיות לאומיות מתקדמות."
+      },
+      "citations": [
+        {
+          "title": "המצע האזרחי של חד\"ש-תע\"ל",
+          "url": "https://main.knesset.gov.il",
+          "quote": "שדרוג תשתיות התחבורה והביוב ביישובים הערביים"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 45,
+        "c2_leader_statements": 45,
+        "c3_leader_actions": 40,
+        "c4_candidates_statements": 40,
+        "c5_candidates_actions": 40,
+        "c6_designated_executive": 40
+      },
+      "notes": {
+        "c1_platform": "תשתיות ביטחוניות, מגן גבולות, חיזוק הפריפריה וההתיישבות.",
+        "c2_leader_statements": "וינטר מדגיש ביטחון אנרגטי ופיתוח תשתיות הגנה מתקדמות.",
+        "c3_leader_actions": "ניהול פרויקטי ביצורים ומערכות הגנה בגבולות.",
+        "c4_candidates_statements": "דגש על תשתיות פיזיות בפריפריה.",
+        "c5_candidates_actions": "ניסיון לוגיסטי-מבצעי עשיר.",
+        "c6_designated_executive": "היעדר מועמד מובהק להייטק וחלל."
+      },
+      "citations": [
+        {
+          "title": "תפיסת הביטחון והגבולות של עופר וינטר",
+          "url": "https://www.israelhayom.co.il",
+          "quote": "בניית תשתיות הגנה תקיפות ומרחבי ביטחון עמוקים"
+        }
+      ]
+    }
+  }
+}
