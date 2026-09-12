@@ -4,6 +4,10 @@
 This project is an automated, objective, evidence-based analysis system evaluating political parties, party leaders, and realistic candidates for the **2026 Israeli Knesset Elections** (taking place late 2026).
 It is implemented as an **Antigravity Skill** (`election-analyst`) running locally inside Antigravity using the user's Gemini Pro capabilities, powered by a **4-phase parallel multi-agent architecture**.
 
+> ⚠️ **STRICT MANDATE: NO MONOLITHIC SHORTCUTS**  
+> Running an election analysis round (e.g. "run a full report round", "הרץ עדכון שבועי") MUST NEVER be executed as a monolithic local script or by copying past data.  
+> You MUST use Antigravity subagent tools (`define_subagent` and `invoke_subagent`) to actually launch the 4 specialized agent roles across their respective phases.
+
 ## 2. Language & Communication Rules
 - **Technical Discussion, Scripts, Code, Architecture, and Git**: English.
 - **Content (Policy topics, stances, parties, candidate names, justifications, quotes, reports)**: Hebrew (עברית).
@@ -52,42 +56,40 @@ Configured in `config/profiles/default.yaml` (Equal weight 1.0 each by default):
 
 ---
 
-## 5. Four-Phase Multi-Agent Architecture & Weekly Workflow
-When the user prompts to run the weekly analysis (e.g., "Run weekly election analysis update" or "הרץ עדכון שבועי לאנליזת הבחירות"):
+## 5. Multi-Agent Setup & Execution Lifecycle
 
-### Phase 1: Concurrent Information Gathering (9 Topic Researchers)
-- Update `config/polls.yaml` with the latest poll figures and realistic candidate thresholds.
-- Launch 9 parallel `topic_researcher` subagents via `invoke_subagent` (one per policy topic) investigating all qualifying parties.
-- Prompts follow `.agents/skills/election-analyst/references/researcher_prompt.md`.
-- Staged output: `data/staging/YYYY-MM-DD/topics/<topic_id>.json`.
+Whenever instructed to run an analysis round or weekly update:
+
+### Step 0: Ensure Subagents are Defined
+Define the 4 subagent types using `define_subagent` if not already defined in the conversation:
+1. `topic_researcher`: Equipped with `enable_write_tools: true`, prompt based on `references/researcher_prompt.md`.
+2. `topic_validator`: Equipped with `enable_write_tools: true`, prompt based on `references/validator_prompt.md`.
+3. `report_rebuilder`: Equipped with `enable_write_tools: true`, prompt based on `references/rebuilder_prompt.md`.
+4. `ui_validator`: Equipped with `enable_write_tools: true`, prompt based on `references/ui_validator_prompt.md`.
+
+### Phase 1: Parallel Information Gathering (9 Concurrent Agents)
+- Update `config/polls.yaml` with the latest poll averages and cutoffs.
+- Call `invoke_subagent` with 9 parallel `topic_researcher` agents (one per policy topic) investigating all qualifying parties.
+- Each researcher saves to `data/staging/YYYY-MM-DD/topics/<topic_id>.json`.
 
 ### Phase 2: Two-Tier Cross-Validation & Feedback Loop
-- **Tier 1 (Automated)**: Run `python3 scripts/validate_links.py` to verify HTTP reachability of all citation URLs and schema conformity.
-- **Tier 2 (Parallel Validators)**: Launch `topic_validator` agents verifying factual accuracy, rubric adherence, and candidate boundaries.
-- **Feedback Loop**: If claims/links are flagged, send revision feedback to the research agent (max 1 revision round). Final determination applied by validator.
-- Validated output: `data/validated/YYYY-MM-DD/topics/<topic_id>.json` and audit logs in `data/validation_logs/YYYY-MM-DD/`.
+- Run Tier 1 automated link and schema verification (`scripts/validate_links.py`).
+- Call `invoke_subagent` for `topic_validator` agents to cross-examine factual claims and rubric compliance.
+- If defects/unverified links are flagged, send revision feedback to the research agent via `send_message` (max 1 revision round).
+- Validated files saved to `data/validated/YYYY-MM-DD/topics/<topic_id>.json` and audit logs to `data/validation_logs/YYYY-MM-DD/`.
 
-### Phase 3: Merging & Report Rebuilding
-- Merge topic datasets:
-  ```bash
-  python3 scripts/merge_topics.py --topics-dir data/validated/YYYY-MM-DD/topics --output data/evaluations/YYYY-MM-DD.json --date YYYY-MM-DD
-  ```
-- Run scoring engine & generate reports:
-  ```bash
-  python3 scripts/run_analysis.py --date YYYY-MM-DD
-  ```
-- Write Hebrew Executive Synthesis (לוח מובילים, תזוזות מפתח ופערים בין הגושים).
+### Phase 3: Aggregation & Report Rebuilding
+- Call `invoke_subagent` for `report_rebuilder` agent.
+- Merges topic files into `data/evaluations/YYYY-MM-DD.json` (`scripts/merge_topics.py`).
+- Runs scoring engine and generates Markdown and HTML (`scripts/run_analysis.py`).
+- Prepares Hebrew Executive Synthesis.
 
 ### Phase 4: UI Validation & Deployment Gatekeeper
-- **Automated Verification & Snapshots**: Run `python3 scripts/validate_ui.py --date YYYY-MM-DD --strict` capturing desktop (`1280x800`) and mobile (`375x812`) snapshots.
-- **Visual Inspection**: `ui_validator` agent reviews layout, RTL rendering, leaderboard cards, and mobile responsiveness.
-- **Rejection Feedback Loop**: If defects exist, `ui_validator` sends a structured Reject payload with selectors to `report_rebuilder` (max 2 revision rounds).
-- **Strict Deployment Gate**: Git commit & push to `origin/main` (for GitHub Pages) is strictly blocked until `data/validation_logs/YYYY-MM-DD/ui_validation.json` has `status: "APPROVED"`.
-  ```bash
-  git add data/ reports/ docs/
-  git commit -m "Weekly election analysis update: YYYY-MM-DD [UI Validated]"
-  git push origin main
-  ```
+- Call `invoke_subagent` for `ui_validator` agent.
+- Runs `scripts/validate_ui.py --date YYYY-MM-DD --strict` capturing desktop and mobile snapshots.
+- Performs visual inspection (RTL layout, Hebrew typography, responsive cards).
+- If rejected, sends structured Reject payload back to `report_rebuilder` (max 2 revision rounds).
+- If approved (`status: "APPROVED"` in `ui_validation.json`), commits and deploys to GitHub Pages (`git push origin main`).
 
 ---
 

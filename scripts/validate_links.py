@@ -30,8 +30,17 @@ def check_url(url: str, timeout: float = 6.0) -> Tuple[str, bool, int, str]:
     if not url.startswith("http://") and not url.startswith("https://"):
         return url, False, 0, "Invalid protocol (must be http or https)"
 
+    import urllib.parse
+    try:
+        parts = urllib.parse.urlsplit(url)
+        safe_path = urllib.parse.quote(parts.path)
+        safe_query = urllib.parse.quote(parts.query, safe="=&?+")
+        safe_url = urllib.parse.urlunsplit((parts.scheme, parts.netloc, safe_path, safe_query, parts.fragment))
+    except Exception:
+        safe_url = url
+
     req = urllib.request.Request(
-        url,
+        safe_url,
         headers={"User-Agent": USER_AGENT, "Accept": "*/*"}
     )
     ctx = ssl.create_default_context()
