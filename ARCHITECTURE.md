@@ -317,6 +317,30 @@ The system is decomposed into 4 specialized Antigravity Skills:
 
 ---
 
+### ADR-016: Hierarchical Collapsible Party Dossiers, Unevaluated Policy Topic Accordion, and Candidate Topic Drill-Down
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**:
+  Users navigating Tab 1 ("כרטיסי מפלגות ומועמדים") previously faced massive vertical scrolling across 14 fully open parties and hundreds of candidate cards. Furthermore, users needed to inspect unevaluated party policy stances (platform, leader statements, and actions without subjective scores or color badges) and drill down into individual candidates' specific track records, votes, and achievements across the 9 canonical policy topics.
+* **Decision**:
+  1. **Collapsible Party Dossier Cards**:
+     - All party cards are collapsible and collapsed by default to provide an uncluttered, legible initial view.
+     - Top global toolbar provides `פתח את כל המפלגות` and `כווץ את כל המפלגות` actions.
+     - Candidate search input features auto-expansion: searching for a candidate auto-expands the party card containing the match and collapses parties with zero matches.
+  2. **Unevaluated 9-Topic Party Policy Accordion**:
+     - Embedded inside each expanded party card (`.party-policy-accordion`): factual platform stances (`c1_platform`), leader statements (`c2_leader_statements`), leader actions (`c3_leader_actions`), and verified citation URLs.
+     - Strictly free of numeric scores or evaluation badges, separating objective reporting from subjective profile rankings.
+  3. **Collapsible Candidate Cards & Party Bulk Toggle**:
+     - Candidate cards are individually collapsible with a hybrid default: realistic-zone candidates start expanded (`display: block`), while non-realistic candidates start collapsed (`display: none`).
+     - A local party-level switch (`toggleAllCandidates`) toggles all candidates in that party at once.
+  4. **Candidate Topic Drill-Down & Dynamic Badges**:
+     - Implemented `extract_candidate_topic_records` in `scripts/generate_report.py`: cross-references candidate names against topic research notes (`c4_candidates_statements`, `c5_candidates_actions`, `c6_designated_executive`) and categorizes candidate CV `key_votes` and `major_achievements` against Hebrew domain keyword sets for all 9 canonical topics.
+     - Interactive clickable pill badges inside candidate cards open inline drawers showing matched legislative roll-calls, achievements, and researcher findings.
+* **Consequences**:
+  Significantly improves UX performance and information hierarchy, gives voters clear access to unevaluated policy facts and candidate records by topic, preserves complete DOM validity, and maintains strict separation between profile scoring (Tab 1) and factual candidate profiles (Tab 2).
+
+---
+
 ## 6. Verification and Deployment Pipeline Matrix
 
 | Stage | Command | Enforced Preconditions | Exit Criteria |

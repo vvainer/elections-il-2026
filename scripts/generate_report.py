@@ -10,6 +10,7 @@ Generates:
 
 import os
 import json
+import re
 from typing import Dict, Any, List, Union
 
 CRITERIA_NAMES_HE = {
@@ -25,6 +26,103 @@ GITHUB_REPO_URL = "https://github.com/vvainer/elections-il-2026"
 GITHUB_BLOB_URL = f"{GITHUB_REPO_URL}/blob/main"
 GITHUB_TREE_URL = f"{GITHUB_REPO_URL}/tree/main"
 GITHUB_RAW_URL = "https://raw.githubusercontent.com/vvainer/elections-il-2026/main"
+
+TOPIC_KEYWORDS = {
+    "education": ["חינוך", "מורים", "ליבה", "בתי ספר", "פדגוגי", "השכלה", "תלמידים", "אקדמיה", "הוראה", "קרמבו", "אינקלו"],
+    "governance_reform": ["משפט", "משילות", "הפרדת רשויות", "שלטון מקומי", "יועמ\"ש", "יועץ משפטי", "כנסת", "רפורמה משפטית", "הפיכה משטרית", "חוק יסוד", "בג\"ץ", "שומרי סף", "טוהר המידות", "חוקה"],
+    "future_infrastructure": ["תשתית", "בינה מלאכותית", "AI", "מו\"פ", "טכנולוגי", "קוונטום", "רובוטיקה", "אנרגיה", "חשמל", "מים", "רכבת", "חדשנות", "הייטק", "סייבר", "תחבורה"],
+    "strategic_posture": ["ביטחון", "צה\"ל", "צבא", "מלחמה", "אסטרטגי", "הסכמים", "פלסטינ", "ירושלים", "עזה", "לבנון", "חטופים", "גבול", "מילואים", "עוטף עזה", "איו\"ש", "טרור"],
+    "religion_and_state": ["דת", "שבת", "חרדים", "גיוס", "ישיבות", "כשרות", "נישואין", "גיור", "רבנות", "תחבורה ציבורית בשבת", "כספים קואליציוניים", "ממלכתי"],
+    "returning_residents": ["יורדים", "החזרת", "השבת", "חו\"ל", "עולים", "רילוקיישן", "רופאים", "מדענים", "בריחת מוחות"],
+    "open_market": ["שוק פתוח", "שוק חופשי", "תחרות", "מונופול", "רגולציה", "מכסים", "ייבוא", "הפרטה", "יוקר המחיה", "עסקים", "מסחר", "הסרת חסמים", "משק"],
+    "welfare_reform": ["רווחה", "קצבאות", "העברות", "עוני", "תעסוקה", "ביטוח לאומי", "נכים", "קשישים", "שכר מינימום", "עובדים סוציאליים", "פיצויי פיטורים", "דיור ציבורי"],
+    "government_downsizing": ["צמצום", "משרדים", "משרדי ממשלה", "ייעול", "קיצוץ", "שירות ציבורי", "מגזר ציבורי", "תקציב המדינה", "שרי ממשלה", "סמכויות"]
+}
+
+def extract_candidate_topic_records(
+    candidate: Dict[str, Any],
+    party_topics: Dict[str, Any],
+    catalog_topics: List[Dict[str, Any]]
+) -> Dict[str, Dict[str, Any]]:
+    """
+    Extracts topic-level standings, key votes, achievements, and research dossier notes for a candidate.
+    """
+    c_name = candidate.get("name", "").strip()
+    cv = candidate.get("cv", {})
+    key_votes = cv.get("key_votes", [])
+    achievements = cv.get("major_achievements", [])
+    
+    name_parts = c_name.split()
+    last_name = name_parts[-1] if len(name_parts) > 1 and len(name_parts[-1]) >= 3 else ""
+    first_name = name_parts[0] if len(name_parts) > 1 and len(name_parts[0]) >= 3 else ""
+
+    topic_records = {}
+
+    for t in catalog_topics:
+        t_id = t["id"]
+        t_title = t.get("name_he") or t.get("title") or t_id
+        keywords = TOPIC_KEYWORDS.get(t_id, [])
+
+        matched_votes = []
+        for vote in key_votes:
+            if any(kw in vote for kw in keywords):
+                matched_votes.append(vote)
+
+        matched_achievements = []
+        for ach in achievements:
+            if any(kw in ach for kw in keywords):
+                matched_achievements.append(ach)
+
+        # Check dossier mentions in party's evaluated topic
+        dossier_notes = []
+        t_eval = party_topics.get(t_id, {})
+        notes_dict = t_eval.get("notes", {})
+        for crit_key in ["c4_candidates_statements", "c5_candidates_actions", "c6_designated_executive"]:
+            note_text = notes_dict.get(crit_key, "")
+            if not note_text:
+                continue
+            
+            # Check candidate mention
+            name_mentioned = (c_name and c_name in note_text)
+            if not name_mentioned and last_name and len(last_name) >= 3:
+                # Ensure word boundary check for last name
+                if re.search(rf"(?:^|[\s,.:;]){re.escape(last_name)}(?:$|[\s,.:;])", note_text):
+                    name_mentioned = True
+            
+            if name_mentioned:
+                sentences = re.split(r"[.;]\s*", note_text)
+                found_sent = False
+                for sent in sentences:
+                    sent = sent.strip()
+                    if not sent:
+                        continue
+                    if (c_name and c_name in sent) or (last_name and last_name in sent):
+                        if sent not in dossier_notes:
+                            dossier_notes.append(sent)
+                            found_sent = True
+                if not found_sent and note_text not in dossier_notes:
+                    dossier_notes.append(note_text)
+
+        # Support explicit static topic tags if candidate has them
+        explicit_records = candidate.get("topic_records", {}).get(t_id, {})
+        if explicit_records:
+            if isinstance(explicit_records, list):
+                dossier_notes.extend(explicit_records)
+            elif isinstance(explicit_records, dict):
+                matched_votes.extend(explicit_records.get("votes", []))
+                matched_achievements.extend(explicit_records.get("achievements", []))
+                dossier_notes.extend(explicit_records.get("notes", []))
+
+        if matched_votes or matched_achievements or dossier_notes:
+            topic_records[t_id] = {
+                "id": t_id,
+                "title": t_title,
+                "votes": matched_votes,
+                "achievements": matched_achievements,
+                "dossier_notes": dossier_notes
+            }
+
+    return topic_records
 
 def get_score_color_class(score: float) -> str:
     if score >= 40:
@@ -668,6 +766,307 @@ def generate_html_dashboard(
             font-weight: 600;
         }}
 
+        /* Collapsible Party Dossier Cards */
+        .party-dossier-card {{
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            background: var(--bg-card);
+            margin-bottom: 20px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }}
+
+        .party-dossier-card:hover {{
+            border-color: var(--border-hover);
+        }}
+
+        .party-card-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            cursor: pointer;
+            background: #ffffff;
+            user-select: none;
+            transition: background 0.15s;
+        }}
+
+        .party-card-header:hover {{
+            background: #f8fafc;
+        }}
+
+        .party-header-main {{
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+        }}
+
+        .party-title-row {{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
+        }}
+
+        .party-expand-icon {{
+            font-size: 0.85rem;
+            color: var(--accent);
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            background: var(--accent-light);
+            font-weight: bold;
+            transition: transform 0.2s;
+        }}
+
+        .party-title {{
+            font-size: 1.35rem;
+            font-weight: 700;
+            color: var(--text-primary);
+            margin: 0;
+        }}
+
+        .party-mandates-pill {{
+            background: #f1f5f9;
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            padding: 3px 10px;
+            border-radius: 14px;
+        }}
+
+        .party-meta-row {{
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 4px;
+        }}
+
+        .party-header-action {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+
+        .party-toggle-btn {{
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 0.82rem;
+            font-weight: 600;
+            padding: 5px 12px;
+            border-radius: 6px;
+            pointer-events: none;
+        }}
+
+        .party-card-body {{
+            padding: 20px;
+            background: #fbfcfe;
+            border-top: 1px solid var(--border);
+        }}
+
+        .dossier-subheading {{
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--accent);
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }}
+
+        .party-topics-block {{
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 22px;
+        }}
+
+        .party-topics-accordion {{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 10px;
+        }}
+
+        .party-policy-accordion {{
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            background: #ffffff;
+            overflow: hidden;
+        }}
+
+        .party-policy-summary {{
+            padding: 10px 14px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #f8fafc;
+            font-size: 0.92rem;
+            user-select: none;
+        }}
+
+        .party-policy-hint {{
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }}
+
+        .party-policy-content {{
+            padding: 14px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }}
+
+        .topic-fact-row {{
+            margin-bottom: 8px;
+        }}
+
+        .topic-fact-row strong {{
+            color: var(--text-primary);
+        }}
+
+        .topic-fact-row span {{
+            color: var(--text-secondary);
+        }}
+
+        /* Candidates Block & Controls */
+        .candidates-block-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 14px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }}
+
+        .candidate-card-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 14px;
+            cursor: pointer;
+            background: #ffffff;
+            user-select: none;
+            transition: background 0.12s;
+        }}
+
+        .candidate-card-header:hover {{
+            background: #f8fafc;
+        }}
+
+        .candidate-header-left {{
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
+            flex: 1;
+        }}
+
+        .candidate-short-title {{
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            max-width: 220px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }}
+
+        .candidate-expand-icon {{
+            font-size: 0.8rem;
+            color: var(--accent);
+            font-weight: bold;
+            margin-right: 6px;
+        }}
+
+        .candidate-card-body {{
+            padding: 14px;
+            border-top: 1px solid var(--border);
+            font-size: 0.9rem;
+            background: #ffffff;
+        }}
+
+        .candidate-topics-section {{
+            margin-top: 12px;
+            padding-top: 10px;
+            border-top: 1px dashed var(--border);
+        }}
+
+        .candidate-topics-header {{
+            font-size: 0.86rem;
+            margin-bottom: 6px;
+            color: var(--text-secondary);
+        }}
+
+        .candidate-topics-pills {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 6px;
+        }}
+
+        .cand-topic-pill {{
+            background: #f1f5f9;
+            color: var(--text-secondary);
+            border: 1px solid var(--border);
+            padding: 3px 9px;
+            border-radius: 12px;
+            font-size: 0.78rem;
+            cursor: pointer;
+            font-weight: 500;
+            transition: all 0.12s;
+        }}
+
+        .cand-topic-pill:hover, .cand-topic-pill.active {{
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }}
+
+        .cand-topic-drawer {{
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 10px 12px;
+            margin-top: 8px;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }}
+
+        .cand-topic-drawer-header {{
+            color: var(--accent);
+            margin-bottom: 6px;
+            font-size: 0.88rem;
+        }}
+
+        .cand-drawer-list {{
+            margin-right: 18px;
+            margin-top: 4px;
+            margin-bottom: 6px;
+            color: var(--text-secondary);
+        }}
+
+        .no-topic-note {{
+            font-size: 0.8rem;
+            color: #94a3b8;
+            font-style: italic;
+        }}
+
+        .meta-sep {{
+            color: #cbd5e1;
+            margin: 0 2px;
+        }}
+
         /* Controls and Search in Tab 1 */
         .dossier-controls {{
             display: flex;
@@ -1105,6 +1504,10 @@ def generate_html_dashboard(
             <input type="text" id="candidateSearchInput" oninput="filterCandidates()" placeholder="🔍 חיפוש מועמד לפי שם או תפקיד..." class="search-input">
             <button class="filter-btn active" id="btn-filter-realistic" onclick="toggleRealisticOnly(true)">★ מועמדים ריאליים בלבד</button>
             <button class="filter-btn" id="btn-filter-all" onclick="toggleRealisticOnly(false)">רשימה מלאה (1..30+)</button>
+            <div style="display: flex; gap: 8px;">
+                <button class="filter-btn" id="btn-expand-all-parties" onclick="toggleAllParties(true)">📂 פתח את כל המפלגות</button>
+                <button class="filter-btn" id="btn-collapse-all-parties" onclick="toggleAllParties(false)">📁 כווץ את כל המפלגות</button>
+            </div>
         </div>
 
         <div id="partiesDossiersList">
@@ -1116,25 +1519,86 @@ def generate_html_dashboard(
         static_data = p_data.get("static_data", {})
         party_info = static_data.get("party_info", {})
         candidates = static_data.get("candidates", [])
+        p_topics = p_data.get("topics", {})
         
         manifesto_link = f"{GITHUB_BLOB_URL}/data/static/parties/{p_id}/manifesto.md"
         
         html += f"""
-        <div class="card" id="dossier-{p_id}">
-            <div class="card-header">
-                <div>
-                    <h3 style="font-size: 1.4rem;">{name} <span style="font-size: 1rem; color: var(--text-secondary); font-weight: normal;">({mandates} מנדטים בסקרים)</span></h3>
-                    <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 4px;">
-                        <strong>יו״ר:</strong> {leader}
-                        {f' | <a href="{party_info.get("official_website")}" target="_blank" rel="noopener noreferrer" class="citation-link">אתר רשמי</a>' if party_info.get("official_website") else ""}
-                        {f' | <a href="{party_info.get("knesset_faction_url")}" target="_blank" rel="noopener noreferrer" class="citation-link">עמוד סיעה בכנסת</a>' if party_info.get("knesset_faction_url") else ""}
-                        | <a href="{manifesto_link}" target="_blank" rel="noopener noreferrer" class="citation-link">📄 צפה במצע המלא (GitHub)</a>
+        <div class="card party-dossier-card" id="dossier-{p_id}" data-party-id="{p_id}">
+            <div class="party-card-header" onclick="togglePartyCard('{p_id}')" role="button" tabindex="0">
+                <div class="party-header-main">
+                    <div class="party-title-row">
+                        <span class="party-expand-icon" id="party-icon-{p_id}">▼</span>
+                        <h3 class="party-title">{name}</h3>
+                        <span class="party-mandates-pill">{mandates} מנדטים בסקרים</span>
                     </div>
+                    <div class="party-meta-row">
+                        <span><strong>יו״ר:</strong> {leader}</span>
+                        {f'<span class="meta-sep">|</span><a href="{party_info.get("official_website")}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">אתר רשמי ↗</a>' if party_info.get("official_website") else ""}
+                        {f'<span class="meta-sep">|</span><a href="{party_info.get("knesset_faction_url")}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">עמוד סיעה בכנסת ↗</a>' if party_info.get("knesset_faction_url") else ""}
+                        <span class="meta-sep">|</span><a href="{manifesto_link}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">📄 צפה במצע המלא (GitHub) ↗</a>
+                    </div>
+                </div>
+                <div class="party-header-action">
+                    <span class="party-toggle-btn" id="party-btn-text-{p_id}">פתח פרטי מפלגה ▾</span>
                 </div>
             </div>
 
-            <h4 style="margin: 16px 0 12px 0; font-size: 1.1rem; color: var(--accent);">נבחרת המועמדים וקורות חיים מעשיים:</h4>
-            <div class="candidates-grid">
+            <div class="party-card-body" id="party-body-{p_id}" style="display: none;">
+                <!-- SECTION 1: עמדות ועשיית המפלגה לפי נושאים (ללא ציונים) -->
+                <div class="party-topics-block">
+                    <h4 class="dossier-subheading">📜 עמדות ועשיית המפלגה לפי 9 נושאי הליבה (דיווח עובדתי ללא ציונים)</h4>
+                    <div class="party-topics-accordion">
+"""
+        for t in topics:
+            t_id = t["id"]
+            t_title = t.get("name_he") or t.get("title") or t_id
+            t_eval = p_topics.get(t_id, {})
+            notes_dict = t_eval.get("notes", {})
+            c1_platform = notes_dict.get("c1_platform", "")
+            c2_leader = notes_dict.get("c2_leader_statements", "")
+            c3_actions = notes_dict.get("c3_leader_actions", "")
+            citations = t_eval.get("citations", [])
+            
+            cites_html = ""
+            if citations:
+                cites_html = '<div style="margin-top: 10px; font-size: 0.86rem;"><strong>מקורות וקישורים מאומתים:</strong><ul style="margin-right: 18px; margin-top: 4px;">'
+                for cite in citations:
+                    title = cite.get("title", "מקור")
+                    url = cite.get("url", "https://github.com/vvainer/elections-il-2026")
+                    quote = cite.get("quote", "")
+                    quote_str = f' &mdash; <em>"{quote}"</em>' if quote else ""
+                    cites_html += f'<li><a href="{url}" target="_blank" rel="noopener noreferrer" class="citation-link">{title}</a>{quote_str}</li>'
+                cites_html += '</ul></div>'
+            
+            html += f"""
+                        <details class="party-policy-accordion">
+                            <summary class="party-policy-summary">
+                                <span>📌 {t_title}</span>
+                                <span class="party-policy-hint">עמדות ומקורות ▾</span>
+                            </summary>
+                            <div class="party-policy-content">
+                                <div class="topic-fact-row"><strong>עקרונות ומצע:</strong> <span>{c1_platform or 'לא צוינה עמדה רשמית במצע.'}</span></div>
+                                <div class="topic-fact-row"><strong>עמדות ראש המפלגה:</strong> <span>{c2_leader or 'אין התבטאויות פומביות מתועדות.'}</span></div>
+                                <div class="topic-fact-row"><strong>עשייה בפועל של ראש המפלגה:</strong> <span>{c3_actions or 'אין רקורד ביצועי או חקיקתי מתועד.'}</span></div>
+                                {cites_html}
+                            </div>
+                        </details>
+"""
+        html += f"""
+                    </div>
+                </div>
+
+                <!-- SECTION 2: נבחרת המועמדים וקורות חיים מעשיים -->
+                <div class="party-candidates-block">
+                    <div class="candidates-block-header">
+                        <h4 class="dossier-subheading" style="margin: 0;">👥 נבחרת המועמדים וקורות חיים מעשיים ({len(candidates)} מועמדים ברשימה)</h4>
+                        <div class="candidates-bulk-controls">
+                            <button class="filter-btn toggle-candidates-btn" id="toggle-cand-btn-{p_id}" onclick="toggleAllCandidates('{p_id}')">📂 פתח את כל המועמדים</button>
+                        </div>
+                    </div>
+
+                    <div class="candidates-grid" id="candidates-grid-{p_id}">
 """
         if candidates:
             for c in candidates:
@@ -1145,29 +1609,80 @@ def generate_html_dashboard(
                 real_badge = '<span class="pill-badge" style="background:#eff6ff; color:#1d4ed8;">★ בטווח הריאלי</span>' if is_real else '<span class="pill-badge" style="background:#f1f5f9; color:#64748b;">מקום ברשימה</span>'
                 
                 cv = c.get("cv", {})
+                short_raw = cv.get("public_service") or cv.get("career") or ""
+                short_snippet = short_raw.split(",")[0].split(";")[0].split(".")[0][:36].strip()
+                short_badge = f'<span class="candidate-short-title" title="{short_raw}">({short_snippet})</span>' if short_snippet else ""
+                
+                cand_topics = extract_candidate_topic_records(c, p_topics, topics)
+                
+                topics_markup = ""
+                if cand_topics:
+                    pills = f'<div class="candidate-topics-pills" id="cand-pills-{p_id}-{pos}">'
+                    drawers = f'<div class="candidate-topics-drawers" id="cand-drawers-{p_id}-{pos}">'
+                    for tid, trec in cand_topics.items():
+                        pills += f'<button type="button" class="cand-topic-pill" id="pill-{p_id}-{pos}-{tid}" onclick="toggleCandidateTopic(\'{p_id}\', \'{pos}\', \'{tid}\')">📌 {trec["title"]}</button>'
+                        drawers += f'<div class="cand-topic-drawer" id="drawer-{p_id}-{pos}-{tid}" style="display: none;">'
+                        drawers += f'<div class="cand-topic-drawer-header"><strong>נושא: {trec["title"]}</strong></div>'
+                        if trec["votes"]:
+                            drawers += '<div><strong>הצבעות מפתח:</strong><ul class="cand-drawer-list">'
+                            for v in trec["votes"]:
+                                drawers += f'<li>{v}</li>'
+                            drawers += '</ul></div>'
+                        if trec["achievements"]:
+                            drawers += '<div><strong>הישגים ועשייה:</strong><ul class="cand-drawer-list">'
+                            for a in trec["achievements"]:
+                                drawers += f'<li>{a}</li>'
+                            drawers += '</ul></div>'
+                        if trec["dossier_notes"]:
+                            drawers += '<div><strong>מתוך תיק המחקר:</strong><ul class="cand-drawer-list">'
+                            for n in trec["dossier_notes"]:
+                                drawers += f'<li>{n}</li>'
+                            drawers += '</ul></div>'
+                        drawers += '</div>'
+                    pills += '</div>'
+                    drawers += '</div>'
+                    topics_markup = pills + drawers
+                else:
+                    topics_markup = '<span class="no-topic-note">אין רישום נושאי ספציפי</span>'
+
                 html += f"""
-                <div class="candidate-card {real_class}" id="candidate-{p_id}-{pos}" data-name="{c_name}" data-realistic="{str(is_real).lower()}">
-                    <div class="candidate-card-header">
-                        <div>
-                            <span class="candidate-pos-tag">מקום #{pos}</span>
-                            <span class="candidate-name" style="margin-right: 8px;">{c_name}</span>
-                            {real_badge}
+                        <div class="candidate-card {real_class}" id="candidate-{p_id}-{pos}" data-name="{c_name}" data-realistic="{str(is_real).lower()}" data-party="{p_id}">
+                            <div class="candidate-card-header" onclick="toggleCandidateCard('{p_id}', '{pos}')" role="button" tabindex="0">
+                                <div class="candidate-header-left">
+                                    <span class="candidate-pos-tag">מקום #{pos}</span>
+                                    <span class="candidate-name">{c_name}</span>
+                                    {real_badge}
+                                    {short_badge}
+                                </div>
+                                <div class="candidate-header-right">
+                                    <span class="candidate-expand-icon" id="cand-icon-{p_id}-{pos}">{'▲' if is_real else '▼'}</span>
+                                </div>
+                            </div>
+                            <div class="candidate-card-body" id="cand-body-{p_id}-{pos}" style="display: {'block' if is_real else 'none'};">
+                                <div class="candidate-cv-grid">
+                                    {f'<div class="cv-item"><strong>השכלה:</strong> <span>{cv["education"]}</span></div>' if cv.get("education") else ""}
+                                    {f'<div class="cv-item"><strong>קריירה אזרחית/צבאית:</strong> <span>{cv["career"]}</span></div>' if cv.get("career") else ""}
+                                    {f'<div class="cv-item"><strong>שירות ציבורי:</strong> <span>{cv["public_service"]}</span></div>' if cv.get("public_service") else ""}
+                                </div>
+                                {f'<div style="margin-top: 8px; font-size: 0.88rem;"><strong>הצבעות מפתח בכנסת:</strong> <span style="color: var(--text-secondary);">{", ".join(cv["key_votes"])}</span></div>' if cv.get("key_votes") else ""}
+                                {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>הישגים בולטים:</strong> <span style="color: var(--pos-text);">{", ".join(cv["major_achievements"])}</span></div>' if cv.get("major_achievements") else ""}
+                                {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>ביקורת ומחלוקות:</strong> <span style="color: var(--neg-text);">{", ".join(cv["notable_failures_or_controversies"])}</span></div>' if cv.get("notable_failures_or_controversies") else ""}
+                                
+                                <div class="candidate-topics-section">
+                                    <div class="candidate-topics-header">
+                                        <strong>עשייה ועמדות לפי נושאים:</strong>
+                                    </div>
+                                    {topics_markup}
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="candidate-cv-grid">
-                        {f'<div class="cv-item"><strong>השכלה:</strong> <span>{cv["education"]}</span></div>' if cv.get("education") else ""}
-                        {f'<div class="cv-item"><strong>קריירה אזרחית/צבאית:</strong> <span>{cv["career"]}</span></div>' if cv.get("career") else ""}
-                        {f'<div class="cv-item"><strong>שירות ציבורי:</strong> <span>{cv["public_service"]}</span></div>' if cv.get("public_service") else ""}
-                    </div>
-                    {f'<div style="margin-top: 8px; font-size: 0.88rem;"><strong>הצבעות מפתח בכנסת:</strong> <span style="color: var(--text-secondary);">{", ".join(cv["key_votes"])}</span></div>' if cv.get("key_votes") else ""}
-                    {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>הישגים בולטים:</strong> <span style="color: var(--pos-text);">{", ".join(cv["major_achievements"])}</span></div>' if cv.get("major_achievements") else ""}
-                    {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>ביקורת ומחלוקות:</strong> <span style="color: var(--neg-text);">{", ".join(cv["notable_failures_or_controversies"])}</span></div>' if cv.get("notable_failures_or_controversies") else ""}
-                </div>
 """
         else:
-            html += "<p style='color: var(--text-secondary);'>אין מידע מפורט על מועמדים.</p>"
+            html += "                        <p style='color: var(--text-secondary);'>אין מידע מפורט על מועמדים.</p>\n"
 
         html += """
+                    </div>
+                </div>
             </div>
         </div>
 """
@@ -1420,13 +1935,98 @@ function switchTab(tabId) {{
 // Jump to party dossier
 function goToPartyDossier(partyId) {{
     switchTab('tab-dossiers');
+    togglePartyCard(partyId, true);
     const el = document.getElementById('dossier-' + partyId);
     if (el) {{
         el.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
     }}
 }}
 
-// Filter candidates in Tab 1
+// Toggle party card collapse/expand
+function togglePartyCard(partyId, forceState) {{
+    const body = document.getElementById('party-body-' + partyId);
+    const icon = document.getElementById('party-icon-' + partyId);
+    const btnText = document.getElementById('party-btn-text-' + partyId);
+    if (!body) return;
+
+    const shouldOpen = (forceState !== undefined) ? forceState : (body.style.display === 'none');
+    body.style.display = shouldOpen ? 'block' : 'none';
+    if (icon) icon.textContent = shouldOpen ? '▲' : '▼';
+    if (btnText) btnText.textContent = shouldOpen ? 'כווץ פרטי מפלגה ▴' : 'פתח פרטי מפלגה ▾';
+}}
+
+// Global toggle for all parties
+function toggleAllParties(open) {{
+    const partyCards = document.querySelectorAll('.party-dossier-card');
+    partyCards.forEach(card => {{
+        const partyId = card.getAttribute('data-party-id');
+        if (partyId) {{
+            togglePartyCard(partyId, open);
+        }}
+    }});
+}}
+
+// Toggle individual candidate card
+function toggleCandidateCard(partyId, pos) {{
+    const body = document.getElementById('cand-body-' + partyId + '-' + pos);
+    const icon = document.getElementById('cand-icon-' + partyId + '-' + pos);
+    if (!body) return;
+
+    const isClosed = (body.style.display === 'none');
+    body.style.display = isClosed ? 'block' : 'none';
+    if (icon) icon.textContent = isClosed ? '▲' : '▼';
+}}
+
+// Party-level bulk toggle for all candidates
+function toggleAllCandidates(partyId) {{
+    const grid = document.getElementById('candidates-grid-' + partyId);
+    const btn = document.getElementById('toggle-cand-btn-' + partyId);
+    if (!grid) return;
+
+    const candBodies = grid.querySelectorAll('.candidate-card-body');
+    const candIcons = grid.querySelectorAll('.candidate-expand-icon');
+
+    let anyClosed = false;
+    candBodies.forEach(b => {{
+        if (b.style.display === 'none') anyClosed = true;
+    }});
+
+    const targetDisplay = anyClosed ? 'block' : 'none';
+    const targetIcon = anyClosed ? '▲' : '▼';
+
+    candBodies.forEach(b => b.style.display = targetDisplay);
+    candIcons.forEach(i => i.textContent = targetIcon);
+
+    if (btn) {{
+        btn.textContent = anyClosed ? '📁 כווץ את כל המועמדים' : '📂 פתח את כל המועמדים';
+    }}
+}}
+
+// Candidate topic drawer toggle
+function toggleCandidateTopic(partyId, pos, topicId) {{
+    const drawer = document.getElementById('drawer-' + partyId + '-' + pos + '-' + topicId);
+    const pill = document.getElementById('pill-' + partyId + '-' + pos + '-' + topicId);
+    if (!drawer) return;
+
+    const isClosed = (drawer.style.display === 'none');
+
+    // Close sibling drawers in this candidate card
+    const drawersContainer = document.getElementById('cand-drawers-' + partyId + '-' + pos);
+    if (drawersContainer) {{
+        drawersContainer.querySelectorAll('.cand-topic-drawer').forEach(d => d.style.display = 'none');
+    }}
+    const pillsContainer = document.getElementById('cand-pills-' + partyId + '-' + pos);
+    if (pillsContainer) {{
+        pillsContainer.querySelectorAll('.cand-topic-pill').forEach(p => p.classList.remove('active'));
+    }}
+
+    if (isClosed) {{
+        drawer.style.display = 'block';
+        if (pill) pill.classList.add('active');
+    }}
+}}
+
+// Filter candidates in Tab 1 with auto-expansion of matching parties
 let filterRealisticOnly = true;
 
 function toggleRealisticOnly(isRealistic) {{
@@ -1438,19 +2038,42 @@ function toggleRealisticOnly(isRealistic) {{
 
 function filterCandidates() {{
     const query = document.getElementById('candidateSearchInput').value.toLowerCase().trim();
-    const cards = document.querySelectorAll('.candidate-card');
+    const partyCards = document.querySelectorAll('.party-dossier-card');
 
-    cards.forEach(card => {{
-        const name = (card.getAttribute('data-name') || '').toLowerCase();
-        const isReal = card.getAttribute('data-realistic') === 'true';
+    partyCards.forEach(partyCard => {{
+        const partyId = partyCard.getAttribute('data-party-id');
+        const grid = document.getElementById('candidates-grid-' + partyId);
+        if (!grid) return;
 
-        let matchesSearch = !query || name.includes(query) || card.textContent.toLowerCase().includes(query);
-        let matchesFilter = !filterRealisticOnly || isReal;
+        const candCards = grid.querySelectorAll('.candidate-card');
+        let partyMatches = 0;
 
-        if (matchesSearch && matchesFilter) {{
-            card.style.display = 'block';
+        candCards.forEach(card => {{
+            const name = (card.getAttribute('data-name') || '').toLowerCase();
+            const isReal = card.getAttribute('data-realistic') === 'true';
+
+            let matchesSearch = !query || name.includes(query) || card.textContent.toLowerCase().includes(query);
+            let matchesFilter = !filterRealisticOnly || isReal;
+
+            if (matchesSearch && matchesFilter) {{
+                card.style.display = 'block';
+                partyMatches++;
+            }} else {{
+                card.style.display = 'none';
+            }}
+        }});
+
+        if (query) {{
+            if (partyMatches > 0) {{
+                partyCard.style.display = 'block';
+                togglePartyCard(partyId, true);
+            }} else {{
+                partyCard.style.display = 'none';
+                togglePartyCard(partyId, false);
+            }}
         }} else {{
-            card.style.display = 'none';
+            partyCard.style.display = 'block';
+            togglePartyCard(partyId, false);
         }}
     }});
 }}
