@@ -351,12 +351,15 @@ def verify_static_kb():
     print(f"[*] Verifying Static Knowledge Base in: {STATIC_DIR}")
     topics_file = os.path.join(STATIC_DIR, "topics", "catalog.json")
     criteria_file = os.path.join(STATIC_DIR, "rubric", "criteria.json")
+    coalitions_file = os.path.join(STATIC_DIR, "coalitions", "scenarios.json")
 
     errors = []
     if not os.path.exists(topics_file):
         errors.append("Missing topics catalog: " + topics_file)
     if not os.path.exists(criteria_file):
         errors.append("Missing criteria rubric: " + criteria_file)
+    if not os.path.exists(coalitions_file):
+        errors.append("Missing coalitions scenarios: " + coalitions_file)
 
     parties = list(PARTIES_CATALOG.keys())
     verified_parties = 0
@@ -381,7 +384,7 @@ def verify_static_kb():
     print("=" * 60)
     print(f"- Total Qualified Parties: {len(parties)}")
     print(f"- Verified Parties:         {verified_parties}")
-    print(f"- Catalog & Rubric Files:  2")
+    print(f"- Catalog, Rubric & Coalition Files: 3")
     if errors:
         print(f"\n[!] Errors ({len(errors)}):")
         for e in errors:

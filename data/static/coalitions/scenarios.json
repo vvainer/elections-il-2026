@@ -1,0 +1,69 @@
+{
+  "version": "1.0.0",
+  "description": "תרחישי קואליציה וגושים מרכזיים לבחירות לכנסת ה-26 המבוססים על סקרים וניתוח פוליטי מוביל",
+  "scenarios": [
+    {
+      "id": "current_right_haredi_bloc",
+      "name_he": "גוש הימין-חרדים (הקואליציה המכהנת)",
+      "description": "קואליציית הימין והמפלגות החרדיות בראשות בנימין נתניהו, המהווה את בסיס הממשלה הנוכחית.",
+      "parties": [
+        "likud",
+        "shas",
+        "yahadut_hatorah",
+        "otzma_yehudit",
+        "religious_zionism"
+      ]
+    },
+    {
+      "id": "change_center_right_coalition",
+      "name_he": "ממשלת שינוי ומרכז-ימין ממלכתי",
+      "description": "קואליציה ציונית רחבה המורכבת ממפלגות האופוזיציה המרכזיות, הימין הממלכתי והדמוקרטים.",
+      "parties": [
+        "yashar",
+        "beyachad",
+        "yisrael_beiteinu",
+        "yesh_atid",
+        "democrats",
+        "hendel_zeleka",
+        "right_winter"
+      ]
+    },
+    {
+      "id": "national_unity_broad",
+      "name_he": "ממשלת אחדות לאומית רחבה (ללא קצוות)",
+      "description": "קואליציית אחדות ציונית רחבה במרכז המפה הפוליטית המשלבת את הליכוד, ביחד, ישר, יש עתיד וישראל ביתנו ללא מפלגות הקצה.",
+      "parties": [
+        "likud",
+        "yashar",
+        "beyachad",
+        "yesh_atid",
+        "yisrael_beiteinu"
+      ]
+    },
+    {
+      "id": "right_wing_broad_liberals",
+      "name_he": "ממשלת ימין ביטחונית-ליברלית רחבה",
+      "description": "קואליציית ימין הכוללת את הליכוד, ביחד (בנט), ישראל ביתנו, הנדל-זליכה, ימין חדש וש״ס.",
+      "parties": [
+        "likud",
+        "beyachad",
+        "yisrael_beiteinu",
+        "hendel_zeleka",
+        "right_winter",
+        "shas"
+      ]
+    },
+    {
+      "id": "center_left_with_raam",
+      "name_he": "קואליציית מרכז-שמאל בשיתוף/רשת ביטחון של רע״ם",
+      "description": "ממשלת מרכז-שמאל בדומה למודל ממשלת בנט-לפיד, הנשענת על שיתוף פעולה או רשת ביטחון עם רע״ם.",
+      "parties": [
+        "yashar",
+        "beyachad",
+        "yesh_atid",
+        "democrats",
+        "raam"
+      ]
+    }
+  ]
+}

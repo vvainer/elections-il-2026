@@ -63,6 +63,9 @@ class DashboardHTMLParser(HTMLParser):
         self.criteria_rows = 0
         self.citation_links = []
         self.badges = []
+        self.tab_buttons = 0
+        self.candidate_cards = 0
+        self.github_links = 0
         
         # State tracking
         self.in_overview_tbody = False
@@ -77,11 +80,18 @@ class DashboardHTMLParser(HTMLParser):
         elif tag == "meta":
             if attrs_dict.get("name") == "viewport":
                 self.has_viewport = True
+
+        elif tag == "button":
+            cls = attrs_dict.get("class", "")
+            if "tab-button" in cls:
+                self.tab_buttons += 1
                 
         elif tag == "div":
             cls = attrs_dict.get("class", "")
             if "leaderboard-card" in cls:
                 self.leaderboard_cards += 1
+            if "candidate-card" in cls:
+                self.candidate_cards += 1
                 
         elif tag == "details":
             cls = attrs_dict.get("class", "")
@@ -94,7 +104,6 @@ class DashboardHTMLParser(HTMLParser):
                 self.criteria_tables += 1
                 
         elif tag == "tbody":
-            # Context tracking
             pass
             
         elif tag == "tr":
@@ -102,6 +111,8 @@ class DashboardHTMLParser(HTMLParser):
             
         elif tag == "a":
             cls = attrs_dict.get("class", "")
+            if "github-link-btn" in cls:
+                self.github_links += 1
             if "citation-link" in cls or "href" in attrs_dict:
                 href = attrs_dict.get("href", "")
                 self.citation_links.append(href)
@@ -164,15 +175,30 @@ def validate_html_dom(html_path: str) -> Tuple[List[str], Dict[str, Any]]:
     if "@media" not in content:
         defects.append("Missing CSS media queries for responsive layouts (@media)")
 
+    # 9. Navigation Tabs check
+    if parser.tab_buttons < 4:
+        defects.append(f"Found only {parser.tab_buttons} navigation tab buttons (minimum 4 required)")
+
+    # 10. Candidate Dossiers check
+    if parser.candidate_cards < 14:
+        defects.append(f"Found only {parser.candidate_cards} candidate cards (minimum 14 required)")
+
+    # 11. Public GitHub Raw Matrix links check
+    if parser.github_links < 8:
+        defects.append(f"Found only {parser.github_links} public GitHub matrix links (minimum 8 required)")
+
     metrics = {
         "lang": lang,
         "dir": direction,
         "has_viewport": parser.has_viewport,
+        "tab_buttons": parser.tab_buttons,
         "leaderboard_cards": parser.leaderboard_cards,
+        "candidate_cards": parser.candidate_cards,
         "topic_accordions": parser.topic_accordions,
         "criteria_tables": parser.criteria_tables,
         "total_badges": len(parser.badges),
         "total_links": len(parser.citation_links),
+        "github_links": parser.github_links,
         "file_size_kb": round(len(content.encode("utf-8")) / 1024, 1)
     }
 

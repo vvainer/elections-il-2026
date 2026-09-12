@@ -2,7 +2,7 @@
   "valid": true,
   "results": [
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/education.json",
+      "file": "data/validated/2026-09-12/topics/education.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -26,7 +26,7 @@
       "total_citations": 15
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/future_infrastructure.json",
+      "file": "data/validated/2026-09-12/topics/future_infrastructure.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -49,7 +49,7 @@
       "total_citations": 14
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/governance_reform.json",
+      "file": "data/validated/2026-09-12/topics/governance_reform.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -72,7 +72,7 @@
       "total_citations": 14
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/government_downsizing.json",
+      "file": "data/validated/2026-09-12/topics/government_downsizing.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -95,7 +95,7 @@
       "total_citations": 14
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/open_market.json",
+      "file": "data/validated/2026-09-12/topics/open_market.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -118,7 +118,7 @@
       "total_citations": 14
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/religion_and_state.json",
+      "file": "data/validated/2026-09-12/topics/religion_and_state.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -141,7 +141,7 @@
       "total_citations": 14
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/returning_residents.json",
+      "file": "data/validated/2026-09-12/topics/returning_residents.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -164,7 +164,7 @@
       "total_citations": 14
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/strategic_posture.json",
+      "file": "data/validated/2026-09-12/topics/strategic_posture.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],
@@ -187,7 +187,7 @@
       "total_citations": 14
     },
     {
-      "file": "/Users/i048709/private/election_analysis/data/validated/2026-09-12/topics/welfare_reform.json",
+      "file": "data/validated/2026-09-12/topics/welfare_reform.json",
       "valid": true,
       "schema_errors": [],
       "broken_urls": [],

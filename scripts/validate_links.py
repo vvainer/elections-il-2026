@@ -25,7 +25,7 @@ VALID_CRITERIA = [
     "c6_designated_executive"
 ]
 
-def check_url(url: str, timeout: float = 6.0) -> Tuple[str, bool, int, str]:
+def check_url(url: str, timeout: float = 10.0) -> Tuple[str, bool, int, str]:
     """Check if a URL is reachable via HTTP HEAD or GET."""
     if not url.startswith("http://") and not url.startswith("https://"):
         return url, False, 0, "Invalid protocol (must be http or https)"

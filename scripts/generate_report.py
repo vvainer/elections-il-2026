@@ -4,7 +4,8 @@ Report Generator for Election Analysis System.
 Generates:
 1. reports/YYYY-MM-DD/<profile_id>.md (Markdown per profile)
 2. reports/YYYY-MM-DD/report.md (Default Markdown report)
-3. docs/index.html (Responsive RTL HTML Dashboard with interactive profile switcher & candidate static KB)
+3. docs/index.html (4-Tab Responsive RTL Dashboard with Candidate Dossiers, Criteria Analysis,
+   Coalition Scenarios, Methodology, and Public GitHub Raw Data Matrix)
 """
 
 import os
@@ -19,6 +20,11 @@ CRITERIA_NAMES_HE = {
     "c5_candidates_actions": "ניסיון ופעילות מעשית של מועמדים ריאליים (20%)",
     "c6_designated_executive": "מועמד ריאלי ייעודי לתפקיד ביצועי (20%)"
 }
+
+GITHUB_REPO_URL = "https://github.com/vvainer/elections-il-2026"
+GITHUB_BLOB_URL = f"{GITHUB_REPO_URL}/blob/main"
+GITHUB_TREE_URL = f"{GITHUB_REPO_URL}/tree/main"
+GITHUB_RAW_URL = "https://raw.githubusercontent.com/vvainer/elections-il-2026/main"
 
 def get_score_color_class(score: float) -> str:
     if score >= 40:
@@ -43,6 +49,7 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
     profile_desc = result.get("profile_description", "")
     parties = result.get("parties", {})
     topics = result.get("topics", [])
+    coalitions = result.get("coalitions", [])
     
     md = []
     md.append(f"# דו״ח אנליזה לבחירות לכנסת ה-26 | {date_str}\n")
@@ -51,7 +58,11 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
         md.append(f"*{profile_desc}*\n")
     md.append("> ניתוח מפלגות ומועמדים לפי עמדות מוגדרות מראש בששת קריטריוני איכות וביצוע.\n")
     
-    md.append("## 🏆 לוח תוצאות ודירוג כללי (Leaderboard)\n")
+    # ----------------------------------------------------
+    # חלק 1: לוח תוצאות ותרחישי קואליציות
+    # ----------------------------------------------------
+    md.append("## 🏆 חלק 1: לוח תוצאות ותרחישי קואליציות (Leaderboard & Coalitions)\n")
+    md.append("### דירוג המפלגות הכללי\n")
     md.append("| דירוג | מפלגה | ראש המפלגה | מנדטים בסקרים | ציון התאמה כולל | נושא חזק ביותר | נושא חלש ביותר |")
     md.append("| :---: | :--- | :--- | :---: | :---: | :--- | :--- |")
     
@@ -77,8 +88,22 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
         sign = "+" if overall > 0 else ""
         md.append(f"| **#{rank}** | **{name}** | {leader} | {mandates} | **`{sign}{overall:.1f}`** | {best_str} | {worst_str} |")
         
+    if coalitions:
+        md.append("\n### תרחישי קואליציות וגושים מרכזיים (בחינת רוב של 61+ מנדטים)\n")
+        md.append("| תרחיש קואליציה | מנדטים משותפים | מעמד רוב (61+) | ציון התאמה משוקלל | מפלגות שותפות |")
+        md.append("| :--- | :---: | :---: | :---: | :--- |")
+        for c in coalitions:
+            maj_str = "✅ רוב קואליציוני" if c.get("has_majority") else "❌ מיעוט"
+            w_score = c.get("weighted_score", 0.0)
+            sign = "+" if w_score > 0 else ""
+            parties_str = ", ".join([f"{p['name_he']} ({p['mandates']})" for p in c.get("parties", [])])
+            md.append(f"| **{c.get('name_he')}** | {c.get('total_mandates')} | {maj_str} | **`{sign}{w_score:.1f}`** | {parties_str} |")
+
+    # ----------------------------------------------------
+    # חלק 2: מטריצת ציונים וניתוח מעמיק לפי נושאים
+    # ----------------------------------------------------
     md.append("\n---\n")
-    md.append("## 📊 מטריצת ציונים לפי נושאים (-100 עד +100)\n")
+    md.append("## 📊 חלק 2: מטריצת ציונים וניתוח מעמיק לפי נושאים\n")
     
     header = "| מפלגה |" + "|".join([f" {t['title']} " for t in topics]) + "|"
     sep = "| :--- |" + "|".join([" :---: " for _ in topics]) + "|"
@@ -94,27 +119,14 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
             row += f" `{sign}{score:.1f}` |"
         md.append(row)
         
-    md.append("\n---\n")
-    md.append("## 🔍 ניתוח מעמיק, מועמדים ומקורות לפי מפלגות\n")
-    
+    md.append("\n### פירוט הערכה לפי מפלגות ונושאים\n")
     for p_id, p_data in parties.items():
         name = p_data.get("name_he", p_id)
         leader = p_data.get("leader", "")
         overall = p_data.get("overall_score", 0.0)
         sign = "+" if overall > 0 else ""
         
-        md.append(f"### מפלגת {name} (ציון כולל: `{sign}{overall:.1f}`)\n")
-        md.append(f"- **יו״ר / ראש המפלגה**: {leader}")
-        md.append(f"- **מנדטים ממוצעים בסקרים**: {p_data.get('poll_mandates', '-')}")
-        
-        # Static candidates summary
-        static_data = p_data.get("static_data", {})
-        candidates = static_data.get("candidates", [])
-        if candidates:
-            realistic_cands = [c for c in candidates if c.get("is_realistic_zone")]
-            md.append(f"- **נבחרת מועמדים ריאליים מאומתת**: {len(realistic_cands)} מועמדים בטווח הריאלי ({', '.join([c['name'] for c in realistic_cands[:6]])})")
-        
-        md.append("\n#### פירוט לפי נושאי מדיניות:\n")
+        md.append(f"#### מפלגת {name} (ציון כולל: `{sign}{overall:.1f}`)\n")
         
         for t in topics:
             t_id = t["id"]
@@ -123,8 +135,7 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
             score = t_eval.get("computed_score", 0.0)
             t_sign = "+" if score > 0 else ""
             
-            md.append(f"##### 📌 {t_title} (ציון נושא: `{t_sign}{score:.1f}`)")
-            
+            md.append(f"##### 📌 {t_title} (ציון: `{t_sign}{score:.1f}`)")
             notes = t_eval.get("notes", {})
             scores = t_eval.get("scores", {})
             
@@ -144,8 +155,74 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
                     quote_str = f' - *"{quote}"*' if quote else ""
                     md.append(f"  - [{title}]({url}){quote_str}")
             md.append("")
-        md.append("\n---\n")
+
+    # ----------------------------------------------------
+    # חלק 3: תיקי מפלגות ונבחרת מועמדים
+    # ----------------------------------------------------
+    md.append("\n---\n")
+    md.append("## 👥 חלק 3: תיקי מפלגות ונבחרת מועמדים (Dossiers)\n")
+    
+    for p_id, p_data in parties.items():
+        name = p_data.get("name_he", p_id)
+        leader = p_data.get("leader", "")
+        mandates = p_data.get("poll_mandates", "-")
+        static_data = p_data.get("static_data", {})
+        party_info = static_data.get("party_info", {})
+        candidates = static_data.get("candidates", [])
         
+        md.append(f"### {name} | ראש המפלגה: {leader} ({mandates} מנדטים)")
+        if party_info.get("official_website"):
+            md.append(f"- **אתר רשמי**: [{party_info['official_website']}]({party_info['official_website']})")
+        if party_info.get("knesset_faction_url"):
+            md.append(f"- **סיעה בכנסת**: [עמוד סיעה רשמי]({party_info['knesset_faction_url']})")
+        if static_data.get("manifesto_text"):
+            md.append(f"- **מצע המפלגה**: [קובץ מצע מלא במאגר GitHub]({GITHUB_BLOB_URL}/data/static/parties/{p_id}/manifesto.md)")
+        
+        md.append("\n#### רשימת מועמדים ריאליים וקורות חיים מעשיים:")
+        if candidates:
+            for c in candidates:
+                if not c.get("is_realistic_zone"):
+                    continue
+                pos = c.get("position", "-")
+                c_name = c.get("name", "")
+                cv = c.get("cv", {})
+                md.append(f"##### מקום {pos}: {c_name} (★ בטווח הריאלי)")
+                if cv.get("education"):
+                    md.append(f"- **השכלה**: {cv['education']}")
+                if cv.get("career"):
+                    md.append(f"- **קריירה מקצועית/צבאית**: {cv['career']}")
+                if cv.get("public_service"):
+                    md.append(f"- **שירות ציבורי ופרלמנטרי**: {cv['public_service']}")
+                if cv.get("key_votes"):
+                    md.append(f"- **הצבעות מפתח**: {', '.join(cv['key_votes'])}")
+                if cv.get("major_achievements"):
+                    md.append(f"- **הישגים בולטים**: {', '.join(cv['major_achievements'])}")
+                if cv.get("notable_failures_or_controversies"):
+                    md.append(f"- **ביקורת ומחלוקות**: {', '.join(cv['notable_failures_or_controversies'])}")
+                md.append("")
+        else:
+            md.append("אין פירוט מועמדים זמין.")
+        md.append("\n---\n")
+
+    # ----------------------------------------------------
+    # חלק 4: מתודולוגיה ומטריצת קישורים לנתונים הגולמיים ב-GitHub
+    # ----------------------------------------------------
+    md.append("## 📁 חלק 4: מתודולוגיה וגישה ישירה לנתונים הגולמיים ב-GitHub\n")
+    md.append("כל נתוני הניתוח, קטלוג הנושאים, מחווני ההערכה והמחקר הדינמי שמורים כקובצי JSON ו-YAML נקיים במאגר הציבורי:\n")
+    md.append("| קטגוריה | קובץ / ארטיפקט | תיאור | קישור ישיר לקובץ ב-GitHub |")
+    md.append("| :--- | :--- | :--- | :--- |")
+    md.append(f"| **קטלוג נושאים** | `data/static/topics/catalog.json` | 9 נושאי המדיניות ושאלות המפתח | [צפייה בקובץ ב-GitHub]({GITHUB_BLOB_URL}/data/static/topics/catalog.json) |")
+    md.append(f"| **מחוון קריטריונים** | `data/static/rubric/criteria.json` | 6 הקריטריונים ומשקולות מנורמלות | [צפייה בקובץ ב-GitHub]({GITHUB_BLOB_URL}/data/static/rubric/criteria.json) |")
+    md.append(f"| **תרחישי קואליציות** | `data/static/coalitions/scenarios.json` | תרחישי גושים וקואליציות פוטנציאליות | [צפייה בקובץ ב-GitHub]({GITHUB_BLOB_URL}/data/static/coalitions/scenarios.json) |")
+    md.append(f"| **מאגר מפלגות סטטי** | `data/static/parties/` | 14 תיקיות מפלגות, קו״ח מועמדים ומצעים | [עיון בתיקייה ב-GitHub]({GITHUB_TREE_URL}/data/static/parties) |")
+    md.append(f"| **סקרי בחירות** | `config/polls.yaml` | ממוצעי סקרים עדכניים ורף מנדטים | [צפייה בקובץ ב-GitHub]({GITHUB_BLOB_URL}/config/polls.yaml) |")
+    md.append(f"| **פרופילי עולם ערכים** | `config/profiles/` | קובצי עולם ערכים מותאמים אישית | [עיון בפרופילים ב-GitHub]({GITHUB_TREE_URL}/config/profiles) |")
+    md.append(f"| **מחקר נושאים מאומת** | `data/validated/{date_str}/topics/` | 9 קובצי מחקר מאומתים מלווים בציטוטים | [עיון במחקר ב-GitHub]({GITHUB_TREE_URL}/data/validated/{date_str}/topics) |")
+    md.append(f"| **מסד הערכה מרכזי** | `data/evaluations/{date_str}.json` | נתונים גולמיים ממוזגים של כלל המפלגות | [צפייה בקובץ ב-GitHub]({GITHUB_BLOB_URL}/data/evaluations/{date_str}.json) |")
+    md.append(f"| **יומן אימות קישורים** | `data/validation_logs/{date_str}/tier1_summary.json` | אימות תקינות URL וסכמות | [צפייה ביומן ב-GitHub]({GITHUB_BLOB_URL}/data/validation_logs/{date_str}/tier1_summary.json) |")
+    md.append(f"| **אימות UI ותצלומים** | `data/validation_logs/{date_str}/ui_validation.json` | דוח ביקורת DOM ותצלומי דסקטופ/מובייל | [צפייה בדוח ב-GitHub]({GITHUB_BLOB_URL}/data/validation_logs/{date_str}/ui_validation.json) |")
+    md.append(f"| **תצלום דסקטופ** | `data/validation_logs/{date_str}/snapshots/desktop.png` | תצלום מסך 1280x800 של הדשבורד | [צפייה בתמונה ב-GitHub]({GITHUB_BLOB_URL}/data/validation_logs/{date_str}/snapshots/desktop.png) |")
+    
     return "\n".join(md)
 
 def generate_html_dashboard(
@@ -154,7 +231,6 @@ def generate_html_dashboard(
 ) -> str:
     # Normalize input to dict of profiles
     if "parties" in profiles_input and "topics" in profiles_input:
-        # Single profile passed
         profiles_dict = {default_profile_id: profiles_input}
     else:
         profiles_dict = profiles_input
@@ -172,12 +248,13 @@ def generate_html_dashboard(
     date_str = active_result.get("date", "2026-09-12")
     topics = active_result.get("topics", [])
     parties = active_result.get("parties", {})
+    coalitions = active_result.get("coalitions", [])
 
     # Top 3 parties for initial cards
     sorted_parties = sorted(parties.items(), key=lambda x: x[1].get("overall_score", 0), reverse=True)
     top_3 = sorted_parties[:3]
 
-    # JSON serialization for interactive client switcher
+    # Clean JSON serialization for interactive client switcher
     clean_profiles_json = {}
     for p_key, p_val in profiles_dict.items():
         clean_profiles_json[p_key] = {
@@ -185,7 +262,8 @@ def generate_html_dashboard(
             "profile_name": p_val.get("profile_name", p_key),
             "profile_description": p_val.get("profile_description", ""),
             "topics": p_val.get("topics", []),
-            "parties": p_val.get("parties", {})
+            "parties": p_val.get("parties", {}),
+            "coalitions": p_val.get("coalitions", [])
         }
     profiles_json_str = json.dumps(clean_profiles_json, ensure_ascii=False)
 
@@ -194,7 +272,7 @@ def generate_html_dashboard(
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>מדד התאמה לבחירות לכנסת ה-26 | ניתוח מפלגות ומועמדים</title>
+    <title>מדד התאמה לבחירות לכנסת ה-26 | מערכת אנליזה רב-סוכנית</title>
     <style>
         :root {{
             --bg-page: #f8fafc;
@@ -202,8 +280,10 @@ def generate_html_dashboard(
             --text-primary: #0f172a;
             --text-secondary: #475569;
             --border: #e2e8f0;
+            --border-hover: #cbd5e1;
             --accent: #2563eb;
-            --accent-light: #dbeafe;
+            --accent-hover: #1d4ed8;
+            --accent-light: #eff6ff;
             --pos-bg: #dcfce7;
             --pos-text: #166534;
             --mild-pos-bg: #f0fdf4;
@@ -227,25 +307,25 @@ def generate_html_dashboard(
             background-color: var(--bg-page);
             color: var(--text-primary);
             line-height: 1.6;
-            padding: 24px 16px;
+            padding: 16px;
         }}
         
         .container {{
-            max-width: 1200px;
+            max-width: 1280px;
             margin: 0 auto;
         }}
         
         header {{
             text-align: center;
-            margin-bottom: 28px;
-            padding-bottom: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 16px;
             border-bottom: 1px solid var(--border);
         }}
         
         header h1 {{
             font-size: 2.2rem;
             color: var(--text-primary);
-            margin-bottom: 8px;
+            margin-bottom: 6px;
         }}
         
         header p {{
@@ -265,17 +345,60 @@ def generate_html_dashboard(
             font-weight: 600;
         }}
 
-        /* Profile Selector */
+        /* Navigation Tabs */
+        .nav-tabs {{
+            display: flex;
+            gap: 8px;
+            border-bottom: 2px solid var(--border);
+            margin-bottom: 24px;
+            overflow-x: auto;
+            padding-bottom: 2px;
+        }}
+
+        .tab-button {{
+            background: none;
+            border: none;
+            padding: 12px 20px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s ease;
+            white-space: nowrap;
+            border-radius: 6px 6px 0 0;
+        }}
+
+        .tab-button:hover {{
+            color: var(--accent);
+            background: var(--accent-light);
+        }}
+
+        .tab-button.active {{
+            color: var(--accent);
+            border-bottom: 3px solid var(--accent);
+            background: #ffffff;
+        }}
+
+        .tab-content {{
+            display: none;
+        }}
+
+        .tab-content.active {{
+            display: block;
+        }}
+
+        /* Profile Selector Box */
         .profile-selector-box {{
             background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
-            border: 2px solid var(--accent-light);
+            border: 2px solid #bfdbfe;
             border-radius: 12px;
             padding: 16px 20px;
-            margin-bottom: 28px;
+            margin-bottom: 24px;
             display: flex;
             flex-direction: column;
             gap: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.03);
         }}
 
         .profile-selector-row {{
@@ -310,7 +433,7 @@ def generate_html_dashboard(
         
         .section-title {{
             font-size: 1.5rem;
-            margin: 32px 0 16px 0;
+            margin: 28px 0 16px 0;
             border-right: 4px solid var(--accent);
             padding-right: 12px;
         }}
@@ -364,7 +487,7 @@ def generate_html_dashboard(
             background: var(--bg-card);
             border-radius: 12px;
             border: 1px solid var(--border);
-            margin-bottom: 32px;
+            margin-bottom: 28px;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }}
         
@@ -413,32 +536,115 @@ def generate_html_dashboard(
             gap: 8px;
         }}
 
-        /* Candidates KB Section */
-        .candidates-kb {{
-            background: #f8fafc;
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            padding: 14px;
-            margin-bottom: 16px;
-        }}
-
-        .candidate-tag {{
-            display: inline-block;
+        /* Candidate Dossiers & Cards */
+        .candidate-card {{
             background: #ffffff;
             border: 1px solid var(--border);
-            border-radius: 6px;
-            padding: 3px 8px;
-            margin: 3px;
-            font-size: 0.85rem;
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 14px;
+            transition: border-color 0.2s, box-shadow 0.2s;
         }}
 
-        .candidate-tag.realistic {{
-            border-color: #93c5fd;
-            background: #eff6ff;
-            color: #1d4ed8;
+        .candidate-card:hover {{
+            border-color: var(--accent);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+        }}
+
+        .candidate-card.realistic-card {{
+            border-right: 4px solid #2563eb;
+            background: #fbfdff;
+        }}
+
+        .candidate-card-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 10px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }}
+
+        .candidate-name {{
+            font-size: 1.15rem;
+            font-weight: 700;
+            color: var(--text-primary);
+        }}
+
+        .candidate-pos-tag {{
+            background: var(--accent-light);
+            color: var(--accent);
+            font-weight: 700;
+            padding: 3px 8px;
+            border-radius: 6px;
+            font-size: 0.88rem;
+        }}
+
+        .candidate-cv-grid {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 10px;
+            font-size: 0.92rem;
+            margin-top: 8px;
+        }}
+
+        .cv-item strong {{
+            color: var(--text-primary);
+        }}
+
+        .cv-item span {{
+            color: var(--text-secondary);
+        }}
+
+        .pill-badge {{
+            display: inline-block;
+            background: #e0f2fe;
+            color: #0369a1;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin: 2px;
             font-weight: 600;
         }}
-        
+
+        /* Controls and Search in Tab 1 */
+        .dossier-controls {{
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+            background: #f1f5f9;
+            padding: 12px 16px;
+            border-radius: 10px;
+        }}
+
+        .search-input {{
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--border);
+            font-size: 0.95rem;
+            flex: 1;
+            min-width: 220px;
+        }}
+
+        .filter-btn {{
+            background: #ffffff;
+            border: 1px solid var(--border);
+            padding: 6px 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.88rem;
+            font-weight: 600;
+            transition: all 0.15s;
+        }}
+
+        .filter-btn:hover, .filter-btn.active {{
+            background: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+        }}
+
         .topic-accordion {{
             border: 1px solid var(--border);
             border-radius: 8px;
@@ -475,6 +681,42 @@ def generate_html_dashboard(
         .citation-link:hover {{
             text-decoration: underline;
         }}
+
+        .candidate-jump-link {{
+            color: #1d4ed8;
+            background: #eff6ff;
+            border: 1px solid #bfdbfe;
+            padding: 2px 6px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-block;
+            margin-right: 4px;
+        }}
+
+        .candidate-jump-link:hover {{
+            background: #dbeafe;
+            text-decoration: underline;
+        }}
+
+        .github-link-btn {{
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #ffffff;
+            background: #24292f;
+            padding: 6px 12px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            transition: background 0.2s;
+        }}
+
+        .github-link-btn:hover {{
+            background: #0f1419;
+        }}
         
         .footer {{
             text-align: center;
@@ -487,7 +729,7 @@ def generate_html_dashboard(
 
         @media (max-width: 768px) {{
             body {{
-                padding: 12px 8px;
+                padding: 10px 6px;
             }}
             header h1 {{
                 font-size: 1.6rem;
@@ -502,6 +744,10 @@ def generate_html_dashboard(
             .card {{
                 padding: 14px;
             }}
+            .tab-button {{
+                padding: 10px 12px;
+                font-size: 0.95rem;
+            }}
         }}
     </style>
 </head>
@@ -509,29 +755,41 @@ def generate_html_dashboard(
 <div class="container">
     <header>
         <h1>מדד התאמה לבחירות לכנסת ה-26</h1>
-        <p>ניתוח מפלגות, מצעים, ראשי מפלגות ומועמדים ריאליים מול עמדות יעד אובייקטיביות</p>
+        <p>ניתוח רב-סוכני אובייקטיבי: מצעים, ראשי מפלגות, נבחרת מועמדים ריאליים וגושים קואליציוניים</p>
         <span class="date-badge">תאריך עדכון אחרון: {date_str}</span>
     </header>
 
-    <!-- Profile Selector Box -->
-    <div class="profile-selector-box">
-        <div class="profile-selector-row">
-            <label for="profileSelect">🎯 בחר עולם ערכים / פרופיל בוחר:</label>
-            <select id="profileSelect" onchange="switchProfile(this.value)" class="profile-dropdown">
+    <!-- Navigation Tabs -->
+    <nav class="nav-tabs" role="tablist">
+        <button class="tab-button active" onclick="switchTab('tab-criteria')" id="btn-criteria">📊 ניתוח קריטריונים ועולם ערכים</button>
+        <button class="tab-button" onclick="switchTab('tab-dossiers')" id="btn-dossiers">👥 כרטיסי מפלגות ומועמדים</button>
+        <button class="tab-button" onclick="switchTab('tab-methodology')" id="btn-methodology">📐 מתודולוגיה ומבנה הניתוח</button>
+        <button class="tab-button" onclick="switchTab('tab-raw-data')" id="btn-raw-data">📁 גישה לנתונים גולמיים (GitHub)</button>
+    </nav>
+
+    <!-- ============================================================= -->
+    <!-- TAB 2 (DEFAULT ACTIVE): ניתוח קריטריונים, דירוג ותרחישי קואליציה -->
+    <!-- ============================================================= -->
+    <div id="tab-criteria" class="tab-content active">
+        <!-- Profile Selector Box -->
+        <div class="profile-selector-box">
+            <div class="profile-selector-row">
+                <label for="profileSelect">🎯 בחר עולם ערכים / פרופיל בוחר:</label>
+                <select id="profileSelect" onchange="switchProfile(this.value)" class="profile-dropdown">
 """
     for p_key, p_val in profiles_dict.items():
         selected = "selected" if p_key == active_id else ""
         p_name = p_val.get("profile_name", p_key)
-        html += f'                <option value="{p_key}" {selected}>{p_name}</option>\n'
+        html += f'                    <option value="{p_key}" {selected}>{p_name}</option>\n'
 
-    html += f"""            </select>
+    html += f"""                </select>
+            </div>
+            <p id="profileDescription" class="profile-desc">{active_result.get("profile_description", "")}</p>
         </div>
-        <p id="profileDescription" class="profile-desc">{active_result.get("profile_description", "")}</p>
-    </div>
 
-    <!-- Top 3 Cards -->
-    <h2 class="section-title">🥇 מובילי ההתאמה הכללית</h2>
-    <div class="leaderboard-cards" id="leaderboardCards">
+        <!-- Top 3 Cards -->
+        <h2 class="section-title">🥇 מובילי ההתאמה לפרופיל הנבחר</h2>
+        <div class="leaderboard-cards" id="leaderboardCards">
 """
     for p_id, p_data in top_3:
         rank = p_data.get("rank", "-")
@@ -541,39 +799,74 @@ def generate_html_dashboard(
         overall = p_data.get("overall_score", 0.0)
         badge = get_score_badge_html(overall)
         html += f"""
-        <div class="leaderboard-card">
-            <div class="card-rank">#{rank}</div>
-            <h3 style="margin-bottom: 4px;">{name}</h3>
-            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;">ראש המפלגה: {leader}</div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
-                <span>ציון התאמה כולל:</span>
-                {badge}
+            <div class="leaderboard-card">
+                <div class="card-rank">#{rank}</div>
+                <h3 style="margin-bottom: 4px;">{name}</h3>
+                <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;">ראש המפלגה: {leader}</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                    <span>ציון התאמה כולל:</span>
+                    {badge}
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 0.88rem; color: var(--text-secondary);">
+                    <span>מנדטים בסקרים:</span>
+                    <strong>{mandates} מנדטים</strong>
+                </div>
             </div>
-            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 0.88rem; color: var(--text-secondary);">
-                <span>מנדטים בסקרים:</span>
-                <strong>{mandates} מנדטים</strong>
-            </div>
-        </div>
 """
 
     html += """
-    </div>
+        </div>
 
-    <h2 class="section-title">🏆 לוח תוצאות ודירוג מלא</h2>
-    <div class="table-responsive">
-        <table id="overviewTable">
-            <thead>
-                <tr>
-                    <th style="width: 8%; text-align: center;">דירוג</th>
-                    <th>מפלגה</th>
-                    <th>ראש המפלגה</th>
-                    <th style="text-align: center;">מנדטים</th>
-                    <th style="text-align: center;">ציון התאמה כולל</th>
-                    <th>נושא חזק ביותר</th>
-                    <th>נושא חלש ביותר</th>
-                </tr>
-            </thead>
-            <tbody>
+        <!-- Coalitions Viability Table -->
+        <h2 class="section-title">🏛️ תרחישי קואליציות וגושים מרכזיים (בחינת רוב 61+ מנדטים)</h2>
+        <div class="table-responsive">
+            <table id="coalitionsTable">
+                <thead>
+                    <tr>
+                        <th style="width: 25%;">תרחיש קואליציה</th>
+                        <th style="width: 14%; text-align: center;">מנדטים משותפים</th>
+                        <th style="width: 16%; text-align: center;">מעמד רוב (61+)</th>
+                        <th style="width: 18%; text-align: center;">ציון התאמה משוקלל</th>
+                        <th>מפלגות שותפות בהרכב</th>
+                    </tr>
+                </thead>
+                <tbody>
+"""
+    for c in coalitions:
+        maj_badge = '<span class="badge positive">✅ רוב קואליציוני</span>' if c.get("has_majority") else '<span class="badge negative">❌ מיעוט</span>'
+        w_score = c.get("weighted_score", 0.0)
+        score_badge = get_score_badge_html(w_score)
+        parties_str = " + ".join([f"<strong>{p['name_he']}</strong> ({p['mandates']})" for p in c.get("parties", [])])
+        html += f"""
+                    <tr>
+                        <td><strong>{c.get('name_he')}</strong><div style="font-size: 0.85rem; color: var(--text-secondary);">{c.get('description', '')}</div></td>
+                        <td style="text-align: center; font-size: 1.1rem; font-weight: bold;">{c.get('total_mandates')}</td>
+                        <td style="text-align: center;">{maj_badge}</td>
+                        <td style="text-align: center;">{score_badge}</td>
+                        <td style="font-size: 0.9rem;">{parties_str}</td>
+                    </tr>
+"""
+    html += """
+                </tbody>
+            </table>
+        </div>
+
+        <!-- Full Leaderboard Table -->
+        <h2 class="section-title">🏆 לוח תוצאות ודירוג מפלגות מלא</h2>
+        <div class="table-responsive">
+            <table id="overviewTable">
+                <thead>
+                    <tr>
+                        <th style="width: 8%; text-align: center;">דירוג</th>
+                        <th>מפלגה</th>
+                        <th>ראש המפלגה</th>
+                        <th style="text-align: center;">מנדטים</th>
+                        <th style="text-align: center;">ציון התאמה כולל</th>
+                        <th>נושא חזק ביותר</th>
+                        <th>נושא חלש ביותר</th>
+                    </tr>
+                </thead>
+                <tbody>
 """
     for p_id, p_data in parties.items():
         rank = p_data.get("rank", "-")
@@ -596,106 +889,78 @@ def generate_html_dashboard(
             worst_str = "-"
             
         html += f"""
-                <tr>
-                    <td style="text-align: center; font-weight: bold; font-size: 1.1rem; color: var(--accent);">#{rank}</td>
-                    <td style="font-weight: bold; font-size: 1.05rem;">{name}</td>
-                    <td>{leader}</td>
-                    <td style="text-align: center;">{mandates}</td>
-                    <td style="text-align: center;">{badge}</td>
-                    <td style="color: var(--pos-text);">{best_str}</td>
-                    <td style="color: var(--neg-text);">{worst_str}</td>
-                </tr>
+                    <tr>
+                        <td style="text-align: center; font-weight: bold; font-size: 1.1rem; color: var(--accent);">#{rank}</td>
+                        <td style="font-weight: bold; font-size: 1.05rem;">{name}</td>
+                        <td>{leader}</td>
+                        <td style="text-align: center;">{mandates}</td>
+                        <td style="text-align: center;">{badge}</td>
+                        <td style="color: var(--pos-text);">{best_str}</td>
+                        <td style="color: var(--neg-text);">{worst_str}</td>
+                    </tr>
 """
 
     html += """
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
 
-    <h2 class="section-title">📊 מטריצת ציונים לפי נושאים (-100 עד +100)</h2>
-    <div class="table-responsive">
-        <table id="matrixTable">
-            <thead>
-                <tr>
-                    <th>מפלגה</th>
+        <!-- Matrix Table -->
+        <h2 class="section-title">📊 מטריצת ציונים לפי 9 הנושאים (-100 עד +100)</h2>
+        <div class="table-responsive">
+            <table id="matrixTable">
+                <thead>
+                    <tr>
+                        <th>מפלגה</th>
 """
     for t in topics:
-        html += f"                    <th style='text-align: center; font-size: 0.85rem;'>{t['title']}</th>\n"
+        html += f"                        <th style='text-align: center; font-size: 0.85rem;'>{t['title']}</th>\n"
         
     html += """
-                </tr>
-            </thead>
-            <tbody>
+                    </tr>
+                </thead>
+                <tbody>
 """
     for p_id, p_data in parties.items():
         name = p_data.get("name_he", p_id)
         html += f"""
-                <tr>
-                    <td style="font-weight: bold;">{name}</td>
+                    <tr>
+                        <td style="font-weight: bold;">{name}</td>
 """
         for t in topics:
             score = p_data.get("topic_scores", {}).get(t["id"], 0.0)
             badge = get_score_badge_html(score)
-            html += f"                    <td style='text-align: center;'>{badge}</td>\n"
-        html += "                </tr>\n"
+            html += f"                        <td style='text-align: center;'>{badge}</td>\n"
+        html += "                    </tr>\n"
         
     html += """
-            </tbody>
-        </table>
-    </div>
+                </tbody>
+            </table>
+        </div>
 
-    <h2 class="section-title">🔍 ניתוח מעמיק, מועמדים ומקורות לפי מפלגה</h2>
-    <div id="partiesContainer">
+        <!-- Detailed Per-Party Topic Accordions -->
+        <h2 class="section-title">🔍 ניתוח מעמיק, ששת הקריטריונים ומקורות לפי מפלגה</h2>
+        <div id="partiesContainer">
 """
-
     for p_id, p_data in parties.items():
         name = p_data.get("name_he", p_id)
         leader = p_data.get("leader", "")
         overall = p_data.get("overall_score", 0.0)
         badge = get_score_badge_html(overall)
         mandates = p_data.get("poll_mandates", "-")
-        static_data = p_data.get("static_data", {})
-        candidates = static_data.get("candidates", [])
         
         html += f"""
-    <div class="card" id="party-{p_id}">
-        <div class="card-header">
-            <div>
-                <h3>{name} <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: normal;">(ראש המפלגה: {leader} | {mandates} מנדטים בסקרים)</span></h3>
-            </div>
-            <div>
-                {badge}
-            </div>
-        </div>
-"""
-        # Static candidates roster display
-        if candidates:
-            html += """
-        <details class="candidates-accordion" style="margin-bottom: 16px; border: 1px solid var(--border); border-radius: 8px;">
-            <summary class="topic-summary" style="background-color: #f1f5f9;">
-                <span>👥 נבחרת המועמדים ורקע מעשי (נתונים סטטיים מאומתים)</span>
-                <span style="font-size: 0.85rem; color: var(--text-secondary);">הצג מועמדים</span>
-            </summary>
-            <div class="topic-details">
-                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
-"""
-            for c in candidates:
-                pos = c.get("position", "-")
-                c_name = c.get("name", "")
-                is_real = c.get("is_realistic_zone", False)
-                real_cls = "realistic" if is_real else ""
-                real_badge = "★ " if is_real else ""
-                html += f'                    <span class="candidate-tag {real_cls}" title="{c_name}">#{pos} {real_badge}{c_name}</span>\n'
-
-            html += """
+        <div class="card" id="party-{p_id}">
+            <div class="card-header">
+                <div>
+                    <h3>{name} <span style="font-size: 0.95rem; color: var(--text-secondary); font-weight: normal;">(יו״ר: {leader} | {mandates} מנדטים בסקרים)</span></h3>
                 </div>
-                <div style="font-size: 0.88rem; color: var(--text-secondary);">
-                    <em>★ מועמדים בטווח המנדטים הריאלי לפי סקרי הבחירות העדכניים.</em>
+                <div style="display: flex; gap: 8px; align-items: center;">
+                    <button class="filter-btn" onclick="goToPartyDossier('{p_id}')">👤 צפה בנבחרת המועמדים</button>
+                    {badge}
                 </div>
             </div>
-        </details>
 """
-
         for t in topics:
             t_id = t["id"]
             t_eval = p_data.get("topics", {}).get(t_id, {})
@@ -703,22 +968,22 @@ def generate_html_dashboard(
             t_badge = get_score_badge_html(score)
             
             html += f"""
-        <details class="topic-accordion">
-            <summary class="topic-summary">
-                <span>📌 {t['title']}</span>
-                <span>{t_badge}</span>
-            </summary>
-            <div class="topic-details">
-                <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;"><strong>עמדת יעד:</strong> {t.get('desired_stance', '')}</p>
-                <table class="criteria-table">
-                    <thead>
-                        <tr>
-                            <th style="width: 28%;">קריטריון ניתוח</th>
-                            <th style="width: 14%; text-align: center;">ציון (-100..+100)</th>
-                            <th>הנמקה, עדויות ועשייה בפועל</th>
-                        </tr>
-                    </thead>
-                    <tbody>
+            <details class="topic-accordion">
+                <summary class="topic-summary">
+                    <span>📌 {t['title']}</span>
+                    <span>{t_badge}</span>
+                </summary>
+                <div class="topic-details">
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;"><strong>עמדת יעד:</strong> {t.get('desired_stance', '')}</p>
+                    <table class="criteria-table">
+                        <thead>
+                            <tr>
+                                <th style="width: 28%;">קריטריון ניתוח</th>
+                                <th style="width: 14%; text-align: center;">ציון (-100..+100)</th>
+                                <th>הנמקה, עדויות ועשייה בפועל</th>
+                            </tr>
+                        </thead>
+                        <tbody>
 """
             scores_dict = t_eval.get("scores", {})
             notes_dict = t_eval.get("notes", {})
@@ -728,19 +993,19 @@ def generate_html_dashboard(
                 c_badge = get_score_badge_html(c_score)
                 note = notes_dict.get(c_key, "אין מידע")
                 html += f"""
-                        <tr>
-                            <td style="font-weight: 600;">{c_label}</td>
-                            <td style="text-align: center;">{c_badge}</td>
-                            <td>{note}</td>
-                        </tr>
+                            <tr>
+                                <td style="font-weight: 600;">{c_label}</td>
+                                <td style="text-align: center;">{c_badge}</td>
+                                <td>{note}</td>
+                            </tr>
 """
             html += """
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
 """
             citations = t_eval.get("citations", [])
             if citations:
-                html += '<div style="margin-top: 12px; font-size: 0.88rem;"><strong>מקורות וקישורים:</strong><ul style="margin-right: 20px; margin-top: 4px;">'
+                html += '<div style="margin-top: 12px; font-size: 0.88rem;"><strong>מקורות וקישורים מאומתים:</strong><ul style="margin-right: 20px; margin-top: 4px;">'
                 for cite in citations:
                     title = cite.get("title", "מקור")
                     url = cite.get("url", "#")
@@ -750,20 +1015,313 @@ def generate_html_dashboard(
                 html += '</ul></div>'
 
             html += """
-            </div>
-        </details>
+                </div>
+            </details>
 """
-        html += "    </div>\n"
+        html += "        </div>\n"
+    html += "    </div>\n"
 
-    html += f"""
+    # =============================================================
+    # TAB 1: כרטיסי מפלגות ומועמדים (Party & Candidate Dossiers)
+    # =============================================================
+    html += """
+    <div id="tab-dossiers" class="tab-content">
+        <h2 class="section-title">👥 כרטיסי מפלגות ומועמדים (Candidate Dossiers)</h2>
+        <div class="dossier-controls">
+            <input type="text" id="candidateSearchInput" oninput="filterCandidates()" placeholder="🔍 חיפוש מועמד לפי שם או תפקיד..." class="search-input">
+            <button class="filter-btn active" id="btn-filter-realistic" onclick="toggleRealisticOnly(true)">★ מועמדים ריאליים בלבד</button>
+            <button class="filter-btn" id="btn-filter-all" onclick="toggleRealisticOnly(false)">רשימה מלאה (1..30+)</button>
+        </div>
+
+        <div id="partiesDossiersList">
+"""
+    for p_id, p_data in parties.items():
+        name = p_data.get("name_he", p_id)
+        leader = p_data.get("leader", "")
+        mandates = p_data.get("poll_mandates", "-")
+        static_data = p_data.get("static_data", {})
+        party_info = static_data.get("party_info", {})
+        candidates = static_data.get("candidates", [])
+        
+        manifesto_link = f"{GITHUB_BLOB_URL}/data/static/parties/{p_id}/manifesto.md"
+        
+        html += f"""
+        <div class="card" id="dossier-{p_id}">
+            <div class="card-header">
+                <div>
+                    <h3 style="font-size: 1.4rem;">{name} <span style="font-size: 1rem; color: var(--text-secondary); font-weight: normal;">({mandates} מנדטים בסקרים)</span></h3>
+                    <div style="font-size: 0.95rem; color: var(--text-secondary); margin-top: 4px;">
+                        <strong>יו״ר:</strong> {leader}
+                        {f' | <a href="{party_info.get("official_website")}" target="_blank" rel="noopener noreferrer" class="citation-link">אתר רשמי</a>' if party_info.get("official_website") else ""}
+                        {f' | <a href="{party_info.get("knesset_faction_url")}" target="_blank" rel="noopener noreferrer" class="citation-link">עמוד סיעה בכנסת</a>' if party_info.get("knesset_faction_url") else ""}
+                        | <a href="{manifesto_link}" target="_blank" rel="noopener noreferrer" class="citation-link">📄 צפה במצע המלא (GitHub)</a>
+                    </div>
+                </div>
+            </div>
+
+            <h4 style="margin: 16px 0 12px 0; font-size: 1.1rem; color: var(--accent);">נבחרת המועמדים וקורות חיים מעשיים:</h4>
+            <div class="candidates-grid">
+"""
+        if candidates:
+            for c in candidates:
+                pos = c.get("position", "-")
+                c_name = c.get("name", "")
+                is_real = c.get("is_realistic_zone", False)
+                real_class = "realistic-card" if is_real else "standard-card"
+                real_badge = '<span class="pill-badge" style="background:#eff6ff; color:#1d4ed8;">★ בטווח הריאלי</span>' if is_real else '<span class="pill-badge" style="background:#f1f5f9; color:#64748b;">מקום ברשימה</span>'
+                
+                cv = c.get("cv", {})
+                html += f"""
+                <div class="candidate-card {real_class}" id="candidate-{p_id}-{pos}" data-name="{c_name}" data-realistic="{str(is_real).lower()}">
+                    <div class="candidate-card-header">
+                        <div>
+                            <span class="candidate-pos-tag">מקום #{pos}</span>
+                            <span class="candidate-name" style="margin-right: 8px;">{c_name}</span>
+                            {real_badge}
+                        </div>
+                    </div>
+                    <div class="candidate-cv-grid">
+                        {f'<div class="cv-item"><strong>השכלה:</strong> <span>{cv["education"]}</span></div>' if cv.get("education") else ""}
+                        {f'<div class="cv-item"><strong>קריירה אזרחית/צבאית:</strong> <span>{cv["career"]}</span></div>' if cv.get("career") else ""}
+                        {f'<div class="cv-item"><strong>שירות ציבורי:</strong> <span>{cv["public_service"]}</span></div>' if cv.get("public_service") else ""}
+                    </div>
+                    {f'<div style="margin-top: 8px; font-size: 0.88rem;"><strong>הצבעות מפתח בכנסת:</strong> <span style="color: var(--text-secondary);">{", ".join(cv["key_votes"])}</span></div>' if cv.get("key_votes") else ""}
+                    {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>הישגים בולטים:</strong> <span style="color: var(--pos-text);">{", ".join(cv["major_achievements"])}</span></div>' if cv.get("major_achievements") else ""}
+                    {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>ביקורת ומחלוקות:</strong> <span style="color: var(--neg-text);">{", ".join(cv["notable_failures_or_controversies"])}</span></div>' if cv.get("notable_failures_or_controversies") else ""}
+                </div>
+"""
+        else:
+            html += "<p style='color: var(--text-secondary);'>אין מידע מפורט על מועמדים.</p>"
+
+        html += """
+            </div>
+        </div>
+"""
+    html += """
+        </div>
     </div>
+"""
 
+    # =============================================================
+    # TAB 3: מתודולוגיה ומבנה הניתוח (Methodology & Topics Catalog)
+    # =============================================================
+    html += f"""
+    <div id="tab-methodology" class="tab-content">
+        <h2 class="section-title">📐 מתודולוגיה ומבנה הניתוח (Methodology)</h2>
+        
+        <div class="card">
+            <h3>🎯 9 נושאי הליבה (מתוך קטלוג הנתונים הסטטי)</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 16px;">
+                כל נושא מוגדר בצורה קנונית בקובץ <a href="{GITHUB_BLOB_URL}/data/static/topics/catalog.json" target="_blank" class="citation-link"><code>data/static/topics/catalog.json</code></a> ומכיל שאלות מפתח מנחות למחקר:
+            </p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 8%; text-align: center;">מזהה</th>
+                            <th style="width: 25%;">שם הנושא</th>
+                            <th>הגדרה ותחומי בדיקה</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+"""
+    for t in topics:
+        html += f"""
+                        <tr>
+                            <td style="text-align: center; font-weight: bold; color: var(--accent);"><code>{t['id']}</code></td>
+                            <td style="font-weight: bold;">{t['title']}</td>
+                            <td style="font-size: 0.92rem; color: var(--text-secondary);">{t.get('desired_stance', '')}</td>
+                        </tr>
+"""
+    html += f"""
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>⚖️ ששת קריטריוני ההערכה והמשקולות המנורמלות</h3>
+            <p style="color: var(--text-secondary); margin-bottom: 16px;">
+                מחוון ההערכה מוגדר בקובץ <a href="{GITHUB_BLOB_URL}/data/static/rubric/criteria.json" target="_blank" class="citation-link"><code>data/static/rubric/criteria.json</code></a>. המשקולות המקוריות מסתכמות ב-110% ומנורמלות מתמטית ל-100% בחלוקה ב-1.1:
+            </p>
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 15%;">מזהה קריטריון</th>
+                            <th style="width: 30%;">שם הקריטריון</th>
+                            <th style="width: 15%; text-align: center;">משקל מקורי</th>
+                            <th style="width: 15%; text-align: center;">משקל מנורמל</th>
+                            <th>מהות הבדיקה</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>c1_platform</code></td>
+                            <td><strong>מצע המפלגה</strong></td>
+                            <td style="text-align: center;">15.0%</td>
+                            <td style="text-align: center; font-weight: bold; color: var(--accent);">13.64%</td>
+                            <td>מסמך מצע רשמי, עקרונות תנועה, תוכניות עבודה שפורסמו.</td>
+                        </tr>
+                        <tr>
+                            <td><code>c2_leader_statements</code></td>
+                            <td><strong>אמירות וכתיבה של ראש המפלגה</strong></td>
+                            <td style="text-align: center;">15.0%</td>
+                            <td style="text-align: center; font-weight: bold; color: var(--accent);">13.64%</td>
+                            <td>נאומים, מאמרים, ספרים, ראיונות עומק ופוסטים ברשתות חברתיות.</td>
+                        </tr>
+                        <tr>
+                            <td><code>c3_leader_actions</code></td>
+                            <td><strong>ניסיון ופעילות מעשית של ראש המפלגה</strong></td>
+                            <td style="text-align: center;">30.0%</td>
+                            <td style="text-align: center; font-weight: bold; color: var(--accent);">27.27%</td>
+                            <td>רקורד ביצועי בעבר, הצבעות וחקיקה בפועל, החלטות ממשלה, עקביות מול הבטחות (המשקל הגבוה ביותר).</td>
+                        </tr>
+                        <tr>
+                            <td><code>c4_candidates_statements</code></td>
+                            <td><strong>אמירות וכתיבה של מועמדים ריאליים</strong></td>
+                            <td style="text-align: center;">10.0%</td>
+                            <td style="text-align: center; font-weight: bold; color: var(--accent);">9.09%</td>
+                            <td>עמדות מועמדים בטווח המנדטים הריאלי לפי סקרים אחרונים.</td>
+                        </tr>
+                        <tr>
+                            <td><code>c5_candidates_actions</code></td>
+                            <td><strong>ניסיון ופעילות מעשית של מועמדים ריאליים</strong></td>
+                            <td style="text-align: center;">20.0%</td>
+                            <td style="text-align: center; font-weight: bold; color: var(--accent);">18.18%</td>
+                            <td>רקורד מקצועי ואזרחי, הצבעות בכנסת, תפקידי ביצוע וניהול ציבורי.</td>
+                        </tr>
+                        <tr>
+                            <td><code>c6_designated_executive</code></td>
+                            <td><strong>מועמד ריאלי ייעודי לתפקיד ביצועי</strong></td>
+                            <td style="text-align: center;">20.0%</td>
+                            <td style="text-align: center; font-weight: bold; color: var(--accent);">18.18%</td>
+                            <td>האם יש דמות מרכזית המיועדת לתיק/תפקיד הביצועי ומתאימה לעמדת היעד.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <div class="card">
+            <h3>📏 סולם הציונים ורף ההכללה בסקרים</h3>
+            <ul style="margin-right: 24px; color: var(--text-secondary); line-height: 1.8;">
+                <li><strong>סולם הציונים</strong>: נע בין <code>100.0-</code> (התנגדות מלאה / עשייה הפוכה מעמדת היעד) לבין <code>100.0+</code> (התאמה מלאה / רקורד מוכח ורפורמות שהושלמו). ציון <code>0.0</code> מציין ניטרליות או היעדר עמדה.</li>
+                <li><strong>סף מפלגתי</strong>: כל מפלגה שעוברת את אחוז החסימה (3.25% / 4 מנדטים) בלפחות סקר אחד אמין נכללת בניתוח.</li>
+                <li><strong>רף מועמדים ריאליים</strong>: מוגדר כ-<code>round(poll_average) + 1</code> מנדט ביטחון (לפי <code>config/polls.yaml</code>).</li>
+            </ul>
+        </div>
+    </div>
+"""
+
+    # =============================================================
+    # TAB 4: גישה לנתונים גולמיים (Public GitHub Raw Data Matrix)
+    # =============================================================
+    html += f"""
+    <div id="tab-raw-data" class="tab-content">
+        <h2 class="section-title">📁 גישה לנתונים גולמיים ומרכז קבצים (Public GitHub Repository)</h2>
+        <p style="color: var(--text-secondary); margin-bottom: 20px;">
+            המערכת פועלת בשקיפות מלאה. כל המידע הסטטי, הסקרים, נתוני המחקר הגולמיים, הקבצים המאומתים ודוחות הביקורת פתוחים לעיון ישיר במאגר הציבורי ב-GitHub:
+        </p>
+
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 20%;">קטגוריית נתונים</th>
+                        <th style="width: 28%;">נתיב קובץ / ארטיפקט</th>
+                        <th>תיאור התוכן</th>
+                        <th style="width: 18%; text-align: center;">קישור ישיר לקובץ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>קטלוג נושאים סטטי</strong></td>
+                        <td><code>data/static/topics/catalog.json</code></td>
+                        <td>הגדרה קנונית של 9 נושאי הליבה ושאלות המחקר</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/static/topics/catalog.json" target="_blank" class="github-link-btn">צפה ב-GitHub ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>מחוון קריטריונים</strong></td>
+                        <td><code>data/static/rubric/criteria.json</code></td>
+                        <td>6 הקריטריונים, הגדרות מתמטיות ומשקולות מנורמלות</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/static/rubric/criteria.json" target="_blank" class="github-link-btn">צפה ב-GitHub ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>תרחישי קואליציות</strong></td>
+                        <td><code>data/static/coalitions/scenarios.json</code></td>
+                        <td>הגדרת גושים וקואליציות פוטנציאליות לבחינת 61 מנדטים</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/static/coalitions/scenarios.json" target="_blank" class="github-link-btn">צפה ב-GitHub ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>מאגר מפלגות ומועמדים</strong></td>
+                        <td><code>data/static/parties/</code></td>
+                        <td>14 תיקיות מפלגות: party.json, candidates.json (1..30+), manifesto.md</td>
+                        <td style="text-align: center;"><a href="{GITHUB_TREE_URL}/data/static/parties" target="_blank" class="github-link-btn">עיון בתיקייה ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>סקרי מנדטים עדכניים</strong></td>
+                        <td><code>config/polls.yaml</code></td>
+                        <td>ממוצעי סקרים, תאריכי סקרים אחרונים וספי מקומות ריאליים</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/config/polls.yaml" target="_blank" class="github-link-btn">צפה ב-GitHub ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>קובצי עולם ערכים</strong></td>
+                        <td><code>config/profiles/</code></td>
+                        <td>פרופילי עמדות של משתמשים (default.yaml, liberal_economic.yaml)</td>
+                        <td style="text-align: center;"><a href="{GITHUB_TREE_URL}/config/profiles" target="_blank" class="github-link-btn">עיון בפרופילים ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>מחקר נושאים מאומת</strong></td>
+                        <td><code>data/validated/{date_str}/topics/</code></td>
+                        <td>9 קובצי מחקר מאומתים לפי נושאים עם ציטוטים וקישורים מאומתים</td>
+                        <td style="text-align: center;"><a href="{GITHUB_TREE_URL}/data/validated/{date_str}/topics" target="_blank" class="github-link-btn">עיון בתיקייה ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>מסד הערכה מרכזי</strong></td>
+                        <td><code>data/evaluations/{date_str}.json</code></td>
+                        <td>קובץ הערכות ממוזג מרכזי עבור כל 14 המפלגות</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/evaluations/{date_str}.json" target="_blank" class="github-link-btn">צפה ב-GitHub ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>יומן אימות קישורים (Tier 1)</strong></td>
+                        <td><code>data/validation_logs/{date_str}/tier1_summary.json</code></td>
+                        <td>בדיקת HTTP אסינכרונית לכל הציטוטים ואימות סכמות JSON</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/validation_logs/{date_str}/tier1_summary.json" target="_blank" class="github-link-btn">צפה ב-GitHub ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>דוח אימות ממשק משתמש (UI)</strong></td>
+                        <td><code>data/validation_logs/{date_str}/ui_validation.json</code></td>
+                        <td>דוח ביקורת DOM ולכידת תצלומי מסך ממוחשבים</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/validation_logs/{date_str}/ui_validation.json" target="_blank" class="github-link-btn">צפה ב-GitHub ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>תצלום מסך דסקטופ (1280x800)</strong></td>
+                        <td><code>data/validation_logs/{date_str}/snapshots/desktop.png</code></td>
+                        <td>תצלום מסך שנלכד על ידי Headless Chrome בעת האימות</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/validation_logs/{date_str}/snapshots/desktop.png" target="_blank" class="github-link-btn">צפה בתמונה ↗</a></td>
+                    </tr>
+                    <tr>
+                        <td><strong>תצלום מסך מובייל (375x812)</strong></td>
+                        <td><code>data/validation_logs/{date_str}/snapshots/mobile.png</code></td>
+                        <td>תצלום מסך מובייל שנלכד על ידי Headless Chrome</td>
+                        <td style="text-align: center;"><a href="{GITHUB_BLOB_URL}/data/validation_logs/{date_str}/snapshots/mobile.png" target="_blank" class="github-link-btn">צפה בתמונה ↗</a></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+"""
+
+    # Page Footer
+    html += f"""
     <div class="footer">
-        <p>מערכת אנליזה לבחירות לכנסת ה-26 | פותח כ-Antigravity Multi-Agent Skill | תאריך עדכון: {date_str}</p>
+        <p>מערכת אנליזה רב-סוכנית לבחירות לכנסת ה-26 | פותח כ-Antigravity Multi-Agent Skill | תאריך עדכון: {date_str}</p>
+        <p style="margin-top: 6px;"><a href="{GITHUB_REPO_URL}" target="_blank" class="citation-link">צפה בקוד המקור ובמאגר הנתונים ב-GitHub</a></p>
     </div>
 </div>
 
-<!-- Embedded Profile Data for Dynamic Client-Side Switching -->
+<!-- Embedded Profiles Data for Dynamic Client-Side Switching -->
 <script id="electionProfilesData" type="application/json">
 {profiles_json_str}
 </script>
@@ -771,6 +1329,59 @@ def generate_html_dashboard(
 <script>
 const profilesData = JSON.parse(document.getElementById('electionProfilesData').textContent);
 
+// Tab switching logic
+function switchTab(tabId) {{
+    document.querySelectorAll('.tab-content').forEach(el => el.classList.remove('active'));
+    document.querySelectorAll('.tab-button').forEach(el => el.classList.remove('active'));
+
+    const targetTab = document.getElementById(tabId);
+    if (targetTab) targetTab.classList.add('active');
+
+    if (tabId === 'tab-criteria') document.getElementById('btn-criteria').classList.add('active');
+    else if (tabId === 'tab-dossiers') document.getElementById('btn-dossiers').classList.add('active');
+    else if (tabId === 'tab-methodology') document.getElementById('btn-methodology').classList.add('active');
+    else if (tabId === 'tab-raw-data') document.getElementById('btn-raw-data').classList.add('active');
+}}
+
+// Jump to party dossier
+function goToPartyDossier(partyId) {{
+    switchTab('tab-dossiers');
+    const el = document.getElementById('dossier-' + partyId);
+    if (el) {{
+        el.scrollIntoView({{ behavior: 'smooth', block: 'start' }});
+    }}
+}}
+
+// Filter candidates in Tab 1
+let filterRealisticOnly = true;
+
+function toggleRealisticOnly(isRealistic) {{
+    filterRealisticOnly = isRealistic;
+    document.getElementById('btn-filter-realistic').classList.toggle('active', isRealistic);
+    document.getElementById('btn-filter-all').classList.toggle('active', !isRealistic);
+    filterCandidates();
+}}
+
+function filterCandidates() {{
+    const query = document.getElementById('candidateSearchInput').value.toLowerCase().trim();
+    const cards = document.querySelectorAll('.candidate-card');
+
+    cards.forEach(card => {{
+        const name = (card.getAttribute('data-name') || '').toLowerCase();
+        const isReal = card.getAttribute('data-realistic') === 'true';
+
+        let matchesSearch = !query || name.includes(query) || card.textContent.toLowerCase().includes(query);
+        let matchesFilter = !filterRealisticOnly || isReal;
+
+        if (matchesSearch && matchesFilter) {{
+            card.style.display = 'block';
+        }} else {{
+            card.style.display = 'none';
+        }}
+    }});
+}}
+
+// Badge helper
 function getBadgeHtml(score) {{
     const sign = score > 0 ? "+" : "";
     let cls = "neutral";
@@ -781,6 +1392,7 @@ function getBadgeHtml(score) {{
     return `<span class="badge ${{cls}}">${{sign}}${{Number(score).toFixed(1)}}</span>`;
 }}
 
+// Switch Worldview Profile
 function switchProfile(profileId) {{
     const prof = profilesData[profileId];
     if (!prof) return;
@@ -845,6 +1457,26 @@ function switchProfile(profileId) {{
             </tr>`;
         }});
         tableBody.innerHTML = rowsHtml;
+    }}
+
+    // 5. Update Coalitions Table
+    const coalitions = prof.coalitions || [];
+    const coalBody = document.querySelector('#coalitionsTable tbody');
+    if (coalBody && coalitions.length > 0) {{
+        let cHtml = '';
+        coalitions.forEach(c => {{
+            const majBadge = c.has_majority ? '<span class="badge positive">✅ רוב קואליציוני</span>' : '<span class="badge negative">❌ מיעוט</span>';
+            const partiesStr = c.parties.map(p => `<strong>${{p.name_he}}</strong> (${{p.mandates}})`).join(' + ');
+            cHtml += `
+            <tr>
+                <td><strong>${{c.name_he}}</strong><div style="font-size: 0.85rem; color: var(--text-secondary);">${{c.description || ''}}</div></td>
+                <td style="text-align: center; font-size: 1.1rem; font-weight: bold;">${{c.total_mandates}}</td>
+                <td style="text-align: center;">${{majBadge}}</td>
+                <td style="text-align: center;">${{getBadgeHtml(c.weighted_score)}}</td>
+                <td style="font-size: 0.9rem;">${{partiesStr}}</td>
+            </tr>`;
+        }});
+        coalBody.innerHTML = cHtml;
     }}
 }}
 </script>

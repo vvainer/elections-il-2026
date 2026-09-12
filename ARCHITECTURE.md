@@ -220,13 +220,62 @@ The system is decomposed into 4 specialized Antigravity Skills:
 
 ---
 
+### ADR-008: Multi-Tab Dashboard Information Architecture
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**: Presenting all party dossiers, topic evaluations, candidate CVs, methodology, and raw data on a single continuous page overwhelmed users and obscured candidate and raw data visibility.
+* **Decision**: Partition the presentation layer (`docs/index.html`) into 4 dedicated, client-side accessible tabs:
+  1. `Tab 1 (Party & Candidate Dossiers)`: Deep candidate profiles, search bar, background filters, realistic vs. full roster toggle.
+  2. `Tab 2 (Criteria Analysis & Coalitions)`: Profile switcher, leaderboard, coalition scenarios, 9-topic matrix, and 6-criteria accordions.
+  3. `Tab 3 (Methodology & Topic Catalog)`: Structured reference of 9 policy topics, 6 criteria math, and scoring rules.
+  4. `Tab 4 (Public GitHub Raw Data Matrix)`: Clean directory matrix table with direct links to all public GitHub repo files.
+* **Consequences**: Provides intuitive, fast navigation for different user personas (voters wanting candidate backgrounds vs. policy wonks inspecting criteria vs. researchers downloading raw data).
+
+---
+
+### ADR-009: Static Coalition Scenarios & Dynamic Viability/Alignment Scoring
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**: Parliamentary elections in Israel are decided by coalition-building, not just single-party strength. Voters need to understand how their worldview aligns with potential governing coalitions and whether those coalitions can reach the 61-seat majority.
+* **Decision**:
+  1. Research prominent coalition structures discussed in Israeli political analysis and store them as a static artifact: `data/static/coalitions/scenarios.json`.
+  2. Include `scenarios.json` in the static knowledge base audit (`build_static_kb.py --verify`).
+  3. Update `scripts/evaluator.py` to dynamically compute for each scenario: total seats based on latest polling (`config/polls.yaml`), majority status ($\ge 61$), and seat-weighted alignment score per user profile.
+* **Consequences**: Enables voters to evaluate government coalition feasibility and policy alignment alongside individual party scores.
+
+---
+
+### ADR-010: Candidate Deep Dossier Schema & Topic Cross-Linking
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**: Candidate backgrounds were previously presented only as simple name tags, hiding critical career milestones, past Knesset votes, achievements, and controversies stored in the static KB.
+* **Decision**:
+  1. Mandate deep structured candidate dossiers in `data/static/parties/<party_id>/candidates.json` covering: `education`, `career`, `public_service`, `key_votes` (Knesset roll-calls), `major_achievements`, and `notable_failures_or_controversies`.
+  2. Render interactive candidate cards in Tab 1 with real-time text search and realistic/full roster toggle.
+  3. Provide smooth cross-linking: when candidates are evaluated in topic criteria `c4` (statements), `c5` (actions), or `c6` (designated executive), their name is a jump-link taking the user directly to their dossier in Tab 1.
+* **Consequences**: Makes candidate qualifications, records, and controversies immediately transparent and connects them directly to policy topic evaluations.
+
+---
+
+### ADR-011: Public GitHub Raw Data Directory Matrix
+* **Status**: Accepted & Implemented
+* **Date**: 2026-09-12
+* **Context**: Full public auditability requires researchers, journalists, and voters to inspect the underlying raw JSON and YAML datasets without hunting through GitHub directory trees.
+* **Decision**: Implement a dedicated public GitHub Directory Matrix in both Tab 4 of `docs/index.html` and Section 4 of `reports/{DATE}/report.md`.
+  - Provide direct clickable links to canonical static files (`catalog.json`, `criteria.json`, `scenarios.json`, party dossiers).
+  - Provide direct links to dynamic artifacts (`polls.yaml`, validated topic research, central evaluations JSON, tier 1 logs, UI validation logs, and snapshots).
+* **Consequences**: 100% transparency, reproducible research, and seamless verification of all underlying data artifacts.
+
+---
+
 ## 6. Verification and Deployment Pipeline Matrix
 
 | Stage | Command | Enforced Preconditions | Exit Criteria |
 | :--- | :--- | :--- | :--- |
-| **Static KB Audit** | `python3 scripts/build_static_kb.py --verify` | All qualified parties in `config/parties.yaml` have directories | 14/14 parties verified, candidates populated |
+| **Static KB Audit** | `python3 scripts/build_static_kb.py --verify` | All qualified parties in `config/parties.yaml` have directories | 14/14 parties verified, 3 static catalog/rubric/coalition files valid |
 | **Tier 1 Validation** | `python3 scripts/validate_links.py <path> --report <log>` | JSON topic files in staging or validated | 0 broken URLs, 0 schema errors |
 | **Topic Merge** | `python3 scripts/merge_topics.py --topics-dir <dir>` | 9 validated topic files present | Central `data/evaluations/{DATE}.json` created |
-| **Multi-Profile Eval** | `python3 scripts/run_analysis.py --date {DATE}` | Profiles exist in `config/profiles/` | Per-profile Markdown reports & `docs/index.html` built |
-| **UI Gatekeeper** | `python3 scripts/validate_ui.py --date {DATE} --strict` | Headless Chrome binary available | `status == "APPROVED"`, desktop/mobile snapshots saved |
+| **Multi-Profile Eval** | `python3 scripts/run_analysis.py --date {DATE}` | Profiles exist in `config/profiles/` | 4-section Markdown reports & 4-tab `docs/index.html` built |
+| **UI Gatekeeper** | `python3 scripts/validate_ui.py --date {DATE} --strict` | Headless Chrome binary available | `status == "APPROVED"`, desktop/mobile snapshots saved, 4 tabs verified |
 | **Production Deploy** | `git push origin main` | `ui_validation.json` holds `"status": "APPROVED"` | GitHub Pages auto-publishes `/docs` |
+

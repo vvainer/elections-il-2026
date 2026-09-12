@@ -6448,5 +6448,225 @@
       },
       "rank": 14
     }
-  }
+  },
+  "coalitions": [
+    {
+      "id": "change_center_right_coalition",
+      "name_he": "ממשלת שינוי ומרכז-ימין ממלכתי",
+      "description": "קואליציה ציונית רחבה המורכבת ממפלגות האופוזיציה המרכזיות, הימין הממלכתי והדמוקרטים.",
+      "parties": [
+        {
+          "id": "yashar",
+          "name_he": "ישר",
+          "mandates": 24,
+          "score": 72.48
+        },
+        {
+          "id": "beyachad",
+          "name_he": "ביחד",
+          "mandates": 13,
+          "score": 76.2
+        },
+        {
+          "id": "yisrael_beiteinu",
+          "name_he": "ישראל ביתנו",
+          "mandates": 9,
+          "score": 79.74
+        },
+        {
+          "id": "yesh_atid",
+          "name_he": "יש עתיד",
+          "mandates": 8,
+          "score": 67.29
+        },
+        {
+          "id": "democrats",
+          "name_he": "הדמוקרטים",
+          "mandates": 9,
+          "score": 36.88
+        },
+        {
+          "id": "hendel_zeleka",
+          "name_he": "איחוד הנדל-זליכה",
+          "mandates": 4,
+          "score": 82.95
+        },
+        {
+          "id": "right_winter",
+          "name_he": "ימין חדש / וינטר",
+          "mandates": 4,
+          "score": 39.25
+        }
+      ],
+      "total_mandates": 71,
+      "has_majority": true,
+      "weighted_score": 67.7
+    },
+    {
+      "id": "national_unity_broad",
+      "name_he": "ממשלת אחדות לאומית רחבה (ללא קצוות)",
+      "description": "קואליציית אחדות ציונית רחבה במרכז המפה הפוליטית המשלבת את הליכוד, ביחד, ישר, יש עתיד וישראל ביתנו ללא מפלגות הקצה.",
+      "parties": [
+        {
+          "id": "likud",
+          "name_he": "הליכוד",
+          "mandates": 22,
+          "score": -10.09
+        },
+        {
+          "id": "yashar",
+          "name_he": "ישר",
+          "mandates": 24,
+          "score": 72.48
+        },
+        {
+          "id": "beyachad",
+          "name_he": "ביחד",
+          "mandates": 13,
+          "score": 76.2
+        },
+        {
+          "id": "yesh_atid",
+          "name_he": "יש עתיד",
+          "mandates": 8,
+          "score": 67.29
+        },
+        {
+          "id": "yisrael_beiteinu",
+          "name_he": "ישראל ביתנו",
+          "mandates": 9,
+          "score": 79.74
+        }
+      ],
+      "total_mandates": 76,
+      "has_majority": true,
+      "weighted_score": 49.53
+    },
+    {
+      "id": "center_left_with_raam",
+      "name_he": "קואליציית מרכז-שמאל בשיתוף/רשת ביטחון של רע״ם",
+      "description": "ממשלת מרכז-שמאל בדומה למודל ממשלת בנט-לפיד, הנשענת על שיתוף פעולה או רשת ביטחון עם רע״ם.",
+      "parties": [
+        {
+          "id": "yashar",
+          "name_he": "ישר",
+          "mandates": 24,
+          "score": 72.48
+        },
+        {
+          "id": "beyachad",
+          "name_he": "ביחד",
+          "mandates": 13,
+          "score": 76.2
+        },
+        {
+          "id": "yesh_atid",
+          "name_he": "יש עתיד",
+          "mandates": 8,
+          "score": 67.29
+        },
+        {
+          "id": "democrats",
+          "name_he": "הדמוקרטים",
+          "mandates": 9,
+          "score": 36.88
+        },
+        {
+          "id": "raam",
+          "name_he": "רע״ם",
+          "mandates": 5,
+          "score": -4.42
+        }
+      ],
+      "total_mandates": 59,
+      "has_majority": false,
+      "weighted_score": 60.65
+    },
+    {
+      "id": "right_wing_broad_liberals",
+      "name_he": "ממשלת ימין ביטחונית-ליברלית רחבה",
+      "description": "קואליציית ימין הכוללת את הליכוד, ביחד (בנט), ישראל ביתנו, הנדל-זליכה, ימין חדש וש״ס.",
+      "parties": [
+        {
+          "id": "likud",
+          "name_he": "הליכוד",
+          "mandates": 22,
+          "score": -10.09
+        },
+        {
+          "id": "beyachad",
+          "name_he": "ביחד",
+          "mandates": 13,
+          "score": 76.2
+        },
+        {
+          "id": "yisrael_beiteinu",
+          "name_he": "ישראל ביתנו",
+          "mandates": 9,
+          "score": 79.74
+        },
+        {
+          "id": "hendel_zeleka",
+          "name_he": "איחוד הנדל-זליכה",
+          "mandates": 4,
+          "score": 82.95
+        },
+        {
+          "id": "right_winter",
+          "name_he": "ימין חדש / וינטר",
+          "mandates": 4,
+          "score": 39.25
+        },
+        {
+          "id": "shas",
+          "name_he": "ש״ס",
+          "mandates": 8,
+          "score": -42.07
+        }
+      ],
+      "total_mandates": 60,
+      "has_majority": false,
+      "weighted_score": 27.31
+    },
+    {
+      "id": "current_right_haredi_bloc",
+      "name_he": "גוש הימין-חרדים (הקואליציה המכהנת)",
+      "description": "קואליציית הימין והמפלגות החרדיות בראשות בנימין נתניהו, המהווה את בסיס הממשלה הנוכחית.",
+      "parties": [
+        {
+          "id": "likud",
+          "name_he": "הליכוד",
+          "mandates": 22,
+          "score": -10.09
+        },
+        {
+          "id": "shas",
+          "name_he": "ש״ס",
+          "mandates": 8,
+          "score": -42.07
+        },
+        {
+          "id": "yahadut_hatorah",
+          "name_he": "יהדות התורה",
+          "mandates": 8,
+          "score": -52.04
+        },
+        {
+          "id": "otzma_yehudit",
+          "name_he": "עוצמה יהודית",
+          "mandates": 8,
+          "score": -8.54
+        },
+        {
+          "id": "religious_zionism",
+          "name_he": "הציונות הדתית",
+          "mandates": 5,
+          "score": 4.8
+        }
+      ],
+      "total_mandates": 51,
+      "has_majority": false,
+      "weighted_score": -19.98
+    }
+  ]
 }

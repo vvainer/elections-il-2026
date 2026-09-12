@@ -90,14 +90,59 @@ def load_static_party_data(party_id: str, static_kb_dir: str) -> Dict[str, Any]:
 
     return data
 
+def load_coalition_scenarios(static_kb_dir: str) -> List[Dict[str, Any]]:
+    scen_file = os.path.join(static_kb_dir, "coalitions", "scenarios.json")
+    if os.path.exists(scen_file):
+        try:
+            with open(scen_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+                return data.get("scenarios", [])
+        except Exception:
+            pass
+    return []
+
+def evaluate_coalitions(scenarios: List[Dict[str, Any]], ranked_parties: Dict[str, Any]) -> List[Dict[str, Any]]:
+    evaluated = []
+    for scen in scenarios:
+        p_ids = scen.get("parties", [])
+        total_mandates = 0
+        weighted_score_sum = 0.0
+        party_details = []
+        for p_id in p_ids:
+            p_data = ranked_parties.get(p_id)
+            if p_data:
+                mandates = int(p_data.get("poll_mandates", 0))
+                score = float(p_data.get("overall_score", 0.0))
+                total_mandates += mandates
+                weighted_score_sum += score * mandates
+                party_details.append({
+                    "id": p_id,
+                    "name_he": p_data.get("name_he", p_id),
+                    "mandates": mandates,
+                    "score": score
+                })
+        
+        weighted_score = round(weighted_score_sum / total_mandates, 2) if total_mandates > 0 else 0.0
+        evaluated.append({
+            "id": scen.get("id", ""),
+            "name_he": scen.get("name_he", ""),
+            "description": scen.get("description", ""),
+            "parties": party_details,
+            "total_mandates": total_mandates,
+            "has_majority": total_mandates >= 61,
+            "weighted_score": weighted_score
+        })
+    evaluated.sort(key=lambda x: (x["has_majority"], x["weighted_score"]), reverse=True)
+    return evaluated
+
 def evaluate_full_dataset(
     eval_data: Dict[str, Any], 
     profile_data: Dict[str, Any],
     static_kb_dir: Optional[str] = None
 ) -> Dict[str, Any]:
     """
-    Computes all topic scores, party overall scores, and ranks for the entire dataset
-    against a given user profile. Enriches parties with static background data if available.
+    Computes all topic scores, party overall scores, ranks, and coalition viability
+    for the entire dataset against a given user profile.
     """
     if static_kb_dir is None:
         default_static = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "static")
@@ -155,6 +200,13 @@ def evaluate_full_dataset(
     for rank, (p_id, p_data) in enumerate(sorted_parties, start=1):
         p_data["rank"] = rank
         ranked_parties[p_id] = p_data
+
+    # Evaluate coalition scenarios
+    coalitions = []
+    if static_kb_dir:
+        scenarios = load_coalition_scenarios(static_kb_dir)
+        if scenarios:
+            coalitions = evaluate_coalitions(scenarios, ranked_parties)
         
     return {
         "date": eval_data.get("date", ""),
@@ -163,5 +215,6 @@ def evaluate_full_dataset(
         "profile_description": profile_data.get("description", ""),
         "topics": topics_list,
         "topic_weights": topic_weights,
-        "parties": ranked_parties
+        "parties": ranked_parties,
+        "coalitions": coalitions
     }
