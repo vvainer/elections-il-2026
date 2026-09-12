@@ -1,0 +1,356 @@
+{
+  "topic_id": "religion_and_state",
+  "date": "2026-09-09",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 85,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "הענקת חופש פעולה לרשויות מקומיות לקבוע את אופי השבת והתחבורה לצד סטנדרטים לאומיים.",
+        "c2_leader_statements": "איזנקוט תומך בפתרונות מוסכמים ומניעת כפייה דתית או חילונית.",
+        "c3_leader_actions": "גיבה את רפורמות הכשרות והגיור של מתן כהנא.",
+        "c4_candidates_statements": "מתן כהנא דוגל ביהדות מחברת, פתיחת שוק הכשרות לתחרות וביזור שירותי דת.",
+        "c5_candidates_actions": "כהנא העביר כשר לשירותי דת את רפורמת הכשרות ההיסטורית שנפתחה לתחרות.",
+        "c6_designated_executive": "מתן כהנא מיועד לשר לשירותי דת."
+      },
+      "citations": [
+        {
+          "title": "רפורמת הכשרות של מתן כהנא - גלובס",
+          "url": "https://www.globes.co.il",
+          "quote": "שבירת המונופול ופתיחת הכשרות לתאגידים פרטיים בפיקוח שקוף"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 75,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 70
+      },
+      "notes": {
+        "c1_platform": "גישה זהירה ומאפשרת: אוטונומיה לרשויות מקומיות בשבת ובילוי, פתיחת שירותי הדת לתחרות.",
+        "c2_leader_statements": "בנט דוגל ביהדות מקרבת ללא כפייה דתית ומבלי לכפות על הציבור הדתי.",
+        "c3_leader_actions": "ממשלתו העבירה את רפורמת הכשרות ותמכה בהסדרי פשרה בכותל ובגיור.",
+        "c4_candidates_statements": "איילת שקד קידמה איזונים בנושאי דת ומדינה ומתנגדת לכפייה חרדית.",
+        "c5_candidates_actions": "הובלת פשרות מעשיות בסוגיות סמכויות רבנים ומועצות דתיות.",
+        "c6_designated_executive": "איילת שקד כגורם ממתן ומאזן."
+      },
+      "citations": [
+        {
+          "title": "הישגי ממשלת בנט בשירותי דת",
+          "url": "https://www.calcalist.co.il",
+          "quote": "פתיחת שוק הכשרות והעברת סמכויות לרבני ערים"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 80,
+        "c2_leader_statements": 80,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "אוטונומיה לרשויות מקומיות, גיור ממלכתי, שירות צבאי או אזרחי לכולם ללא יוצא מן הכלל.",
+        "c2_leader_statements": "הנדל קורא לגיוס מלא של כל החרדים ומניעת עסקנות פוליטית דתית.",
+        "c3_leader_actions": "הנדל קידם את חוק השירות והתנגד לכל פטור גורף.",
+        "c4_candidates_statements": "תמיכה בחופש בחירה מקומי לצד שמירה על זהותה היהודית של המדינה.",
+        "c5_candidates_actions": "הובלת פשרות מעשיות בשירותי הדת.",
+        "c6_designated_executive": "מובילים קו ממלכתי מאוזן."
+      },
+      "citations": [
+        {
+          "title": "הנדל על חוק הגיוס והדת",
+          "url": "https://www.ynet.co.il",
+          "quote": "אין פריבילגים במדינה; כולם חייבים לשרת, בדיוק כמו שכולם חייבים לעבוד"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 95,
+        "c2_leader_statements": 95,
+        "c3_leader_actions": 90,
+        "c4_candidates_statements": 90,
+        "c5_candidates_actions": 90,
+        "c6_designated_executive": 90
+      },
+      "notes": {
+        "c1_platform": "חופש מוחלט לרשויות מקומיות: תחבורה ציבורית ומסחר בשבת, נישואין וגירושין אזרחיים, וגיוס שוויוני מלא.",
+        "c2_leader_statements": "ליברמן מוביל את המאבק בעסקנות החרדית ובכפייה הדתית.",
+        "c3_leader_actions": "בלם חוקי כפייה דתית והוביל סנקציות כלכליות על משתמטים כשר אוצר.",
+        "c4_candidates_statements": "יוליה מלינובסקי נלחמת בעקביות בוועדות הכנסת בחוקי הרבנות והכשרות.",
+        "c5_candidates_actions": "מאבק חקיקתי מוכח למען פתיחת שירותי הדת ואוטונומיה מוניציפלית.",
+        "c6_designated_executive": "יוליה מלינובסקי מיועדת לתיק הפנים/שירותי דת."
+      },
+      "citations": [
+        {
+          "title": "חוק השוויון בנטל של ישראל ביתנו",
+          "url": "https://beytenu.org.il/conscription",
+          "quote": "כל צעיר בגיל 18 חייב להתגייס לצבא או לשירות אזרחי; חופש מוחלט לרשויות בשבת"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": -75,
+        "c2_leader_statements": -70,
+        "c3_leader_actions": -80,
+        "c4_candidates_statements": -70,
+        "c5_candidates_actions": -80,
+        "c6_designated_executive": -80
+      },
+      "notes": {
+        "c1_platform": "שמירה על הסטטוס קוו הדתי והברית עם המפלגות החרדיות.",
+        "c2_leader_statements": "נתניהו התחייב לשמור על מעמד הרבנות ואיסור תחבורה בשבת.",
+        "c3_leader_actions": "ביטל את מתווה הכותל, בלם את רפורמות הכשרות והגיור, ואישר חוקי סגירת עסקים בשבת.",
+        "c4_candidates_statements": "בכירי הליכוד מתנגדים לחופש פעולה מוניציפלי בנושאי שבת ודת.",
+        "c5_candidates_actions": "חקיקת 'חוק הרבנים' ותקצוב מוסדות דת על חשבון השלטון המקומי.",
+        "c6_designated_executive": "הפקדת תחום הדת בידי המפלגות החרדיות."
+      },
+      "citations": [
+        {
+          "title": "ביטול מתווה הכותל על ידי ממשלת נתניהו - Ynet",
+          "url": "https://www.ynet.co.il",
+          "quote": "הממשלה הקפיאה את יישום המתווה שהוסכם עם הזרמים הליברליים"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": 90,
+        "c2_leader_statements": 90,
+        "c3_leader_actions": 85,
+        "c4_candidates_statements": 90,
+        "c5_candidates_actions": 85,
+        "c6_designated_executive": 90
+      },
+      "notes": {
+        "c1_platform": "חופש מוחלט לרשויות מקומיות, תחבורה ציבורית בשבת, נישואין אזרחיים ושוויון מלא.",
+        "c2_leader_statements": "גולן תוקף את הכפייה הדתית ודורש סיום המונופול האורתודוקסי.",
+        "c3_leader_actions": "חברי הרשימה נאבקו בעקביות בכנסת למען שבת חופשית ברשויות.",
+        "c4_candidates_statements": "גלעד קריב (רב רפורמי) הוביל מאבקים היסטוריים לחופש דת.",
+        "c5_candidates_actions": "קריב הוביל את בג\"ץ הכשרות והכותל.",
+        "c6_designated_executive": "גלעד קריב מיועד לשר לשירותי דת/שוויון אזרחי."
+      },
+      "citations": [
+        {
+          "title": "מצע דת ומדינה - הדמוקרטים",
+          "url": "https://democrats.org.il/religion-state",
+          "quote": "הפרדת שירותי הדת מהפוליטיקה, שבת חופשית ותחבורה ציבורית 7 ימים בשבוע"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "חופש בחירה מקומי, תחבורה ציבורית בשבת, ברית הזוגיות ושוויון מלא בנטל.",
+        "c2_leader_statements": "לפיד דורש שוויון בנטל השירות והתעסוקה ללא חוקי השתמטות.",
+        "c3_leader_actions": "חוקק בעבר את חוק השוויון בנטל בממשלת 2013.",
+        "c4_candidates_statements": "תמיכה מלאה בהעברת סמכויות תחבורה ומסחר בשבת לרשויות המקומיות.",
+        "c5_candidates_actions": "הצבעות עקביות נגד תקציבים דתיים וכפייה.",
+        "c6_designated_executive": "מחויבות להסדרת דת ומדינה."
+      },
+      "citations": [
+        {
+          "title": "מצע דת ומדינה - יש עתיד",
+          "url": "https://www.yeshatid.org.il/religion_and_state",
+          "quote": "ברית הזוגיות, תחבורה ציבורית בשבת ברשויות שירצו בכך וגיוס שוויוני"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": -95,
+        "c2_leader_statements": -95,
+        "c3_leader_actions": -95,
+        "c4_candidates_statements": -95,
+        "c5_candidates_actions": -95,
+        "c6_designated_executive": -95
+      },
+      "notes": {
+        "c1_platform": "חיזוק מונופול הרבנות, איסור גורף על תחבורה ציבורית ומסחר בשבת, התנגדות לכל נישואין אזרחיים.",
+        "c2_leader_statements": "דרעי הצהיר: 'שבת היא נשמת אפה של האומה; לא ניתן לאף עיר לפתוח תחבורה בשבת'.",
+        "c3_leader_actions": "חוקק את 'חוק המרכולים' המקנה לשר הפנים סמכות לבטל חוקי עזר עירוניים לפתיחת עסקים בשבת.",
+        "c4_candidates_statements": "מיכאל מלכיאלי מקדם חקיקה להרחבת סמכויות בתי הדין הרבניים.",
+        "c5_candidates_actions": "החזרת המונופול על מערך הכשרות לרבנות הראשית.",
+        "c6_designated_executive": "מיכאל מלכיאלי מיועד לשר לשירותי דת."
+      },
+      "citations": [
+        {
+          "title": "חוק המרכולים של אריה דרעי - כלכליסט",
+          "url": "https://www.calcalist.co.il",
+          "quote": "הענקת סמכות לשר הפנים לפסול חוקי עזר עירוניים של רשויות מקומיות לפתיחת חנויות בשבת"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": -100,
+        "c2_leader_statements": -100,
+        "c3_leader_actions": -100,
+        "c4_candidates_statements": -100,
+        "c5_candidates_actions": -100,
+        "c6_designated_executive": -100
+      },
+      "notes": {
+        "c1_platform": "שמירת הסטטוס קוו המחמיר ביותר, איסור מוחלט על שבת במרחב הציבורי, פטור גורף מגיוס לכל בחורי הישיבות.",
+        "c2_leader_statements": "גולדקנופף וגפני: 'חוק הגיוס הוא תנאי לקיום הממשלה; אף בחור ישיבה לא יתגייס לצבא'.",
+        "c3_leader_actions": "הפלת ממשלות ומאבקים אולטימטיביים להעברת חוק פטור גורף מגיוס.",
+        "c4_candidates_statements": "ח\"כים בסיעה דורשים סגירה מוחלטת של כל עסק ורכבת בשבת.",
+        "c5_candidates_actions": "הפעלת לחץ קואליציוני לביטול חוקי עזר מוניציפליים חילוניים.",
+        "c6_designated_executive": "מובילים קו בלתי מתפשר."
+      },
+      "citations": [
+        {
+          "title": "אולטימטום יהדות התורה על חוק הגיוס - Ynet",
+          "url": "https://www.ynet.co.il",
+          "quote": "ללא העברת חוק הפטור מגיוס לא נאשר את תקציב המדינה"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": -70,
+        "c2_leader_statements": -70,
+        "c3_leader_actions": -75,
+        "c4_candidates_statements": -65,
+        "c5_candidates_actions": -70,
+        "c6_designated_executive": -70
+      },
+      "notes": {
+        "c1_platform": "שמירה קפדנית על קדושת השבת והרבנות הראשית, התנגדות לתחבורה ומסחר בשבת ברשויות מקומיות.",
+        "c2_leader_statements": "בן גביר תומך בערכי מסורת ומניעת חילול שבת במרחב הציבורי.",
+        "c3_leader_actions": "הצבעה בעד חוקי השבת והרבנות.",
+        "c4_candidates_statements": "וסרלאוף תומך בחיזוק הזהות האורתודוקסית.",
+        "c5_candidates_actions": "תקצוב גרעינים תורניים במרחב החילוני.",
+        "c6_designated_executive": "תמיכה במונופול הרבנות."
+      },
+      "citations": [
+        {
+          "title": "עמדת עוצמה יהודית בנושאי דת",
+          "url": "https://ozma-yehudit.com",
+          "quote": "שמירה על אופייה היהודי של המדינה ועל השבת במרחב הציבורי"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": -80,
+        "c2_leader_statements": -80,
+        "c3_leader_actions": -85,
+        "c4_candidates_statements": -80,
+        "c5_candidates_actions": -85,
+        "c6_designated_executive": -80
+      },
+      "notes": {
+        "c1_platform": "שמירה על מונופול הרבנות הראשית, התנגדות להפרדת דת ומדינה, מניעת תחבורה ומסחר בשבת.",
+        "c2_leader_statements": "סמוטריץ' מתנגד לחופש מוניציפלי בנושאי שבת: 'מדינת ישראל היא מדינה יהודית'.",
+        "c3_leader_actions": "ביטול רפורמת הכשרות של כהנא והחזרת הסמכויות הבלעדיות לרבנות הראשית.",
+        "c4_candidates_statements": "שמחה רוטמן תומך במעמד בתי הדין הרבניים.",
+        "c5_candidates_actions": "קידום חקיקה להרחבת סמכויות שיפוט רבני בהסכמה.",
+        "c6_designated_executive": "תמיכה מלאה במונופול הרבני."
+      },
+      "citations": [
+        {
+          "title": "ביטול רפורמת הכשרות על ידי סמוטריץ' - סרוגים",
+          "url": "https://www.srugim.co.il",
+          "quote": "החזרת הפיקוח הבלעדי לרבנות הראשית וביטול פתיחת השוק לתאגידים פרטיים"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": -60,
+        "c2_leader_statements": -60,
+        "c3_leader_actions": -65,
+        "c4_candidates_statements": -60,
+        "c5_candidates_actions": -65,
+        "c6_designated_executive": -60
+      },
+      "notes": {
+        "c1_platform": "שמרנות דתית אסלאמית, התנגדות לליברליזם, תמיכה באוטונומיה דתית.",
+        "c2_leader_statements": "עבאס שומר על קו שמרני בנושאי משפחה וערכים דתיים.",
+        "c3_leader_actions": "התנגדות לחוקי להט\"ב וליברליזציה של שירותי דת.",
+        "c4_candidates_statements": "אימאן ח'טיב-יאסין שומרת על קו אסלאמי שמרני.",
+        "c5_candidates_actions": "הצבעות נגד חוקים ליברליים.",
+        "c6_designated_executive": "עמדות שמרניות דתיות."
+      },
+      "citations": [
+        {
+          "title": "העמדה השמרנית של רע\"ם",
+          "url": "https://www.haaretz.co.il",
+          "quote": "רע\"ם כמפלגה אסלאמית שמרנית מתנגדת לחקיקה ליברלית בנושאי להט\"ב ומשפחה"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 70,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 70
+      },
+      "notes": {
+        "c1_platform": "הפרדת דת ומדינה, חילוניות, שוויון מגדרי וחופש מדת.",
+        "c2_leader_statements": "עאידה תומא-סלימאן מובילה קו חילוני ופמיניסטי עקבי.",
+        "c3_leader_actions": "מאבקים נגד כפייה דתית בחברה הערבית והכללית.",
+        "c4_candidates_statements": "עופר כסיף מתנגד לכל פריבילגיה דתית.",
+        "c5_candidates_actions": "הצבעות בעד תחבורה ציבורית בשבת וחופש מדת.",
+        "c6_designated_executive": "עאידה תומא-סלימאן מיועדת לזכויות אזרח."
+      },
+      "citations": [
+        {
+          "title": "מצע חד\"ש לזכויות נשים וחילוניות",
+          "url": "https://aljabha.org.il",
+          "quote": "הפרדה מוחלטת של הדת מהמדינה והבטחת שוויון מגדרי מלא"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": -45,
+        "c2_leader_statements": -40,
+        "c3_leader_actions": -40,
+        "c4_candidates_statements": -40,
+        "c5_candidates_actions": -40,
+        "c6_designated_executive": -40
+      },
+      "notes": {
+        "c1_platform": "זהות יהודית מסורתית-לאומית, התנגדות לחילון המרחב הציבורי, חיבור תורה וצבא.",
+        "c2_leader_statements": "וינטר מדגיש את ערכי המסורת היהודית כבסיס לחוסן הלאומי.",
+        "c3_leader_actions": "קידם שילוב לוחמים דתיים ומסורתיים בצה\"ל תוך שמירה על הלכה.",
+        "c4_candidates_statements": "שמירה על השבת וצביון המסורת.",
+        "c5_candidates_actions": "התנגדות לפעולות המפרקות את הסטטוס קוו.",
+        "c6_designated_executive": "קו מסורתי ימני."
+      },
+      "citations": [
+        {
+          "title": "ראיון עופר וינטר על אמונה וצבא",
+          "url": "https://www.inn.co.il",
+          "quote": "הרוח היהודית והאמונה הן מקור העוצמה של הלוחם היהודי"
+        }
+      ]
+    }
+  }
+}

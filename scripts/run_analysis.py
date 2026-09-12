@@ -14,7 +14,18 @@ try:
     import yaml
     HAS_YAML = True
 except ImportError:
-    HAS_YAML = False
+    import site
+    venv_site = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), ".venv", "lib")
+    if os.path.exists(venv_site):
+        for root, dirs, _ in os.walk(venv_site):
+            if "site-packages" in dirs:
+                site.addsitedir(os.path.join(root, "site-packages"))
+                break
+    try:
+        import yaml
+        HAS_YAML = True
+    except ImportError:
+        HAS_YAML = False
 
 from evaluator import evaluate_full_dataset
 from generate_report import generate_markdown_report, generate_html_dashboard

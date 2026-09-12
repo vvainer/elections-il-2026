@@ -2,7 +2,7 @@
 
 ## 1. Project Context & Purpose
 This project is an automated, objective, evidence-based analysis system evaluating political parties, party leaders, and realistic candidates for the **2026 Israeli Knesset Elections** (taking place late 2026).
-It is implemented as an **Antigravity Skill** (`election-analyst`) running locally inside Antigravity using the user's Gemini Pro capabilities.
+It is implemented as an **Antigravity Skill** (`election-analyst`) running locally inside Antigravity using the user's Gemini Pro capabilities, powered by a **parallel multi-agent architecture**.
 
 ## 2. Language & Communication Rules
 - **Technical Discussion, Scripts, Code, Architecture, and Git**: English.
@@ -52,31 +52,63 @@ Configured in `config/profiles/default.yaml` (Equal weight 1.0 each by default):
 
 ---
 
-## 5. Weekly Workflow & Execution Instructions
+## 5. Parallel Multi-Agent Architecture & Weekly Workflow
 When the user prompts to run the weekly analysis (e.g., "Run weekly election analysis update" or "הרץ עדכון שבועי לאנליזת הבחירות"):
-1. **Check Polls**: Update `config/polls.yaml` with the latest poll figures and realistic cutoffs. Check if any new party crossed the 4-seat threshold.
-2. **Research Deltas**: Perform targeted live web research on news, candidate statements, or policy moves from the past week.
-3. **Update Dataset**: Update or create `data/evaluations/YYYY-MM-DD.json` with updated scores, notes, and citations.
-4. **Run Analysis Pipeline**:
-   ```bash
-   .venv/bin/python3 scripts/run_analysis.py --date YYYY-MM-DD
-   ```
-5. **Outputs Generated**:
-   - `reports/YYYY-MM-DD/report.md`: Full GitHub-flavored markdown report.
-   - `docs/index.html`: Responsive RTL HTML dashboard for GitHub Pages.
-6. **Git Commit**: Commit the updated data and reports.
+
+### Phase 1: Concurrent Information Gathering (9 Topic Researchers)
+- Update `config/polls.yaml` with the latest poll figures and realistic candidate thresholds.
+- Launch 9 parallel `topic_researcher` subagents via `invoke_subagent` (one per policy topic) investigating all qualifying parties.
+- Prompts follow `.agents/skills/election-analyst/references/researcher_prompt.md`.
+- Staged output: `data/staging/YYYY-MM-DD/topics/<topic_id>.json`.
+
+### Phase 2: Two-Tier Cross-Validation & Feedback Loop
+- **Tier 1 (Automated)**: Run `python3 scripts/validate_links.py` to verify HTTP reachability of all citation URLs and schema conformity.
+- **Tier 2 (Parallel Validators)**: Launch `topic_validator` agents verifying factual accuracy, rubric adherence, and candidate boundaries.
+- **Feedback Loop**: If claims/links are flagged, send revision feedback to the research agent (max 1 revision round). Final determination applied by validator.
+- Validated output: `data/validated/YYYY-MM-DD/topics/<topic_id>.json` and audit logs in `data/validation_logs/YYYY-MM-DD/`.
+
+### Phase 3: Merging, Report Rebuilding & Deployment
+- Merge topic datasets:
+  ```bash
+  python3 scripts/merge_topics.py --topics-dir data/validated/YYYY-MM-DD/topics --output data/evaluations/YYYY-MM-DD.json --date YYYY-MM-DD
+  ```
+- Run scoring engine & generate reports:
+  ```bash
+  python3 scripts/run_analysis.py --date YYYY-MM-DD
+  ```
+  *(Or execute full pipeline via `python3 scripts/orchestrate_analysis.py --date YYYY-MM-DD --stage all`)*.
+- Write Hebrew Executive Synthesis (לוח מובילים, תזוזות מפתח ופערים בין הגושים).
+- Commit & push to `origin/main` for automatic GitHub Pages deployment:
+  ```bash
+  git add data/ reports/ docs/
+  git commit -m "Weekly election analysis update: YYYY-MM-DD [Multi-agent validated]"
+  git push origin main
+  ```
 
 ---
 
 ## 6. Project Files Structure
-- `.agents/skills/election-analyst/SKILL.md`: Skill runbook for Antigravity.
-- `.agents/skills/election-analyst/references/criteria_rubric.md`: Scoring rubric and math.
-- `config/profiles/default.yaml`: 9 topics, stances, checklists, and weights.
-- `config/polls.yaml`: Current polling benchmarks and realistic seat cutoffs.
-- `config/parties.yaml`: Party registry, leadership, candidates, official links.
-- `scripts/evaluator.py`: Python mathematical evaluation engine.
-- `scripts/generate_report.py`: Markdown and HTML dashboard generator.
-- `scripts/run_analysis.py`: Main CLI runner.
-- `data/evaluations/`: Raw JSON datasets per analysis date.
-- `reports/`: Generated markdown reports by date.
-- `docs/`: GitHub Pages deployment folder (`index.html`).
+- `.agents/skills/election-analyst/SKILL.md`: Main Antigravity Skill runbook.
+- `.agents/skills/election-analyst/references/`:
+  - `criteria_rubric.md`: Scoring rubric and weighting math.
+  - `researcher_prompt.md`: Prompt template for parallel gathering agents.
+  - `validator_prompt.md`: Prompt template for cross-validation agents.
+  - `rebuilder_prompt.md`: Prompt template for report rebuilder and publisher.
+- `config/`:
+  - `profiles/default.yaml`: 9 topics, stances, checklists, and weights.
+  - `polls.yaml`: Current polling benchmarks and realistic seat cutoffs.
+  - `parties.yaml`: Party registry, leadership, candidates, official links.
+- `scripts/`:
+  - `validate_links.py`: Fast concurrent HTTP link & schema validator.
+  - `merge_topics.py`: Topic dataset merger & splitter.
+  - `evaluator.py`: Mathematical 6-criteria evaluation engine.
+  - `generate_report.py`: Markdown and HTML dashboard generator.
+  - `run_analysis.py`: Scoring runner.
+  - `orchestrate_analysis.py`: End-to-end pipeline orchestrator CLI.
+- `data/`:
+  - `staging/YYYY-MM-DD/topics/`: Raw research per topic.
+  - `validated/YYYY-MM-DD/topics/`: Validated research per topic.
+  - `validation_logs/YYYY-MM-DD/`: Audit trail and link checks.
+  - `evaluations/YYYY-MM-DD.json`: Central merged evaluation files.
+- `reports/YYYY-MM-DD/report.md`: Generated weekly Markdown reports.
+- `docs/index.html`: Responsive RTL HTML dashboard deployed to GitHub Pages.

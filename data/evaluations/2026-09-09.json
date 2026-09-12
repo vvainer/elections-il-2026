@@ -1,6 +1,6 @@
 {
   "date": "2026-09-09",
-  "notes": "ריצה שבועית ראשונה לקראת בחירות הכנסת ה-26. כיסוי של כל 14 המפלגות שעברו את אחוז החסימה לפחות בסקר אחד.",
+  "notes": "Multi-agent cross-validated evaluation dataset for 2026-09-09.",
   "parties": {
     "yashar": {
       "name_he": "ישר",
@@ -37,31 +37,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 55,
-            "c2_leader_statements": 60,
-            "c3_leader_actions": 50,
-            "c4_candidates_statements": 55,
-            "c5_candidates_actions": 55,
-            "c6_designated_executive": 60
-          },
-          "notes": {
-            "c1_platform": "דגש על ממלכתיות וחיזוק השלטון המקומי, אך זהירות משינויים מרחיקי לכת ביועמ\"ש או בבג\"ץ.",
-            "c2_leader_statements": "איזנקוט קורא להסדרת יחסים מוסכמת בחוק יסוד חקיקה וביזור סמכויות לראשי ערים.",
-            "c3_leader_actions": "תמך בהידברות בבית הנשיא להסדרת מערכת המשפט.",
-            "c4_candidates_statements": "מיכאל ביטון דורש העברת סמכויות ותקציבים מהממשלה לשלטון המקומי.",
-            "c5_candidates_actions": "ביטון כראש מועצת ירוחם לשעבר הוביל מודלים מוצלחים של ניהול עצמי מוניציפלי.",
-            "c6_designated_executive": "מיכאל ביטון מיועד לתיק הפנים/שלטון מקומי."
-          },
-          "citations": [
-            {
-              "title": "עמדות ישר: ממלכתיות וביזור שלטוני",
-              "url": "https://yashar.org.il/governance",
-              "quote": "העברת סמכויות ניהוליות לרשויות המקומיות היא תנאי לשירות איכותי לאזרח"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 80,
@@ -87,28 +62,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 75,
-            "c2_leader_statements": 75,
-            "c3_leader_actions": 80,
-            "c4_candidates_statements": 70,
+            "c1_platform": 55,
+            "c2_leader_statements": 60,
+            "c3_leader_actions": 50,
+            "c4_candidates_statements": 55,
+            "c5_candidates_actions": 55,
+            "c6_designated_executive": 60
+          },
+          "notes": {
+            "c1_platform": "דגש על ממלכתיות וחיזוק השלטון המקומי, אך זהירות משינויים מרחיקי לכת ביועמ\"ש או בבג\"ץ.",
+            "c2_leader_statements": "איזנקוט קורא להסדרת יחסים מוסכמת בחוק יסוד חקיקה וביזור סמכויות לראשי ערים.",
+            "c3_leader_actions": "תמך בהידברות בבית הנשיא להסדרת מערכת המשפט.",
+            "c4_candidates_statements": "מיכאל ביטון דורש העברת סמכויות ותקציבים מהממשלה לשלטון המקומי.",
+            "c5_candidates_actions": "ביטון כראש מועצת ירוחם לשעבר הוביל מודלים מוצלחים של ניהול עצמי מוניציפלי.",
+            "c6_designated_executive": "מיכאל ביטון מיועד לתיק הפנים/שלטון מקומי."
+          },
+          "citations": [
+            {
+              "title": "עמדות ישר: ממלכתיות וביזור שלטוני",
+              "url": "https://yashar.org.il/governance",
+              "quote": "העברת סמכויות ניהוליות לרשויות המקומיות היא תנאי לשירות איכותי לאזרח"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 85,
+            "c2_leader_statements": 85,
+            "c3_leader_actions": 70,
+            "c4_candidates_statements": 80,
             "c5_candidates_actions": 75,
             "c6_designated_executive": 80
           },
           "notes": {
-            "c1_platform": "הרחבת הסכמי אברהם לברית ביטחונית אזורית, היפרדות אזרחית מהפלסטינים תוך אחיזה ביטחונית מלאה וללא חלוקת ירושלים.",
-            "c2_leader_statements": "איזנקוט מדגיש בריתות הגנה הדוקות עם ארה\"ב ומדינות ערב המתונות לצד יוזמה מדינית פעילה.",
-            "c3_leader_actions": "כרמטכ\"ל ניהל את המב\"מ (המערכה בין המלחמות) בהצלחה עולמית ויצר שיתופי פעולה אזוריים סודיים.",
-            "c4_candidates_statements": "מתן כהנא תומך בחיזוק הבריתות האסטרטגיות ושמירה קפדנית על ביטחון ישראל.",
-            "c5_candidates_actions": "כהנא כטייס קרב ומפקד טייסת בעל רקע אסטרטגי עשיר.",
-            "c6_designated_executive": "איזנקוט עצמו מיועד להוביל את המדיניות הביטחונית-מדינית."
+            "c1_platform": "התחייבות רשמית להגבלת הממשלה ל-18 שרים בחוק יסוד וביטול מוחלט של כל המשרדים המומצאים.",
+            "c2_leader_statements": "איזנקוט התחייב: 'לא נשב בממשלה של מעל 18 שרים; נסגור 10 משרדים מיותרים ביום הראשון'.",
+            "c3_leader_actions": "חתם על הצעת חוק לצמצום משרדי הממשלה.",
+            "c4_candidates_statements": "חברי הרשימה הריאלית התחייבו פומבית לצמצום מנגנוני השרים והלשכות.",
+            "c5_candidates_actions": "חברי הכנסת הגישו הצעות לפירוק משרד המורשת, המשימות הלאומיות והמסורת.",
+            "c6_designated_executive": "מחויבות קולקטיבית של הנהגת המפלגה."
           },
           "citations": [
             {
-              "title": "תפיסת הביטחון של גדי איזנקוט - המכון למחקרי ביטחון לאומי (INSS)",
-              "url": "https://www.inss.org.il",
-              "quote": "יוזמה אסטרטגית ובריתות אזוריות הן מכפיל כוח קריטי לביטחון ישראל"
+              "title": "תוכנית 18 השרים - מפלגת ישר",
+              "url": "https://yashar.org.il/platform/governance-efficiency",
+              "quote": "ממשלה קטנה, יעילה, ללא שרים ללא תיק וללא כפילויות ביורוקרטיות"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 60,
+            "c2_leader_statements": 60,
+            "c3_leader_actions": 55,
+            "c4_candidates_statements": 65,
+            "c5_candidates_actions": 65,
+            "c6_designated_executive": 65
+          },
+          "notes": {
+            "c1_platform": "פתיחת השוק לייבוא והורדת יוקר המחיה, תוך שמירה על רשתות ביטחון סוציאליות.",
+            "c2_leader_statements": "איזנקוט מדגיש תחרות ומלחמה בקרטלים אך שומר על קו ממלכתי מרוסן.",
+            "c3_leader_actions": "תמך ברפורמות הכלכליות של ממשלת השינוי.",
+            "c4_candidates_statements": "שאול מרידור דוגל בריסוק חסמים בירוקרטיים ואימוץ תקנים אירופיים.",
+            "c5_candidates_actions": "שאול מרידור כראש אגף תקציבים לשעבר הוביל צעדים רבים לפתיחת השוק לתחרות.",
+            "c6_designated_executive": "שאול מרידור מיועד לתפקיד כלכלי בכיר."
+          },
+          "citations": [
+            {
+              "title": "תוכנית שאול מרידור למאבק ביוקר המחיה",
+              "url": "https://www.calcalist.co.il",
+              "quote": "ביטול תקינה ייחודית ופתיחה גורפת של יבוא מקביל"
             }
           ]
         },
@@ -162,28 +187,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 60,
-            "c2_leader_statements": 60,
-            "c3_leader_actions": 55,
-            "c4_candidates_statements": 65,
-            "c5_candidates_actions": 65,
-            "c6_designated_executive": 65
+            "c1_platform": 75,
+            "c2_leader_statements": 75,
+            "c3_leader_actions": 80,
+            "c4_candidates_statements": 70,
+            "c5_candidates_actions": 75,
+            "c6_designated_executive": 80
           },
           "notes": {
-            "c1_platform": "פתיחת השוק לייבוא והורדת יוקר המחיה, תוך שמירה על רשתות ביטחון סוציאליות.",
-            "c2_leader_statements": "איזנקוט מדגיש תחרות ומלחמה בקרטלים אך שומר על קו ממלכתי מרוסן.",
-            "c3_leader_actions": "תמך ברפורמות הכלכליות של ממשלת השינוי.",
-            "c4_candidates_statements": "שאול מרידור דוגל בריסוק חסמים בירוקרטיים ואימוץ תקנים אירופיים.",
-            "c5_candidates_actions": "שאול מרידור כראש אגף תקציבים לשעבר הוביל צעדים רבים לפתיחת השוק לתחרות.",
-            "c6_designated_executive": "שאול מרידור מיועד לתפקיד כלכלי בכיר."
+            "c1_platform": "הרחבת הסכמי אברהם לברית ביטחונית אזורית, היפרדות אזרחית מהפלסטינים תוך אחיזה ביטחונית מלאה וללא חלוקת ירושלים.",
+            "c2_leader_statements": "איזנקוט מדגיש בריתות הגנה הדוקות עם ארה\"ב ומדינות ערב המתונות לצד יוזמה מדינית פעילה.",
+            "c3_leader_actions": "כרמטכ\"ל ניהל את המב\"מ (המערכה בין המלחמות) בהצלחה עולמית ויצר שיתופי פעולה אזוריים סודיים.",
+            "c4_candidates_statements": "מתן כהנא תומך בחיזוק הבריתות האסטרטגיות ושמירה קפדנית על ביטחון ישראל.",
+            "c5_candidates_actions": "כהנא כטייס קרב ומפקד טייסת בעל רקע אסטרטגי עשיר.",
+            "c6_designated_executive": "איזנקוט עצמו מיועד להוביל את המדיניות הביטחונית-מדינית."
           },
           "citations": [
             {
-              "title": "תוכנית שאול מרידור למאבק ביוקר המחיה",
-              "url": "https://www.calcalist.co.il",
-              "quote": "ביטול תקינה ייחודית ופתיחה גורפת של יבוא מקביל"
+              "title": "תפיסת הביטחון של גדי איזנקוט - המכון למחקרי ביטחון לאומי (INSS)",
+              "url": "https://www.inss.org.il",
+              "quote": "יוזמה אסטרטגית ובריתות אזוריות הן מכפיל כוח קריטי לביטחון ישראל"
             }
           ]
         },
@@ -209,31 +234,6 @@
               "title": "הצהרת ישר על תקציב המדינה",
               "url": "https://yashar.org.il/press/budget-priorities",
               "quote": "הפסקת תקצוב שמעודד עוני והיעדר תעסוקה"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 85,
-            "c2_leader_statements": 85,
-            "c3_leader_actions": 70,
-            "c4_candidates_statements": 80,
-            "c5_candidates_actions": 75,
-            "c6_designated_executive": 80
-          },
-          "notes": {
-            "c1_platform": "התחייבות רשמית להגבלת הממשלה ל-18 שרים בחוק יסוד וביטול מוחלט של כל המשרדים המומצאים.",
-            "c2_leader_statements": "איזנקוט התחייב: 'לא נשב בממשלה של מעל 18 שרים; נסגור 10 משרדים מיותרים ביום הראשון'.",
-            "c3_leader_actions": "חתם על הצעת חוק לצמצום משרדי הממשלה.",
-            "c4_candidates_statements": "חברי הרשימה הריאלית התחייבו פומבית לצמצום מנגנוני השרים והלשכות.",
-            "c5_candidates_actions": "חברי הכנסת הגישו הצעות לפירוק משרד המורשת, המשימות הלאומיות והמסורת.",
-            "c6_designated_executive": "מחויבות קולקטיבית של הנהגת המפלגה."
-          },
-          "citations": [
-            {
-              "title": "תוכנית 18 השרים - מפלגת ישר",
-              "url": "https://yashar.org.il/platform/governance-efficiency",
-              "quote": "ממשלה קטנה, יעילה, ללא שרים ללא תיק וללא כפילויות ביורוקרטיות"
             }
           ]
         }
@@ -269,31 +269,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 85,
-            "c2_leader_statements": 85,
-            "c3_leader_actions": 80,
-            "c4_candidates_statements": 85,
-            "c5_candidates_actions": 85,
-            "c6_designated_executive": 85
-          },
-          "notes": {
-            "c1_platform": "רפורמה מבנית מאוזנת: פיצול תפקיד היועמ\"ש, ריסון אקטיביזם שיפוטי וביזור לשלטון המקומי.",
-            "c2_leader_statements": "בנט ושקד קוראים בעקביות לפיצול מוסד היועמ\"ש והחזרת האיזון בין הרשויות ללא אנרכיה.",
-            "c3_leader_actions": "שקד כשרת משפטים מינתה שופטים שמרנים, קידמה חוקים להגבלת עתירות ופעלה לריסון משפטי.",
-            "c4_candidates_statements": "איילת שקד מובילה את התפיסה המשפטית המובנית של המפלגה.",
-            "c5_candidates_actions": "רקורד עשיר ומעשי של שקד בהובלת שינויים במערכת המשפט ובמשרד הפנים.",
-            "c6_designated_executive": "איילת שקד מיועדת חד-משמעית לתיק המשפטים."
-          },
-          "citations": [
-            {
-              "title": "תוכנית שקד ובנט למערכת המשפט",
-              "url": "https://www.globes.co.il",
-              "quote": "פיצול תפקיד היועמ\"ש בין תובע כללי ליועץ משפטי לממשלה הוא כורח השעה"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 90,
@@ -319,28 +294,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 80,
-            "c2_leader_statements": 80,
-            "c3_leader_actions": 85,
-            "c4_candidates_statements": 80,
+            "c1_platform": 85,
+            "c2_leader_statements": 85,
+            "c3_leader_actions": 80,
+            "c4_candidates_statements": 85,
             "c5_candidates_actions": 85,
             "c6_designated_executive": 85
           },
           "notes": {
-            "c1_platform": "דוקטרינת בנט: מאבק בראש התמנון (איראן), שלילת מדינה פלסטינית, הרחבת בריתות אזוריות.",
-            "c2_leader_statements": "בנט מתנגד לויתורים טריטוריאליים ביו\"ש אך מקדם אוטונומיה כלכלית ושת\"פ אזורי נרחב.",
-            "c3_leader_actions": "כראש ממשלה ניהל מדיניות אזורית תקיפה, נפגש עם מנהיגי האזור וקידם עסקאות הגנה.",
-            "c4_candidates_statements": "יוסי כהן היה מאדריכלי הסכמי אברהם ובעל קשרים אסטרטגיים ענפים באזור.",
-            "c5_candidates_actions": "יוסי כהן הוביל מבצעים מודיעיניים אסטרטגיים ומו\"מ להסכמים בינלאומיים.",
-            "c6_designated_executive": "יוסי כהן מיועד לשר החוץ / ראש המל\"ל הבכיר."
+            "c1_platform": "רפורמה מבנית מאוזנת: פיצול תפקיד היועמ\"ש, ריסון אקטיביזם שיפוטי וביזור לשלטון המקומי.",
+            "c2_leader_statements": "בנט ושקד קוראים בעקביות לפיצול מוסד היועמ\"ש והחזרת האיזון בין הרשויות ללא אנרכיה.",
+            "c3_leader_actions": "שקד כשרת משפטים מינתה שופטים שמרנים, קידמה חוקים להגבלת עתירות ופעלה לריסון משפטי.",
+            "c4_candidates_statements": "איילת שקד מובילה את התפיסה המשפטית המובנית של המפלגה.",
+            "c5_candidates_actions": "רקורד עשיר ומעשי של שקד בהובלת שינויים במערכת המשפט ובמשרד הפנים.",
+            "c6_designated_executive": "איילת שקד מיועדת חד-משמעית לתיק המשפטים."
           },
           "citations": [
             {
-              "title": "דוקטרינת הביטחון של נפתלי בנט",
-              "url": "https://www.inss.org.il",
-              "quote": "מול ציר הרשע נדרשת פגיעה בראש ולא רק בזרועות, לצד בריתות הגנה מודיעיניות"
+              "title": "תוכנית שקד ובנט למערכת המשפט",
+              "url": "https://www.globes.co.il",
+              "quote": "פיצול תפקיד היועמ\"ש בין תובע כללי ליועץ משפטי לממשלה הוא כורח השעה"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 65,
+            "c2_leader_statements": 65,
+            "c3_leader_actions": 50,
+            "c4_candidates_statements": 65,
+            "c5_candidates_actions": 55,
+            "c6_designated_executive": 60
+          },
+          "notes": {
+            "c1_platform": "צמצום מספר המשרדים ל-18 והתייעלות מנגנוני המטה הממשלתיים.",
+            "c2_leader_statements": "בנט מצהיר על כוונה להקים ממשלת מומחים מצומצמת ויעילה.",
+            "c3_leader_actions": "בעבר כראש ממשלה הקים ממשלה של 27 שרים בשל פשרות פוליטיות, דבר המהווה פער מול ההצהרה.",
+            "c4_candidates_statements": "שקד וקארה תומכים בצמצום הוצאות הממשלה והשרים.",
+            "c5_candidates_actions": "שקד סגרה בעבר יחידות כפולות במשרד המשפטים והפנים.",
+            "c6_designated_executive": "מחויבות כללית ללא חקיקה חקוקה בסלע."
+          },
+          "citations": [
+            {
+              "title": "הצהרות נפתלי בנט על מבנה הממשלה",
+              "url": "https://www.beyachad2026.org.il",
+              "quote": "נקים ממשלה רזה ללא שרים מומצאים"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 90,
+            "c2_leader_statements": 95,
+            "c3_leader_actions": 85,
+            "c4_candidates_statements": 90,
+            "c5_candidates_actions": 85,
+            "c6_designated_executive": 90
+          },
+          "notes": {
+            "c1_platform": "תוכנית שוק פתוח מלא: הסרת מכסים, אימוץ גורף של תקנים מערביים, ריסוק מונופולים וביטול רגולציה.",
+            "c2_leader_statements": "בנט: 'ישראל סובלת מחנק ביורוקרטי וקרטלים; נפסיק להמציא תקנים ונפתח את הנמלים והשווקים'.",
+            "c3_leader_actions": "ממשלת בנט העבירה את רפורמת היבוא המהפכנית ורפורמת הרישוי לעסקים.",
+            "c4_candidates_statements": "אביר קארה הוא סמל המאבק ברגולציה ומונופולים מטעם 'השולמנים'.",
+            "c5_candidates_actions": "קארה הוביל את 'חוק רישוי עסקים' וביטול עשרות תקנים מכבידים.",
+            "c6_designated_executive": "אביר קארה מיועד לשר הממונה על הרגולציה והורדת החסמים."
+          },
+          "citations": [
+            {
+              "title": "רפורמת היבוא מה שטוב לאירופה טוב לישראל",
+              "url": "https://www.gov.il/he/departments/news/reform_europe_israel",
+              "quote": "מוצר שמאושר לשיווק באיחוד האירופי יכנס לישראל ללא בדיקות מיותרות"
             }
           ]
         },
@@ -394,28 +419,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 90,
-            "c2_leader_statements": 95,
+            "c1_platform": 80,
+            "c2_leader_statements": 80,
             "c3_leader_actions": 85,
-            "c4_candidates_statements": 90,
+            "c4_candidates_statements": 80,
             "c5_candidates_actions": 85,
-            "c6_designated_executive": 90
+            "c6_designated_executive": 85
           },
           "notes": {
-            "c1_platform": "תוכנית שוק פתוח מלא: הסרת מכסים, אימוץ גורף של תקנים מערביים, ריסוק מונופולים וביטול רגולציה.",
-            "c2_leader_statements": "בנט: 'ישראל סובלת מחנק ביורוקרטי וקרטלים; נפסיק להמציא תקנים ונפתח את הנמלים והשווקים'.",
-            "c3_leader_actions": "ממשלת בנט העבירה את רפורמת היבוא המהפכנית ורפורמת הרישוי לעסקים.",
-            "c4_candidates_statements": "אביר קארה הוא סמל המאבק ברגולציה ומונופולים מטעם 'השולמנים'.",
-            "c5_candidates_actions": "קארה הוביל את 'חוק רישוי עסקים' וביטול עשרות תקנים מכבידים.",
-            "c6_designated_executive": "אביר קארה מיועד לשר הממונה על הרגולציה והורדת החסמים."
+            "c1_platform": "דוקטרינת בנט: מאבק בראש התמנון (איראן), שלילת מדינה פלסטינית, הרחבת בריתות אזוריות.",
+            "c2_leader_statements": "בנט מתנגד לויתורים טריטוריאליים ביו\"ש אך מקדם אוטונומיה כלכלית ושת\"פ אזורי נרחב.",
+            "c3_leader_actions": "כראש ממשלה ניהל מדיניות אזורית תקיפה, נפגש עם מנהיגי האזור וקידם עסקאות הגנה.",
+            "c4_candidates_statements": "יוסי כהן היה מאדריכלי הסכמי אברהם ובעל קשרים אסטרטגיים ענפים באזור.",
+            "c5_candidates_actions": "יוסי כהן הוביל מבצעים מודיעיניים אסטרטגיים ומו\"מ להסכמים בינלאומיים.",
+            "c6_designated_executive": "יוסי כהן מיועד לשר החוץ / ראש המל\"ל הבכיר."
           },
           "citations": [
             {
-              "title": "רפורמת היבוא מה שטוב לאירופה טוב לישראל",
-              "url": "https://www.gov.il/he/departments/news/reform_europe_israel",
-              "quote": "מוצר שמאושר לשיווק באיחוד האירופי יכנס לישראל ללא בדיקות מיותרות"
+              "title": "דוקטרינת הביטחון של נפתלי בנט",
+              "url": "https://www.inss.org.il",
+              "quote": "מול ציר הרשע נדרשת פגיעה בראש ולא רק בזרועות, לצד בריתות הגנה מודיעיניות"
             }
           ]
         },
@@ -441,31 +466,6 @@
               "title": "דוחות מוסד שורש - פרופ' דן בן-דוד",
               "url": "https://shoresh.institute",
               "quote": "ללא מיצוי כושר השתכרות ולימודי ליבה, המשק הישראלי יתקשה לממן שירותים בסיסיים"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 65,
-            "c2_leader_statements": 65,
-            "c3_leader_actions": 50,
-            "c4_candidates_statements": 65,
-            "c5_candidates_actions": 55,
-            "c6_designated_executive": 60
-          },
-          "notes": {
-            "c1_platform": "צמצום מספר המשרדים ל-18 והתייעלות מנגנוני המטה הממשלתיים.",
-            "c2_leader_statements": "בנט מצהיר על כוונה להקים ממשלת מומחים מצומצמת ויעילה.",
-            "c3_leader_actions": "בעבר כראש ממשלה הקים ממשלה של 27 שרים בשל פשרות פוליטיות, דבר המהווה פער מול ההצהרה.",
-            "c4_candidates_statements": "שקד וקארה תומכים בצמצום הוצאות הממשלה והשרים.",
-            "c5_candidates_actions": "שקד סגרה בעבר יחידות כפולות במשרד המשפטים והפנים.",
-            "c6_designated_executive": "מחויבות כללית ללא חקיקה חקוקה בסלע."
-          },
-          "citations": [
-            {
-              "title": "הצהרות נפתלי בנט על מבנה הממשלה",
-              "url": "https://www.beyachad2026.org.il",
-              "quote": "נקים ממשלה רזה ללא שרים מומצאים"
             }
           ]
         }
@@ -501,31 +501,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 80,
-            "c2_leader_statements": 80,
-            "c3_leader_actions": 75,
-            "c4_candidates_statements": 75,
-            "c5_candidates_actions": 80,
-            "c6_designated_executive": 80
-          },
-          "notes": {
-            "c1_platform": "ממלכתיות, הגבלת כהונות, ביזור סמכויות לרשויות מקומיות, הסדרת יחסי כנסת-בג\"ץ ברוח שמרנית-ממלכתית.",
-            "c2_leader_statements": "הנדל קורא לימין ממלכתי השומר על שלטון החוק תוך תיקונים מוסכמים.",
-            "c3_leader_actions": "הנדל והאוזר הובילו קו ממלכתי בלתי מתפשר ומנעו פגיעה במוסדות השלטון.",
-            "c4_candidates_statements": "צביקה האוזר הוביל את 'חוק הלאום' ויוזמות חוקתיות ממלכתיות.",
-            "c5_candidates_actions": "רקורד חקיקתי ומשפטי עשיר בניהול מערכות ממשל.",
-            "c6_designated_executive": "האוזר מיועד לשר משפטים/חוץ."
-          },
-          "citations": [
-            {
-              "title": "מצע ממלכתיות ומשטר - יועז הנדל",
-              "url": "https://www.hendel.org.il",
-              "quote": "ימין ממלכתי שמחזק את מוסדות המדינה והשלטון המקומי"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 90,
@@ -551,28 +526,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
             "c1_platform": 80,
             "c2_leader_statements": 80,
-            "c3_leader_actions": 80,
+            "c3_leader_actions": 75,
             "c4_candidates_statements": 75,
             "c5_candidates_actions": 80,
             "c6_designated_executive": 80
           },
           "notes": {
-            "c1_platform": "ימין ביטחוני פרגמטי: שלילת מדינה פלסטינית ונסיגות לקווי 67, שמירה קשיחה על בקעת הירדן וירושלים, בריתות אזוריות.",
-            "c2_leader_statements": "הנדל מדגיש ביטחון עצמי, הכרעה, ושילוב כוחות עם בעלות ברית.",
-            "c3_leader_actions": "הנדל שירת כלוחם ומפקד בשייטת 13, בעל דוקטורט בהיסטוריה צבאית ומומחיות באסטרטגיה.",
-            "c4_candidates_statements": "האוזר כיהן כיו\"ר ועדת חוץ וביטחון של הכנסת והוביל פיקוח ביטחוני הדוק.",
-            "c5_candidates_actions": "האוזר הוביל מהלכים להכרה אמריקאית ברמת הגולן.",
-            "c6_designated_executive": "הנדל והאוזר מיועדים לתפקידי ביטחון וחוץ."
+            "c1_platform": "ממלכתיות, הגבלת כהונות, ביזור סמכויות לרשויות מקומיות, הסדרת יחסי כנסת-בג\"ץ ברוח שמרנית-ממלכתית.",
+            "c2_leader_statements": "הנדל קורא לימין ממלכתי השומר על שלטון החוק תוך תיקונים מוסכמים.",
+            "c3_leader_actions": "הנדל והאוזר הובילו קו ממלכתי בלתי מתפשר ומנעו פגיעה במוסדות השלטון.",
+            "c4_candidates_statements": "צביקה האוזר הוביל את 'חוק הלאום' ויוזמות חוקתיות ממלכתיות.",
+            "c5_candidates_actions": "רקורד חקיקתי ומשפטי עשיר בניהול מערכות ממשל.",
+            "c6_designated_executive": "האוזר מיועד לשר משפטים/חוץ."
           },
           "citations": [
             {
-              "title": "תפיסת הביטחון של יועז הנדל",
-              "url": "https://www.haaretz.co.il",
-              "quote": "ניהול הסכסוך בעוצמה תוך מניעת סיפוח אוכלוסייה פלסטינית ושמירה על בקעת הירדן"
+              "title": "מצע ממלכתיות ומשטר - יועז הנדל",
+              "url": "https://www.hendel.org.il",
+              "quote": "ימין ממלכתי שמחזק את מוסדות המדינה והשלטון המקומי"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 90,
+            "c2_leader_statements": 90,
+            "c3_leader_actions": 80,
+            "c4_candidates_statements": 85,
+            "c5_candidates_actions": 80,
+            "c6_designated_executive": 85
+          },
+          "notes": {
+            "c1_platform": "חוק ממשלה רזה: מקסימום 18 שרים, ביטול משרדים מומצאים וסגירת לשכות מיותרות.",
+            "c2_leader_statements": "הנדל וזליכה התחייבו שלא יישבו בממשלה מנופחת ויקצצו 40% מהוצאות המטה.",
+            "c3_leader_actions": "הנדל כשר תקשורת ייעל את המשרד וצמצם יחידות מטה.",
+            "c4_candidates_statements": "צביקה האוזר תומך בחקיקת חוק יסוד המגביל את הממשלה ל-18 שרים ללא הוראות שעה.",
+            "c5_candidates_actions": "האוזר יזם חוקים לקיצוץ הוצאות פוליטיות בכנסת.",
+            "c6_designated_executive": "התחייבות רשמית במצע."
+          },
+          "citations": [
+            {
+              "title": "חוק ממשלה רזה - מצע הנדל וזליכה",
+              "url": "https://www.kalkalit.org/downsizing",
+              "quote": "ממשלה של 18 שרים בלבד, חיסכון של מיליארדים בהוצאות שרים ולשכות"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 95,
+            "c2_leader_statements": 95,
+            "c3_leader_actions": 90,
+            "c4_candidates_statements": 90,
+            "c5_candidates_actions": 90,
+            "c6_designated_executive": 95
+          },
+          "notes": {
+            "c1_platform": "ריסוק המונופולים, פירוק קרטל היבואנים הבלעדיים, פתיחת הנמלים, הורדת מכסים ועידוד יזמות.",
+            "c2_leader_statements": "זליכה הוא הדובר הבולט בישראל נגד הריכוזיות ומונופולי המזון והיבוא.",
+            "c3_leader_actions": "כחשב כללי לחם במונופולים, פיקח על תקציבים וחשף עיוותים מבניים במשק.",
+            "c4_candidates_statements": "הנדל פתח את שוק התקשורת לתחרות עזה והוריד מחירים.",
+            "c5_candidates_actions": "הנדל ביטל את פיצול התשתית והספק בתקשורת, חיסל ביורוקרטיה והוזיל עלויות.",
+            "c6_designated_executive": "פרופ' ירון זליכה מיועד חד-משמעית לשר האוצר."
+          },
+          "citations": [
+            {
+              "title": "ספר תוכנית החירום של ירון זליכה",
+              "url": "https://www.kalkalit.org/manifesto",
+              "quote": "פירוק 10 המונופולים הגדולים במשק יוריד את מחירי המזון ב-30%"
             }
           ]
         },
@@ -626,28 +651,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 95,
-            "c2_leader_statements": 95,
-            "c3_leader_actions": 90,
-            "c4_candidates_statements": 90,
-            "c5_candidates_actions": 90,
-            "c6_designated_executive": 95
+            "c1_platform": 80,
+            "c2_leader_statements": 80,
+            "c3_leader_actions": 80,
+            "c4_candidates_statements": 75,
+            "c5_candidates_actions": 80,
+            "c6_designated_executive": 80
           },
           "notes": {
-            "c1_platform": "ריסוק המונופולים, פירוק קרטל היבואנים הבלעדיים, פתיחת הנמלים, הורדת מכסים ועידוד יזמות.",
-            "c2_leader_statements": "זליכה הוא הדובר הבולט בישראל נגד הריכוזיות ומונופולי המזון והיבוא.",
-            "c3_leader_actions": "כחשב כללי לחם במונופולים, פיקח על תקציבים וחשף עיוותים מבניים במשק.",
-            "c4_candidates_statements": "הנדל פתח את שוק התקשורת לתחרות עזה והוריד מחירים.",
-            "c5_candidates_actions": "הנדל ביטל את פיצול התשתית והספק בתקשורת, חיסל ביורוקרטיה והוזיל עלויות.",
-            "c6_designated_executive": "פרופ' ירון זליכה מיועד חד-משמעית לשר האוצר."
+            "c1_platform": "ימין ביטחוני פרגמטי: שלילת מדינה פלסטינית ונסיגות לקווי 67, שמירה קשיחה על בקעת הירדן וירושלים, בריתות אזוריות.",
+            "c2_leader_statements": "הנדל מדגיש ביטחון עצמי, הכרעה, ושילוב כוחות עם בעלות ברית.",
+            "c3_leader_actions": "הנדל שירת כלוחם ומפקד בשייטת 13, בעל דוקטורט בהיסטוריה צבאית ומומחיות באסטרטגיה.",
+            "c4_candidates_statements": "האוזר כיהן כיו\"ר ועדת חוץ וביטחון של הכנסת והוביל פיקוח ביטחוני הדוק.",
+            "c5_candidates_actions": "האוזר הוביל מהלכים להכרה אמריקאית ברמת הגולן.",
+            "c6_designated_executive": "הנדל והאוזר מיועדים לתפקידי ביטחון וחוץ."
           },
           "citations": [
             {
-              "title": "ספר תוכנית החירום של ירון זליכה",
-              "url": "https://www.kalkalit.org/manifesto",
-              "quote": "פירוק 10 המונופולים הגדולים במשק יוריד את מחירי המזון ב-30%"
+              "title": "תפיסת הביטחון של יועז הנדל",
+              "url": "https://www.haaretz.co.il",
+              "quote": "ניהול הסכסוך בעוצמה תוך מניעת סיפוח אוכלוסייה פלסטינית ושמירה על בקעת הירדן"
             }
           ]
         },
@@ -673,31 +698,6 @@
               "title": "מלחמתו של זליכה בשחיתות התקציבית",
               "url": "https://www.haaretz.co.il",
               "quote": "כספי הציבור חייבים ללכת למנועי צמיחה ולמי שאינו מסוגל לעבוד, לא לחלוקה סקטוריאלית"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 90,
-            "c2_leader_statements": 90,
-            "c3_leader_actions": 80,
-            "c4_candidates_statements": 85,
-            "c5_candidates_actions": 80,
-            "c6_designated_executive": 85
-          },
-          "notes": {
-            "c1_platform": "חוק ממשלה רזה: מקסימום 18 שרים, ביטול משרדים מומצאים וסגירת לשכות מיותרות.",
-            "c2_leader_statements": "הנדל וזליכה התחייבו שלא יישבו בממשלה מנופחת ויקצצו 40% מהוצאות המטה.",
-            "c3_leader_actions": "הנדל כשר תקשורת ייעל את המשרד וצמצם יחידות מטה.",
-            "c4_candidates_statements": "צביקה האוזר תומך בחקיקת חוק יסוד המגביל את הממשלה ל-18 שרים ללא הוראות שעה.",
-            "c5_candidates_actions": "האוזר יזם חוקים לקיצוץ הוצאות פוליטיות בכנסת.",
-            "c6_designated_executive": "התחייבות רשמית במצע."
-          },
-          "citations": [
-            {
-              "title": "חוק ממשלה רזה - מצע הנדל וזליכה",
-              "url": "https://www.kalkalit.org/downsizing",
-              "quote": "ממשלה של 18 שרים בלבד, חיסכון של מיליארדים בהוצאות שרים ולשכות"
             }
           ]
         }
@@ -733,31 +733,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 70,
-            "c2_leader_statements": 70,
-            "c3_leader_actions": 65,
-            "c4_candidates_statements": 65,
-            "c5_candidates_actions": 65,
-            "c6_designated_executive": 65
-          },
-          "notes": {
-            "c1_platform": "מעבר למשטר נשיאותי, חוקה והסדרת היחסים בין הרשויות תוך שמירה על ממלכתיות.",
-            "c2_leader_statements": "ליברמן קורא לרפורמה במבנה השלטון וחיזוק המשילות והיציבות הפוליטית.",
-            "c3_leader_actions": "ניהל מערכות ציבוריות רבות ומשרדי ממשלה בכירים (ביטחון, אוצר, חוץ).",
-            "c4_candidates_statements": "יוליה מלינובסקי מציגה עמדות תקיפות לביזור סמכויות לרשויות המקומיות.",
-            "c5_candidates_actions": "מלינובסקי פעילה מרכזית בוועדות הכנסת בפיקוח על הממשלה.",
-            "c6_designated_executive": "עודד פורר מיועד לתפקידים בכירים."
-          },
-          "citations": [
-            {
-              "title": "תוכנית הממשל של אביגדור ליברמן",
-              "url": "https://beytenu.org.il/governance",
-              "quote": "חוקה לישראל, משטר נשיאותי וביזור סמכויות לרשויות המקומיות"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 80,
@@ -783,28 +758,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 65,
-            "c2_leader_statements": 65,
-            "c3_leader_actions": 60,
-            "c4_candidates_statements": 60,
+            "c1_platform": 70,
+            "c2_leader_statements": 70,
+            "c3_leader_actions": 65,
+            "c4_candidates_statements": 65,
             "c5_candidates_actions": 65,
-            "c6_designated_executive": 70
+            "c6_designated_executive": 65
           },
           "notes": {
-            "c1_platform": "קו ביטחוני ניצי, שלילת ויתורים בירושלים וביו\"ש, הסדר חילופי שטחים ואוכלוסיות ובריתות אזוריות.",
-            "c2_leader_statements": "ליברמן התריע מפני חמאס ואיראן ודורש הכרעה ביטחונית טוטאלית.",
-            "c3_leader_actions": "כשר ביטחון התפטר במחאה על הפסקת האש עם חמאס ב-2018 (אזהרותיו התבררו כמדויקות ב-7.10).",
-            "c4_candidates_statements": "שרון ניר (תא\"ל במיל') מקדמת חשיבה ביטחונית-אסטרטגית סדורה.",
-            "c5_candidates_actions": "ניר שירתה בתפקידי פיקוד בכירים בצה\"ל וביועצת הרמטכ\"ל.",
-            "c6_designated_executive": "ליברמן מיועד לתיק הביטחון."
+            "c1_platform": "מעבר למשטר נשיאותי, חוקה והסדרת היחסים בין הרשויות תוך שמירה על ממלכתיות.",
+            "c2_leader_statements": "ליברמן קורא לרפורמה במבנה השלטון וחיזוק המשילות והיציבות הפוליטית.",
+            "c3_leader_actions": "ניהל מערכות ציבוריות רבות ומשרדי ממשלה בכירים (ביטחון, אוצר, חוץ).",
+            "c4_candidates_statements": "יוליה מלינובסקי מציגה עמדות תקיפות לביזור סמכויות לרשויות המקומיות.",
+            "c5_candidates_actions": "מלינובסקי פעילה מרכזית בוועדות הכנסת בפיקוח על הממשלה.",
+            "c6_designated_executive": "עודד פורר מיועד לתפקידים בכירים."
           },
           "citations": [
             {
-              "title": "תזכיר ליברמן על תוכנית חמאס - וואלה",
-              "url": "https://news.walla.co.il",
-              "quote": "התזכיר מ-2016 בו הזהיר ליברמן מהפלישה המתוכננת של חמאס"
+              "title": "תוכנית הממשל של אביגדור ליברמן",
+              "url": "https://beytenu.org.il/governance",
+              "quote": "חוקה לישראל, משטר נשיאותי וביזור סמכויות לרשויות המקומיות"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 75,
+            "c2_leader_statements": 75,
+            "c3_leader_actions": 70,
+            "c4_candidates_statements": 70,
+            "c5_candidates_actions": 70,
+            "c6_designated_executive": 75
+          },
+          "notes": {
+            "c1_platform": "הגבלת מספר השרים ל-18, ביטול משרדים מומצאים וסגירת משרדי דתות ומורשת.",
+            "c2_leader_statements": "ליברמן כינה את הממשלה הנוכחית 'ממשלת שודדים עם 30 שרים מיותרים'.",
+            "c3_leader_actions": "בממשלת בנט-לפיד החזיקה ישראל ביתנו במספר מועט של תיקים.",
+            "c4_candidates_statements": "חברי הסיעה הגישו הצעות לפירוק המשרדים המיותרים.",
+            "c5_candidates_actions": "פעילות בוועדות הכנסת נגד תקציבי משרדי הסרק.",
+            "c6_designated_executive": "התחייבות לממשלה של 18 שרים."
+          },
+          "citations": [
+            {
+              "title": "הצעת חוק לצמצום משרדי הממשלה - ישראל ביתנו",
+              "url": "https://beytenu.org.il",
+              "quote": "ביטול 12 משרדי ממשלה מיותרים וחיסכון שנתי של מיליארדי שקלים"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 85,
+            "c2_leader_statements": 90,
+            "c3_leader_actions": 85,
+            "c4_candidates_statements": 85,
+            "c5_candidates_actions": 85,
+            "c6_designated_executive": 85
+          },
+          "notes": {
+            "c1_platform": "הורדת מכסים, פתיחת שוק המזון והחקלאות ליבוא, הסרת רגולציה ופירוק קרטלים.",
+            "c2_leader_statements": "ליברמן פעל כשר אוצר לפתיחה אגרסיבית של השוק ליבוא ללא מכסים.",
+            "c3_leader_actions": "ביטל מכסים על פירות, ירקות, ביצים ומוצרי צריכה, והוריד חסמים בירוקרטיים.",
+            "c4_candidates_statements": "עודד פורר הוביל את הרפורמה בחקלאות מול הלובי החקלאי.",
+            "c5_candidates_actions": "יישום בפועל של פתיחת השוק לתחרות בענף המזון.",
+            "c6_designated_executive": "צוות הכלכלה מיועד להמשך פתיחת השוק."
+          },
+          "citations": [
+            {
+              "title": "רפורמת החקלאות והורדת המכסים של ליברמן ופורר",
+              "url": "https://www.globes.co.il",
+              "quote": "הפחתת מכסים מיידית על עשרות מוצרי יסוד להורדת יוקר המחיה"
             }
           ]
         },
@@ -858,28 +883,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 85,
-            "c2_leader_statements": 90,
-            "c3_leader_actions": 85,
-            "c4_candidates_statements": 85,
-            "c5_candidates_actions": 85,
-            "c6_designated_executive": 85
+            "c1_platform": 65,
+            "c2_leader_statements": 65,
+            "c3_leader_actions": 60,
+            "c4_candidates_statements": 60,
+            "c5_candidates_actions": 65,
+            "c6_designated_executive": 70
           },
           "notes": {
-            "c1_platform": "הורדת מכסים, פתיחת שוק המזון והחקלאות ליבוא, הסרת רגולציה ופירוק קרטלים.",
-            "c2_leader_statements": "ליברמן פעל כשר אוצר לפתיחה אגרסיבית של השוק ליבוא ללא מכסים.",
-            "c3_leader_actions": "ביטל מכסים על פירות, ירקות, ביצים ומוצרי צריכה, והוריד חסמים בירוקרטיים.",
-            "c4_candidates_statements": "עודד פורר הוביל את הרפורמה בחקלאות מול הלובי החקלאי.",
-            "c5_candidates_actions": "יישום בפועל של פתיחת השוק לתחרות בענף המזון.",
-            "c6_designated_executive": "צוות הכלכלה מיועד להמשך פתיחת השוק."
+            "c1_platform": "קו ביטחוני ניצי, שלילת ויתורים בירושלים וביו\"ש, הסדר חילופי שטחים ואוכלוסיות ובריתות אזוריות.",
+            "c2_leader_statements": "ליברמן התריע מפני חמאס ואיראן ודורש הכרעה ביטחונית טוטאלית.",
+            "c3_leader_actions": "כשר ביטחון התפטר במחאה על הפסקת האש עם חמאס ב-2018 (אזהרותיו התבררו כמדויקות ב-7.10).",
+            "c4_candidates_statements": "שרון ניר (תא\"ל במיל') מקדמת חשיבה ביטחונית-אסטרטגית סדורה.",
+            "c5_candidates_actions": "ניר שירתה בתפקידי פיקוד בכירים בצה\"ל וביועצת הרמטכ\"ל.",
+            "c6_designated_executive": "ליברמן מיועד לתיק הביטחון."
           },
           "citations": [
             {
-              "title": "רפורמת החקלאות והורדת המכסים של ליברמן ופורר",
-              "url": "https://www.globes.co.il",
-              "quote": "הפחתת מכסים מיידית על עשרות מוצרי יסוד להורדת יוקר המחיה"
+              "title": "תזכיר ליברמן על תוכנית חמאס - וואלה",
+              "url": "https://news.walla.co.il",
+              "quote": "התזכיר מ-2016 בו הזהיר ליברמן מהפלישה המתוכננת של חמאס"
             }
           ]
         },
@@ -907,38 +932,13 @@
               "quote": "סבסוד ממשלתי יינתן רק למשפחות שבהן שני ההורים עובדים"
             }
           ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 75,
-            "c2_leader_statements": 75,
-            "c3_leader_actions": 70,
-            "c4_candidates_statements": 70,
-            "c5_candidates_actions": 70,
-            "c6_designated_executive": 75
-          },
-          "notes": {
-            "c1_platform": "הגבלת מספר השרים ל-18, ביטול משרדים מומצאים וסגירת משרדי דתות ומורשת.",
-            "c2_leader_statements": "ליברמן כינה את הממשלה הנוכחית 'ממשלת שודדים עם 30 שרים מיותרים'.",
-            "c3_leader_actions": "בממשלת בנט-לפיד החזיקה ישראל ביתנו במספר מועט של תיקים.",
-            "c4_candidates_statements": "חברי הסיעה הגישו הצעות לפירוק המשרדים המיותרים.",
-            "c5_candidates_actions": "פעילות בוועדות הכנסת נגד תקציבי משרדי הסרק.",
-            "c6_designated_executive": "התחייבות לממשלה של 18 שרים."
-          },
-          "citations": [
-            {
-              "title": "הצעת חוק לצמצום משרדי הממשלה - ישראל ביתנו",
-              "url": "https://beytenu.org.il",
-              "quote": "ביטול 12 משרדי ממשלה מיותרים וחיסכון שנתי של מיליארדי שקלים"
-            }
-          ]
         }
       }
     },
     "likud": {
       "name_he": "הליכוד",
       "leader": "בנימין נתניהו",
-      "poll_mandates": 21,
+      "poll_mandates": 22,
       "topics": {
         "education": {
           "scores": {
@@ -962,31 +962,6 @@
               "title": "הסכמי התקציב של משרד החינוך והליכוד",
               "url": "https://www.calcalist.co.il",
               "quote": "העברת מאות מיליונים לרשתות החינוך ללא חובת פיקוח או לימודי ליבה"
-            }
-          ]
-        },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 10,
-            "c2_leader_statements": 10,
-            "c3_leader_actions": -25,
-            "c4_candidates_statements": 20,
-            "c5_candidates_actions": -20,
-            "c6_designated_executive": -10
-          },
-          "notes": {
-            "c1_platform": "רפורמה משפטית לריסון בג\"ץ, אך ללא ביזור סמכויות לשלטון מקומי וללא חיזוק עצמאי של הכנסת.",
-            "c2_leader_statements": "נתניהו הצהיר על תיקון מערכת המשפט, אך בפועל ניהל מאבקים אישיים מול היועמ\"שית.",
-            "c3_leader_actions": "הובלת 'הרפורמה המשפטית' של לוין יצרה קרע לאומי חסר תקדים ללא הסכמה רחבה.",
-            "c4_candidates_statements": "יריב לוין מוביל קו רדיקלי לשינוי הרכב הוועדה לבחירת שופטים.",
-            "c5_candidates_actions": "לוין שיתק את הוועדה לבחירת שופטים במשך חודשים ארוכים.",
-            "c6_designated_executive": "יריב לוין מיועד להמשיך בתפקידו."
-          },
-          "citations": [
-            {
-              "title": "הרפורמה המשפטית של יריב לוין - ויקיפדיה",
-              "url": "https://he.wikipedia.org/wiki/הרפורמה_המשפטית_בישראל_(2023)",
-              "quote": "רפורמה מקיפה שגררה מחאות ענק וביקורת כלכלית וביטחונית"
             }
           ]
         },
@@ -1015,28 +990,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 60,
-            "c2_leader_statements": 65,
-            "c3_leader_actions": 55,
-            "c4_candidates_statements": 60,
-            "c5_candidates_actions": 55,
-            "c6_designated_executive": 60
+            "c1_platform": 10,
+            "c2_leader_statements": 10,
+            "c3_leader_actions": -25,
+            "c4_candidates_statements": 20,
+            "c5_candidates_actions": -20,
+            "c6_designated_executive": -10
           },
           "notes": {
-            "c1_platform": "שלמות הארץ, שלילת מדינה פלסטינית וחלוקת ירושלים, בריתות עם מדינות ערב המתונות.",
-            "c2_leader_statements": "נתניהו הוביל את הסכמי אברהם ההיסטוריים ובלם חלוקת הארץ במשך עשורים.",
-            "c3_leader_actions": "מחדל 7 באוקטובר התרחש במשמרתו; ניהול המלחמה הוביל למתיחות בינלאומית וצווי מעצר בהאג.",
-            "c4_candidates_statements": "ישראל כ\"ץ ויואב גלנט קידמו שת\"פ ביטחוני עם ארה\"ב אך גלנט פוטר/התעמת עם נתניהו.",
-            "c5_candidates_actions": "מאמצים מדיניים לבלימת איראן לצד משבר חריף מול המערב.",
-            "c6_designated_executive": "ישראל כ\"ץ מיועד לתיקי החוץ/ביטחון."
+            "c1_platform": "רפורמה משפטית לריסון בג\"ץ, אך ללא ביזור סמכויות לשלטון מקומי וללא חיזוק עצמאי של הכנסת.",
+            "c2_leader_statements": "נתניהו הצהיר על תיקון מערכת המשפט, אך בפועל ניהל מאבקים אישיים מול היועמ\"שית.",
+            "c3_leader_actions": "הובלת 'הרפורמה המשפטית' של לוין יצרה קרע לאומי חסר תקדים ללא הסכמה רחבה.",
+            "c4_candidates_statements": "יריב לוין מוביל קו רדיקלי לשינוי הרכב הוועדה לבחירת שופטים.",
+            "c5_candidates_actions": "לוין שיתק את הוועדה לבחירת שופטים במשך חודשים ארוכים.",
+            "c6_designated_executive": "יריב לוין מיועד להמשיך בתפקידו."
           },
           "citations": [
             {
-              "title": "הסכמי אברהם - משרד החוץ",
-              "url": "https://www.gov.il/he/departments/news/abraham_accords",
-              "quote": "כינון יחסים דיפלומטיים היסטוריים עם איחוד האמירויות, בחריין ומרוקו"
+              "title": "הרפורמה המשפטית של יריב לוין - ויקיפדיה",
+              "url": "https://he.wikipedia.org/wiki/הרפורמה_המשפטית_בישראל_(2023)",
+              "quote": "רפורמה מקיפה שגררה מחאות ענק וביקורת כלכלית וביטחונית"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": -85,
+            "c2_leader_statements": -80,
+            "c3_leader_actions": -95,
+            "c4_candidates_statements": -80,
+            "c5_candidates_actions": -90,
+            "c6_designated_executive": -90
+          },
+          "notes": {
+            "c1_platform": "הליכוד אינו כולל שום הגבלה על מספר השרים או המשרדים.",
+            "c2_leader_statements": "נתניהו מגן על הקמת עשרות משרדים מפוצלים לצורכי שלום קואליציוני.",
+            "c3_leader_actions": "הקים את הממשלה הגדולה והמנופחת בהיסטוריה (מעל 30 שרים, משרדים מומצאים: מורשת, משימות לאומיות, מסורת, שת\"פ אזורי).",
+            "c4_candidates_statements": "ח\"כים בליכוד נלחמים על כל תיק ולשכה מומצאת.",
+            "c5_candidates_actions": "הקצאת מאות מיליונים ללשכות שרים וסגני שרים מיותרים.",
+            "c6_designated_executive": "חוסר נכונות מוחלט לסגור משרדים."
+          },
+          "citations": [
+            {
+              "title": "מבנה ממשלת ישראל ה-37 - אתר הכנסת",
+              "url": "https://main.knesset.gov.il",
+              "quote": "ממשלה המונה 34 שרים ועשרות משרדים ממשלתיים מפוצלים"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 55,
+            "c2_leader_statements": 65,
+            "c3_leader_actions": 50,
+            "c4_candidates_statements": 60,
+            "c5_candidates_actions": 45,
+            "c6_designated_executive": 55
+          },
+          "notes": {
+            "c1_platform": "כלכלה חופשית, יוזמה פרטית והורדת חסמים.",
+            "c2_leader_statements": "נתניהו התגאה בהפיכת ישראל לכלכלת שוק פתוחה ב-2003.",
+            "c3_leader_actions": "בעבר קידם רפורמות בנמלים, אך בממשלתו הנוכחית יוקר המחיה זינק ומכסים רבים הושבו/הועלו.",
+            "c4_candidates_statements": "ניר ברקת מוביל את תוכנית 'מה שטוב לאירופה טוב לישראל' כשר כלכלה.",
+            "c5_candidates_actions": "ברקת קידם חוקי יבוא אך נתקל בחסמים בוועדות הכנסת.",
+            "c6_designated_executive": "ניר ברקת מיועד לשר הכלכלה."
+          },
+          "citations": [
+            {
+              "title": "רפורמת ברקת מה שטוב לאירופה טוב לישראל",
+              "url": "https://www.gov.il/he/departments/news/europe_good_israel",
+              "quote": "אימוץ התקן האירופי על אלפי מוצרי צריכה ומזון"
             }
           ]
         },
@@ -1090,28 +1115,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 55,
+            "c1_platform": 60,
             "c2_leader_statements": 65,
-            "c3_leader_actions": 50,
+            "c3_leader_actions": 55,
             "c4_candidates_statements": 60,
-            "c5_candidates_actions": 45,
-            "c6_designated_executive": 55
+            "c5_candidates_actions": 55,
+            "c6_designated_executive": 60
           },
           "notes": {
-            "c1_platform": "כלכלה חופשית, יוזמה פרטית והורדת חסמים.",
-            "c2_leader_statements": "נתניהו התגאה בהפיכת ישראל לכלכלת שוק פתוחה ב-2003.",
-            "c3_leader_actions": "בעבר קידם רפורמות בנמלים, אך בממשלתו הנוכחית יוקר המחיה זינק ומכסים רבים הושבו/הועלו.",
-            "c4_candidates_statements": "ניר ברקת מוביל את תוכנית 'מה שטוב לאירופה טוב לישראל' כשר כלכלה.",
-            "c5_candidates_actions": "ברקת קידם חוקי יבוא אך נתקל בחסמים בוועדות הכנסת.",
-            "c6_designated_executive": "ניר ברקת מיועד לשר הכלכלה."
+            "c1_platform": "שלמות הארץ, שלילת מדינה פלסטינית וחלוקת ירושלים, בריתות עם מדינות ערב המתונות.",
+            "c2_leader_statements": "נתניהו הוביל את הסכמי אברהם ההיסטוריים ובלם חלוקת הארץ במשך עשורים.",
+            "c3_leader_actions": "מחדל 7 באוקטובר התרחש במשמרתו; ניהול המלחמה הוביל למתיחות בינלאומית וצווי מעצר בהאג.",
+            "c4_candidates_statements": "ישראל כ\"ץ ויואב גלנט קידמו שת\"פ ביטחוני עם ארה\"ב אך גלנט פוטר/התעמת עם נתניהו.",
+            "c5_candidates_actions": "מאמצים מדיניים לבלימת איראן לצד משבר חריף מול המערב.",
+            "c6_designated_executive": "ישראל כ\"ץ מיועד לתיקי החוץ/ביטחון."
           },
           "citations": [
             {
-              "title": "רפורמת ברקת מה שטוב לאירופה טוב לישראל",
-              "url": "https://www.gov.il/he/departments/news/europe_good_israel",
-              "quote": "אימוץ התקן האירופי על אלפי מוצרי צריכה ומזון"
+              "title": "הסכמי אברהם - משרד החוץ",
+              "url": "https://www.gov.il/he/departments/news/abraham_accords",
+              "quote": "כינון יחסים דיפלומטיים היסטוריים עם איחוד האמירויות, בחריין ומרוקו"
             }
           ]
         },
@@ -1137,31 +1162,6 @@
               "title": "הכספים הקואליציוניים בתקציב המדינה - המכון הישראלי לדמוקרטיה",
               "url": "https://www.idi.org.il",
               "quote": "גידול חסר תקדים בתקציבים שאינם מעודדים תעסוקה והשכלה"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": -85,
-            "c2_leader_statements": -80,
-            "c3_leader_actions": -95,
-            "c4_candidates_statements": -80,
-            "c5_candidates_actions": -90,
-            "c6_designated_executive": -90
-          },
-          "notes": {
-            "c1_platform": "הליכוד אינו כולל שום הגבלה על מספר השרים או המשרדים.",
-            "c2_leader_statements": "נתניהו מגן על הקמת עשרות משרדים מפוצלים לצורכי שלום קואליציוני.",
-            "c3_leader_actions": "הקים את הממשלה הגדולה והמנופחת בהיסטוריה (מעל 30 שרים, משרדים מומצאים: מורשת, משימות לאומיות, מסורת, שת\"פ אזורי).",
-            "c4_candidates_statements": "ח\"כים בליכוד נלחמים על כל תיק ולשכה מומצאת.",
-            "c5_candidates_actions": "הקצאת מאות מיליונים ללשכות שרים וסגני שרים מיותרים.",
-            "c6_designated_executive": "חוסר נכונות מוחלט לסגור משרדים."
-          },
-          "citations": [
-            {
-              "title": "מבנה ממשלת ישראל ה-37 - אתר הכנסת",
-              "url": "https://main.knesset.gov.il",
-              "quote": "ממשלה המונה 34 שרים ועשרות משרדים ממשלתיים מפוצלים"
             }
           ]
         }
@@ -1197,31 +1197,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": -20,
-            "c2_leader_statements": -25,
-            "c3_leader_actions": -15,
-            "c4_candidates_statements": -20,
-            "c5_candidates_actions": -15,
-            "c6_designated_executive": -20
-          },
-          "notes": {
-            "c1_platform": "הגנה מוחלטת על מעמד בית המשפט העליון ומוסד היועמ\"ש, התנגדות לכל פיצול או ריסון.",
-            "c2_leader_statements": "גולן מתנגד בחריפות לכל פשרה ביחס לרשות השופטת או היועמ\"ש.",
-            "c3_leader_actions": "הוביל את מחאת הרחוב נגד הרפורמה המשפטית.",
-            "c4_candidates_statements": "גלעד קריב דוגל בשמירה על עליונות המשפט והתנגדות לפיצול היועמ\"ש.",
-            "c5_candidates_actions": "בלימת שינויים במערכת המשפט בוועדות הכנסת.",
-            "c6_designated_executive": "גלעד קריב מיועד לשר המשפטים בקו שמרני מוסדי."
-          },
-          "citations": [
-            {
-              "title": "עמדת הדמוקרטים בנושא מערכת המשפט",
-              "url": "https://democrats.org.il/justice",
-              "quote": "שמירה על עצמאות הרשות השופטת ואי-פגיעה במוסד היועץ המשפטי לממשלה"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 65,
@@ -1247,28 +1222,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": -65,
-            "c2_leader_statements": -70,
-            "c3_leader_actions": -55,
-            "c4_candidates_statements": -65,
-            "c5_candidates_actions": -60,
-            "c6_designated_executive": -65
+            "c1_platform": -20,
+            "c2_leader_statements": -25,
+            "c3_leader_actions": -15,
+            "c4_candidates_statements": -20,
+            "c5_candidates_actions": -15,
+            "c6_designated_executive": -20
           },
           "notes": {
-            "c1_platform": "תמיכה בפתרון שתי המדינות, נכונות לנסיגות טריטוריאליות נרחבות ביו\"ש – בניגוד חריף לעמדת המשתמש.",
-            "c2_leader_statements": "גולן קורא להיפרדות מדינית ולסיום השליטה בפלסטינים באמצעות הקמת מדינה פלסטינית.",
-            "c3_leader_actions": "כסגן רמטכ\"ל ניהל מערכות צבאיות, אך עמדותיו המדיניות מנוגדות לעמדת היעד (הדורשת אי-מסירת שטחים נרחבים וירושלים).",
-            "c4_candidates_statements": "מוסי רז ולזימי תומכים בעמדות שמאל מדיני מובהקות.",
-            "c5_candidates_actions": "השתתפות בפעילויות ארגוני שלום ודרישה לחלוקת הארץ.",
-            "c6_designated_executive": "יאיר גולן מיועד להוביל קו זה."
+            "c1_platform": "הגנה מוחלטת על מעמד בית המשפט העליון ומוסד היועמ\"ש, התנגדות לכל פיצול או ריסון.",
+            "c2_leader_statements": "גולן מתנגד בחריפות לכל פשרה ביחס לרשות השופטת או היועמ\"ש.",
+            "c3_leader_actions": "הוביל את מחאת הרחוב נגד הרפורמה המשפטית.",
+            "c4_candidates_statements": "גלעד קריב דוגל בשמירה על עליונות המשפט והתנגדות לפיצול היועמ\"ש.",
+            "c5_candidates_actions": "בלימת שינויים במערכת המשפט בוועדות הכנסת.",
+            "c6_designated_executive": "גלעד קריב מיועד לשר המשפטים בקו שמרני מוסדי."
           },
           "citations": [
             {
-              "title": "החזון המדיני של יאיר גולן והדמוקרטים",
-              "url": "https://democrats.org.il/diplomacy",
-              "quote": "היפרדות מדינית מהפלסטינים על בסיס שתי מדינות בגבולות מוסכמים"
+              "title": "עמדת הדמוקרטים בנושא מערכת המשפט",
+              "url": "https://democrats.org.il/justice",
+              "quote": "שמירה על עצמאות הרשות השופטת ואי-פגיעה במוסד היועץ המשפטי לממשלה"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 75,
+            "c2_leader_statements": 80,
+            "c3_leader_actions": 65,
+            "c4_candidates_statements": 70,
+            "c5_candidates_actions": 65,
+            "c6_designated_executive": 70
+          },
+          "notes": {
+            "c1_platform": "צמצום הממשלה ל-18 שרים וסגירת משרדי ההתנחלויות, המורשת והמשימות הלאומיות.",
+            "c2_leader_statements": "גולן דורש סגירה מיידית של משרדי הסרק שנועדו לשחד שותפים קואליציוניים.",
+            "c3_leader_actions": "הצבעות נגד הקמת משרדים מפוצלים בכנסת.",
+            "c4_candidates_statements": "חברי הרשימה תומכים בחוק יסוד המגביל את גודל הממשלה.",
+            "c5_candidates_actions": "פעילות פרלמנטרית לחשיפת ביזבוזי הלשכות המיותרות.",
+            "c6_designated_executive": "מחויבות לממשלה רזה."
+          },
+          "citations": [
+            {
+              "title": "הצעת חוק לביטול משרדי ממשלה מיותרים - הדמוקרטים",
+              "url": "https://democrats.org.il",
+              "quote": "סגירת עשרה משרדים מיותרים והחזרת הסמכויות למשרדי הליבה"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 10,
+            "c2_leader_statements": 15,
+            "c3_leader_actions": 0,
+            "c4_candidates_statements": 10,
+            "c5_candidates_actions": 5,
+            "c6_designated_executive": 10
+          },
+          "notes": {
+            "c1_platform": "סוציאל-דמוקרטיה קלאסית: תמיכה באיגודים מקצועיים, פיקוח מחירים וחיזוק המגזר הציבורי, פחות התלהבות מהסרת רגולציה.",
+            "c2_leader_statements": "גולן תומך בפיקוח הדוק על השוק ומאבק בטייקונים דרך מיסוי והתערבות.",
+            "c3_leader_actions": "נעמה לזימי הובילה מהלכים להרחבת חוקי עבודה והגנה על עובדים מאוגדים.",
+            "c4_candidates_statements": "לזימי מסתייגת מפתיחה גורפת של יבוא שתפגע בייצור מקומי.",
+            "c5_candidates_actions": "פעילות פרו-איגודית ענפה.",
+            "c6_designated_executive": "נעמה לזימי מיועדת לתיק העבודה/רווחה."
+          },
+          "citations": [
+            {
+              "title": "החזון הסוציאל-דמוקרטי של הדמוקרטים",
+              "url": "https://democrats.org.il/economy",
+              "quote": "חיזוק העבודה המאורגנת, השקעות ציבוריות ופיקוח על מחירי מצרכי יסוד"
             }
           ]
         },
@@ -1322,28 +1347,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 10,
-            "c2_leader_statements": 15,
-            "c3_leader_actions": 0,
-            "c4_candidates_statements": 10,
-            "c5_candidates_actions": 5,
-            "c6_designated_executive": 10
+            "c1_platform": -65,
+            "c2_leader_statements": -70,
+            "c3_leader_actions": -55,
+            "c4_candidates_statements": -65,
+            "c5_candidates_actions": -60,
+            "c6_designated_executive": -65
           },
           "notes": {
-            "c1_platform": "סוציאל-דמוקרטיה קלאסית: תמיכה באיגודים מקצועיים, פיקוח מחירים וחיזוק המגזר הציבורי, פחות התלהבות מהסרת רגולציה.",
-            "c2_leader_statements": "גולן תומך בפיקוח הדוק על השוק ומאבק בטייקונים דרך מיסוי והתערבות.",
-            "c3_leader_actions": "נעמה לזימי הובילה מהלכים להרחבת חוקי עבודה והגנה על עובדים מאוגדים.",
-            "c4_candidates_statements": "לזימי מסתייגת מפתיחה גורפת של יבוא שתפגע בייצור מקומי.",
-            "c5_candidates_actions": "פעילות פרו-איגודית ענפה.",
-            "c6_designated_executive": "נעמה לזימי מיועדת לתיק העבודה/רווחה."
+            "c1_platform": "תמיכה בפתרון שתי המדינות, נכונות לנסיגות טריטוריאליות נרחבות ביו\"ש – בניגוד חריף לעמדת המשתמש.",
+            "c2_leader_statements": "גולן קורא להיפרדות מדינית ולסיום השליטה בפלסטינים באמצעות הקמת מדינה פלסטינית.",
+            "c3_leader_actions": "כסגן רמטכ\"ל ניהל מערכות צבאיות, אך עמדותיו המדיניות מנוגדות לעמדת היעד (הדורשת אי-מסירת שטחים נרחבים וירושלים).",
+            "c4_candidates_statements": "מוסי רז ולזימי תומכים בעמדות שמאל מדיני מובהקות.",
+            "c5_candidates_actions": "השתתפות בפעילויות ארגוני שלום ודרישה לחלוקת הארץ.",
+            "c6_designated_executive": "יאיר גולן מיועד להוביל קו זה."
           },
           "citations": [
             {
-              "title": "החזון הסוציאל-דמוקרטי של הדמוקרטים",
-              "url": "https://democrats.org.il/economy",
-              "quote": "חיזוק העבודה המאורגנת, השקעות ציבוריות ופיקוח על מחירי מצרכי יסוד"
+              "title": "החזון המדיני של יאיר גולן והדמוקרטים",
+              "url": "https://democrats.org.il/diplomacy",
+              "quote": "היפרדות מדינית מהפלסטינים על בסיס שתי מדינות בגבולות מוסכמים"
             }
           ]
         },
@@ -1369,31 +1394,6 @@
               "title": "המאבק להעלאת קצבאות הנכות והזקנה - נעמה לזימי",
               "url": "https://main.knesset.gov.il",
               "quote": "הבטחת קיום בכבוד לכל אדם עם מוגבלות וקשיש"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 75,
-            "c2_leader_statements": 80,
-            "c3_leader_actions": 65,
-            "c4_candidates_statements": 70,
-            "c5_candidates_actions": 65,
-            "c6_designated_executive": 70
-          },
-          "notes": {
-            "c1_platform": "צמצום הממשלה ל-18 שרים וסגירת משרדי ההתנחלויות, המורשת והמשימות הלאומיות.",
-            "c2_leader_statements": "גולן דורש סגירה מיידית של משרדי הסרק שנועדו לשחד שותפים קואליציוניים.",
-            "c3_leader_actions": "הצבעות נגד הקמת משרדים מפוצלים בכנסת.",
-            "c4_candidates_statements": "חברי הרשימה תומכים בחוק יסוד המגביל את גודל הממשלה.",
-            "c5_candidates_actions": "פעילות פרלמנטרית לחשיפת ביזבוזי הלשכות המיותרות.",
-            "c6_designated_executive": "מחויבות לממשלה רזה."
-          },
-          "citations": [
-            {
-              "title": "הצעת חוק לביטול משרדי ממשלה מיותרים - הדמוקרטים",
-              "url": "https://democrats.org.il",
-              "quote": "סגירת עשרה משרדים מיותרים והחזרת הסמכויות למשרדי הליבה"
             }
           ]
         }
@@ -1429,31 +1429,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 25,
-            "c2_leader_statements": 30,
-            "c3_leader_actions": 20,
-            "c4_candidates_statements": 25,
-            "c5_candidates_actions": 20,
-            "c6_designated_executive": 25
-          },
-          "notes": {
-            "c1_platform": "חוקה לישראל, הגבלת כהונת רה\"מ, אך התנגדות נחרצת לשינוי במעמד בג\"ץ או ביועמ\"ש.",
-            "c2_leader_statements": "לפיד מתנגד לכל פגיעה בעצמאות הייעוץ המשפטי ובבית המשפט העליון.",
-            "c3_leader_actions": "התנגדות מוחלטת ליוזמות פיצול יועמ\"ש או ריסון סמכויות.",
-            "c4_candidates_statements": "קארין אלהרר מגנה על שלטון החוק הקיים.",
-            "c5_candidates_actions": "נציגת האופוזיציה בוועדה לבחירת שופטים.",
-            "c6_designated_executive": "שמירה על המבנה המוסדי הקיים."
-          },
-          "citations": [
-            {
-              "title": "חוקה לישראל - יש עתיד",
-              "url": "https://www.yeshatid.org.il/constitution",
-              "quote": "כינון חוקה שתגן על הדמוקרטיה ועל עצמאות בית המשפט העליון"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 75,
@@ -1479,28 +1454,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 35,
-            "c2_leader_statements": 35,
-            "c3_leader_actions": 45,
-            "c4_candidates_statements": 40,
-            "c5_candidates_actions": 40,
-            "c6_designated_executive": 40
+            "c1_platform": 25,
+            "c2_leader_statements": 30,
+            "c3_leader_actions": 20,
+            "c4_candidates_statements": 25,
+            "c5_candidates_actions": 20,
+            "c6_designated_executive": 25
           },
           "notes": {
-            "c1_platform": "העמקת הסכמי אברהם וברית אזורית, לצד נכונות לפתרון שתי מדינות (בעיקרון) ללא חלוקת ירושלים.",
-            "c2_leader_statements": "לפיד נאם בעצרת האו\"ם בעד פתרון שתי המדינות, דבר המהווה פער מול עמדת המשתמש.",
-            "c3_leader_actions": "כראש ממשלה ושר חוץ חיזק יחסים עם ארה\"ב ואירופה והעביר את הסכם הגבול הימי עם לבנון.",
-            "c4_candidates_statements": "אורנה ברביבאי תומכת בגישה ביטחונית זהירה.",
-            "c5_candidates_actions": "ברביבאי כאלופה הראשונה בצה\"ל בעלת ניסיון פיקודי וביטחוני.",
-            "c6_designated_executive": "אורנה ברביבאי מיועדת לתיקי ביטחון/פנים."
+            "c1_platform": "חוקה לישראל, הגבלת כהונת רה\"מ, אך התנגדות נחרצת לשינוי במעמד בג\"ץ או ביועמ\"ש.",
+            "c2_leader_statements": "לפיד מתנגד לכל פגיעה בעצמאות הייעוץ המשפטי ובבית המשפט העליון.",
+            "c3_leader_actions": "התנגדות מוחלטת ליוזמות פיצול יועמ\"ש או ריסון סמכויות.",
+            "c4_candidates_statements": "קארין אלהרר מגנה על שלטון החוק הקיים.",
+            "c5_candidates_actions": "נציגת האופוזיציה בוועדה לבחירת שופטים.",
+            "c6_designated_executive": "שמירה על המבנה המוסדי הקיים."
           },
           "citations": [
             {
-              "title": "נאום יאיר לפיד בעצרת האו\"ם - Ynet",
-              "url": "https://www.ynet.co.il",
-              "quote": "הסכם עם הפלסטינים על בסיס שתי מדינות לשני עמים הוא הדבר הנכון לביטחון ישראל"
+              "title": "חוקה לישראל - יש עתיד",
+              "url": "https://www.yeshatid.org.il/constitution",
+              "quote": "כינון חוקה שתגן על הדמוקרטיה ועל עצמאות בית המשפט העליון"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 75,
+            "c2_leader_statements": 80,
+            "c3_leader_actions": 65,
+            "c4_candidates_statements": 75,
+            "c5_candidates_actions": 65,
+            "c6_designated_executive": 70
+          },
+          "notes": {
+            "c1_platform": "חוק יסוד המגביל את הממשלה ל-18 שרים ללא שרים ללא תיק.",
+            "c2_leader_statements": "לפיד מצהיר בעקביות על הצורך בממשלה קטנה ויעילה.",
+            "c3_leader_actions": "חוקק את חוק 18 השרים ב-2013, אך בממשלת השינוי ב-2021 נאלץ להגדיל את הממשלה ל-27 שרים עקב פשרות.",
+            "c4_candidates_statements": "ח\"כים של יש עתיד הגישו הצעות לפירוק משרדי הסרק.",
+            "c5_candidates_actions": "הצבעות עקביות נגד המשרדים המומצאים.",
+            "c6_designated_executive": "התחייבות רשמית להגבלה חוקתית."
+          },
+          "citations": [
+            {
+              "title": "חוק יסוד הממשלה: הגבלה ל-18 שרים - יש עתיד",
+              "url": "https://www.yeshatid.org.il/governance",
+              "quote": "ממשלה קומפקטית ללא בזבוז של מיליארדים על לשכות שרים פיקטיביות"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 75,
+            "c2_leader_statements": 75,
+            "c3_leader_actions": 70,
+            "c4_candidates_statements": 75,
+            "c5_candidates_actions": 70,
+            "c6_designated_executive": 75
+          },
+          "notes": {
+            "c1_platform": "הורדת מכסים, פתיחה לתחרות והסרת חסמי יבוא.",
+            "c2_leader_statements": "לפיד תומך בכלכלה חופשית לצד רשת ביטחון למעמד הביניים.",
+            "c3_leader_actions": "ממשלתו העבירה את רפורמת היבוא הגדולה והפחיתה מכסים על מוצרי צריכה.",
+            "c4_candidates_statements": "אורנה ברביבאי הובילה כשרת כלכלה את 'חוק סימון מוצרים' והסרת תקינה.",
+            "c5_candidates_actions": "ברביבאי פתחה את השוק לתחרות מקבילה.",
+            "c6_designated_executive": "אורנה ברביבאי מיועדת לתיק הכלכלה."
+          },
+          "citations": [
+            {
+              "title": "הסרת מכסים והורדת יוקר המחיה - אורנה ברביבאי",
+              "url": "https://www.gov.il/he/departments/news/import_reform",
+              "quote": "ביטול בדיקות מעבדה כפולות למוצרים בעלי תקינה בינלאומית"
             }
           ]
         },
@@ -1554,28 +1579,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 75,
-            "c2_leader_statements": 75,
-            "c3_leader_actions": 70,
-            "c4_candidates_statements": 75,
-            "c5_candidates_actions": 70,
-            "c6_designated_executive": 75
+            "c1_platform": 35,
+            "c2_leader_statements": 35,
+            "c3_leader_actions": 45,
+            "c4_candidates_statements": 40,
+            "c5_candidates_actions": 40,
+            "c6_designated_executive": 40
           },
           "notes": {
-            "c1_platform": "הורדת מכסים, פתיחה לתחרות והסרת חסמי יבוא.",
-            "c2_leader_statements": "לפיד תומך בכלכלה חופשית לצד רשת ביטחון למעמד הביניים.",
-            "c3_leader_actions": "ממשלתו העבירה את רפורמת היבוא הגדולה והפחיתה מכסים על מוצרי צריכה.",
-            "c4_candidates_statements": "אורנה ברביבאי הובילה כשרת כלכלה את 'חוק סימון מוצרים' והסרת תקינה.",
-            "c5_candidates_actions": "ברביבאי פתחה את השוק לתחרות מקבילה.",
-            "c6_designated_executive": "אורנה ברביבאי מיועדת לתיק הכלכלה."
+            "c1_platform": "העמקת הסכמי אברהם וברית אזורית, לצד נכונות לפתרון שתי מדינות (בעיקרון) ללא חלוקת ירושלים.",
+            "c2_leader_statements": "לפיד נאם בעצרת האו\"ם בעד פתרון שתי המדינות, דבר המהווה פער מול עמדת המשתמש.",
+            "c3_leader_actions": "כראש ממשלה ושר חוץ חיזק יחסים עם ארה\"ב ואירופה והעביר את הסכם הגבול הימי עם לבנון.",
+            "c4_candidates_statements": "אורנה ברביבאי תומכת בגישה ביטחונית זהירה.",
+            "c5_candidates_actions": "ברביבאי כאלופה הראשונה בצה\"ל בעלת ניסיון פיקודי וביטחוני.",
+            "c6_designated_executive": "אורנה ברביבאי מיועדת לתיקי ביטחון/פנים."
           },
           "citations": [
             {
-              "title": "הסרת מכסים והורדת יוקר המחיה - אורנה ברביבאי",
-              "url": "https://www.gov.il/he/departments/news/import_reform",
-              "quote": "ביטול בדיקות מעבדה כפולות למוצרים בעלי תקינה בינלאומית"
+              "title": "נאום יאיר לפיד בעצרת האו\"ם - Ynet",
+              "url": "https://www.ynet.co.il",
+              "quote": "הסכם עם הפלסטינים על בסיס שתי מדינות לשני עמים הוא הדבר הנכון לביטחון ישראל"
             }
           ]
         },
@@ -1601,31 +1626,6 @@
               "title": "התניית קצבאות במיצוי כושר השתכרות - יש עתיד",
               "url": "https://www.yeshatid.org.il/welfare",
               "quote": "הפסקת חלוקת כספים קואליציוניים המנציחים עוני ובטלה"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 75,
-            "c2_leader_statements": 80,
-            "c3_leader_actions": 65,
-            "c4_candidates_statements": 75,
-            "c5_candidates_actions": 65,
-            "c6_designated_executive": 70
-          },
-          "notes": {
-            "c1_platform": "חוק יסוד המגביל את הממשלה ל-18 שרים ללא שרים ללא תיק.",
-            "c2_leader_statements": "לפיד מצהיר בעקביות על הצורך בממשלה קטנה ויעילה.",
-            "c3_leader_actions": "חוקק את חוק 18 השרים ב-2013, אך בממשלת השינוי ב-2021 נאלץ להגדיל את הממשלה ל-27 שרים עקב פשרות.",
-            "c4_candidates_statements": "ח\"כים של יש עתיד הגישו הצעות לפירוק משרדי הסרק.",
-            "c5_candidates_actions": "הצבעות עקביות נגד המשרדים המומצאים.",
-            "c6_designated_executive": "התחייבות רשמית להגבלה חוקתית."
-          },
-          "citations": [
-            {
-              "title": "חוק יסוד הממשלה: הגבלה ל-18 שרים - יש עתיד",
-              "url": "https://www.yeshatid.org.il/governance",
-              "quote": "ממשלה קומפקטית ללא בזבוז של מיליארדים על לשכות שרים פיקטיביות"
             }
           ]
         }
@@ -1661,31 +1661,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 20,
-            "c2_leader_statements": 25,
-            "c3_leader_actions": 15,
-            "c4_candidates_statements": 20,
-            "c5_candidates_actions": 15,
-            "c6_designated_executive": 20
-          },
-          "notes": {
-            "c1_platform": "תמיכה בריסון בג\"ץ ופסקת התגברות (בשל פסילת דרעי), אך ללא ביזור סמכויות לרשויות מקומיות ליברליות.",
-            "c2_leader_statements": "דרעי תומך בהחלשת כוחם של שופטי בג\"ץ והיועמ\"ש.",
-            "c3_leader_actions": "חקיקת 'חוק דרעי' לפיקוח שיפוטי מצומצם.",
-            "c4_candidates_statements": "ח\"כים בש\"ס תומכים בהגבלת עילת הסבירות.",
-            "c5_candidates_actions": "הצבעות בעד כל סעיפי הרפורמה המשפטית.",
-            "c6_designated_executive": "דרעי מנווט את המדיניות המשפטית."
-          },
-          "citations": [
-            {
-              "title": "חוק דרעי ועילת הסבירות",
-              "url": "https://www.ynet.co.il",
-              "quote": "ש\"ס תומכת בחקיקה שתמנע מבית המשפט להתערב במינויי שרים"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 15,
@@ -1711,28 +1686,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 30,
-            "c2_leader_statements": 35,
-            "c3_leader_actions": 35,
-            "c4_candidates_statements": 30,
-            "c5_candidates_actions": 30,
-            "c6_designated_executive": 35
+            "c1_platform": 20,
+            "c2_leader_statements": 25,
+            "c3_leader_actions": 15,
+            "c4_candidates_statements": 20,
+            "c5_candidates_actions": 15,
+            "c6_designated_executive": 20
           },
           "notes": {
-            "c1_platform": "קו ימין מתון-פרגמטי מסורתי (מורשת הרב עובדיה יוסף), שלילת חלוקת ירושלים.",
-            "c2_leader_statements": "דרעי מציג גישה מתונה ואחראית בקבינט המדיני-ביטחוני.",
-            "c3_leader_actions": "שימש כמשקיף בכיר בקבינט המלחמה והיווה גורם ממתן.",
-            "c4_candidates_statements": "תמיכה בעסקאות להשבת חטופים ובריתות אזוריות.",
-            "c5_candidates_actions": "הצבעות בעד הסכמי שלום אזוריים בעבר.",
-            "c6_designated_executive": "דרעי חבר קבינט בכיר."
+            "c1_platform": "תמיכה בריסון בג\"ץ ופסקת התגברות (בשל פסילת דרעי), אך ללא ביזור סמכויות לרשויות מקומיות ליברליות.",
+            "c2_leader_statements": "דרעי תומך בהחלשת כוחם של שופטי בג\"ץ והיועמ\"ש.",
+            "c3_leader_actions": "חקיקת 'חוק דרעי' לפיקוח שיפוטי מצומצם.",
+            "c4_candidates_statements": "ח\"כים בש\"ס תומכים בהגבלת עילת הסבירות.",
+            "c5_candidates_actions": "הצבעות בעד כל סעיפי הרפורמה המשפטית.",
+            "c6_designated_executive": "דרעי מנווט את המדיניות המשפטית."
           },
           "citations": [
             {
-              "title": "אריה דרעי בקבינט המלחמה",
-              "url": "https://www.haaretz.co.il",
-              "quote": "גורם ממתן שדחף להסדרים אחראיים ולשימור הברית עם ארה\"ב"
+              "title": "חוק דרעי ועילת הסבירות",
+              "url": "https://www.ynet.co.il",
+              "quote": "ש\"ס תומכת בחקיקה שתמנע מבית המשפט להתערב במינויי שרים"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": -80,
+            "c2_leader_statements": -75,
+            "c3_leader_actions": -85,
+            "c4_candidates_statements": -75,
+            "c5_candidates_actions": -85,
+            "c6_designated_executive": -85
+          },
+          "notes": {
+            "c1_platform": "דרישה למספר מרבי של תיקים: פנים, בריאות, רווחה, שירותי דת ומשרדים נוספים.",
+            "c2_leader_statements": "דרעי דרש מספר רב של משרדים וסגני שרים עבור חברי סיעתו.",
+            "c3_leader_actions": "פיצול סמכויות והקמת משרדים כפולים (רווחה, ביטחון לאומי ודתות).",
+            "c4_candidates_statements": "ח\"כים בש\"ס מכהנים במשרדים ייעודיים.",
+            "c5_candidates_actions": "התנגדות עקבית לכל חוק להגבלת מספר השרים.",
+            "c6_designated_executive": "תמיכה בממשלה רחבה ומחלקת כיבודים."
+          },
+          "citations": [
+            {
+              "title": "חלוקת התיקים של ש\"ס בממשלה ה-37",
+              "url": "https://main.knesset.gov.il",
+              "quote": "ש\"ס מחזיקה בחמישה משרדי ממשלה בכירים ומספר סגני שרים"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": -25,
+            "c2_leader_statements": -20,
+            "c3_leader_actions": -30,
+            "c4_candidates_statements": -25,
+            "c5_candidates_actions": -30,
+            "c6_designated_executive": -25
+          },
+          "notes": {
+            "c1_platform": "תמיכה בסובסידיות, פיקוח מחירים והגנה על יבואנים מסורתיים, התנגדות לרפורמות תחרות חופשית.",
+            "c2_leader_statements": "העדפת פיקוח מחירים וחלוקת תלושים על פני פתיחת שוק והורדת מכסים.",
+            "c3_leader_actions": "תמיכה בחוקי יבואנים בלעדיים ומונופולים בתמורה לתקציבים מגזריים.",
+            "c4_candidates_statements": "התנגדות לרפורמות ליברליות המאיימות על שוק הכשרות.",
+            "c5_candidates_actions": "סיכול רפורמות יבוא הדורשות תקינה אירופית ללא כשרות רבנות.",
+            "c6_designated_executive": "היעדר תמיכה בשוק חופשי."
+          },
+          "citations": [
+            {
+              "title": "חלוקת תלושי המזון של ש\"ס - גלובס",
+              "url": "https://www.globes.co.il",
+              "quote": "חלוקת תקציבי עתק בתלושים ללא קריטריון של מיצוי כושר עבודה"
             }
           ]
         },
@@ -1786,28 +1811,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": -25,
-            "c2_leader_statements": -20,
-            "c3_leader_actions": -30,
-            "c4_candidates_statements": -25,
-            "c5_candidates_actions": -30,
-            "c6_designated_executive": -25
+            "c1_platform": 30,
+            "c2_leader_statements": 35,
+            "c3_leader_actions": 35,
+            "c4_candidates_statements": 30,
+            "c5_candidates_actions": 30,
+            "c6_designated_executive": 35
           },
           "notes": {
-            "c1_platform": "תמיכה בסובסידיות, פיקוח מחירים והגנה על יבואנים מסורתיים, התנגדות לרפורמות תחרות חופשית.",
-            "c2_leader_statements": "העדפת פיקוח מחירים וחלוקת תלושים על פני פתיחת שוק והורדת מכסים.",
-            "c3_leader_actions": "תמיכה בחוקי יבואנים בלעדיים ומונופולים בתמורה לתקציבים מגזריים.",
-            "c4_candidates_statements": "התנגדות לרפורמות ליברליות המאיימות על שוק הכשרות.",
-            "c5_candidates_actions": "סיכול רפורמות יבוא הדורשות תקינה אירופית ללא כשרות רבנות.",
-            "c6_designated_executive": "היעדר תמיכה בשוק חופשי."
+            "c1_platform": "קו ימין מתון-פרגמטי מסורתי (מורשת הרב עובדיה יוסף), שלילת חלוקת ירושלים.",
+            "c2_leader_statements": "דרעי מציג גישה מתונה ואחראית בקבינט המדיני-ביטחוני.",
+            "c3_leader_actions": "שימש כמשקיף בכיר בקבינט המלחמה והיווה גורם ממתן.",
+            "c4_candidates_statements": "תמיכה בעסקאות להשבת חטופים ובריתות אזוריות.",
+            "c5_candidates_actions": "הצבעות בעד הסכמי שלום אזוריים בעבר.",
+            "c6_designated_executive": "דרעי חבר קבינט בכיר."
           },
           "citations": [
             {
-              "title": "חלוקת תלושי המזון של ש\"ס - גלובס",
-              "url": "https://www.globes.co.il",
-              "quote": "חלוקת תקציבי עתק בתלושים ללא קריטריון של מיצוי כושר עבודה"
+              "title": "אריה דרעי בקבינט המלחמה",
+              "url": "https://www.haaretz.co.il",
+              "quote": "גורם ממתן שדחף להסדרים אחראיים ולשימור הברית עם ארה\"ב"
             }
           ]
         },
@@ -1833,31 +1858,6 @@
               "title": "תקציבי הישיבות והאברכים - דה מרקר",
               "url": "https://www.themarker.com",
               "quote": "תקציב הישיבות חצה את רף ה-2.5 מיליארד ש\"ח תחת הלחץ הקואליציוני של ש\"ס ויהדות התורה"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": -80,
-            "c2_leader_statements": -75,
-            "c3_leader_actions": -85,
-            "c4_candidates_statements": -75,
-            "c5_candidates_actions": -85,
-            "c6_designated_executive": -85
-          },
-          "notes": {
-            "c1_platform": "דרישה למספר מרבי של תיקים: פנים, בריאות, רווחה, שירותי דת ומשרדים נוספים.",
-            "c2_leader_statements": "דרעי דרש מספר רב של משרדים וסגני שרים עבור חברי סיעתו.",
-            "c3_leader_actions": "פיצול סמכויות והקמת משרדים כפולים (רווחה, ביטחון לאומי ודתות).",
-            "c4_candidates_statements": "ח\"כים בש\"ס מכהנים במשרדים ייעודיים.",
-            "c5_candidates_actions": "התנגדות עקבית לכל חוק להגבלת מספר השרים.",
-            "c6_designated_executive": "תמיכה בממשלה רחבה ומחלקת כיבודים."
-          },
-          "citations": [
-            {
-              "title": "חלוקת התיקים של ש\"ס בממשלה ה-37",
-              "url": "https://main.knesset.gov.il",
-              "quote": "ש\"ס מחזיקה בחמישה משרדי ממשלה בכירים ומספר סגני שרים"
             }
           ]
         }
@@ -1893,31 +1893,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 15,
-            "c2_leader_statements": 20,
-            "c3_leader_actions": 15,
-            "c4_candidates_statements": 20,
-            "c5_candidates_actions": 15,
-            "c6_designated_executive": 15
-          },
-          "notes": {
-            "c1_platform": "ריסון בג\"ץ באמצעות פסקת התגברות ברוב של 61 כדי למנוע גיוס חרדים והתערבות בתקציבים.",
-            "c2_leader_statements": "גפני תוקף את בג\"ץ בחריפות ומאשים אותו ברדיפת עולם התורה.",
-            "c3_leader_actions": "תמיכה בחוקי הרפורמה המשפטית.",
-            "c4_candidates_statements": "התנגדות לכל ביזור סמכויות לרשויות מקומיות שאינן חרדיות.",
-            "c5_candidates_actions": "הצבעה בעד חוקי הקואליציה המשפטיים.",
-            "c6_designated_executive": "גפני מוביל את העמדה בוועדת כספים."
-          },
-          "citations": [
-            {
-              "title": "גפני על בג\"ץ ופסקת ההתגברות",
-              "url": "https://www.inn.co.il",
-              "quote": "בג\"ץ הפך לגורם שמאיים על המשך קיומו של עולם הישיבות"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": -20,
@@ -1943,28 +1918,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 20,
-            "c2_leader_statements": 25,
-            "c3_leader_actions": 20,
+            "c1_platform": 15,
+            "c2_leader_statements": 20,
+            "c3_leader_actions": 15,
             "c4_candidates_statements": 20,
-            "c5_candidates_actions": 20,
-            "c6_designated_executive": 20
+            "c5_candidates_actions": 15,
+            "c6_designated_executive": 15
           },
           "notes": {
-            "c1_platform": "אי-התערבות מסורתית בענייני חוץ וביטחון, שלילת התגרות באומות, קו זהיר.",
-            "c2_leader_statements": "הצהרות מתונות של גפני התומכות בהסדרים והימנעות ממלחמות מיותרות.",
-            "c3_leader_actions": "חברי הסיעה אינם נוטלים תפקידים ביטחוניים ואינם משרתים בצה\"ל.",
-            "c4_candidates_statements": "תמיכה בהחזרת חטופים.",
-            "c5_candidates_actions": "הצבעות לפי משמעת קואליציונית.",
-            "c6_designated_executive": "היעדר מועמד ביטחוני."
+            "c1_platform": "ריסון בג\"ץ באמצעות פסקת התגברות ברוב של 61 כדי למנוע גיוס חרדים והתערבות בתקציבים.",
+            "c2_leader_statements": "גפני תוקף את בג\"ץ בחריפות ומאשים אותו ברדיפת עולם התורה.",
+            "c3_leader_actions": "תמיכה בחוקי הרפורמה המשפטית.",
+            "c4_candidates_statements": "התנגדות לכל ביזור סמכויות לרשויות מקומיות שאינן חרדיות.",
+            "c5_candidates_actions": "הצבעה בעד חוקי הקואליציה המשפטיים.",
+            "c6_designated_executive": "גפני מוביל את העמדה בוועדת כספים."
           },
           "citations": [
             {
-              "title": "עמדות יהדות התורה בנושאי ביטחון",
-              "url": "https://www.kikar.co.il",
-              "quote": "הציבור החרדי תומך בצעדים זהירים לשמירה על חיי אדם"
+              "title": "גפני על בג\"ץ ופסקת ההתגברות",
+              "url": "https://www.inn.co.il",
+              "quote": "בג\"ץ הפך לגורם שמאיים על המשך קיומו של עולם הישיבות"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": -80,
+            "c2_leader_statements": -80,
+            "c3_leader_actions": -85,
+            "c4_candidates_statements": -80,
+            "c5_candidates_actions": -85,
+            "c6_designated_executive": -85
+          },
+          "notes": {
+            "c1_platform": "התנגדות להגבלת מספר השרים, דרישה למשרדים ייעודיים וסגני שרים בעלי סמכויות שר.",
+            "c2_leader_statements": "גולדקנופף מכהן כשר שיכון ודורש סמכויות נרחבות נוספות.",
+            "c3_leader_actions": "הקמת רשויות ייעודיות ומשרדים מפוצלים.",
+            "c4_candidates_statements": "אורי מקלב מכהן כסגן שר עם לשכות כפולות בתחבורה ובמשרד רה\"מ.",
+            "c5_candidates_actions": "תמיכה בממשלה רחבה ומנופחת.",
+            "c6_designated_executive": "שמירה על מבנה ממשלתי מנופח."
+          },
+          "citations": [
+            {
+              "title": "מינויי יהדות התורה בממשלה",
+              "url": "https://main.knesset.gov.il",
+              "quote": "הקמת הרשות החרדית ולשכות סגני שרים מרובות"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": -40,
+            "c2_leader_statements": -35,
+            "c3_leader_actions": -45,
+            "c4_candidates_statements": -40,
+            "c5_candidates_actions": -45,
+            "c6_designated_executive": -40
+          },
+          "notes": {
+            "c1_platform": "התנגדות לרפורמות תקינה אירופית המאיימות על הכשרות, תמיכה בסובסידיות ומחירים מפוקחים.",
+            "c2_leader_statements": "גפני משתמש בוועדת הכספים לחסימת רפורמות ליברליות במשק.",
+            "c3_leader_actions": "עיכוב רפורמות יבוא ותחרות עד לקבלת כספים ייעודיים.",
+            "c4_candidates_statements": "הגנה על מונופולי יבוא העומדים בדרישות כשרות מיוחדות.",
+            "c5_candidates_actions": "חקיקה מעכבת תחרות חופשית.",
+            "c6_designated_executive": "משה גפני כיו\"ר ועדת כספים."
+          },
+          "citations": [
+            {
+              "title": "עיכובי ועדת הכספים ברפורמות יבוא - גלובס",
+              "url": "https://www.globes.co.il",
+              "quote": "ועדת הכספים בראשות גפני עיכבה אישור תקנות יבוא בשל דרישות כשרות"
             }
           ]
         },
@@ -2018,28 +2043,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": -40,
-            "c2_leader_statements": -35,
-            "c3_leader_actions": -45,
-            "c4_candidates_statements": -40,
-            "c5_candidates_actions": -45,
-            "c6_designated_executive": -40
+            "c1_platform": 20,
+            "c2_leader_statements": 25,
+            "c3_leader_actions": 20,
+            "c4_candidates_statements": 20,
+            "c5_candidates_actions": 20,
+            "c6_designated_executive": 20
           },
           "notes": {
-            "c1_platform": "התנגדות לרפורמות תקינה אירופית המאיימות על הכשרות, תמיכה בסובסידיות ומחירים מפוקחים.",
-            "c2_leader_statements": "גפני משתמש בוועדת הכספים לחסימת רפורמות ליברליות במשק.",
-            "c3_leader_actions": "עיכוב רפורמות יבוא ותחרות עד לקבלת כספים ייעודיים.",
-            "c4_candidates_statements": "הגנה על מונופולי יבוא העומדים בדרישות כשרות מיוחדות.",
-            "c5_candidates_actions": "חקיקה מעכבת תחרות חופשית.",
-            "c6_designated_executive": "משה גפני כיו\"ר ועדת כספים."
+            "c1_platform": "אי-התערבות מסורתית בענייני חוץ וביטחון, שלילת התגרות באומות, קו זהיר.",
+            "c2_leader_statements": "הצהרות מתונות של גפני התומכות בהסדרים והימנעות ממלחמות מיותרות.",
+            "c3_leader_actions": "חברי הסיעה אינם נוטלים תפקידים ביטחוניים ואינם משרתים בצה\"ל.",
+            "c4_candidates_statements": "תמיכה בהחזרת חטופים.",
+            "c5_candidates_actions": "הצבעות לפי משמעת קואליציונית.",
+            "c6_designated_executive": "היעדר מועמד ביטחוני."
           },
           "citations": [
             {
-              "title": "עיכובי ועדת הכספים ברפורמות יבוא - גלובס",
-              "url": "https://www.globes.co.il",
-              "quote": "ועדת הכספים בראשות גפני עיכבה אישור תקנות יבוא בשל דרישות כשרות"
+              "title": "עמדות יהדות התורה בנושאי ביטחון",
+              "url": "https://www.kikar.co.il",
+              "quote": "הציבור החרדי תומך בצעדים זהירים לשמירה על חיי אדם"
             }
           ]
         },
@@ -2067,38 +2092,13 @@
               "quote": "העברת מיליארדי שקלים בהסכמים קואליציוניים למי שאינם משתלבים בתעסוקה"
             }
           ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": -80,
-            "c2_leader_statements": -80,
-            "c3_leader_actions": -85,
-            "c4_candidates_statements": -80,
-            "c5_candidates_actions": -85,
-            "c6_designated_executive": -85
-          },
-          "notes": {
-            "c1_platform": "התנגדות להגבלת מספר השרים, דרישה למשרדים ייעודיים וסגני שרים בעלי סמכויות שר.",
-            "c2_leader_statements": "גולדקנופף מכהן כשר שיכון ודורש סמכויות נרחבות נוספות.",
-            "c3_leader_actions": "הקמת רשויות ייעודיות ומשרדים מפוצלים.",
-            "c4_candidates_statements": "אורי מקלב מכהן כסגן שר עם לשכות כפולות בתחבורה ובמשרד רה\"מ.",
-            "c5_candidates_actions": "תמיכה בממשלה רחבה ומנופחת.",
-            "c6_designated_executive": "שמירה על מבנה ממשלתי מנופח."
-          },
-          "citations": [
-            {
-              "title": "מינויי יהדות התורה בממשלה",
-              "url": "https://main.knesset.gov.il",
-              "quote": "הקמת הרשות החרדית ולשכות סגני שרים מרובות"
-            }
-          ]
         }
       }
     },
     "otzma_yehudit": {
       "name_he": "עוצמה יהודית",
       "leader": "איתמר בן גביר",
-      "poll_mandates": 7,
+      "poll_mandates": 8,
       "topics": {
         "education": {
           "scores": {
@@ -2122,31 +2122,6 @@
               "title": "מצע עוצמה יהודית - חינוך לאומי",
               "url": "https://ozma-yehudit.com",
               "quote": "חיזוק ערכי הציונות, המורשת והזהות היהודית במערכת החינוך"
-            }
-          ]
-        },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 65,
-            "c2_leader_statements": 70,
-            "c3_leader_actions": 60,
-            "c4_candidates_statements": 65,
-            "c5_candidates_actions": 60,
-            "c6_designated_executive": 65
-          },
-          "notes": {
-            "c1_platform": "ריסון תקיף של בג\"ץ, פיטורי/פיצול היועמ\"ש והעברת סמכויות לממשלה ולשרים.",
-            "c2_leader_statements": "בן גביר תוקף בעקביות את היועמ\"שית ופרקליטות המדינה ודורש פיצול מיידי של התפקיד.",
-            "c3_leader_actions": "מאבקים משפטיים יומיומיים מול הייעוץ המשפטי לממשלה והתעקשות על משילות השר.",
-            "c4_candidates_statements": "צביקה פוגל דורש שלטון חוק נחוש וריסון הפקידות המשפטית.",
-            "c5_candidates_actions": "הצבעות בעד כל חוקי הרפורמה המשפטית.",
-            "c6_designated_executive": "איתמר בן גביר מוביל קו זה."
-          },
-          "citations": [
-            {
-              "title": "עימותי בן גביר והיועמ\"שית - Ynet",
-              "url": "https://www.ynet.co.il",
-              "quote": "בן גביר דורש פיצול מיידי של סמכויות היועמ\"ש והפסקת הווטו של הפקידות המשפטית"
             }
           ]
         },
@@ -2175,28 +2150,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 10,
-            "c2_leader_statements": 15,
-            "c3_leader_actions": 10,
-            "c4_candidates_statements": 15,
-            "c5_candidates_actions": 10,
-            "c6_designated_executive": 15
+            "c1_platform": 65,
+            "c2_leader_statements": 70,
+            "c3_leader_actions": 60,
+            "c4_candidates_statements": 65,
+            "c5_candidates_actions": 60,
+            "c6_designated_executive": 65
           },
           "notes": {
-            "c1_platform": "החלת ריבונות מלאה ביו\"ש ועידוד הגירה, ללא הסכמים בינלאומיים מדודים או פתרון שת\"פ אזורי כפי שביקש המשתמש.",
-            "c2_leader_statements": "בן גביר מתנגד להסכמים עם הרש\"פ או לוויתורים כלשהם, מתעמת עם הממשל האמריקאי.",
-            "c3_leader_actions": "פעילותו מובילה לבידוד בינלאומי ומתיחות קשה מול בעלות ברית מערביות.",
-            "c4_candidates_statements": "צביקה פוגל תומך בהכרעה צבאית מוחלטת.",
-            "c5_candidates_actions": "פוגל כיו\"ר ועדת ביטחון לאומי הוביל קו ניצי.",
-            "c6_designated_executive": "בן גביר מיועד לתיק הביטחון הלאומי."
+            "c1_platform": "ריסון תקיף של בג\"ץ, פיטורי/פיצול היועמ\"ש והעברת סמכויות לממשלה ולשרים.",
+            "c2_leader_statements": "בן גביר תוקף בעקביות את היועמ\"שית ופרקליטות המדינה ודורש פיצול מיידי של התפקיד.",
+            "c3_leader_actions": "מאבקים משפטיים יומיומיים מול הייעוץ המשפטי לממשלה והתעקשות על משילות השר.",
+            "c4_candidates_statements": "צביקה פוגל דורש שלטון חוק נחוש וריסון הפקידות המשפטית.",
+            "c5_candidates_actions": "הצבעות בעד כל חוקי הרפורמה המשפטית.",
+            "c6_designated_executive": "איתמר בן גביר מוביל קו זה."
           },
           "citations": [
             {
-              "title": "החזון המדיני של עוצמה יהודית",
-              "url": "https://ozma-yehudit.com/policy",
-              "quote": "החלת ריבונות ישראלית מלאה על כל שטחי יהודה ושומרון"
+              "title": "עימותי בן גביר והיועמ\"שית - Ynet",
+              "url": "https://www.ynet.co.il",
+              "quote": "בן גביר דורש פיצול מיידי של סמכויות היועמ\"ש והפסקת הווטו של הפקידות המשפטית"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": -75,
+            "c2_leader_statements": -70,
+            "c3_leader_actions": -85,
+            "c4_candidates_statements": -75,
+            "c5_candidates_actions": -85,
+            "c6_designated_executive": -80
+          },
+          "notes": {
+            "c1_platform": "הקמת משרדים מפוצלים ומנגנוני שרים חדשים (ביטחון לאומי, מורשת, נגב וגליל).",
+            "c2_leader_statements": "בן גביר דרש הרחבת סמכויות והקמת המשמר הלאומי תחת פיקוחו הישיר.",
+            "c3_leader_actions": "החזקה בשלושה משרדי ממשלה נפרדים (ביטחון לאומי, נגב וגליל, מורשת).",
+            "c4_candidates_statements": "ח\"כים תומכים בלשכות שרים נוספות.",
+            "c5_candidates_actions": "הצבעות נגד צמצום מספר השרים.",
+            "c6_designated_executive": "שמירה על ריבוי משרדים."
+          },
+          "citations": [
+            {
+              "title": "המשרדים של עוצמה יהודית בממשלה ה-37",
+              "url": "https://main.knesset.gov.il",
+              "quote": "שלושה שרים במשרדים מפוצלים כולל משרד המורשת ומשרד הנגב והגליל"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 40,
+            "c2_leader_statements": 40,
+            "c3_leader_actions": 35,
+            "c4_candidates_statements": 40,
+            "c5_candidates_actions": 35,
+            "c6_designated_executive": 35
+          },
+          "notes": {
+            "c1_platform": "תמיכה עקרונית בהורדת רגולציה ועסקים קטנים, לצד דרישה לתמיכות מגזריות.",
+            "c2_leader_statements": "וסרלאוף מקדם הקלות לעסקים בנגב ובגליל.",
+            "c3_leader_actions": "הקצאת מענקים לעסקים באזורי עימות.",
+            "c4_candidates_statements": "אלמוג כהן דורש הסרת חסמי ביטחון לעסקים בדרום.",
+            "c5_candidates_actions": "קידום הקלות ברישוי נשק לעצמאים.",
+            "c6_designated_executive": "יצחק וסרלאוף מיועד לשר הנגב והגליל."
+          },
+          "citations": [
+            {
+              "title": "סיוע לעסקים בנגב ובגליל - וסרלאוף",
+              "url": "https://www.gov.il/he/departments/news/negev_galilee_business",
+              "quote": "הקצאת תקציבים מיוחדים לסיוע לעסקים קטנים בקו העימות"
             }
           ]
         },
@@ -2250,28 +2275,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 40,
-            "c2_leader_statements": 40,
-            "c3_leader_actions": 35,
-            "c4_candidates_statements": 40,
-            "c5_candidates_actions": 35,
-            "c6_designated_executive": 35
+            "c1_platform": 10,
+            "c2_leader_statements": 15,
+            "c3_leader_actions": 10,
+            "c4_candidates_statements": 15,
+            "c5_candidates_actions": 10,
+            "c6_designated_executive": 15
           },
           "notes": {
-            "c1_platform": "תמיכה עקרונית בהורדת רגולציה ועסקים קטנים, לצד דרישה לתמיכות מגזריות.",
-            "c2_leader_statements": "וסרלאוף מקדם הקלות לעסקים בנגב ובגליל.",
-            "c3_leader_actions": "הקצאת מענקים לעסקים באזורי עימות.",
-            "c4_candidates_statements": "אלמוג כהן דורש הסרת חסמי ביטחון לעסקים בדרום.",
-            "c5_candidates_actions": "קידום הקלות ברישוי נשק לעצמאים.",
-            "c6_designated_executive": "יצחק וסרלאוף מיועד לשר הנגב והגליל."
+            "c1_platform": "החלת ריבונות מלאה ביו\"ש ועידוד הגירה, ללא הסכמים בינלאומיים מדודים או פתרון שת\"פ אזורי כפי שביקש המשתמש.",
+            "c2_leader_statements": "בן גביר מתנגד להסכמים עם הרש\"פ או לוויתורים כלשהם, מתעמת עם הממשל האמריקאי.",
+            "c3_leader_actions": "פעילותו מובילה לבידוד בינלאומי ומתיחות קשה מול בעלות ברית מערביות.",
+            "c4_candidates_statements": "צביקה פוגל תומך בהכרעה צבאית מוחלטת.",
+            "c5_candidates_actions": "פוגל כיו\"ר ועדת ביטחון לאומי הוביל קו ניצי.",
+            "c6_designated_executive": "בן גביר מיועד לתיק הביטחון הלאומי."
           },
           "citations": [
             {
-              "title": "סיוע לעסקים בנגב ובגליל - וסרלאוף",
-              "url": "https://www.gov.il/he/departments/news/negev_galilee_business",
-              "quote": "הקצאת תקציבים מיוחדים לסיוע לעסקים קטנים בקו העימות"
+              "title": "החזון המדיני של עוצמה יהודית",
+              "url": "https://ozma-yehudit.com/policy",
+              "quote": "החלת ריבונות ישראלית מלאה על כל שטחי יהודה ושומרון"
             }
           ]
         },
@@ -2297,31 +2322,6 @@
               "title": "הכספים הקואליציוניים של עוצמה יהודית",
               "url": "https://www.calcalist.co.il",
               "quote": "מאות מיליוני שקלים נותבו לגרעינים תורניים ולפרויקטים ייעודיים"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": -75,
-            "c2_leader_statements": -70,
-            "c3_leader_actions": -85,
-            "c4_candidates_statements": -75,
-            "c5_candidates_actions": -85,
-            "c6_designated_executive": -80
-          },
-          "notes": {
-            "c1_platform": "הקמת משרדים מפוצלים ומנגנוני שרים חדשים (ביטחון לאומי, מורשת, נגב וגליל).",
-            "c2_leader_statements": "בן גביר דרש הרחבת סמכויות והקמת המשמר הלאומי תחת פיקוחו הישיר.",
-            "c3_leader_actions": "החזקה בשלושה משרדי ממשלה נפרדים (ביטחון לאומי, נגב וגליל, מורשת).",
-            "c4_candidates_statements": "ח\"כים תומכים בלשכות שרים נוספות.",
-            "c5_candidates_actions": "הצבעות נגד צמצום מספר השרים.",
-            "c6_designated_executive": "שמירה על ריבוי משרדים."
-          },
-          "citations": [
-            {
-              "title": "המשרדים של עוצמה יהודית בממשלה ה-37",
-              "url": "https://main.knesset.gov.il",
-              "quote": "שלושה שרים במשרדים מפוצלים כולל משרד המורשת ומשרד הנגב והגליל"
             }
           ]
         }
@@ -2357,31 +2357,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 85,
-            "c2_leader_statements": 90,
-            "c3_leader_actions": 85,
-            "c4_candidates_statements": 90,
-            "c5_candidates_actions": 85,
-            "c6_designated_executive": 90
-          },
-          "notes": {
-            "c1_platform": "תוכנית 'חוק וסדר' לריסון מוחלט של בג\"ץ, פיצול תפקיד היועמ\"ש, שינוי הרכב הוועדה לשופטים וביטול עילת הסבירות.",
-            "c2_leader_statements": "סמוטריץ' ורוטמן הם הוגי ומנהלי הרפורמה המשפטית בישראל.",
-            "c3_leader_actions": "רוטמן כיו\"ר ועדת חוקה הוביל את חקיקת צמצום עילת הסבירות ומאבק בייעוץ המשפטי.",
-            "c4_candidates_statements": "שמחה רוטמן הוא הדמות המובילה בישראל לריסון האקטיביזם השיפוטי.",
-            "c5_candidates_actions": "ניהול עשרות דיונים וועדות לשינוי סדרי השלטון המשפטי.",
-            "c6_designated_executive": "שמחה רוטמן מיועד חד-משמעית לשר המשפטים."
-          },
-          "citations": [
-            {
-              "title": "תוכנית חוק וסדר - הציונות הדתית",
-              "url": "https://zionutdatit.org.il/law-and-order",
-              "quote": "פיצול תפקיד היועץ המשפטי לממשלה, שינוי הוועדה לבחירת שופטים ואיזון הרשויות"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 50,
@@ -2407,28 +2382,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 20,
-            "c2_leader_statements": 25,
-            "c3_leader_actions": 20,
-            "c4_candidates_statements": 20,
-            "c5_candidates_actions": 20,
-            "c6_designated_executive": 20
+            "c1_platform": 85,
+            "c2_leader_statements": 90,
+            "c3_leader_actions": 85,
+            "c4_candidates_statements": 90,
+            "c5_candidates_actions": 85,
+            "c6_designated_executive": 90
           },
           "notes": {
-            "c1_platform": "תוכנית ההכרעה: סיפוח מלא של יהודה ושומרון, שלילת כל הסדר או מדינה פלסטינית, פירוק הרש\"פ.",
-            "c2_leader_statements": "סמוטריץ' מתנגד לכל פשרה טריטוריאלית ומתעמת עם בעלות ברית מערביות.",
-            "c3_leader_actions": "הוביל את העברת סמכויות המנהל האזרחי לידי משרדו, קידם בנייה מסיבית בהתנחלויות.",
-            "c4_candidates_statements": "סטרוק דורשת החזרת ההתיישבות לחבל עזה וצפון השומרון.",
-            "c5_candidates_actions": "פעילות ענפה בהתיישבות.",
-            "c6_designated_executive": "סמוטריץ' מחזיק בסמכויות אזרחיות ביו\"ש."
+            "c1_platform": "תוכנית 'חוק וסדר' לריסון מוחלט של בג\"ץ, פיצול תפקיד היועמ\"ש, שינוי הרכב הוועדה לשופטים וביטול עילת הסבירות.",
+            "c2_leader_statements": "סמוטריץ' ורוטמן הם הוגי ומנהלי הרפורמה המשפטית בישראל.",
+            "c3_leader_actions": "רוטמן כיו\"ר ועדת חוקה הוביל את חקיקת צמצום עילת הסבירות ומאבק בייעוץ המשפטי.",
+            "c4_candidates_statements": "שמחה רוטמן הוא הדמות המובילה בישראל לריסון האקטיביזם השיפוטי.",
+            "c5_candidates_actions": "ניהול עשרות דיונים וועדות לשינוי סדרי השלטון המשפטי.",
+            "c6_designated_executive": "שמחה רוטמן מיועד חד-משמעית לשר המשפטים."
           },
           "citations": [
             {
-              "title": "תוכנית ההכרעה של בצלאל סמוטריץ' - השילוח",
-              "url": "https://hashiloach.org.il",
-              "quote": "החלת ריבונות מלאה על כל מרחבי יהודה ושומרון וסיום אשליית שתי המדינות"
+              "title": "תוכנית חוק וסדר - הציונות הדתית",
+              "url": "https://zionutdatit.org.il/law-and-order",
+              "quote": "פיצול תפקיד היועץ המשפטי לממשלה, שינוי הוועדה לבחירת שופטים ואיזון הרשויות"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": -65,
+            "c2_leader_statements": -60,
+            "c3_leader_actions": -80,
+            "c4_candidates_statements": -65,
+            "c5_candidates_actions": -80,
+            "c6_designated_executive": -75
+          },
+          "notes": {
+            "c1_platform": "דרישה לצמצום ביורוקרטיה, אך הקמת משרדים ייעודיים עבור המפלגה.",
+            "c2_leader_statements": "הצהרות על יעילות שלטונית לצד החזקה בשני משרדים וסמכויות שר במשרד הביטחון.",
+            "c3_leader_actions": "הקמת משרד המשימות הלאומיות בראשות אורית סטרוק (משרד מומצא).",
+            "c4_candidates_statements": "סטרוק מגנה על קיומו של המשרד הייעודי.",
+            "c5_candidates_actions": "הצבעות נגד צמצום הממשלה.",
+            "c6_designated_executive": "החזקת תיקים מפוצלים."
+          },
+          "citations": [
+            {
+              "title": "תקציב משרד המשימות הלאומיות של סטרוק - TheMarker",
+              "url": "https://www.themarker.com",
+              "quote": "מאות מיליוני שקלים הוקצו למשרד מומצא לצורכי שליטה תקציבית"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 75,
+            "c2_leader_statements": 80,
+            "c3_leader_actions": 65,
+            "c4_candidates_statements": 80,
+            "c5_candidates_actions": 65,
+            "c6_designated_executive": 75
+          },
+          "notes": {
+            "c1_platform": "כלכלה חופשית, צמצום כוחם של ועדי העובדים, ביטול מכסים והסרת רגולציה.",
+            "c2_leader_statements": "סמוטריץ' מציג תפיסה כלכלית ליברלית-ימנית נוסח מילטון פרידמן.",
+            "c3_leader_actions": "כשר אוצר ניסה לקדם רפורמות יבוא והורדת מכסים, אך התקשה בריסון יוקר המחיה והגירעון.",
+            "c4_candidates_statements": "משה פייגלין דוגל בחירות כלכלית מוחלטת ושוק חופשי ללא התערבות ממשלתית.",
+            "c5_candidates_actions": "קידום חוקים להגבלת זכות השביתה בשירותים חיוניים.",
+            "c6_designated_executive": "סמוטריץ' מכהן כשר האוצר."
+          },
+          "citations": [
+            {
+              "title": "התפיסה הכלכלית של בצלאל סמוטריץ' - גלובס",
+              "url": "https://www.globes.co.il",
+              "quote": "שוק חופשי, ריסון כוחם של ועדי השאלטר והורדת רגולציה מכבידה"
             }
           ]
         },
@@ -2482,28 +2507,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 75,
-            "c2_leader_statements": 80,
-            "c3_leader_actions": 65,
-            "c4_candidates_statements": 80,
-            "c5_candidates_actions": 65,
-            "c6_designated_executive": 75
+            "c1_platform": 20,
+            "c2_leader_statements": 25,
+            "c3_leader_actions": 20,
+            "c4_candidates_statements": 20,
+            "c5_candidates_actions": 20,
+            "c6_designated_executive": 20
           },
           "notes": {
-            "c1_platform": "כלכלה חופשית, צמצום כוחם של ועדי העובדים, ביטול מכסים והסרת רגולציה.",
-            "c2_leader_statements": "סמוטריץ' מציג תפיסה כלכלית ליברלית-ימנית נוסח מילטון פרידמן.",
-            "c3_leader_actions": "כשר אוצר ניסה לקדם רפורמות יבוא והורדת מכסים, אך התקשה בריסון יוקר המחיה והגירעון.",
-            "c4_candidates_statements": "משה פייגלין דוגל בחירות כלכלית מוחלטת ושוק חופשי ללא התערבות ממשלתית.",
-            "c5_candidates_actions": "קידום חוקים להגבלת זכות השביתה בשירותים חיוניים.",
-            "c6_designated_executive": "סמוטריץ' מכהן כשר האוצר."
+            "c1_platform": "תוכנית ההכרעה: סיפוח מלא של יהודה ושומרון, שלילת כל הסדר או מדינה פלסטינית, פירוק הרש\"פ.",
+            "c2_leader_statements": "סמוטריץ' מתנגד לכל פשרה טריטוריאלית ומתעמת עם בעלות ברית מערביות.",
+            "c3_leader_actions": "הוביל את העברת סמכויות המנהל האזרחי לידי משרדו, קידם בנייה מסיבית בהתנחלויות.",
+            "c4_candidates_statements": "סטרוק דורשת החזרת ההתיישבות לחבל עזה וצפון השומרון.",
+            "c5_candidates_actions": "פעילות ענפה בהתיישבות.",
+            "c6_designated_executive": "סמוטריץ' מחזיק בסמכויות אזרחיות ביו\"ש."
           },
           "citations": [
             {
-              "title": "התפיסה הכלכלית של בצלאל סמוטריץ' - גלובס",
-              "url": "https://www.globes.co.il",
-              "quote": "שוק חופשי, ריסון כוחם של ועדי השאלטר והורדת רגולציה מכבידה"
+              "title": "תוכנית ההכרעה של בצלאל סמוטריץ' - השילוח",
+              "url": "https://hashiloach.org.il",
+              "quote": "החלת ריבונות מלאה על כל מרחבי יהודה ושומרון וסיום אשליית שתי המדינות"
             }
           ]
         },
@@ -2529,31 +2554,6 @@
               "title": "הכספים הקואליציוניים בתקציב 2024 - כלכליסט",
               "url": "https://www.calcalist.co.il",
               "quote": "סמוטריץ' העביר מיליארדי שקלים בהסכמים קואליציוניים בניגוד להמלצות אגף תקציבים"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": -65,
-            "c2_leader_statements": -60,
-            "c3_leader_actions": -80,
-            "c4_candidates_statements": -65,
-            "c5_candidates_actions": -80,
-            "c6_designated_executive": -75
-          },
-          "notes": {
-            "c1_platform": "דרישה לצמצום ביורוקרטיה, אך הקמת משרדים ייעודיים עבור המפלגה.",
-            "c2_leader_statements": "הצהרות על יעילות שלטונית לצד החזקה בשני משרדים וסמכויות שר במשרד הביטחון.",
-            "c3_leader_actions": "הקמת משרד המשימות הלאומיות בראשות אורית סטרוק (משרד מומצא).",
-            "c4_candidates_statements": "סטרוק מגנה על קיומו של המשרד הייעודי.",
-            "c5_candidates_actions": "הצבעות נגד צמצום הממשלה.",
-            "c6_designated_executive": "החזקת תיקים מפוצלים."
-          },
-          "citations": [
-            {
-              "title": "תקציב משרד המשימות הלאומיות של סטרוק - TheMarker",
-              "url": "https://www.themarker.com",
-              "quote": "מאות מיליוני שקלים הוקצו למשרד מומצא לצורכי שליטה תקציבית"
             }
           ]
         }
@@ -2589,31 +2589,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": -25,
-            "c2_leader_statements": -20,
-            "c3_leader_actions": -15,
-            "c4_candidates_statements": -20,
-            "c5_candidates_actions": -15,
-            "c6_designated_executive": -20
-          },
-          "notes": {
-            "c1_platform": "הגנה על עצמאות בג\"ץ כמגן על מיעוטים, התנגדות לריסון שיפוטי או פיצול יועמ\"ש.",
-            "c2_leader_statements": "עבאס רואה בבג\"ץ בלם קריטי מפני עריצות הרוב.",
-            "c3_leader_actions": "הצבעה נגד כל סעיפי הרפורמה המשפטית.",
-            "c4_candidates_statements": "תמיכה בביזור סמכויות לרשויות מקומיות ערביות.",
-            "c5_candidates_actions": "התנגדות לשינויים במערכת המשפט.",
-            "c6_designated_executive": "שמירה על המבנה הקיים."
-          },
-          "citations": [
-            {
-              "title": "עמדת רע\"ם על הרפורמה המשפטית",
-              "url": "https://raam.org.il",
-              "quote": "פגיעה במערכת המשפט תפגע בראש ובראשונה באזרחים הערבים בישראל"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 40,
@@ -2639,28 +2614,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": -90,
-            "c2_leader_statements": -85,
-            "c3_leader_actions": -80,
-            "c4_candidates_statements": -90,
-            "c5_candidates_actions": -85,
-            "c6_designated_executive": -85
+            "c1_platform": -25,
+            "c2_leader_statements": -20,
+            "c3_leader_actions": -15,
+            "c4_candidates_statements": -20,
+            "c5_candidates_actions": -15,
+            "c6_designated_executive": -20
           },
           "notes": {
-            "c1_platform": "תמיכה בהקמת מדינה פלסטינית בקווי 67 ובירתה מזרח ירושלים – בניגוד מוחלט לעמדת המשתמש.",
-            "c2_leader_statements": "עבאס מצהיר על מדינה פלסטינית עצמאית וסיום הכיבוש.",
-            "c3_leader_actions": "הצבעות נגד פעולות צבאיות ותקציבי ביטחון.",
-            "c4_candidates_statements": "התנגדות לכל פעילות צבאית בעזה ויו\"ש.",
-            "c5_candidates_actions": "הזדהות עם המאבק הפלסטיני.",
-            "c6_designated_executive": "עמדה מנוגדת בתוקף לעמדת המשתמש."
+            "c1_platform": "הגנה על עצמאות בג\"ץ כמגן על מיעוטים, התנגדות לריסון שיפוטי או פיצול יועמ\"ש.",
+            "c2_leader_statements": "עבאס רואה בבג\"ץ בלם קריטי מפני עריצות הרוב.",
+            "c3_leader_actions": "הצבעה נגד כל סעיפי הרפורמה המשפטית.",
+            "c4_candidates_statements": "תמיכה בביזור סמכויות לרשויות מקומיות ערביות.",
+            "c5_candidates_actions": "התנגדות לשינויים במערכת המשפט.",
+            "c6_designated_executive": "שמירה על המבנה הקיים."
           },
           "citations": [
             {
-              "title": "החזון המדיני של רע\"ם",
-              "url": "https://raam.org.il/peace",
-              "quote": "שלום צודק על בסיס שתי מדינות בקווי 1967 ומזרח ירושלים כבירת פלסטין"
+              "title": "עמדת רע\"ם על הרפורמה המשפטית",
+              "url": "https://raam.org.il",
+              "quote": "פגיעה במערכת המשפט תפגע בראש ובראשונה באזרחים הערבים בישראל"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 0,
+            "c2_leader_statements": 10,
+            "c3_leader_actions": 0,
+            "c4_candidates_statements": 0,
+            "c5_candidates_actions": 0,
+            "c6_designated_executive": 0
+          },
+          "notes": {
+            "c1_platform": "ללא עמדה מוגדרת בנושא גודל הממשלה או מספר השרים.",
+            "c2_leader_statements": "התמקדות בהשגת תקציבים והשפעה אזרחית.",
+            "c3_leader_actions": "לא דרשו תפקידי שרים בממשלת השינוי.",
+            "c4_candidates_statements": "אין.",
+            "c5_candidates_actions": "אין.",
+            "c6_designated_executive": "אין."
+          },
+          "citations": [
+            {
+              "title": "מצע רע\"ם",
+              "url": "https://raam.org.il",
+              "quote": "פרגמטיזם אזרחי להשגת זכויות ותקציבים"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 20,
+            "c2_leader_statements": 25,
+            "c3_leader_actions": 25,
+            "c4_candidates_statements": 20,
+            "c5_candidates_actions": 20,
+            "c6_designated_executive": 20
+          },
+          "notes": {
+            "c1_platform": "פיתוח עסקים קטנים בחברה הערבית, הקלות אשראי והסרת חסמי תכנון.",
+            "c2_leader_statements": "עבאס דורש שילוב עסקים ערביים בכלכלה הישראלית.",
+            "c3_leader_actions": "קידום אזורי תעשייה ביישובים ערביים.",
+            "c4_candidates_statements": "דגש על מענקים ממשלתיים ולא על שוק פתוח בלבד.",
+            "c5_candidates_actions": "סיוע לעסקים מקומיים.",
+            "c6_designated_executive": "מועמדות כלכלית מקומית."
+          },
+          "citations": [
+            {
+              "title": "תוכנית הפיתוח הכלכלי לחברה הערבית - רע\"ם",
+              "url": "https://raam.org.il",
+              "quote": "הקמת אזורי תעשייה משותפים והנגשת אשראי בנקאי לעסקים ערביים"
             }
           ]
         },
@@ -2714,28 +2739,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 20,
-            "c2_leader_statements": 25,
-            "c3_leader_actions": 25,
-            "c4_candidates_statements": 20,
-            "c5_candidates_actions": 20,
-            "c6_designated_executive": 20
+            "c1_platform": -90,
+            "c2_leader_statements": -85,
+            "c3_leader_actions": -80,
+            "c4_candidates_statements": -90,
+            "c5_candidates_actions": -85,
+            "c6_designated_executive": -85
           },
           "notes": {
-            "c1_platform": "פיתוח עסקים קטנים בחברה הערבית, הקלות אשראי והסרת חסמי תכנון.",
-            "c2_leader_statements": "עבאס דורש שילוב עסקים ערביים בכלכלה הישראלית.",
-            "c3_leader_actions": "קידום אזורי תעשייה ביישובים ערביים.",
-            "c4_candidates_statements": "דגש על מענקים ממשלתיים ולא על שוק פתוח בלבד.",
-            "c5_candidates_actions": "סיוע לעסקים מקומיים.",
-            "c6_designated_executive": "מועמדות כלכלית מקומית."
+            "c1_platform": "תמיכה בהקמת מדינה פלסטינית בקווי 67 ובירתה מזרח ירושלים – בניגוד מוחלט לעמדת המשתמש.",
+            "c2_leader_statements": "עבאס מצהיר על מדינה פלסטינית עצמאית וסיום הכיבוש.",
+            "c3_leader_actions": "הצבעות נגד פעולות צבאיות ותקציבי ביטחון.",
+            "c4_candidates_statements": "התנגדות לכל פעילות צבאית בעזה ויו\"ש.",
+            "c5_candidates_actions": "הזדהות עם המאבק הפלסטיני.",
+            "c6_designated_executive": "עמדה מנוגדת בתוקף לעמדת המשתמש."
           },
           "citations": [
             {
-              "title": "תוכנית הפיתוח הכלכלי לחברה הערבית - רע\"ם",
-              "url": "https://raam.org.il",
-              "quote": "הקמת אזורי תעשייה משותפים והנגשת אשראי בנקאי לעסקים ערביים"
+              "title": "החזון המדיני של רע\"ם",
+              "url": "https://raam.org.il/peace",
+              "quote": "שלום צודק על בסיס שתי מדינות בקווי 1967 ומזרח ירושלים כבירת פלסטין"
             }
           ]
         },
@@ -2761,31 +2786,6 @@
               "title": "מאבק רע\"ם בעוני בנגב",
               "url": "https://raam.org.il",
               "quote": "הבטחת קצבאות קיום ורשת ביטחון סוציאלית לאוכלוסיות המוחלשות ביותר"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 0,
-            "c2_leader_statements": 10,
-            "c3_leader_actions": 0,
-            "c4_candidates_statements": 0,
-            "c5_candidates_actions": 0,
-            "c6_designated_executive": 0
-          },
-          "notes": {
-            "c1_platform": "ללא עמדה מוגדרת בנושא גודל הממשלה או מספר השרים.",
-            "c2_leader_statements": "התמקדות בהשגת תקציבים והשפעה אזרחית.",
-            "c3_leader_actions": "לא דרשו תפקידי שרים בממשלת השינוי.",
-            "c4_candidates_statements": "אין.",
-            "c5_candidates_actions": "אין.",
-            "c6_designated_executive": "אין."
-          },
-          "citations": [
-            {
-              "title": "מצע רע\"ם",
-              "url": "https://raam.org.il",
-              "quote": "פרגמטיזם אזרחי להשגת זכויות ותקציבים"
             }
           ]
         }
@@ -2821,31 +2821,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": -40,
-            "c2_leader_statements": -40,
-            "c3_leader_actions": -35,
-            "c4_candidates_statements": -40,
-            "c5_candidates_actions": -35,
-            "c6_designated_executive": -35
-          },
-          "notes": {
-            "c1_platform": "הגנה על בג\"ץ ושלטון החוק מפני הרפורמה, דרישה למדינת כל אזרחיה וביטול חוק הלאום.",
-            "c2_leader_statements": "עודה וטיבי מתנגדים לכל שינוי משפטי המחזק את השלטון הימני.",
-            "c3_leader_actions": "הצבעה עקבית נגד חוקי הרפורמה המשפטית.",
-            "c4_candidates_statements": "התנגדות לביזור סמכויות שעשוי לפגוע במיעוטים.",
-            "c5_candidates_actions": "הובלת עתירות רבות לבג\"ץ.",
-            "c6_designated_executive": "עמדות מנוגדות לעמדת המשתמש."
-          },
-          "citations": [
-            {
-              "title": "מאבק חד\"ש-תע\"ל בהפיכה המשטרית",
-              "url": "https://aljabha.org.il",
-              "quote": "הגנה על מרחב הדמוקרטיה וביטול חוקי הגזענות"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 25,
@@ -2871,28 +2846,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": -100,
-            "c2_leader_statements": -100,
-            "c3_leader_actions": -100,
-            "c4_candidates_statements": -100,
-            "c5_candidates_actions": -100,
-            "c6_designated_executive": -100
+            "c1_platform": -40,
+            "c2_leader_statements": -40,
+            "c3_leader_actions": -35,
+            "c4_candidates_statements": -40,
+            "c5_candidates_actions": -35,
+            "c6_designated_executive": -35
           },
           "notes": {
-            "c1_platform": "נסיגה ישראלית מלאה מכל שטחי 1967 כולל מזרח ירושלים, פירוק כל ההתנחלויות, הקמת מדינה פלסטינית ופתרון בעיית הפליטים.",
-            "c2_leader_statements": "עודה, טיבי וכסיף קוראים בעקביות לסיום הכיבוש, מגנים את פעולות צה\"ל ותומכים בסנקציות בינלאומיות.",
-            "c3_leader_actions": "הצבעות נגד כל תקציבי הביטחון, פעילות בפורומים בינלאומיים נגד ישראל.",
-            "c4_candidates_statements": "עופר כסיף חתם על העצומה התומכת בתביעה נגד ישראל בבית הדין בהאג.",
-            "c5_candidates_actions": "התנגדות מוחלטת לכל תפיסה ביטחונית ציונית.",
-            "c6_designated_executive": "התנגדות קוטבית ומוחלטת לעמדת המשתמש."
+            "c1_platform": "הגנה על בג\"ץ ושלטון החוק מפני הרפורמה, דרישה למדינת כל אזרחיה וביטול חוק הלאום.",
+            "c2_leader_statements": "עודה וטיבי מתנגדים לכל שינוי משפטי המחזק את השלטון הימני.",
+            "c3_leader_actions": "הצבעה עקבית נגד חוקי הרפורמה המשפטית.",
+            "c4_candidates_statements": "התנגדות לביזור סמכויות שעשוי לפגוע במיעוטים.",
+            "c5_candidates_actions": "הובלת עתירות רבות לבג\"ץ.",
+            "c6_designated_executive": "עמדות מנוגדות לעמדת המשתמש."
           },
           "citations": [
             {
-              "title": "החזון המדיני של חד\"ש-תע\"ל",
-              "url": "https://aljabha.org.il/peace-plan",
-              "quote": "סיום מוחלט של הכיבוש, פינוי כל ההתנחלויות והקמת מדינה פלסטינית עצמאית שבירתה ירושלים המזרחית"
+              "title": "מאבק חד\"ש-תע\"ל בהפיכה המשטרית",
+              "url": "https://aljabha.org.il",
+              "quote": "הגנה על מרחב הדמוקרטיה וביטול חוקי הגזענות"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 20,
+            "c2_leader_statements": 25,
+            "c3_leader_actions": 20,
+            "c4_candidates_statements": 20,
+            "c5_candidates_actions": 20,
+            "c6_designated_executive": 20
+          },
+          "notes": {
+            "c1_platform": "ביקורת על ממשלה מנופחת ומשרדים סקטוריאליים, אך תמיכה בהרחבת משרדי רווחה ובריאות.",
+            "c2_leader_statements": "טיבי תוקף בלעג את 'המשרדים המומצאים' של הממשלה.",
+            "c3_leader_actions": "הצבעות נגד הקמת משרדי סרק של הימין.",
+            "c4_candidates_statements": "ח\"כים תוקפים בזבוזי לשכות.",
+            "c5_candidates_actions": "ביקורת בוועדת הכנסת.",
+            "c6_designated_executive": "היעדר תוכנית סדורה ל-18 שרים."
+          },
+          "citations": [
+            {
+              "title": "ביקורת חד\"ש-תע\"ל על משרדי הממשלה",
+              "url": "https://aljabha.org.il",
+              "quote": "ממשלה מנופחת המבזבזת מיליארדים על משרדים פוליטיים מיותרים"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": -70,
+            "c2_leader_statements": -75,
+            "c3_leader_actions": -70,
+            "c4_candidates_statements": -75,
+            "c5_candidates_actions": -70,
+            "c6_designated_executive": -75
+          },
+          "notes": {
+            "c1_platform": "אידיאולוגיה קומוניסטית/סוציאליסטית מרקסיסטית: התנגדות לקפיטליזם, שוק חופשי והפרטות, דרישה להלאמת משאבים.",
+            "c2_leader_statements": "עודה וכסיף מתנגדים בחריפות לשוק חופשי ורואים בו כלי לניצול מעמדי.",
+            "c3_leader_actions": "הצבעות עקביות נגד רפורמות שוק חופשי, יבוא ותחרות.",
+            "c4_candidates_statements": "עופר כסיף תוקף את 'הקפיטליזם החזירי'.",
+            "c5_candidates_actions": "תמיכה בשביתות עובדים והגנה על מונופולים ממשלתיים.",
+            "c6_designated_executive": "התנגדות מוחלטת לשוק פתוח."
+          },
+          "citations": [
+            {
+              "title": "החזון הכלכלי של המפלגה הקומוניסטית הישראלית (מק\"י/חד\"ש)",
+              "url": "https://aljabha.org.il/economy",
+              "quote": "מאבק בלתי מתפשר בקפיטליזם, בהפרטות ובשליטת ההון על החברה"
             }
           ]
         },
@@ -2946,28 +2971,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": -70,
-            "c2_leader_statements": -75,
-            "c3_leader_actions": -70,
-            "c4_candidates_statements": -75,
-            "c5_candidates_actions": -70,
-            "c6_designated_executive": -75
+            "c1_platform": -100,
+            "c2_leader_statements": -100,
+            "c3_leader_actions": -100,
+            "c4_candidates_statements": -100,
+            "c5_candidates_actions": -100,
+            "c6_designated_executive": -100
           },
           "notes": {
-            "c1_platform": "אידיאולוגיה קומוניסטית/סוציאליסטית מרקסיסטית: התנגדות לקפיטליזם, שוק חופשי והפרטות, דרישה להלאמת משאבים.",
-            "c2_leader_statements": "עודה וכסיף מתנגדים בחריפות לשוק חופשי ורואים בו כלי לניצול מעמדי.",
-            "c3_leader_actions": "הצבעות עקביות נגד רפורמות שוק חופשי, יבוא ותחרות.",
-            "c4_candidates_statements": "עופר כסיף תוקף את 'הקפיטליזם החזירי'.",
-            "c5_candidates_actions": "תמיכה בשביתות עובדים והגנה על מונופולים ממשלתיים.",
-            "c6_designated_executive": "התנגדות מוחלטת לשוק פתוח."
+            "c1_platform": "נסיגה ישראלית מלאה מכל שטחי 1967 כולל מזרח ירושלים, פירוק כל ההתנחלויות, הקמת מדינה פלסטינית ופתרון בעיית הפליטים.",
+            "c2_leader_statements": "עודה, טיבי וכסיף קוראים בעקביות לסיום הכיבוש, מגנים את פעולות צה\"ל ותומכים בסנקציות בינלאומיות.",
+            "c3_leader_actions": "הצבעות נגד כל תקציבי הביטחון, פעילות בפורומים בינלאומיים נגד ישראל.",
+            "c4_candidates_statements": "עופר כסיף חתם על העצומה התומכת בתביעה נגד ישראל בבית הדין בהאג.",
+            "c5_candidates_actions": "התנגדות מוחלטת לכל תפיסה ביטחונית ציונית.",
+            "c6_designated_executive": "התנגדות קוטבית ומוחלטת לעמדת המשתמש."
           },
           "citations": [
             {
-              "title": "החזון הכלכלי של המפלגה הקומוניסטית הישראלית (מק\"י/חד\"ש)",
-              "url": "https://aljabha.org.il/economy",
-              "quote": "מאבק בלתי מתפשר בקפיטליזם, בהפרטות ובשליטת ההון על החברה"
+              "title": "החזון המדיני של חד\"ש-תע\"ל",
+              "url": "https://aljabha.org.il/peace-plan",
+              "quote": "סיום מוחלט של הכיבוש, פינוי כל ההתנחלויות והקמת מדינה פלסטינית עצמאית שבירתה ירושלים המזרחית"
             }
           ]
         },
@@ -2995,36 +3020,11 @@
               "quote": "הבטחת קיום בכבוד לכל אדם באמצעות קצבאות רווחה אוניברסליות"
             }
           ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 20,
-            "c2_leader_statements": 25,
-            "c3_leader_actions": 20,
-            "c4_candidates_statements": 20,
-            "c5_candidates_actions": 20,
-            "c6_designated_executive": 20
-          },
-          "notes": {
-            "c1_platform": "ביקורת על ממשלה מנופחת ומשרדים סקטוריאליים, אך תמיכה בהרחבת משרדי רווחה ובריאות.",
-            "c2_leader_statements": "טיבי תוקף בלעג את 'המשרדים המומצאים' של הממשלה.",
-            "c3_leader_actions": "הצבעות נגד הקמת משרדי סרק של הימין.",
-            "c4_candidates_statements": "ח\"כים תוקפים בזבוזי לשכות.",
-            "c5_candidates_actions": "ביקורת בוועדת הכנסת.",
-            "c6_designated_executive": "היעדר תוכנית סדורה ל-18 שרים."
-          },
-          "citations": [
-            {
-              "title": "ביקורת חד\"ש-תע\"ל על משרדי הממשלה",
-              "url": "https://aljabha.org.il",
-              "quote": "ממשלה מנופחת המבזבזת מיליארדים על משרדים פוליטיים מיותרים"
-            }
-          ]
         }
       }
     },
     "right_winter": {
-      "name_he": "ימין ממלכתי / וינטר",
+      "name_he": "ימין חדש / וינטר",
       "leader": "עופר וינטר",
       "poll_mandates": 4,
       "topics": {
@@ -3053,31 +3053,6 @@
             }
           ]
         },
-        "governance_reform": {
-          "scores": {
-            "c1_platform": 65,
-            "c2_leader_statements": 70,
-            "c3_leader_actions": 60,
-            "c4_candidates_statements": 65,
-            "c5_candidates_actions": 60,
-            "c6_designated_executive": 65
-          },
-          "notes": {
-            "c1_platform": "החזרת המשילות, ריסון המשפטיזציה של הצבא ומערכת הביטחון, תיקון היחסים בין הדרג המדיני לפרקליטות.",
-            "c2_leader_statements": "וינטר התבטא בחריפות נגד עודף משפטיזציה הפוגעת בהכרעה ובלחימה.",
-            "c3_leader_actions": "התמודד מול לחצים משפטיים וחקירות צבאיות במהלך שירותו הקרבי.",
-            "c4_candidates_statements": "תמיכה במשילות מלאה ופיקוח על הפקידות.",
-            "c5_candidates_actions": "מאבק ציבורי למען חופש פעולה למפקדים.",
-            "c6_designated_executive": "וינטר מיועד להובלת תחום המשילות והביטחון."
-          },
-          "citations": [
-            {
-              "title": "מאמרי עופר וינטר על משילות ופיקוד",
-              "url": "https://www.makorrishon.co.il",
-              "quote": "עודף משפטיזציה וחשש מביקורת מסרסים את יכולת ההכרעה של המפקדים בשטח"
-            }
-          ]
-        },
         "future_infrastructure": {
           "scores": {
             "c1_platform": 45,
@@ -3103,28 +3078,78 @@
             }
           ]
         },
-        "strategic_posture": {
+        "governance_reform": {
           "scores": {
-            "c1_platform": 75,
-            "c2_leader_statements": 80,
-            "c3_leader_actions": 85,
-            "c4_candidates_statements": 75,
-            "c5_candidates_actions": 80,
-            "c6_designated_executive": 85
+            "c1_platform": 65,
+            "c2_leader_statements": 70,
+            "c3_leader_actions": 60,
+            "c4_candidates_statements": 65,
+            "c5_candidates_actions": 60,
+            "c6_designated_executive": 65
           },
           "notes": {
-            "c1_platform": "הכרעה צבאית מוחלטת, שלילת כל מדינה פלסטינית או נסיגות, שמירה קשיחה על ירושלים וביטחון ישראל.",
-            "c2_leader_statements": "וינטר הוא סמל הגישה ההתקפית: 'הכרעה ברורה של האויב ללא היסוסים וללא מריחת זמן'.",
-            "c3_leader_actions": "פיקד על חטיבת גבעתי במבצע 'צוק איתן' ועל עוצבות קרביות בהצלחה מבצעית רבה.",
-            "c4_candidates_statements": "התנגדות לכל ויתור ביטחוני ביו\"ש ובבקעה.",
-            "c5_candidates_actions": "רקורד קרבי עטור שבחים של מפקדים ולוחמים.",
-            "c6_designated_executive": "עופר וינטר מיועד לשר הביטחון."
+            "c1_platform": "החזרת המשילות, ריסון המשפטיזציה של הצבא ומערכת הביטחון, תיקון היחסים בין הדרג המדיני לפרקליטות.",
+            "c2_leader_statements": "וינטר התבטא בחריפות נגד עודף משפטיזציה הפוגעת בהכרעה ובלחימה.",
+            "c3_leader_actions": "התמודד מול לחצים משפטיים וחקירות צבאיות במהלך שירותו הקרבי.",
+            "c4_candidates_statements": "תמיכה במשילות מלאה ופיקוח על הפקידות.",
+            "c5_candidates_actions": "מאבק ציבורי למען חופש פעולה למפקדים.",
+            "c6_designated_executive": "וינטר מיועד להובלת תחום המשילות והביטחון."
           },
           "citations": [
             {
-              "title": "דף המפקד של עופר וינטר בצוק איתן",
-              "url": "https://www.ynet.co.il",
-              "quote": "ההיסטוריה בחרה בנו להיות בחוד החנית של הלחימה באויב הטרוריסטי; הכרעה ברורה וניצחון"
+              "title": "מאמרי עופר וינטר על משילות ופיקוד",
+              "url": "https://www.makorrishon.co.il",
+              "quote": "עודף משפטיזציה וחשש מביקורת מסרסים את יכולת ההכרעה של המפקדים בשטח"
+            }
+          ]
+        },
+        "government_downsizing": {
+          "scores": {
+            "c1_platform": 60,
+            "c2_leader_statements": 65,
+            "c3_leader_actions": 50,
+            "c4_candidates_statements": 60,
+            "c5_candidates_actions": 50,
+            "c6_designated_executive": 55
+          },
+          "notes": {
+            "c1_platform": "צמצום משרדי ממשלה מיותרים ואיחוד פונקציות ביטחוניות ואזרחיות.",
+            "c2_leader_statements": "וינטר מדבר על 'מטה רזה ויעיל' כפי שנהוג בצבא הקרבי.",
+            "c3_leader_actions": "צמצום תקני מפקדה והעברת משאבים לקצה המבצעי.",
+            "c4_candidates_statements": "התנגדות למשרדים פוליטיים מומצאים.",
+            "c5_candidates_actions": "קריאה לייעול המנגנון הציבורי.",
+            "c6_designated_executive": "תפיסת פיקוד רזה."
+          },
+          "citations": [
+            {
+              "title": "תפיסת המטה הרזה של עופר וינטר",
+              "url": "https://www.israelhayom.co.il",
+              "quote": "ממשלה צריכה לפעול כמו אוגדה קרבית: מטה רזה, מינימום ביורוקרטיה וכל המשאבים לשטח"
+            }
+          ]
+        },
+        "open_market": {
+          "scores": {
+            "c1_platform": 45,
+            "c2_leader_statements": 45,
+            "c3_leader_actions": 35,
+            "c4_candidates_statements": 40,
+            "c5_candidates_actions": 35,
+            "c6_designated_executive": 40
+          },
+          "notes": {
+            "c1_platform": "תמיכה ביוזמה פרטית, עידוד עסקים קטנים וצמצום בירוקרטיה ממשלתית.",
+            "c2_leader_statements": "וינטר תומך בהורדת חסמים למשרתי מילואים ולעסקים עצמאיים.",
+            "c3_leader_actions": "ניהול מערכות תקציביות גדולות בצה\"ל.",
+            "c4_candidates_statements": "סיוע לעסקים של לוחמים.",
+            "c5_candidates_actions": "הקלת עול הרגולציה.",
+            "c6_designated_executive": "קו ימני כלכלי מתון."
+          },
+          "citations": [
+            {
+              "title": "עמדות כלכליות של מפלגת הימין הממלכתי",
+              "url": "https://www.inn.co.il",
+              "quote": "הורדת נטל המיסים והסרת חסמים בירוקרטיים למשרתי המילואים"
             }
           ]
         },
@@ -3178,28 +3203,28 @@
             }
           ]
         },
-        "open_market": {
+        "strategic_posture": {
           "scores": {
-            "c1_platform": 45,
-            "c2_leader_statements": 45,
-            "c3_leader_actions": 35,
-            "c4_candidates_statements": 40,
-            "c5_candidates_actions": 35,
-            "c6_designated_executive": 40
+            "c1_platform": 75,
+            "c2_leader_statements": 80,
+            "c3_leader_actions": 85,
+            "c4_candidates_statements": 75,
+            "c5_candidates_actions": 80,
+            "c6_designated_executive": 85
           },
           "notes": {
-            "c1_platform": "תמיכה ביוזמה פרטית, עידוד עסקים קטנים וצמצום בירוקרטיה ממשלתית.",
-            "c2_leader_statements": "וינטר תומך בהורדת חסמים למשרתי מילואים ולעסקים עצמאיים.",
-            "c3_leader_actions": "ניהול מערכות תקציביות גדולות בצה\"ל.",
-            "c4_candidates_statements": "סיוע לעסקים של לוחמים.",
-            "c5_candidates_actions": "הקלת עול הרגולציה.",
-            "c6_designated_executive": "קו ימני כלכלי מתון."
+            "c1_platform": "הכרעה צבאית מוחלטת, שלילת כל מדינה פלסטינית או נסיגות, שמירה קשיחה על ירושלים וביטחון ישראל.",
+            "c2_leader_statements": "וינטר הוא סמל הגישה ההתקפית: 'הכרעה ברורה של האויב ללא היסוסים וללא מריחת זמן'.",
+            "c3_leader_actions": "פיקד על חטיבת גבעתי במבצע 'צוק איתן' ועל עוצבות קרביות בהצלחה מבצעית רבה.",
+            "c4_candidates_statements": "התנגדות לכל ויתור ביטחוני ביו\"ש ובבקעה.",
+            "c5_candidates_actions": "רקורד קרבי עטור שבחים של מפקדים ולוחמים.",
+            "c6_designated_executive": "עופר וינטר מיועד לשר הביטחון."
           },
           "citations": [
             {
-              "title": "עמדות כלכליות של מפלגת הימין הממלכתי",
-              "url": "https://www.inn.co.il",
-              "quote": "הורדת נטל המיסים והסרת חסמים בירוקרטיים למשרתי המילואים"
+              "title": "דף המפקד של עופר וינטר בצוק איתן",
+              "url": "https://www.ynet.co.il",
+              "quote": "ההיסטוריה בחרה בנו להיות בחוד החנית של הלחימה באויב הטרוריסטי; הכרעה ברורה וניצחון"
             }
           ]
         },
@@ -3225,31 +3250,6 @@
               "title": "חוק זכויות הלוחם של עופר וינטר",
               "url": "https://www.makorrishon.co.il",
               "quote": "עדיפות מוחלטת בדיור, תעסוקה ומענקים למי שנלחם למען המדינה"
-            }
-          ]
-        },
-        "government_downsizing": {
-          "scores": {
-            "c1_platform": 60,
-            "c2_leader_statements": 65,
-            "c3_leader_actions": 50,
-            "c4_candidates_statements": 60,
-            "c5_candidates_actions": 50,
-            "c6_designated_executive": 55
-          },
-          "notes": {
-            "c1_platform": "צמצום משרדי ממשלה מיותרים ואיחוד פונקציות ביטחוניות ואזרחיות.",
-            "c2_leader_statements": "וינטר מדבר על 'מטה רזה ויעיל' כפי שנהוג בצבא הקרבי.",
-            "c3_leader_actions": "צמצום תקני מפקדה והעברת משאבים לקצה המבצעי.",
-            "c4_candidates_statements": "התנגדות למשרדים פוליטיים מומצאים.",
-            "c5_candidates_actions": "קריאה לייעול המנגנון הציבורי.",
-            "c6_designated_executive": "תפיסת פיקוד רזה."
-          },
-          "citations": [
-            {
-              "title": "תפיסת המטה הרזה של עופר וינטר",
-              "url": "https://www.israelhayom.co.il",
-              "quote": "ממשלה צריכה לפעול כמו אוגדה קרבית: מטה רזה, מינימום ביורוקרטיה וכל המשאבים לשטח"
             }
           ]
         }

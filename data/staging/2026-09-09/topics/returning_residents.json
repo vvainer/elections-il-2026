@@ -1,0 +1,356 @@
+{
+  "topic_id": "returning_residents",
+  "date": "2026-09-09",
+  "parties": {
+    "yashar": {
+      "scores": {
+        "c1_platform": 65,
+        "c2_leader_statements": 60,
+        "c3_leader_actions": 50,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 60,
+        "c6_designated_executive": 60
+      },
+      "notes": {
+        "c1_platform": "תוכנית לאומית לבלימת ירידת רופאים ומדענים והענקת חבילות קליטה ומחקר.",
+        "c2_leader_statements": "איזנקוט התריע שוב ושוב מפני בריחת מוחות ומשבר כוח האדם הרפואי.",
+        "c3_leader_actions": "קידם שילוב אנשי מדע וטכנולוגיה במחקר ביטחוני.",
+        "c4_candidates_statements": "פרופ' מנואל טרכטנברג מוביל את גיבוש חבילת התמריצים לחוקרים ישראלים בחו\"ל.",
+        "c5_candidates_actions": "טרכטנברג הוביל בעבר את הות\"ת ואת המל\"ג וקידם מוקדי מצויינות אקדמיים (I-CORE).",
+        "c6_designated_executive": "מועמדות משותפת של טרכטנברג להובלת המועצה הלאומית לכלכלה."
+      },
+      "citations": [
+        {
+          "title": "יוזמת בלימת בריחת המוחות - מפלגת ישר",
+          "url": "https://yashar.org.il/initiatives/brain-gain",
+          "quote": "מענקי פתיחת מעבדות ותנאים מועדפים לרופאים חוזרים"
+        }
+      ]
+    },
+    "beyachad": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 70,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 75,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "תוכנית 'חוזרים הביתה': הטבות מס, מענקי מחקר והקלת רישיונות לרופאים ויזמים בחו\"ל.",
+        "c2_leader_statements": "בנט קרא לישראלים לחזור וליטול חלק בבנייה מחדש של ישראל.",
+        "c3_leader_actions": "כשר כלכלה פעל להבאת טאלנטים ויזמים וקידם הכרה בתארים זרים.",
+        "c4_candidates_statements": "אביר קארה תומך בהסרה מיידית של כלל חסמי הרישוי הממשלתיים המונעים חזרה.",
+        "c5_candidates_actions": "פעילות במסגרת 'אביר קארה למען העסקים' להסרת ביורוקרטיה מקצועית.",
+        "c6_designated_executive": "הקמת מנהלת מיוחדת להחזרת מוחות ויזמים."
+      },
+      "citations": [
+        {
+          "title": "תוכנית החזרת היזמים והרופאים - ביחד",
+          "url": "https://www.beyachad2026.org.il/economy",
+          "quote": "מסלול ירוק והכרה אוטומטית ברישיונות רפואיים מארה\"ב ואירופה"
+        }
+      ]
+    },
+    "hendel_zeleka": {
+      "scores": {
+        "c1_platform": 75,
+        "c2_leader_statements": 75,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 75,
+        "c5_candidates_actions": 70,
+        "c6_designated_executive": 75
+      },
+      "notes": {
+        "c1_platform": "תוכנית תמרוץ והשקעה באקדמיה וברפואה להחזרת חוקרים ורופאים ישראלים מחו\"ל.",
+        "c2_leader_statements": "זליכה מציג נתונים על אובדן ההון האנושי ודורש הפיכת תנאי השכר למקבילים לאירופה.",
+        "c3_leader_actions": "זליכה כראש ביה\"ס למנהל עסקים בקריה האקדמית אונו גייס חוקרים מובילים.",
+        "c4_candidates_statements": "הנדל תומך בהקלות מס משמעותיות לישראלים חוזרים במקצועות מועדפים.",
+        "c5_candidates_actions": "קידום יוזמות קליטה טכנולוגיות.",
+        "c6_designated_executive": "פרופ' זליכה כשר כלכלה/אוצר מיועד."
+      },
+      "citations": [
+        {
+          "title": "תוכנית זליכה לעידוד מדענים ורופאים חוזרים",
+          "url": "https://www.kalkalit.org/brain-gain",
+          "quote": "העלאת שכר היסוד בבתי החולים והאקדמיה כדי להחזיר מוחות ארצה"
+        }
+      ]
+    },
+    "yisrael_beiteinu": {
+      "scores": {
+        "c1_platform": 85,
+        "c2_leader_statements": 85,
+        "c3_leader_actions": 80,
+        "c4_candidates_statements": 80,
+        "c5_candidates_actions": 80,
+        "c6_designated_executive": 85
+      },
+      "notes": {
+        "c1_platform": "תוכנית לאומית מקיפה להשבת ישראלים מחו\"ל בדגש על רופאים, מהנדסים ומדענים.",
+        "c2_leader_statements": "ליברמן יזם כשר אוצר חבילות קליטה ותמריצי מס לרופאים חוזרים.",
+        "c3_leader_actions": "הקצה מענקים של מאות אלפי שקלים לרופאים מומחים שחזרו לעבוד בפריפריה.",
+        "c4_candidates_statements": "יבגני סובה מקדם בכנסת את חוקי העלייה והחזרת המוחות.",
+        "c5_candidates_actions": "סובה הוביל פעילות פרלמנטרית להסרת חסמי הכרה בדיפלומות רפואיות.",
+        "c6_designated_executive": "יבגני סובה מיועד לשר הקליטה והעלייה."
+      },
+      "citations": [
+        {
+          "title": "מענקי ליברמן לרופאים חוזרים - ישראל היום",
+          "url": "https://www.israelhayom.co.il",
+          "quote": "הקצאת מענקים לרופאים ישראלים חוזרים שנקלטו בבתי חולים בפריפריה"
+        }
+      ]
+    },
+    "likud": {
+      "scores": {
+        "c1_platform": 10,
+        "c2_leader_statements": 10,
+        "c3_leader_actions": -15,
+        "c4_candidates_statements": 15,
+        "c5_candidates_actions": -10,
+        "c6_designated_executive": 10
+      },
+      "notes": {
+        "c1_platform": "קריאות כלליות לעלייה, ללא תוכנית אופרטיבית מותאמת לרופאים ויזמים.",
+        "c2_leader_statements": "הצהרות על קיבוץ גלויות, אך התעלמות מתופעת 'הרילוקיישן' של אנשי הייטק ורופאים.",
+        "c3_leader_actions": "העדר תוכנית בלימה ממשלתית מול עזיבת מאות רופאים מומחים.",
+        "c4_candidates_statements": "ניר ברקת מציג יוזמות הייטק אך ללא תקצוב תואם.",
+        "c5_candidates_actions": "משרד העלייה והקליטה התמקד בעלייה ממזרח אירופה ולא ביורדים ישראלים.",
+        "c6_designated_executive": "ללא מועמד ייעודי בעל תוכנית קונקרטית."
+      },
+      "citations": [
+        {
+          "title": "דוח ההסתדרות הרפואית על עזיבת רופאים",
+          "url": "https://www.ima.org.il",
+          "quote": "מגמת עזיבה של רופאים מומחים לחו\"ל ללא מענה ממשלתי הולם"
+        }
+      ]
+    },
+    "democrats": {
+      "scores": {
+        "c1_platform": 55,
+        "c2_leader_statements": 50,
+        "c3_leader_actions": 45,
+        "c4_candidates_statements": 55,
+        "c5_candidates_actions": 50,
+        "c6_designated_executive": 50
+      },
+      "notes": {
+        "c1_platform": "השקעה במחקר האקדמי ובבתי החולים הציבוריים כדי ליצור תנאים לחזרה.",
+        "c2_leader_statements": "גולן מתריע מפני בריחת רופאים וחוקרים בשל האווירה הפוליטית והפגיעה בדמוקרטיה.",
+        "c3_leader_actions": "תמיכה בתקציבי אקדמיה ומדע.",
+        "c4_candidates_statements": "הדגשת השבת תקנים למחקר ורפואה ציבורית.",
+        "c5_candidates_actions": "פעילות בוועדות הבריאות והחינוך.",
+        "c6_designated_executive": "ללא מנהלת ייעודית מפורטת."
+      },
+      "citations": [
+        {
+          "title": "הצלת מערכת הבריאות הציבורית - הדמוקרטים",
+          "url": "https://democrats.org.il/health",
+          "quote": "שיפור תנאי הרופאים והמתמחים ובלימת מגמת הרילוקיישן"
+        }
+      ]
+    },
+    "yesh_atid": {
+      "scores": {
+        "c1_platform": 70,
+        "c2_leader_statements": 70,
+        "c3_leader_actions": 65,
+        "c4_candidates_statements": 65,
+        "c5_candidates_actions": 65,
+        "c6_designated_executive": 65
+      },
+      "notes": {
+        "c1_platform": "תוכניות החזרה להייטקיסטים, מדענים ורופאים עם תמריצי מס ממוקדים.",
+        "c2_leader_statements": "לפיד מציג את החזרת המוחות כמשימה לאומית עליונה.",
+        "c3_leader_actions": "ממשלתו אישרה תמריצים למרכזי מו\"פ בינלאומיים.",
+        "c4_candidates_statements": "אורנה ברביבאי קידמה הכשרות הייטק והשבת מומחים.",
+        "c5_candidates_actions": "ברביבאי פעלה להסרת חסמי תעסוקה ורגולציה לעולים ויורדים.",
+        "c6_designated_executive": "אורנה ברביבאי מיועדת לתיק הכלכלה/קליטה."
+      },
+      "citations": [
+        {
+          "title": "תוכנית הון אנושי בהייטק - יש עתיד",
+          "url": "https://www.yeshatid.org.il/economy",
+          "quote": "משיכת מוחות ישראלים מחו\"ל והרחבת תוכניות הקליטה במחקר הרפואי"
+        }
+      ]
+    },
+    "shas": {
+      "scores": {
+        "c1_platform": -10,
+        "c2_leader_statements": -10,
+        "c3_leader_actions": -20,
+        "c4_candidates_statements": -10,
+        "c5_candidates_actions": -15,
+        "c6_designated_executive": -15
+      },
+      "notes": {
+        "c1_platform": "היעדר כל תוכנית להשבת מוחות, רופאים או מדענים.",
+        "c2_leader_statements": "התמקדות בלעדית בצורכי הציבור החרדי והמסורתי בישראל.",
+        "c3_leader_actions": "חוסר עניין מובהק בסוגיות יורדים והייטק.",
+        "c4_candidates_statements": "ללא התבטאויות בנושא.",
+        "c5_candidates_actions": "אפס פעילות פרלמנטרית בתחום.",
+        "c6_designated_executive": "אין מועמד רלוונטי."
+      },
+      "citations": [
+        {
+          "title": "תוכניות הפעולה של ש\"ס",
+          "url": "https://shas.org.il",
+          "quote": "מיקוד מלא בקהילות בישראל ובשירותי הדת"
+        }
+      ]
+    },
+    "yahadut_hatorah": {
+      "scores": {
+        "c1_platform": -20,
+        "c2_leader_statements": -20,
+        "c3_leader_actions": -25,
+        "c4_candidates_statements": -20,
+        "c5_candidates_actions": -25,
+        "c6_designated_executive": -25
+      },
+      "notes": {
+        "c1_platform": "ללא התייחסות למדענים, רופאים או הייטק.",
+        "c2_leader_statements": "חוסר עניין מוחלט.",
+        "c3_leader_actions": "ניתוב כל התקציבים למוסדות תורניים פנימיים.",
+        "c4_candidates_statements": "אין.",
+        "c5_candidates_actions": "אפס מעורבות.",
+        "c6_designated_executive": "אין."
+      },
+      "citations": [
+        {
+          "title": "סדרי העדיפויות של יהדות התורה",
+          "url": "https://main.knesset.gov.il",
+          "quote": "התמקדות בלעדית בצורכי עולם התורה והחינוך החרדי"
+        }
+      ]
+    },
+    "otzma_yehudit": {
+      "scores": {
+        "c1_platform": 0,
+        "c2_leader_statements": 0,
+        "c3_leader_actions": -10,
+        "c4_candidates_statements": 0,
+        "c5_candidates_actions": -10,
+        "c6_designated_executive": 0
+      },
+      "notes": {
+        "c1_platform": "התמקדות בעלייה מטעמי ציונות ויהדות, ללא תוכנית ספציפית לרופאים ומדענים יורדים.",
+        "c2_leader_statements": "ללא התייחסות לתמריצים כלכליים ומדעיים להשבת מוחות.",
+        "c3_leader_actions": "אפס פעילות בתחום.",
+        "c4_candidates_statements": "אין.",
+        "c5_candidates_actions": "אין.",
+        "c6_designated_executive": "היעדר מועמד ייעודי."
+      },
+      "citations": [
+        {
+          "title": "מצע עוצמה יהודית",
+          "url": "https://ozma-yehudit.com",
+          "quote": "עידוד עלייה יהודית וחיזוק הקשר עם התפוצות"
+        }
+      ]
+    },
+    "religious_zionism": {
+      "scores": {
+        "c1_platform": 15,
+        "c2_leader_statements": 20,
+        "c3_leader_actions": 10,
+        "c4_candidates_statements": 15,
+        "c5_candidates_actions": 10,
+        "c6_designated_executive": 15
+      },
+      "notes": {
+        "c1_platform": "משרד העלייה והקליטה בראשות אופיר סופר השיק תוכניות לקליטת רופאים מחו\"ל.",
+        "c2_leader_statements": "אופיר סופר הוביל קמפיינים להבאת רופאים יהודים מצרפת וארה\"ב.",
+        "c3_leader_actions": "הקלת מבחני רישוי לרופאים עולים ממדינות מערביות.",
+        "c4_candidates_statements": "סופר מתמקד ברופאים עולים יותר מאשר ביורדים ישראלים.",
+        "c5_candidates_actions": "אישור תקציבי סיוע במשרד הקליטה.",
+        "c6_designated_executive": "אופיר סופר מיועד להמשך כהונה כשר הקליטה."
+      },
+      "citations": [
+        {
+          "title": "תוכנית משרד העלייה והקליטה לרופאים עולים - אופיר סופר",
+          "url": "https://www.gov.il/he/departments/news/doctors_aliyah",
+          "quote": "מסלול ירוק להכרה ברישיונות רפואה לעולים מצרפת, ארה\"ב ובריטניה"
+        }
+      ]
+    },
+    "raam": {
+      "scores": {
+        "c1_platform": 0,
+        "c2_leader_statements": 0,
+        "c3_leader_actions": -10,
+        "c4_candidates_statements": 0,
+        "c5_candidates_actions": -10,
+        "c6_designated_executive": 0
+      },
+      "notes": {
+        "c1_platform": "ללא התייחסות ליורדים ישראלים מחו\"ל.",
+        "c2_leader_statements": "אין התייחסות.",
+        "c3_leader_actions": "אין פעילות.",
+        "c4_candidates_statements": "אין.",
+        "c5_candidates_actions": "אין.",
+        "c6_designated_executive": "אין."
+      },
+      "citations": [
+        {
+          "title": "מצע רע\"ם",
+          "url": "https://raam.org.il",
+          "quote": "התמקדות באזרחים הערבים בישראל"
+        }
+      ]
+    },
+    "hadash_taal": {
+      "scores": {
+        "c1_platform": -20,
+        "c2_leader_statements": -20,
+        "c3_leader_actions": -25,
+        "c4_candidates_statements": -20,
+        "c5_candidates_actions": -25,
+        "c6_designated_executive": -25
+      },
+      "notes": {
+        "c1_platform": "התנגדות לחוק השבות ולתמריצים לאומיים ליורדים יהודים.",
+        "c2_leader_statements": "ביקורת על מדיניות המפלה לטובת יהודים מחו\"ל.",
+        "c3_leader_actions": "הצבעות נגד תקציבי עידוד עלייה.",
+        "c4_candidates_statements": "דרישה לשוויון זכויות מלא לפליטים פלסטינים.",
+        "c5_candidates_actions": "אין פעילות להשבת מוחות ישראלים.",
+        "c6_designated_executive": "היעדר מועמד."
+      },
+      "citations": [
+        {
+          "title": "עמדת חד\"ש על חוק השבות",
+          "url": "https://aljabha.org.il",
+          "quote": "ביטול חוקי העלייה המפלים והבטחת שוויון אזרחי לכל"
+        }
+      ]
+    },
+    "right_winter": {
+      "scores": {
+        "c1_platform": 20,
+        "c2_leader_statements": 25,
+        "c3_leader_actions": 15,
+        "c4_candidates_statements": 20,
+        "c5_candidates_actions": 15,
+        "c6_designated_executive": 20
+      },
+      "notes": {
+        "c1_platform": "קריאה לפטריוטיזם ושיבה הביתה להגנת המולדת ובנייתה.",
+        "c2_leader_statements": "וינטר קורא לישראלים לחזור ולהתגייס למאמץ הלאומי.",
+        "c3_leader_actions": "גיוס אנשי מילואים מחו\"ל במלחמה.",
+        "c4_candidates_statements": "דגש על מחויבות ציונית.",
+        "c5_candidates_actions": "פעילות בהתנדבות לאומית.",
+        "c6_designated_executive": "היעדר מנגנון כלכלי מוסדר."
+      },
+      "citations": [
+        {
+          "title": "קריאת עופר וינטר לישראלים בעולם",
+          "url": "https://www.israelhayom.co.il",
+          "quote": "זה הזמן של כל ישראלי בעולם לחזור הביתה ולעמוד לצד אחיו"
+        }
+      ]
+    }
+  }
+}
