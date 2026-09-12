@@ -1,0 +1,118 @@
+last_updated: "2026-09-09"
+electoral_threshold_percent: 3.25
+electoral_threshold_mandates: 4
+safety_margin_mandates: 1
+
+recent_polls:
+  - source: "כאן 11 (מכון קנטאר)"
+    date: "2026-09-06"
+    url: "https://www.kan.org.il"
+  - source: "חדשות 12 (מדגם / מנו גבע)"
+    date: "2026-09-07"
+    url: "https://www.mako.co.il"
+  - source: "מעריב (לזר מחקרים)"
+    date: "2026-09-08"
+    url: "https://www.maariv.co.il"
+  - source: "עכשיו 14 (דיירקט פולס)"
+    date: "2026-09-07"
+    url: "https://www.now14.co.il"
+
+parties_status:
+  yashar:
+    name_he: "ישר"
+    leader: "גדי איזנקוט"
+    poll_average: 23.7
+    max_poll: 25
+    qualifies: true
+    realistic_cutoff: 25
+  likud:
+    name_he: "הליכוד"
+    leader: "בנימין נתניהו"
+    poll_average: 21.8
+    max_poll: 26
+    qualifies: true
+    realistic_cutoff: 23
+  beyachad:
+    name_he: "ביחד"
+    leader: "נפתלי בנט"
+    poll_average: 13.3
+    max_poll: 14
+    qualifies: true
+    realistic_cutoff: 14
+  yisrael_beiteinu:
+    name_he: "ישראל ביתנו"
+    leader: "אביגדור ליברמן"
+    poll_average: 9.0
+    max_poll: 10
+    qualifies: true
+    realistic_cutoff: 10
+  democrats:
+    name_he: "הדמוקרטים (עבודה-מרצ)"
+    leader: "יאיר גולן"
+    poll_average: 8.7
+    max_poll: 9
+    qualifies: true
+    realistic_cutoff: 10
+  yesh_atid:
+    name_he: "יש עתיד"
+    leader: "יאיר לפיד"
+    poll_average: 8.0
+    max_poll: 9
+    qualifies: true
+    realistic_cutoff: 9
+  shas:
+    name_he: "ש״ס"
+    leader: "אריה דרעי"
+    poll_average: 8.0
+    max_poll: 10
+    qualifies: true
+    realistic_cutoff: 9
+  yahadut_hatorah:
+    name_he: "יהדות התורה"
+    leader: "יצחק גולדקנופף / משה גפני"
+    poll_average: 7.5
+    max_poll: 8
+    qualifies: true
+    realistic_cutoff: 9
+  otzma_yehudit:
+    name_he: "עוצמה יהודית"
+    leader: "איתמר בן גביר"
+    poll_average: 7.5
+    max_poll: 9
+    qualifies: true
+    realistic_cutoff: 9
+  religious_zionism:
+    name_he: "הציונות הדתית"
+    leader: "בצלאל סמוטריץ׳"
+    poll_average: 5.0
+    max_poll: 6
+    qualifies: true
+    realistic_cutoff: 6
+  raam:
+    name_he: "רע״ם"
+    leader: "מנסור עבאס"
+    poll_average: 5.0
+    max_poll: 5
+    qualifies: true
+    realistic_cutoff: 6
+  hadash_taal:
+    name_he: "חד״ש-תע״ל"
+    leader: "איימן עודה / אחמד טיבי"
+    poll_average: 5.0
+    max_poll: 5
+    qualifies: true
+    realistic_cutoff: 6
+  hendel_zeleka:
+    name_he: "איחוד הנדל-זליכה"
+    leader: "יועז הנדל / ירון זליכה"
+    poll_average: 4.0
+    max_poll: 4
+    qualifies: true
+    realistic_cutoff: 5
+  right_winter:
+    name_he: "ימין ממלכתי / וינטר"
+    leader: "עופר וינטר"
+    poll_average: 4.0
+    max_poll: 4
+    qualifies: true
+    realistic_cutoff: 5

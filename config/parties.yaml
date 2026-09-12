@@ -1,0 +1,291 @@
+version: "1.0.0"
+parties:
+  likud:
+    id: "likud"
+    name_he: "הליכוד"
+    leader: "בנימין נתניהו"
+    leader_title: "ראש הממשלה ויו״ר הליכוד"
+    official_website: "https://www.likud.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=1"
+    manifesto_status: "מצע מסורתי / עקרונות תנועת הליכוד"
+    realistic_candidates:
+      - name: "יריב לוין"
+        position: 2
+        role_designated: "משפטים / ממשל"
+      - name: "יואב גלנט"
+        position: 3
+        role_designated: "ביטחון"
+      - name: "ניר ברקת"
+        position: 4
+        role_designated: "כלכלה / יזמות"
+      - name: "ישראל כ״ץ"
+        position: 5
+        role_designated: "חוץ / ביטחון"
+      - name: "אלי כהן"
+        position: 6
+        role_designated: "אנרגיה / תשתיות"
+      - name: "יואב קיש"
+        position: 7
+        role_designated: "חינוך"
+      - name: "אבי דיכטר"
+        position: 8
+        role_designated: "חקלאות / ביטחון"
+
+  yashar:
+    id: "yashar"
+    name_he: "ישר"
+    leader: "גדי איזנקוט"
+    leader_title: "יו״ר מפלגת ישר, רמטכ״ל לשעבר"
+    official_website: "https://yashar.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "תכנית לאומית לתיקון המדינה 2026"
+    realistic_candidates:
+      - name: "מתן כהנא"
+        position: 2
+        role_designated: "דת ומדינה / שירות ציבורי"
+      - name: "אורית פרקש הכהן"
+        position: 3
+        role_designated: "מדע וטכנולוגיה / אנרגיה"
+      - name: "חילי טרופר"
+        position: 4
+        role_designated: "חינוך / חברה"
+      - name: "מיכאל ביטון"
+        position: 5
+        role_designated: "שלטון מקומי / פריפריה"
+      - name: "אלון שוסטר"
+        position: 6
+        role_designated: "חקלאות והתיישבות"
+
+  beyachad:
+    id: "beyachad"
+    name_he: "ביחד"
+    leader: "נפתלי בנט"
+    leader_title: "ראש הממשלה לשעבר ויו״ר מפלגת ביחד"
+    official_website: "https://www.beyachad2026.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "תוכנית זינוק לישראל: כלכלה, ביטחון, שלטון"
+    realistic_candidates:
+      - name: "איילת שקד"
+        position: 2
+        role_designated: "משפטים / פנים"
+      - name: "יוסי כהן"
+        position: 3
+        role_designated: "ביטחון לאומי / מדיני"
+      - name: "פרופ' דן בן-דוד"
+        position: 4
+        role_designated: "כלכלה / חינוך"
+      - name: "אביר קארה"
+        position: 5
+        role_designated: "הסרת חסמים ורגולציה"
+
+  yisrael_beiteinu:
+    id: "yisrael_beiteinu"
+    name_he: "ישראל ביתנו"
+    leader: "אביגדור ליברמן"
+    leader_title: "יו״ר ישראל ביתנו, שר הביטחון והאוצר לשעבר"
+    official_website: "https://beytenu.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=8"
+    manifesto_status: "מצע מפלגת ישראל ביתנו: ביטחון, שוויון בנטל, כלכלה חופשית"
+    realistic_candidates:
+      - name: "עודד פורר"
+        position: 2
+        role_designated: "כלכלה ותשתיות"
+      - name: "יבגני סובה"
+        position: 3
+        role_designated: "קליטה והסברה"
+      - name: "שרון ניר"
+        position: 4
+        role_designated: "ביטחון ושוויון בנטל"
+      - name: "יוליה מלינובסקי"
+        position: 5
+        role_designated: "שירותי דת / רגולציה"
+
+  democrats:
+    id: "democrats"
+    name_he: "הדמוקרטים"
+    leader: "יאיר גולן"
+    leader_title: "יו״ר הדמוקרטים, סגן רמטכ״ל לשעבר"
+    official_website: "https://democrats.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "חוקה, דמוקרטיה שוויונית והסדר מדיני"
+    realistic_candidates:
+      - name: "נעמה לזימי"
+        position: 2
+        role_designated: "רווחה ועבודה"
+      - name: "גלעד קריב"
+        position: 3
+        role_designated: "משפטים / דת ומדינה"
+      - name: "מוסי רז"
+        position: 4
+        role_designated: "איכות סביבה וזכויות אדם"
+      - name: "אפרת רייטן"
+        position: 5
+        role_designated: "חינוך ורווחה"
+
+  yesh_atid:
+    id: "yesh_atid"
+    name_he: "יש עתיד"
+    leader: "יאיר לפיד"
+    leader_title: "ראש האופוזיציה, ראש הממשלה לשעבר"
+    official_website: "https://www.yeshatid.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=3"
+    manifesto_status: "חוקה לישראל, שוויון בנטל וממשלה יעילה"
+    realistic_candidates:
+      - name: "אורנה ברביבאי"
+        position: 2
+        role_designated: "כלכלה ותעשייה"
+      - name: "מאיר כהן"
+        position: 3
+        role_designated: "רווחה ושירותים חברתיים"
+      - name: "קארין אלהרר"
+        position: 4
+        role_designated: "אנרגיה ותשתיות / משפטים"
+      - name: "מירב בן ארי"
+        position: 5
+        role_designated: "ביטחון פנים / חינוך"
+
+  shas:
+    id: "shas"
+    name_he: "ש״ס"
+    leader: "אריה דרעי"
+    leader_title: "יו״ר תנועת ש״ס"
+    official_website: "https://shas.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=4"
+    manifesto_status: "ערכי היהדות, דאגה לשכבות החלשות וחינוך תורני"
+    realistic_candidates:
+      - name: "יעקב מרגי"
+        position: 2
+        role_designated: "רווחה"
+      - name: "מיכאל מלכיאלי"
+        position: 3
+        role_designated: "דת"
+      - name: "חיים ביטון"
+        position: 4
+        role_designated: "חינוך"
+
+  yahadut_hatorah:
+    id: "yahadut_hatorah"
+    name_he: "יהדות התורה"
+    leader: "יצחק גולדקנופף / משה גפני"
+    leader_title: "ראשי יהדות התורה"
+    official_website: "https://main.knesset.gov.il"
+    knesset_faction_url: "https://main.knesset.gov.il/mk/factions/pages/faction.aspx?fId=5"
+    manifesto_status: "שמירת עולם התורה והסטטוס קוו"
+    realistic_candidates:
+      - name: "משה גפני"
+        position: 2
+        role_designated: "ועדת כספים"
+      - name: "אורי מקלב"
+        position: 3
+        role_designated: "תחבורה / רשות לפיתוח חרדי"
+
+  otzma_yehudit:
+    id: "otzma_yehudit"
+    name_he: "עוצמה יהודית"
+    leader: "איתמר בן גביר"
+    leader_title: "השר לביטחון לאומי ויו״ר עוצמה יהודית"
+    official_website: "https://ozma-yehudit.com"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "ריבונות, משילות וביטחון אישי"
+    realistic_candidates:
+      - name: "יצחק וסרלאוף"
+        position: 2
+        role_designated: "פיתוח הנגב והגליל"
+      - name: "אלמוג כהן"
+        position: 3
+        role_designated: "ביטחון פנים והנגב"
+      - name: "צביקה פוגל"
+        position: 4
+        role_designated: "ביטחון לאומי"
+
+  religious_zionism:
+    id: "religious_zionism"
+    name_he: "הציונות הדתית"
+    leader: "בצלאל סמוטריץ׳"
+    leader_title: "שר האוצר ויו״ר הציונות הדתית"
+    official_website: "https://zionutdatit.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "תוכנית חוק וסדר, כלכלה חופשית, חיזוק ההתיישבות"
+    realistic_candidates:
+      - name: "אופיר סופר"
+        position: 2
+        role_designated: "עלייה וקליטה"
+      - name: "אורית סטרוק"
+        position: 3
+        role_designated: "התיישבות ומשימות לאומיות"
+      - name: "שמחה רוטמן"
+        position: 4
+        role_designated: "משפט וחוקה"
+      - name: "משה פייגלין"
+        position: 5
+        role_designated: "חירות כלכלית / זהות"
+
+  raam:
+    id: "raam"
+    name_he: "רע״ם"
+    leader: "מנסור עבאס"
+    leader_title: "יו״ר הרשימה הערבית המאוחדת (רע״ם)"
+    official_website: "https://raam.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "השתלבות אזרחית, פיתוח החברה הערבית וצמצום פערים"
+    realistic_candidates:
+      - name: "וליד טאהא"
+        position: 2
+        role_designated: "פנים ושלטון מקומי"
+      - name: "אימאן ח׳טיב-יאסין"
+        position: 3
+        role_designated: "רווחה ומעמד האישה"
+      - name: "יאסר חוג׳יראת"
+        position: 4
+        role_designated: "בריאות ושלטון מקומי"
+
+  hadash_taal:
+    id: "hadash_taal"
+    name_he: "חד״ש-תע״ל"
+    leader: "איימן עודה / אחמד טיבי"
+    leader_title: "ראשי סיעת חד״ש-תע״ל"
+    official_website: "https://aljabha.org.il"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "שלום צודק, שוויון לאומי ואזרחי מלא וצדק חברתי"
+    realistic_candidates:
+      - name: "אחמד טיבי"
+        position: 2
+        role_designated: "בריאות וזכויות אזרחיות"
+      - name: "עאידה תומא-סלימאן"
+        position: 3
+        role_designated: "רווחה וזכויות נשים"
+      - name: "עופר כסיף"
+        position: 4
+        role_designated: "חינוך וזכויות אדם"
+
+  hendel_zeleka:
+    id: "hendel_zeleka"
+    name_he: "איחוד הנדל-זליכה"
+    leader: "יועז הנדל / ירון זליכה"
+    leader_title: "ראשי מפלגת ימין ממלכתי-כלכלי"
+    official_website: "https://www.kalkalit.org"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "ממלכתיות, מלחמה במונופולים וריסוק יוקר המחיה"
+    realistic_candidates:
+      - name: "ירון זליכה"
+        position: 2
+        role_designated: "אוצר וכלכלה"
+      - name: "יועז הנדל"
+        position: 1
+        role_designated: "תקשורת וביטחון"
+      - name: "צביקה האוזר"
+        position: 3
+        role_designated: "משפט וחוץ"
+
+  right_winter:
+    id: "right_winter"
+    name_he: "ימין חדש / וינטר"
+    leader: "עופר וינטר"
+    leader_title: "תא״ל (במיל') עופר וינטר"
+    official_website: "https://main.knesset.gov.il"
+    knesset_faction_url: "https://main.knesset.gov.il"
+    manifesto_status: "הכרעה צבאית, ביטחון לאומי וערכי מסורת"
+    realistic_candidates:
+      - name: "עופר וינטר"
+        position: 1
+        role_designated: "ביטחון"
