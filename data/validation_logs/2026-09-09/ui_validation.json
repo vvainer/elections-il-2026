@@ -1,0 +1,22 @@
+{
+  "date": "2026-09-09",
+  "html_file": "docs/index.html",
+  "status": "APPROVED",
+  "defects_count": 0,
+  "defects": [],
+  "metrics": {
+    "lang": "he",
+    "dir": "rtl",
+    "has_viewport": true,
+    "leaderboard_cards": 4,
+    "topic_accordions": 126,
+    "criteria_tables": 126,
+    "total_badges": 1040,
+    "total_links": 127,
+    "file_size_kb": 564.1
+  },
+  "snapshots": {
+    "desktop": "data/validation_logs/2026-09-09/snapshots/desktop.png",
+    "mobile": "data/validation_logs/2026-09-09/snapshots/mobile.png"
+  }
+}

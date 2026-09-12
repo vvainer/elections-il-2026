@@ -2,7 +2,7 @@
 
 ## 1. Project Context & Purpose
 This project is an automated, objective, evidence-based analysis system evaluating political parties, party leaders, and realistic candidates for the **2026 Israeli Knesset Elections** (taking place late 2026).
-It is implemented as an **Antigravity Skill** (`election-analyst`) running locally inside Antigravity using the user's Gemini Pro capabilities, powered by a **parallel multi-agent architecture**.
+It is implemented as an **Antigravity Skill** (`election-analyst`) running locally inside Antigravity using the user's Gemini Pro capabilities, powered by a **4-phase parallel multi-agent architecture**.
 
 ## 2. Language & Communication Rules
 - **Technical Discussion, Scripts, Code, Architecture, and Git**: English.
@@ -52,7 +52,7 @@ Configured in `config/profiles/default.yaml` (Equal weight 1.0 each by default):
 
 ---
 
-## 5. Parallel Multi-Agent Architecture & Weekly Workflow
+## 5. Four-Phase Multi-Agent Architecture & Weekly Workflow
 When the user prompts to run the weekly analysis (e.g., "Run weekly election analysis update" or "הרץ עדכון שבועי לאנליזת הבחירות"):
 
 ### Phase 1: Concurrent Information Gathering (9 Topic Researchers)
@@ -67,7 +67,7 @@ When the user prompts to run the weekly analysis (e.g., "Run weekly election ana
 - **Feedback Loop**: If claims/links are flagged, send revision feedback to the research agent (max 1 revision round). Final determination applied by validator.
 - Validated output: `data/validated/YYYY-MM-DD/topics/<topic_id>.json` and audit logs in `data/validation_logs/YYYY-MM-DD/`.
 
-### Phase 3: Merging, Report Rebuilding & Deployment
+### Phase 3: Merging & Report Rebuilding
 - Merge topic datasets:
   ```bash
   python3 scripts/merge_topics.py --topics-dir data/validated/YYYY-MM-DD/topics --output data/evaluations/YYYY-MM-DD.json --date YYYY-MM-DD
@@ -76,12 +76,16 @@ When the user prompts to run the weekly analysis (e.g., "Run weekly election ana
   ```bash
   python3 scripts/run_analysis.py --date YYYY-MM-DD
   ```
-  *(Or execute full pipeline via `python3 scripts/orchestrate_analysis.py --date YYYY-MM-DD --stage all`)*.
 - Write Hebrew Executive Synthesis (לוח מובילים, תזוזות מפתח ופערים בין הגושים).
-- Commit & push to `origin/main` for automatic GitHub Pages deployment:
+
+### Phase 4: UI Validation & Deployment Gatekeeper
+- **Automated Verification & Snapshots**: Run `python3 scripts/validate_ui.py --date YYYY-MM-DD --strict` capturing desktop (`1280x800`) and mobile (`375x812`) snapshots.
+- **Visual Inspection**: `ui_validator` agent reviews layout, RTL rendering, leaderboard cards, and mobile responsiveness.
+- **Rejection Feedback Loop**: If defects exist, `ui_validator` sends a structured Reject payload with selectors to `report_rebuilder` (max 2 revision rounds).
+- **Strict Deployment Gate**: Git commit & push to `origin/main` (for GitHub Pages) is strictly blocked until `data/validation_logs/YYYY-MM-DD/ui_validation.json` has `status: "APPROVED"`.
   ```bash
   git add data/ reports/ docs/
-  git commit -m "Weekly election analysis update: YYYY-MM-DD [Multi-agent validated]"
+  git commit -m "Weekly election analysis update: YYYY-MM-DD [UI Validated]"
   git push origin main
   ```
 
@@ -93,13 +97,15 @@ When the user prompts to run the weekly analysis (e.g., "Run weekly election ana
   - `criteria_rubric.md`: Scoring rubric and weighting math.
   - `researcher_prompt.md`: Prompt template for parallel gathering agents.
   - `validator_prompt.md`: Prompt template for cross-validation agents.
-  - `rebuilder_prompt.md`: Prompt template for report rebuilder and publisher.
+  - `rebuilder_prompt.md`: Prompt template for report rebuilder.
+  - `ui_validator_prompt.md`: Prompt template for UI validator and gatekeeper.
 - `config/`:
   - `profiles/default.yaml`: 9 topics, stances, checklists, and weights.
   - `polls.yaml`: Current polling benchmarks and realistic seat cutoffs.
   - `parties.yaml`: Party registry, leadership, candidates, official links.
 - `scripts/`:
   - `validate_links.py`: Fast concurrent HTTP link & schema validator.
+  - `validate_ui.py`: Headless Chrome snapshot capturer and DOM validator.
   - `merge_topics.py`: Topic dataset merger & splitter.
   - `evaluator.py`: Mathematical 6-criteria evaluation engine.
   - `generate_report.py`: Markdown and HTML dashboard generator.
@@ -108,7 +114,7 @@ When the user prompts to run the weekly analysis (e.g., "Run weekly election ana
 - `data/`:
   - `staging/YYYY-MM-DD/topics/`: Raw research per topic.
   - `validated/YYYY-MM-DD/topics/`: Validated research per topic.
-  - `validation_logs/YYYY-MM-DD/`: Audit trail and link checks.
+  - `validation_logs/YYYY-MM-DD/`: Audit trail, link checks, snapshots, and `ui_validation.json`.
   - `evaluations/YYYY-MM-DD.json`: Central merged evaluation files.
 - `reports/YYYY-MM-DD/report.md`: Generated weekly Markdown reports.
 - `docs/index.html`: Responsive RTL HTML dashboard deployed to GitHub Pages.

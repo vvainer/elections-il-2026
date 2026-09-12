@@ -236,6 +236,56 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
         .badge.mild-negative {{ background-color: var(--mild-neg-bg); color: var(--mild-neg-text); }}
         .badge.negative {{ background-color: var(--neg-bg); color: var(--neg-text); }}
         
+        .leaderboard-cards {{
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 16px;
+            margin-bottom: 24px;
+        }}
+        
+        .leaderboard-card {{
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            position: relative;
+            transition: transform 0.2s, border-color 0.2s;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }}
+        
+        .leaderboard-card:hover {{
+            transform: translateY(-2px);
+            border-color: var(--accent);
+        }}
+        
+        .card-rank {{
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--accent);
+        }}
+        
+        @media (max-width: 768px) {{
+            body {{
+                padding: 12px 8px;
+            }}
+            header h1 {{
+                font-size: 1.6rem;
+            }}
+            .section-title {{
+                font-size: 1.25rem;
+            }}
+            th, td {{
+                padding: 10px 8px;
+                font-size: 0.88rem;
+            }}
+            .card {{
+                padding: 14px;
+            }}
+        }}
+        
         .table-responsive {{
             overflow-x: auto;
             background: var(--bg-card);
@@ -357,6 +407,30 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
     </header>
 
     <h2 class="section-title">🏆 לוח דירוג המפלגות (Leaderboard)</h2>
+    <div class="leaderboard-cards">
+"""
+    # Top 3 highlight cards
+    for idx, (p_id, p_data) in enumerate(list(parties.items())[:3]):
+        rank = p_data.get("rank", idx + 1)
+        name = p_data.get("name_he", p_id)
+        leader = p_data.get("leader", "")
+        mandates = p_data.get("poll_mandates", "-")
+        overall = p_data.get("overall_score", 0.0)
+        badge = get_score_badge_html(overall)
+        html += f"""
+        <div class="leaderboard-card">
+            <div class="card-rank">#{rank}</div>
+            <div style="font-size: 1.3rem; font-weight: bold; color: var(--text-primary); margin-bottom: 4px;">{name}</div>
+            <div style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 12px;">ראש המפלגה: {leader}</div>
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 12px; border-top: 1px solid var(--border); padding-top: 12px;">
+                <span style="font-size: 0.9rem; color: var(--text-secondary);">מנדטים בסקרים: <strong>{mandates}</strong></span>
+                {badge}
+            </div>
+        </div>
+"""
+    
+    html += """
+    </div>
     <div class="table-responsive">
         <table>
             <thead>
