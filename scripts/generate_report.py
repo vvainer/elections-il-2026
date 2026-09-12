@@ -1233,16 +1233,215 @@ def generate_html_dashboard(
 
     <!-- Navigation Tabs -->
     <nav class="nav-tabs" role="tablist">
-        <button class="tab-button active" onclick="switchTab('tab-criteria')" id="btn-criteria">📊 ניתוח קריטריונים ועולם ערכים</button>
-        <button class="tab-button" onclick="switchTab('tab-dossiers')" id="btn-dossiers">👥 כרטיסי מפלגות ומועמדים</button>
+        <button class="tab-button active" onclick="switchTab('tab-dossiers')" id="btn-dossiers">👥 כרטיסי מפלגות ומועמדים</button>
+        <button class="tab-button" onclick="switchTab('tab-criteria')" id="btn-criteria">📊 ניתוח קריטריונים ועולם ערכים</button>
         <button class="tab-button" onclick="switchTab('tab-methodology')" id="btn-methodology">📐 מתודולוגיה ומבנה הניתוח</button>
         <button class="tab-button" onclick="switchTab('tab-raw-data')" id="btn-raw-data">📁 גישה לנתונים גולמיים (GitHub)</button>
     </nav>
+"""
 
-    <!-- ============================================================= -->
-    <!-- TAB 2 (DEFAULT ACTIVE): ניתוח קריטריונים, דירוג ותרחישי קואליציה -->
-    <!-- ============================================================= -->
-    <div id="tab-criteria" class="tab-content active">
+    # =============================================================
+    # TAB 1 (DEFAULT ACTIVE): כרטיסי מפלגות ומועמדים (Party & Candidate Dossiers)
+    # =============================================================
+    html += """
+    <div id="tab-dossiers" class="tab-content active">
+        <h2 class="section-title">👥 כרטיסי מפלגות ומועמדים (Candidate Dossiers)</h2>
+        <div class="dossier-controls">
+            <input type="text" id="candidateSearchInput" oninput="filterCandidates()" placeholder="🔍 חיפוש מועמד לפי שם או תפקיד..." class="search-input">
+            <button class="filter-btn active" id="btn-filter-realistic" onclick="toggleRealisticOnly(true)">★ מועמדים ריאליים בלבד</button>
+            <button class="filter-btn" id="btn-filter-all" onclick="toggleRealisticOnly(false)">רשימה מלאה (1..30+)</button>
+            <div style="display: flex; gap: 8px;">
+                <button class="filter-btn" id="btn-expand-all-parties" onclick="toggleAllParties(true)">📂 פתח את כל המפלגות</button>
+                <button class="filter-btn" id="btn-collapse-all-parties" onclick="toggleAllParties(false)">📁 כווץ את כל המפלגות</button>
+            </div>
+        </div>
+
+        <div id="partiesDossiersList">
+"""
+    for p_id, p_data in parties.items():
+        name = p_data.get("name_he", p_id)
+        leader = p_data.get("leader", "")
+        mandates = p_data.get("poll_mandates", "-")
+        static_data = p_data.get("static_data", {})
+        party_info = static_data.get("party_info", {})
+        candidates = static_data.get("candidates", [])
+        p_topics = p_data.get("topics", {})
+        
+        manifesto_link = f"{GITHUB_BLOB_URL}/data/static/parties/{p_id}/manifesto.md"
+        
+        html += f"""
+        <div class="card party-dossier-card" id="dossier-{p_id}" data-party-id="{p_id}">
+            <div class="party-card-header" onclick="togglePartyCard('{p_id}')" role="button" tabindex="0">
+                <div class="party-header-main">
+                    <div class="party-title-row">
+                        <span class="party-expand-icon" id="party-icon-{p_id}">▼</span>
+                        <h3 class="party-title">{name}</h3>
+                        <span class="party-mandates-pill">{mandates} מנדטים בסקרים</span>
+                    </div>
+                    <div class="party-meta-row">
+                        <span><strong>יו״ר:</strong> {leader}</span>
+                        {f'<span class="meta-sep">|</span><a href="{party_info.get("official_website")}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">אתר רשמי ↗</a>' if party_info.get("official_website") else ""}
+                        {f'<span class="meta-sep">|</span><a href="{party_info.get("knesset_faction_url")}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">עמוד סיעה בכנסת ↗</a>' if party_info.get("knesset_faction_url") else ""}
+                        <span class="meta-sep">|</span><a href="{manifesto_link}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">📄 צפה במצע המלא (GitHub) ↗</a>
+                    </div>
+                </div>
+                <div class="party-header-action">
+                    <span class="party-toggle-btn" id="party-btn-text-{p_id}">פתח פרטי מפלגה ▾</span>
+                </div>
+            </div>
+
+            <div class="party-card-body" id="party-body-{p_id}" style="display: none;">
+                <!-- SECTION 1: עמדות ועשיית המפלגה לפי נושאים (ללא ציונים) -->
+                <div class="party-topics-block">
+                    <h4 class="dossier-subheading">📜 עמדות ועשיית המפלגה לפי 9 נושאי הליבה (דיווח עובדתי ללא ציונים)</h4>
+                    <div class="party-topics-accordion">
+"""
+        for t in topics:
+            t_id = t["id"]
+            t_title = t.get("name_he") or t.get("title") or t_id
+            t_eval = p_topics.get(t_id, {})
+            notes_dict = t_eval.get("notes", {})
+            c1_platform = notes_dict.get("c1_platform", "")
+            c2_leader = notes_dict.get("c2_leader_statements", "")
+            c3_actions = notes_dict.get("c3_leader_actions", "")
+            citations = t_eval.get("citations", [])
+            
+            cites_html = ""
+            if citations:
+                cites_html = '<div style="margin-top: 10px; font-size: 0.86rem;"><strong>מקורות וקישורים מאומתים:</strong><ul style="margin-right: 18px; margin-top: 4px;">'
+                for cite in citations:
+                    title = cite.get("title", "מקור")
+                    url = cite.get("url", "https://github.com/vvainer/elections-il-2026")
+                    quote = cite.get("quote", "")
+                    quote_str = f' &mdash; <em>"{quote}"</em>' if quote else ""
+                    cites_html += f'<li><a href="{url}" target="_blank" rel="noopener noreferrer" class="citation-link">{title}</a>{quote_str}</li>'
+                cites_html += '</ul></div>'
+            
+            html += f"""
+                        <details class="party-policy-accordion">
+                            <summary class="party-policy-summary">
+                                <span>📌 {t_title}</span>
+                                <span class="party-policy-hint">עמדות ומקורות ▾</span>
+                            </summary>
+                            <div class="party-policy-content">
+                                <div class="topic-fact-row"><strong>עקרונות ומצע:</strong> <span>{c1_platform or 'לא צוינה עמדה רשמית במצע.'}</span></div>
+                                <div class="topic-fact-row"><strong>עמדות ראש המפלגה:</strong> <span>{c2_leader or 'אין התבטאויות פומביות מתועדות.'}</span></div>
+                                <div class="topic-fact-row"><strong>עשייה בפועל של ראש המפלגה:</strong> <span>{c3_actions or 'אין רקורד ביצועי או חקיקתי מתועד.'}</span></div>
+                                {cites_html}
+                            </div>
+                        </details>
+"""
+        html += f"""
+                    </div>
+                </div>
+
+                <!-- SECTION 2: נבחרת המועמדים וקורות חיים מעשיים -->
+                <div class="party-candidates-block">
+                    <div class="candidates-block-header">
+                        <h4 class="dossier-subheading" style="margin: 0;">👥 נבחרת המועמדים וקורות חיים מעשיים ({len(candidates)} מועמדים ברשימה)</h4>
+                        <div class="candidates-bulk-controls">
+                            <button class="filter-btn toggle-candidates-btn" id="toggle-cand-btn-{p_id}" onclick="toggleAllCandidates('{p_id}')">📂 פתח את כל המועמדים</button>
+                        </div>
+                    </div>
+
+                    <div class="candidates-grid" id="candidates-grid-{p_id}">
+"""
+        if candidates:
+            for c in candidates:
+                pos = c.get("position", "-")
+                c_name = c.get("name", "")
+                is_real = c.get("is_realistic_zone", False)
+                real_class = "realistic-card" if is_real else "standard-card"
+                real_badge = '<span class="pill-badge" style="background:#eff6ff; color:#1d4ed8;">★ בטווח הריאלי</span>' if is_real else '<span class="pill-badge" style="background:#f1f5f9; color:#64748b;">מקום ברשימה</span>'
+                
+                cv = c.get("cv", {})
+                short_raw = cv.get("public_service") or cv.get("career") or ""
+                short_snippet = short_raw.split(",")[0].split(";")[0].split(".")[0][:36].strip()
+                short_badge = f'<span class="candidate-short-title" title="{short_raw}">({short_snippet})</span>' if short_snippet else ""
+                
+                cand_topics = extract_candidate_topic_records(c, p_topics, topics)
+                
+                topics_markup = ""
+                if cand_topics:
+                    pills = f'<div class="candidate-topics-pills" id="cand-pills-{p_id}-{pos}">'
+                    drawers = f'<div class="candidate-topics-drawers" id="cand-drawers-{p_id}-{pos}">'
+                    for tid, trec in cand_topics.items():
+                        pills += f'<button type="button" class="cand-topic-pill" id="pill-{p_id}-{pos}-{tid}" onclick="toggleCandidateTopic(\'{p_id}\', \'{pos}\', \'{tid}\')">📌 {trec["title"]}</button>'
+                        drawers += f'<div class="cand-topic-drawer" id="drawer-{p_id}-{pos}-{tid}" style="display: none;">'
+                        drawers += f'<div class="cand-topic-drawer-header"><strong>נושא: {trec["title"]}</strong></div>'
+                        if trec["votes"]:
+                            drawers += '<div><strong>הצבעות מפתח:</strong><ul class="cand-drawer-list">'
+                            for v in trec["votes"]:
+                                drawers += f'<li>{v}</li>'
+                            drawers += '</ul></div>'
+                        if trec["achievements"]:
+                            drawers += '<div><strong>הישגים ועשייה:</strong><ul class="cand-drawer-list">'
+                            for a in trec["achievements"]:
+                                drawers += f'<li>{a}</li>'
+                            drawers += '</ul></div>'
+                        if trec["dossier_notes"]:
+                            drawers += '<div><strong>מתוך תיק המחקר:</strong><ul class="cand-drawer-list">'
+                            for n in trec["dossier_notes"]:
+                                drawers += f'<li>{n}</li>'
+                            drawers += '</ul></div>'
+                        drawers += '</div>'
+                    pills += '</div>'
+                    drawers += '</div>'
+                    topics_markup = pills + drawers
+                else:
+                    topics_markup = '<span class="no-topic-note">אין רישום נושאי ספציפי</span>'
+
+                html += f"""
+                        <div class="candidate-card {real_class}" id="candidate-{p_id}-{pos}" data-name="{c_name}" data-realistic="{str(is_real).lower()}" data-party="{p_id}">
+                            <div class="candidate-card-header" onclick="toggleCandidateCard('{p_id}', '{pos}')" role="button" tabindex="0">
+                                <div class="candidate-header-left">
+                                    <span class="candidate-pos-tag">מקום #{pos}</span>
+                                    <span class="candidate-name">{c_name}</span>
+                                    {real_badge}
+                                    {short_badge}
+                                </div>
+                                <div class="candidate-header-right">
+                                    <span class="candidate-expand-icon" id="cand-icon-{p_id}-{pos}">{'▲' if is_real else '▼'}</span>
+                                </div>
+                            </div>
+                            <div class="candidate-card-body" id="cand-body-{p_id}-{pos}" style="display: {'block' if is_real else 'none'};">
+                                <div class="candidate-cv-grid">
+                                    {f'<div class="cv-item"><strong>השכלה:</strong> <span>{cv["education"]}</span></div>' if cv.get("education") else ""}
+                                    {f'<div class="cv-item"><strong>קריירה אזרחית/צבאית:</strong> <span>{cv["career"]}</span></div>' if cv.get("career") else ""}
+                                    {f'<div class="cv-item"><strong>שירות ציבורי:</strong> <span>{cv["public_service"]}</span></div>' if cv.get("public_service") else ""}
+                                </div>
+                                {f'<div style="margin-top: 8px; font-size: 0.88rem;"><strong>הצבעות מפתח בכנסת:</strong> <span style="color: var(--text-secondary);">{", ".join(cv["key_votes"])}</span></div>' if cv.get("key_votes") else ""}
+                                {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>הישגים בולטים:</strong> <span style="color: var(--pos-text);">{", ".join(cv["major_achievements"])}</span></div>' if cv.get("major_achievements") else ""}
+                                {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>ביקורת ומחלוקות:</strong> <span style="color: var(--neg-text);">{", ".join(cv["notable_failures_or_controversies"])}</span></div>' if cv.get("notable_failures_or_controversies") else ""}
+                                
+                                <div class="candidate-topics-section">
+                                    <div class="candidate-topics-header">
+                                        <strong>עשייה ועמדות לפי נושאים:</strong>
+                                    </div>
+                                    {topics_markup}
+                                </div>
+                            </div>
+                        </div>
+"""
+        else:
+            html += "                        <p style='color: var(--text-secondary);'>אין מידע מפורט על מועמדים.</p>\n"
+
+        html += """
+                    </div>
+                </div>
+            </div>
+        </div>
+"""
+    html += """
+        </div>
+    </div>
+"""
+
+    # =============================================================
+    # TAB 2: ניתוח קריטריונים, דירוג ותרחישי קואליציה
+    # =============================================================
+    html += f"""
+    <div id="tab-criteria" class="tab-content">
         <!-- Profile Selector Box -->
         <div class="profile-selector-box">
             <div class="profile-selector-row">
@@ -1493,203 +1692,6 @@ def generate_html_dashboard(
         html += "        </div>\n"
     html += "    </div>\n"
     html += "    </div>\n"
-
-    # =============================================================
-    # TAB 1: כרטיסי מפלגות ומועמדים (Party & Candidate Dossiers)
-    # =============================================================
-    html += """
-    <div id="tab-dossiers" class="tab-content">
-        <h2 class="section-title">👥 כרטיסי מפלגות ומועמדים (Candidate Dossiers)</h2>
-        <div class="dossier-controls">
-            <input type="text" id="candidateSearchInput" oninput="filterCandidates()" placeholder="🔍 חיפוש מועמד לפי שם או תפקיד..." class="search-input">
-            <button class="filter-btn active" id="btn-filter-realistic" onclick="toggleRealisticOnly(true)">★ מועמדים ריאליים בלבד</button>
-            <button class="filter-btn" id="btn-filter-all" onclick="toggleRealisticOnly(false)">רשימה מלאה (1..30+)</button>
-            <div style="display: flex; gap: 8px;">
-                <button class="filter-btn" id="btn-expand-all-parties" onclick="toggleAllParties(true)">📂 פתח את כל המפלגות</button>
-                <button class="filter-btn" id="btn-collapse-all-parties" onclick="toggleAllParties(false)">📁 כווץ את כל המפלגות</button>
-            </div>
-        </div>
-
-        <div id="partiesDossiersList">
-"""
-    for p_id, p_data in parties.items():
-        name = p_data.get("name_he", p_id)
-        leader = p_data.get("leader", "")
-        mandates = p_data.get("poll_mandates", "-")
-        static_data = p_data.get("static_data", {})
-        party_info = static_data.get("party_info", {})
-        candidates = static_data.get("candidates", [])
-        p_topics = p_data.get("topics", {})
-        
-        manifesto_link = f"{GITHUB_BLOB_URL}/data/static/parties/{p_id}/manifesto.md"
-        
-        html += f"""
-        <div class="card party-dossier-card" id="dossier-{p_id}" data-party-id="{p_id}">
-            <div class="party-card-header" onclick="togglePartyCard('{p_id}')" role="button" tabindex="0">
-                <div class="party-header-main">
-                    <div class="party-title-row">
-                        <span class="party-expand-icon" id="party-icon-{p_id}">▼</span>
-                        <h3 class="party-title">{name}</h3>
-                        <span class="party-mandates-pill">{mandates} מנדטים בסקרים</span>
-                    </div>
-                    <div class="party-meta-row">
-                        <span><strong>יו״ר:</strong> {leader}</span>
-                        {f'<span class="meta-sep">|</span><a href="{party_info.get("official_website")}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">אתר רשמי ↗</a>' if party_info.get("official_website") else ""}
-                        {f'<span class="meta-sep">|</span><a href="{party_info.get("knesset_faction_url")}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">עמוד סיעה בכנסת ↗</a>' if party_info.get("knesset_faction_url") else ""}
-                        <span class="meta-sep">|</span><a href="{manifesto_link}" target="_blank" rel="noopener noreferrer" class="citation-link" onclick="event.stopPropagation()">📄 צפה במצע המלא (GitHub) ↗</a>
-                    </div>
-                </div>
-                <div class="party-header-action">
-                    <span class="party-toggle-btn" id="party-btn-text-{p_id}">פתח פרטי מפלגה ▾</span>
-                </div>
-            </div>
-
-            <div class="party-card-body" id="party-body-{p_id}" style="display: none;">
-                <!-- SECTION 1: עמדות ועשיית המפלגה לפי נושאים (ללא ציונים) -->
-                <div class="party-topics-block">
-                    <h4 class="dossier-subheading">📜 עמדות ועשיית המפלגה לפי 9 נושאי הליבה (דיווח עובדתי ללא ציונים)</h4>
-                    <div class="party-topics-accordion">
-"""
-        for t in topics:
-            t_id = t["id"]
-            t_title = t.get("name_he") or t.get("title") or t_id
-            t_eval = p_topics.get(t_id, {})
-            notes_dict = t_eval.get("notes", {})
-            c1_platform = notes_dict.get("c1_platform", "")
-            c2_leader = notes_dict.get("c2_leader_statements", "")
-            c3_actions = notes_dict.get("c3_leader_actions", "")
-            citations = t_eval.get("citations", [])
-            
-            cites_html = ""
-            if citations:
-                cites_html = '<div style="margin-top: 10px; font-size: 0.86rem;"><strong>מקורות וקישורים מאומתים:</strong><ul style="margin-right: 18px; margin-top: 4px;">'
-                for cite in citations:
-                    title = cite.get("title", "מקור")
-                    url = cite.get("url", "https://github.com/vvainer/elections-il-2026")
-                    quote = cite.get("quote", "")
-                    quote_str = f' &mdash; <em>"{quote}"</em>' if quote else ""
-                    cites_html += f'<li><a href="{url}" target="_blank" rel="noopener noreferrer" class="citation-link">{title}</a>{quote_str}</li>'
-                cites_html += '</ul></div>'
-            
-            html += f"""
-                        <details class="party-policy-accordion">
-                            <summary class="party-policy-summary">
-                                <span>📌 {t_title}</span>
-                                <span class="party-policy-hint">עמדות ומקורות ▾</span>
-                            </summary>
-                            <div class="party-policy-content">
-                                <div class="topic-fact-row"><strong>עקרונות ומצע:</strong> <span>{c1_platform or 'לא צוינה עמדה רשמית במצע.'}</span></div>
-                                <div class="topic-fact-row"><strong>עמדות ראש המפלגה:</strong> <span>{c2_leader or 'אין התבטאויות פומביות מתועדות.'}</span></div>
-                                <div class="topic-fact-row"><strong>עשייה בפועל של ראש המפלגה:</strong> <span>{c3_actions or 'אין רקורד ביצועי או חקיקתי מתועד.'}</span></div>
-                                {cites_html}
-                            </div>
-                        </details>
-"""
-        html += f"""
-                    </div>
-                </div>
-
-                <!-- SECTION 2: נבחרת המועמדים וקורות חיים מעשיים -->
-                <div class="party-candidates-block">
-                    <div class="candidates-block-header">
-                        <h4 class="dossier-subheading" style="margin: 0;">👥 נבחרת המועמדים וקורות חיים מעשיים ({len(candidates)} מועמדים ברשימה)</h4>
-                        <div class="candidates-bulk-controls">
-                            <button class="filter-btn toggle-candidates-btn" id="toggle-cand-btn-{p_id}" onclick="toggleAllCandidates('{p_id}')">📂 פתח את כל המועמדים</button>
-                        </div>
-                    </div>
-
-                    <div class="candidates-grid" id="candidates-grid-{p_id}">
-"""
-        if candidates:
-            for c in candidates:
-                pos = c.get("position", "-")
-                c_name = c.get("name", "")
-                is_real = c.get("is_realistic_zone", False)
-                real_class = "realistic-card" if is_real else "standard-card"
-                real_badge = '<span class="pill-badge" style="background:#eff6ff; color:#1d4ed8;">★ בטווח הריאלי</span>' if is_real else '<span class="pill-badge" style="background:#f1f5f9; color:#64748b;">מקום ברשימה</span>'
-                
-                cv = c.get("cv", {})
-                short_raw = cv.get("public_service") or cv.get("career") or ""
-                short_snippet = short_raw.split(",")[0].split(";")[0].split(".")[0][:36].strip()
-                short_badge = f'<span class="candidate-short-title" title="{short_raw}">({short_snippet})</span>' if short_snippet else ""
-                
-                cand_topics = extract_candidate_topic_records(c, p_topics, topics)
-                
-                topics_markup = ""
-                if cand_topics:
-                    pills = f'<div class="candidate-topics-pills" id="cand-pills-{p_id}-{pos}">'
-                    drawers = f'<div class="candidate-topics-drawers" id="cand-drawers-{p_id}-{pos}">'
-                    for tid, trec in cand_topics.items():
-                        pills += f'<button type="button" class="cand-topic-pill" id="pill-{p_id}-{pos}-{tid}" onclick="toggleCandidateTopic(\'{p_id}\', \'{pos}\', \'{tid}\')">📌 {trec["title"]}</button>'
-                        drawers += f'<div class="cand-topic-drawer" id="drawer-{p_id}-{pos}-{tid}" style="display: none;">'
-                        drawers += f'<div class="cand-topic-drawer-header"><strong>נושא: {trec["title"]}</strong></div>'
-                        if trec["votes"]:
-                            drawers += '<div><strong>הצבעות מפתח:</strong><ul class="cand-drawer-list">'
-                            for v in trec["votes"]:
-                                drawers += f'<li>{v}</li>'
-                            drawers += '</ul></div>'
-                        if trec["achievements"]:
-                            drawers += '<div><strong>הישגים ועשייה:</strong><ul class="cand-drawer-list">'
-                            for a in trec["achievements"]:
-                                drawers += f'<li>{a}</li>'
-                            drawers += '</ul></div>'
-                        if trec["dossier_notes"]:
-                            drawers += '<div><strong>מתוך תיק המחקר:</strong><ul class="cand-drawer-list">'
-                            for n in trec["dossier_notes"]:
-                                drawers += f'<li>{n}</li>'
-                            drawers += '</ul></div>'
-                        drawers += '</div>'
-                    pills += '</div>'
-                    drawers += '</div>'
-                    topics_markup = pills + drawers
-                else:
-                    topics_markup = '<span class="no-topic-note">אין רישום נושאי ספציפי</span>'
-
-                html += f"""
-                        <div class="candidate-card {real_class}" id="candidate-{p_id}-{pos}" data-name="{c_name}" data-realistic="{str(is_real).lower()}" data-party="{p_id}">
-                            <div class="candidate-card-header" onclick="toggleCandidateCard('{p_id}', '{pos}')" role="button" tabindex="0">
-                                <div class="candidate-header-left">
-                                    <span class="candidate-pos-tag">מקום #{pos}</span>
-                                    <span class="candidate-name">{c_name}</span>
-                                    {real_badge}
-                                    {short_badge}
-                                </div>
-                                <div class="candidate-header-right">
-                                    <span class="candidate-expand-icon" id="cand-icon-{p_id}-{pos}">{'▲' if is_real else '▼'}</span>
-                                </div>
-                            </div>
-                            <div class="candidate-card-body" id="cand-body-{p_id}-{pos}" style="display: {'block' if is_real else 'none'};">
-                                <div class="candidate-cv-grid">
-                                    {f'<div class="cv-item"><strong>השכלה:</strong> <span>{cv["education"]}</span></div>' if cv.get("education") else ""}
-                                    {f'<div class="cv-item"><strong>קריירה אזרחית/צבאית:</strong> <span>{cv["career"]}</span></div>' if cv.get("career") else ""}
-                                    {f'<div class="cv-item"><strong>שירות ציבורי:</strong> <span>{cv["public_service"]}</span></div>' if cv.get("public_service") else ""}
-                                </div>
-                                {f'<div style="margin-top: 8px; font-size: 0.88rem;"><strong>הצבעות מפתח בכנסת:</strong> <span style="color: var(--text-secondary);">{", ".join(cv["key_votes"])}</span></div>' if cv.get("key_votes") else ""}
-                                {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>הישגים בולטים:</strong> <span style="color: var(--pos-text);">{", ".join(cv["major_achievements"])}</span></div>' if cv.get("major_achievements") else ""}
-                                {f'<div style="margin-top: 6px; font-size: 0.88rem;"><strong>ביקורת ומחלוקות:</strong> <span style="color: var(--neg-text);">{", ".join(cv["notable_failures_or_controversies"])}</span></div>' if cv.get("notable_failures_or_controversies") else ""}
-                                
-                                <div class="candidate-topics-section">
-                                    <div class="candidate-topics-header">
-                                        <strong>עשייה ועמדות לפי נושאים:</strong>
-                                    </div>
-                                    {topics_markup}
-                                </div>
-                            </div>
-                        </div>
-"""
-        else:
-            html += "                        <p style='color: var(--text-secondary);'>אין מידע מפורט על מועמדים.</p>\n"
-
-        html += """
-                    </div>
-                </div>
-            </div>
-        </div>
-"""
-    html += """
-        </div>
-    </div>
-"""
 
     # =============================================================
     # TAB 3: מתודולוגיה ומבנה הניתוח (Methodology & Topics Catalog)
