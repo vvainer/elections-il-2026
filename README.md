@@ -1,7 +1,12 @@
 # מערכת אנליזה: בחירות לכנסת ה-26 (2026) 🇮🇱
 
 מערכת חכמה, אובייקטיבית ומבוססת ראיות לניתוח מפלגות, ראשי מפלגות ומועמדים במקומות ריאליים לקראת הבחירות לכנסת ה-26.  
-המערכת פותחה כ-**Antigravity Skill** (`election-analyst`) ופועלת ישירות מתוך סביבת Antigravity (Gemini Pro) ללא צורך במפתחות API חיצוניים.
+המערכת ממומשת באמצעות שתי מיומנויות Antigravity ייעודיות:
+- **`run-election-round`** (`.agents/skills/run-election-round/SKILL.md`): מיומנות ההרצה המלאה המפעילה ארכיטקטורת רב-סוכנים בארבעה שלבים.
+- **`election-analyst`** (`.agents/skills/election-analyst/SKILL.md`): מיומנות מתודולוגיית הניתוח, מחוון הקריטריונים ופרופיל הנושאים.
+
+🌐 **דשבורד אינטראקטיבי פעיל ב-GitHub Pages**:  
+**[https://vvainer.github.io/elections-il-2026/](https://vvainer.github.io/elections-il-2026/)**
 
 ---
 
@@ -40,37 +45,38 @@
 
 ---
 
-## 🚀 אופן ההרצה והשימוש מתוך Antigravity
+## 🚀 אופן ההרצה באמצעות מיומנות `run-election-round`
 
-המערכת פועלת באופן יזום לפי דרישה (On-Demand).  
-בכל שבוע (או בכל עת שתרצה לעדכן), פשוט בקש מ-Antigravity בצ'אט:
+כדי להריץ סבב מלא, בקש מ-Antigravity בצ'אט:
 ```text
-הרץ ניתוח שבועי מעודכן לבחירות 2026
+הרץ סבב רב-סוכנים מלא לבחירות 2026
 ```
-Antigravity יפעיל את המיומנות (`election-analyst`), יבצע מחקר מקוון עדכני על סקרים והצהרות חדשות, יעדכן את קבצי הנתונים, ויפיק:
-1. דו"ח Markdown מפורט: `reports/YYYY-MM-DD/report.md`
-2. דשבורד אינטראקטיבי מלא ל-GitHub Pages: `docs/index.html`
+*(או: `run a full report round` / `run-election-round`)*
+
+Antigravity יפעיל את המיומנות **`run-election-round`** לפי נוהל רב-סוכנים מחייב בארבעה שלבים:
+
+```mermaid
+flowchart LR
+    P1["שלב 1: איסוף מקבילי<br/>(9 סוכני נושא)"] --> P2["שלב 2: אימות צולב<br/>(topic_validator + קישורים)"]
+    P2 --> P3["שלב 3: מיזוג ובניית דוחות<br/>(report_rebuilder)"]
+    P3 --> P4["שלב 4: אימות UI ושער פריסה<br/>(ui_validator + תצלומי מסך)"]
+    P4 --> Deploy["GitHub Pages Push"]
+```
+
+1. **שלב 0 (`define_subagent`)**: הגדרת 4 סוכני המשנה הייעודיים.
+2. **שלב 1 (`invoke_subagent` x9)**: הפעלה מקבילית של 9 סוכני איסוף (אחד לכל נושא ליבה) ושמירה ל-`data/staging/YYYY-MM-DD/topics/*.json`.
+3. **שלב 2 (אימות צולב ולולאת משוב)**: בדיקת קישורים אוטומטית (`scripts/validate_links.py`) ואימות מהותי ע״י `topic_validator`. לולאת משוב לתיקון ליקויים (עד סבב אחד) ושמירה ל-`data/validated/`.
+4. **שלב 3 (מיזוג ובנייה)**: הפעלת `report_rebuilder`, מיזוג נתונים (`scripts/merge_topics.py`), חישוב ציונים (`scripts/run_analysis.py`), והפקת תקציר מנהלים שבועי בעברית.
+5. **שלב 4 (אימות UI ושער פריסה)**: הפעלת `ui_validator` ללכידת תצלומי מסך Headless Chrome (`desktop.png`, `mobile.png`) ואימות DOM. חסימת פריסה במקרה של דחייה, ופריסה אוטומטית ל-GitHub Pages בעת אישור (`APPROVED`).
 
 ---
 
 ## 🌐 פרסום האתר ל-GitHub Pages
 
-1. **הגדרת Remote ל-Repository המקומי**:
-   ```bash
-   git remote add origin https://github.com/YOUR_USERNAME/YOUR_REPO.git
-   git branch -M main
-   git push -u origin main
-   ```
-
-2. **הפעלת GitHub Pages**:
-   - היכנס ל-Repository שלך ב-GitHub.
-   - עבור ל: `Settings` -> `Pages`.
-   - תחת **Build and deployment**:
-     - **Source**: `Deploy from a branch`
-     - **Branch**: בחר `main` ובתיקייה בחר `/docs`.
-     - לחץ **Save**.
-   - בתוך כדקה האתר האינטראקטיבי יהיה זמין בכתובת:
-     `https://YOUR_USERNAME.github.io/YOUR_REPO/`
+המאגר מוגדר ומפורסם ישירות ל-GitHub Pages:
+- **Repository**: [https://github.com/vvainer/elections-il-2026](https://github.com/vvainer/elections-il-2026)
+- **Settings -> Pages**: מוגדר לסניף `main` ותיקיית `/docs`.
+- **Live Site**: [https://vvainer.github.io/elections-il-2026/](https://vvainer.github.io/elections-il-2026/)
 
 ---
 
@@ -80,27 +86,40 @@ Antigravity יפעיל את המיומנות (`election-analyst`), יבצע מח
 election_analysis/
 ├── .agents/
 │   └── skills/
+│       ├── run-election-round/
+│       │   └── SKILL.md                 # מיומנות ההרצה המלאה של סבב הרב-סוכנים
 │       └── election-analyst/
-│           ├── SKILL.md                 # הגדרת המיומנות של Antigravity
+│           ├── SKILL.md                 # מיומנות הליבה ומתודולוגיית הניתוח
 │           └── references/
-│               └── criteria_rubric.md   # מחוון הקריטריונים המלא
+│               ├── criteria_rubric.md   # מחוון הקריטריונים המלא
+│               ├── researcher_prompt.md # תבנית הנחיה לסוכני איסוף
+│               ├── validator_prompt.md  # תבנית הנחיה לסוכני אימות
+│               ├── rebuilder_prompt.md  # תבנית הנחיה לסוכן הפקת דוחות
+│               └── ui_validator_prompt.md # תבנית הנחיה לסוכן אימות UI
 ├── config/
 │   ├── polls.yaml                       # מעקב סקרים וספי מקומות ריאליים
 │   ├── parties.yaml                     # מאגר מפלגות, מועמדים וקישורים
 │   └── profiles/
 │       └── default.yaml                 # 9 הנושאים, עמדות היעד ומשקלים
 ├── data/
-│   └── evaluations/
-│       └── 2026-09-09.json              # נתוני הניתוח המלאים והמקורות
+│   ├── staging/YYYY-MM-DD/topics/       # ממצאי מחקר גולמיים מ-9 הסוכנים
+│   ├── validated/YYYY-MM-DD/topics/     # נתונים מאומתים לאחר בדיקות
+│   ├── validation_logs/YYYY-MM-DD/      # יומני אימות, תיקונים ותצלומי מסך
+│   └── evaluations/YYYY-MM-DD.json      # מסד הנתונים השבועי הממוזג
 ├── docs/
 │   └── index.html                       # הדשבורד הרספונסיבי ל-GitHub Pages
 ├── reports/
-│   └── 2026-09-09/
-│       └── report.md                    # הדו"ח השבועי המפורט ב-Markdown
+│   └── YYYY-MM-DD/
+│       └── report.md                    # הדו"ח השבועי המפורט ב-Markdown ותקציר מנהלים
 ├── scripts/
+│   ├── validate_links.py                # אימות קישורים ומבנה JSON מקבילי
+│   ├── validate_ui.py                   # אימות DOM ולכידת תצלומי מסך Chrome
+│   ├── merge_topics.py                  # מיזוג ופיצול קובצי נושאים
 │   ├── evaluator.py                     # מנוע החישוב המתמטי והנרמול
 │   ├── generate_report.py               # מחולל ה-Markdown וה-HTML
-│   ├── build_initial_dataset.py         # יצירת מאגר הנתונים
-│   └── run_analysis.py                  # סקריפט ההרצה המרכזי
-└── README.md
+│   ├── run_analysis.py                  # סקריפט החישוב והפקת הדוחות
+│   └── orchestrate_analysis.py          # אורקסטרטור פקודות CLI שלבי
+├── AGENTS.md                            # זיכרון והנחיות Antigravity
+├── GEMINI.md                            # זיכרון והנחיות Antigravity
+└── README.md                            # תיעוד ראשי של הפרויקט
 ```

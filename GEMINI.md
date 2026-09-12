@@ -2,11 +2,13 @@
 
 ## 1. Project Context & Purpose
 This project is an automated, objective, evidence-based analysis system evaluating political parties, party leaders, and realistic candidates for the **2026 Israeli Knesset Elections** (taking place late 2026).
-It is implemented as an **Antigravity Skill** (`election-analyst`) running locally inside Antigravity using the user's Gemini Pro capabilities, powered by a **4-phase parallel multi-agent architecture**.
+It is implemented using two dedicated **Antigravity Skills**:
+1. **`run-election-round`** (`.agents/skills/run-election-round/SKILL.md`): The end-to-end execution skill orchestrating the full 4-phase multi-agent lifecycle.
+2. **`election-analyst`** (`.agents/skills/election-analyst/SKILL.md`): The domain methodology and criteria evaluation skill.
 
 > ⚠️ **STRICT MANDATE: NO MONOLITHIC SHORTCUTS**  
-> Running an election analysis round (e.g. "run a full report round", "הרץ עדכון שבועי") MUST NEVER be executed as a monolithic local script or by copying past data.  
-> You MUST use Antigravity subagent tools (`define_subagent` and `invoke_subagent`) to actually launch the 4 specialized agent roles across their respective phases.
+> Running an election analysis round (e.g. "run a full report round", "הרץ עדכון שבועי", "הרץ סבב רב-סוכנים מלא") MUST NEVER be executed as a monolithic local script or by copying past data.  
+> You MUST activate the **`run-election-round`** skill and use Antigravity subagent tools (`define_subagent` and `invoke_subagent`) to actually launch the 4 specialized agent roles across their respective phases.
 
 ## 2. Language & Communication Rules
 - **Technical Discussion, Scripts, Code, Architecture, and Git**: English.
@@ -56,9 +58,9 @@ Configured in `config/profiles/default.yaml` (Equal weight 1.0 each by default):
 
 ---
 
-## 5. Multi-Agent Setup & Execution Lifecycle
+## 5. Multi-Agent Setup & Execution Lifecycle (`run-election-round`)
 
-Whenever instructed to run an analysis round or weekly update:
+Whenever instructed to run an analysis round or weekly update, follow the **`run-election-round`** skill:
 
 ### Step 0: Ensure Subagents are Defined
 Define the 4 subagent types using `define_subagent` if not already defined in the conversation:
@@ -94,13 +96,15 @@ Define the 4 subagent types using `define_subagent` if not already defined in th
 ---
 
 ## 6. Project Files Structure
-- `.agents/skills/election-analyst/SKILL.md`: Main Antigravity Skill runbook.
-- `.agents/skills/election-analyst/references/`:
-  - `criteria_rubric.md`: Scoring rubric and weighting math.
-  - `researcher_prompt.md`: Prompt template for parallel gathering agents.
-  - `validator_prompt.md`: Prompt template for cross-validation agents.
-  - `rebuilder_prompt.md`: Prompt template for report rebuilder.
-  - `ui_validator_prompt.md`: Prompt template for UI validator and gatekeeper.
+- `.agents/skills/`:
+  - **`run-election-round/SKILL.md`**: Master execution skill orchestrating the 4-phase multi-agent round.
+  - **`election-analyst/SKILL.md`**: Core methodology, policy profiles, and evaluation criteria.
+  - `election-analyst/references/`:
+    - `criteria_rubric.md`: Scoring rubric and weighting math.
+    - `researcher_prompt.md`: Prompt template for parallel gathering agents.
+    - `validator_prompt.md`: Prompt template for cross-validation agents.
+    - `rebuilder_prompt.md`: Prompt template for report rebuilder.
+    - `ui_validator_prompt.md`: Prompt template for UI validator and gatekeeper.
 - `config/`:
   - `profiles/default.yaml`: 9 topics, stances, checklists, and weights.
   - `polls.yaml`: Current polling benchmarks and realistic seat cutoffs.
