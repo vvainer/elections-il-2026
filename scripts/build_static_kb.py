@@ -675,10 +675,14 @@ def main():
         ok = import_cec_source(args.import_cec_source)
         sys.exit(0 if ok else 1)
     elif args.build_all or (not args.party and not args.verify):
-        print("[*] Generating static artifacts for all qualifying parties...")
-        for p_id in PARTIES_CATALOG.keys():
-            generate_party_static_data(p_id)
-        verify_static_kb()
+        print("[*] Synchronizing static artifacts for all qualifying parties via official CEC data...")
+        try:
+            from sync_cec_data import sync_all
+        except ImportError:
+            from scripts.sync_cec_data import sync_all
+        sync_all()
+        ok = verify_static_kb()
+        sys.exit(0 if ok else 1)
     elif args.party:
         generate_party_static_data(args.party)
     elif args.verify:
