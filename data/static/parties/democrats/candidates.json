@@ -1,0 +1,181 @@
+{
+  "party_id": "democrats",
+  "party_name_he": "הדמוקרטים",
+  "total_candidates_registered": 10,
+  "candidates": [
+    {
+      "position": 1,
+      "name": "יאיר גולן",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "תואר ראשון במדעי המדינה מאוניברסיטת ת\"א, תואר שני במנהל ציבורי מהרווארד",
+        "career": "אלוף בצה\"ל, סגן הרמטכ\"ל, אלוף פיקוד הצפון, מפקד פיקוד העורף",
+        "public_service": "סגן שרת הכלכלה (2021-2022), ח\"כ, יו\"ר מפלגת הדמוקרטים (איחוד עבודה-מרצ)",
+        "key_votes": [
+          "התנגדות נחרצת לחקיקה המשפטית",
+          "הצבעה בעד חוקי איכות סביבה ותחבורה ציבורית בשבת"
+        ],
+        "major_achievements": [
+          "חילוץ אזרחים תחת אש בעוטף עזה ב-7 באוקטובר 2023",
+          "איחוד מחנה השמאל הציוני"
+        ],
+        "notable_failures_or_controversies": [
+          "נאום 'זיהוי התהליכים' ביום השואה שעורר סערה ציבורית רחבה"
+        ]
+      }
+    },
+    {
+      "position": 2,
+      "name": "נעמה לזימי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 3,
+      "name": "גלעד קריב",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 4,
+      "name": "אפרת רייטן",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 5,
+      "name": "מוסי רז",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 6,
+      "name": "מיכל רוזין",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 7,
+      "name": "גבי לסקי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 8,
+      "name": "מהרטא ברוך-רון",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 9,
+      "name": "יאיא פינק",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 10,
+      "name": "אמילי מואטי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת הדמוקרטים",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת הדמוקרטים"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    }
+  ]
+}

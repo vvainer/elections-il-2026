@@ -2,13 +2,14 @@
 """
 Report Generator for Election Analysis System.
 Generates:
-1. reports/YYYY-MM-DD/report.md (Markdown)
-2. docs/index.html (Responsive RTL HTML Dashboard for GitHub Pages)
+1. reports/YYYY-MM-DD/<profile_id>.md (Markdown per profile)
+2. reports/YYYY-MM-DD/report.md (Default Markdown report)
+3. docs/index.html (Responsive RTL HTML Dashboard with interactive profile switcher & candidate static KB)
 """
 
 import os
 import json
-from typing import Dict, Any, List
+from typing import Dict, Any, List, Union
 
 CRITERIA_NAMES_HE = {
     "c1_platform": "מצע המפלגה (15%)",
@@ -37,12 +38,17 @@ def get_score_badge_html(score: float) -> str:
     return f'<span class="badge {css_class}">{sign}{score:.1f}</span>'
 
 def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] = None) -> str:
-    date_str = result.get("date", "2026-09-09")
+    date_str = result.get("date", "2026-09-12")
+    profile_name = result.get("profile_name", "ברירת מחדל")
+    profile_desc = result.get("profile_description", "")
     parties = result.get("parties", {})
     topics = result.get("topics", [])
     
     md = []
     md.append(f"# דו״ח אנליזה לבחירות לכנסת ה-26 | {date_str}\n")
+    md.append(f"**פרופיל עולם ערכים נבחר**: {profile_name}  \n")
+    if profile_desc:
+        md.append(f"*{profile_desc}*\n")
     md.append("> ניתוח מפלגות ומועמדים לפי עמדות מוגדרות מראש בששת קריטריוני איכות וביצוע.\n")
     
     md.append("## 🏆 לוח תוצאות ודירוג כללי (Leaderboard)\n")
@@ -89,7 +95,7 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
         md.append(row)
         
     md.append("\n---\n")
-    md.append("## 🔍 ניתוח מעמיק ומקורות לפי מפלגות\n")
+    md.append("## 🔍 ניתוח מעמיק, מועמדים ומקורות לפי מפלגות\n")
     
     for p_id, p_data in parties.items():
         name = p_data.get("name_he", p_id)
@@ -98,105 +104,147 @@ def generate_markdown_report(result: Dict[str, Any], delta_info: Dict[str, Any] 
         sign = "+" if overall > 0 else ""
         
         md.append(f"### מפלגת {name} (ציון כולל: `{sign}{overall:.1f}`)\n")
-        md.append(f"**ראש המפלגה**: {leader} | **מנדטים צפויים**: {p_data.get('poll_mandates', '-')}\n")
+        md.append(f"- **יו״ר / ראש המפלגה**: {leader}")
+        md.append(f"- **מנדטים ממוצעים בסקרים**: {p_data.get('poll_mandates', '-')}")
+        
+        # Static candidates summary
+        static_data = p_data.get("static_data", {})
+        candidates = static_data.get("candidates", [])
+        if candidates:
+            realistic_cands = [c for c in candidates if c.get("is_realistic_zone")]
+            md.append(f"- **נבחרת מועמדים ריאליים מאומתת**: {len(realistic_cands)} מועמדים בטווח הריאלי ({', '.join([c['name'] for c in realistic_cands[:6]])})")
+        
+        md.append("\n#### פירוט לפי נושאי מדיניות:\n")
         
         for t in topics:
             t_id = t["id"]
+            t_title = t["title"]
             t_eval = p_data.get("topics", {}).get(t_id, {})
             score = t_eval.get("computed_score", 0.0)
-            sign_t = "+" if score > 0 else ""
+            t_sign = "+" if score > 0 else ""
             
-            md.append(f"#### 📌 {t['title']} (ציון נושא: `{sign_t}{score:.1f}`)")
-            md.append(f"*עמדת היעד המבוקשת:* {t.get('desired_stance', '')}\n")
+            md.append(f"##### 📌 {t_title} (ציון נושא: `{t_sign}{score:.1f}`)")
             
-            scores_dict = t_eval.get("scores", {})
-            notes_dict = t_eval.get("notes", {})
+            notes = t_eval.get("notes", {})
+            scores = t_eval.get("scores", {})
             
-            md.append("| קריטריון | ציון | פירוט והנמקה |")
-            md.append("| :--- | :---: | :--- |")
             for c_key, c_label in CRITERIA_NAMES_HE.items():
-                c_score = scores_dict.get(c_key, 0.0)
+                c_score = scores.get(c_key, 0.0)
                 c_sign = "+" if c_score > 0 else ""
-                note = notes_dict.get(c_key, "אין פירוט")
-                md.append(f"| {c_label} | `{c_sign}{c_score:.1f}` | {note} |")
+                note = notes.get(c_key, "אין מידע")
+                md.append(f"- **{c_label}** [`{c_sign}{c_score:.1f}`]: {note}")
                 
             citations = t_eval.get("citations", [])
             if citations:
-                md.append("\n**מקורות וסימוכין (Citations):**")
+                md.append("- **מקורות ואסמכתאות:**")
                 for cite in citations:
                     title = cite.get("title", "מקור")
-                    url = cite.get("url", "#")
+                    url = cite.get("url", "")
                     quote = cite.get("quote", "")
                     quote_str = f' - *"{quote}"*' if quote else ""
-                    md.append(f"- [{title}]({url}){quote_str}")
-            md.append("\n")
-            
-        md.append("---\n")
+                    md.append(f"  - [{title}]({url}){quote_str}")
+            md.append("")
+        md.append("\n---\n")
         
     return "\n".join(md)
 
-def generate_html_dashboard(result: Dict[str, Any]) -> str:
-    date_str = result.get("date", "2026-09-09")
-    parties = result.get("parties", {})
-    topics = result.get("topics", [])
-    
+def generate_html_dashboard(
+    profiles_input: Union[Dict[str, Any], Dict[str, Dict[str, Any]]], 
+    default_profile_id: str = "default"
+) -> str:
+    # Normalize input to dict of profiles
+    if "parties" in profiles_input and "topics" in profiles_input:
+        # Single profile passed
+        profiles_dict = {default_profile_id: profiles_input}
+    else:
+        profiles_dict = profiles_input
+
+    if not profiles_dict:
+        raise ValueError("No profile results provided to generate_html_dashboard")
+
+    # Select active profile
+    if default_profile_id in profiles_dict:
+        active_id = default_profile_id
+    else:
+        active_id = list(profiles_dict.keys())[0]
+
+    active_result = profiles_dict[active_id]
+    date_str = active_result.get("date", "2026-09-12")
+    topics = active_result.get("topics", [])
+    parties = active_result.get("parties", {})
+
+    # Top 3 parties for initial cards
+    sorted_parties = sorted(parties.items(), key=lambda x: x[1].get("overall_score", 0), reverse=True)
+    top_3 = sorted_parties[:3]
+
+    # JSON serialization for interactive client switcher
+    clean_profiles_json = {}
+    for p_key, p_val in profiles_dict.items():
+        clean_profiles_json[p_key] = {
+            "profile_id": p_key,
+            "profile_name": p_val.get("profile_name", p_key),
+            "profile_description": p_val.get("profile_description", ""),
+            "topics": p_val.get("topics", []),
+            "parties": p_val.get("parties", {})
+        }
+    profiles_json_str = json.dumps(clean_profiles_json, ensure_ascii=False)
+
     html = f"""<!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>אנליזה לבחירות לכנסת ה-26 | {date_str}</title>
+    <title>מדד התאמה לבחירות לכנסת ה-26 | ניתוח מפלגות ומועמדים</title>
     <style>
         :root {{
-            --bg-primary: #0f172a;
-            --bg-card: #1e293b;
-            --bg-card-hover: #334155;
-            --border: #334155;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent: #38bdf8;
-            --accent-hover: #0284c7;
-            --pos-bg: #064e3b;
-            --pos-text: #34d399;
-            --mild-pos-bg: #065f46;
-            --mild-pos-text: #a7f3d0;
-            --neutral-bg: #374151;
-            --neutral-text: #d1d5db;
-            --mild-neg-bg: #7f1d1d;
-            --mild-neg-text: #fca5a5;
-            --neg-bg: #991b1b;
-            --neg-text: #fecaca;
+            --bg-page: #f8fafc;
+            --bg-card: #ffffff;
+            --text-primary: #0f172a;
+            --text-secondary: #475569;
+            --border: #e2e8f0;
+            --accent: #2563eb;
+            --accent-light: #dbeafe;
+            --pos-bg: #dcfce7;
+            --pos-text: #166534;
+            --mild-pos-bg: #f0fdf4;
+            --mild-pos-text: #15803d;
+            --neutral-bg: #f1f5f9;
+            --neutral-text: #475569;
+            --mild-neg-bg: #fff1f2;
+            --mild-neg-text: #be123c;
+            --neg-bg: #ffe4e6;
+            --neg-text: #9f1239;
         }}
         
         * {{
             box-sizing: border-box;
             margin: 0;
             padding: 0;
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
         }}
         
         body {{
-            background-color: var(--bg-primary);
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-page);
             color: var(--text-primary);
             line-height: 1.6;
             padding: 24px 16px;
         }}
         
         .container {{
-            max-width: 1300px;
+            max-width: 1200px;
             margin: 0 auto;
         }}
         
         header {{
             text-align: center;
-            margin-bottom: 32px;
-            padding-bottom: 24px;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
             border-bottom: 1px solid var(--border);
         }}
         
         header h1 {{
             font-size: 2.2rem;
-            color: var(--accent);
+            color: var(--text-primary);
             margin-bottom: 8px;
         }}
         
@@ -209,11 +257,55 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
             display: inline-block;
             background: var(--bg-card);
             border: 1px solid var(--border);
-            padding: 4px 12px;
+            padding: 4px 14px;
             border-radius: 9999px;
             font-size: 0.9rem;
             color: var(--accent);
             margin-top: 8px;
+            font-weight: 600;
+        }}
+
+        /* Profile Selector */
+        .profile-selector-box {{
+            background: linear-gradient(135deg, #eff6ff 0%, #ffffff 100%);
+            border: 2px solid var(--accent-light);
+            border-radius: 12px;
+            padding: 16px 20px;
+            margin-bottom: 28px;
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+        }}
+
+        .profile-selector-row {{
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }}
+
+        .profile-selector-row label {{
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--text-primary);
+        }}
+
+        .profile-dropdown {{
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid var(--accent);
+            background: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--accent);
+            cursor: pointer;
+            outline: none;
+        }}
+
+        .profile-desc {{
+            color: var(--text-secondary);
+            font-size: 0.92rem;
         }}
         
         .section-title {{
@@ -250,7 +342,7 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
             padding: 20px;
             position: relative;
             transition: transform 0.2s, border-color 0.2s;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
         }}
         
         .leaderboard-card:hover {{
@@ -266,7 +358,133 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
             font-weight: 800;
             color: var(--accent);
         }}
+
+        .table-responsive {{
+            overflow-x: auto;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            margin-bottom: 32px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }}
         
+        table {{
+            width: 100%;
+            border-collapse: collapse;
+            text-align: right;
+        }}
+        
+        th, td {{
+            padding: 12px 14px;
+            border-bottom: 1px solid var(--border);
+        }}
+        
+        th {{
+            background-color: #f1f5f9;
+            font-weight: 700;
+            color: var(--text-primary);
+        }}
+        
+        tr:last-child td {{
+            border-bottom: none;
+        }}
+        
+        tr:hover td {{
+            background-color: #f8fafc;
+        }}
+        
+        .card {{
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 24px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }}
+        
+        .card-header {{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 12px;
+            margin-bottom: 16px;
+            flex-wrap: wrap;
+            gap: 8px;
+        }}
+
+        /* Candidates KB Section */
+        .candidates-kb {{
+            background: #f8fafc;
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 14px;
+            margin-bottom: 16px;
+        }}
+
+        .candidate-tag {{
+            display: inline-block;
+            background: #ffffff;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            padding: 3px 8px;
+            margin: 3px;
+            font-size: 0.85rem;
+        }}
+
+        .candidate-tag.realistic {{
+            border-color: #93c5fd;
+            background: #eff6ff;
+            color: #1d4ed8;
+            font-weight: 600;
+        }}
+        
+        .topic-accordion {{
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            margin-bottom: 10px;
+            background: #ffffff;
+        }}
+        
+        .topic-summary {{
+            padding: 12px 16px;
+            cursor: pointer;
+            font-weight: 600;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+            background-color: #fafafa;
+        }}
+        
+        .topic-details {{
+            padding: 16px;
+            border-top: 1px solid var(--border);
+        }}
+        
+        .criteria-table {{
+            margin-top: 8px;
+            font-size: 0.92rem;
+        }}
+        
+        .citation-link {{
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 500;
+        }}
+        .citation-link:hover {{
+            text-decoration: underline;
+        }}
+        
+        .footer {{
+            text-align: center;
+            margin-top: 48px;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }}
+
         @media (max-width: 768px) {{
             body {{
                 padding: 12px 8px;
@@ -285,133 +503,38 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
                 padding: 14px;
             }}
         }}
-        
-        .table-responsive {{
-            overflow-x: auto;
-            background: var(--bg-card);
-            border-radius: 12px;
-            border: 1px solid var(--border);
-            margin-bottom: 32px;
-            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-        }}
-        
-        table {{
-            width: 100%;
-            border-collapse: collapse;
-            text-align: right;
-        }}
-        
-        th, td {{
-            padding: 14px 18px;
-            border-bottom: 1px solid var(--border);
-        }}
-        
-        th {{
-            background: #1e293b;
-            color: var(--text-secondary);
-            font-size: 0.95rem;
-            font-weight: 600;
-        }}
-        
-        tr:hover td {{
-            background: rgba(255, 255, 255, 0.02);
-        }}
-        
-        .card {{
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            margin-bottom: 24px;
-        }}
-        
-        .card-header {{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border);
-            padding-bottom: 12px;
-            margin-bottom: 16px;
-        }}
-        
-        .card-header h3 {{
-            font-size: 1.3rem;
-            color: var(--text-primary);
-        }}
-        
-        .topic-accordion {{
-            background: rgba(15, 23, 42, 0.6);
-            border-radius: 8px;
-            margin-bottom: 12px;
-            border: 1px solid var(--border);
-            overflow: hidden;
-        }}
-        
-        .topic-summary {{
-            padding: 12px 16px;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            user-select: none;
-            font-weight: 600;
-        }}
-        
-        .topic-summary:hover {{
-            background: rgba(255, 255, 255, 0.03);
-        }}
-        
-        .topic-details {{
-            padding: 16px;
-            border-top: 1px solid var(--border);
-            background: rgba(0, 0, 0, 0.15);
-        }}
-        
-        .criteria-table {{
-            width: 100%;
-            margin-top: 10px;
-            font-size: 0.92rem;
-        }}
-        
-        .criteria-table th, .criteria-table td {{
-            padding: 8px 12px;
-        }}
-        
-        .citation-link {{
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.2s;
-        }}
-        
-        .citation-link:hover {{
-            text-decoration: underline;
-            color: var(--accent-hover);
-        }}
-        
-        .footer {{
-            text-align: center;
-            color: var(--text-secondary);
-            font-size: 0.9rem;
-            margin-top: 48px;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-        }}
     </style>
 </head>
 <body>
 <div class="container">
     <header>
-        <h1>מערכת אנליזה: בחירות לכנסת ה-26</h1>
-        <p>ניתוח התאמה של מפלגות ומועמדים לעמדות המשתמש על פני 6 קריטריוני מצע, מנהיגות וביצוע</p>
-        <span class="date-badge">תאריך ניתוח עדכני: {date_str}</span>
+        <h1>מדד התאמה לבחירות לכנסת ה-26</h1>
+        <p>ניתוח מפלגות, מצעים, ראשי מפלגות ומועמדים ריאליים מול עמדות יעד אובייקטיביות</p>
+        <span class="date-badge">תאריך עדכון אחרון: {date_str}</span>
     </header>
 
-    <h2 class="section-title">🏆 לוח דירוג המפלגות (Leaderboard)</h2>
-    <div class="leaderboard-cards">
+    <!-- Profile Selector Box -->
+    <div class="profile-selector-box">
+        <div class="profile-selector-row">
+            <label for="profileSelect">🎯 בחר עולם ערכים / פרופיל בוחר:</label>
+            <select id="profileSelect" onchange="switchProfile(this.value)" class="profile-dropdown">
 """
-    # Top 3 highlight cards
-    for idx, (p_id, p_data) in enumerate(list(parties.items())[:3]):
-        rank = p_data.get("rank", idx + 1)
+    for p_key, p_val in profiles_dict.items():
+        selected = "selected" if p_key == active_id else ""
+        p_name = p_val.get("profile_name", p_key)
+        html += f'                <option value="{p_key}" {selected}>{p_name}</option>\n'
+
+    html += f"""            </select>
+        </div>
+        <p id="profileDescription" class="profile-desc">{active_result.get("profile_description", "")}</p>
+    </div>
+
+    <!-- Top 3 Cards -->
+    <h2 class="section-title">🥇 מובילי ההתאמה הכללית</h2>
+    <div class="leaderboard-cards" id="leaderboardCards">
+"""
+    for p_id, p_data in top_3:
+        rank = p_data.get("rank", "-")
         name = p_data.get("name_he", p_id)
         leader = p_data.get("leader", "")
         mandates = p_data.get("poll_mandates", "-")
@@ -420,25 +543,31 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
         html += f"""
         <div class="leaderboard-card">
             <div class="card-rank">#{rank}</div>
-            <div style="font-size: 1.3rem; font-weight: bold; color: var(--text-primary); margin-bottom: 4px;">{name}</div>
-            <div style="color: var(--text-secondary); font-size: 0.95rem; margin-bottom: 12px;">ראש המפלגה: {leader}</div>
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 12px; border-top: 1px solid var(--border); padding-top: 12px;">
-                <span style="font-size: 0.9rem; color: var(--text-secondary);">מנדטים בסקרים: <strong>{mandates}</strong></span>
+            <h3 style="margin-bottom: 4px;">{name}</h3>
+            <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;">ראש המפלגה: {leader}</div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                <span>ציון התאמה כולל:</span>
                 {badge}
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 0.88rem; color: var(--text-secondary);">
+                <span>מנדטים בסקרים:</span>
+                <strong>{mandates} מנדטים</strong>
             </div>
         </div>
 """
-    
+
     html += """
     </div>
+
+    <h2 class="section-title">🏆 לוח תוצאות ודירוג מלא</h2>
     <div class="table-responsive">
-        <table>
+        <table id="overviewTable">
             <thead>
                 <tr>
-                    <th style="width: 70px; text-align: center;">דירוג</th>
+                    <th style="width: 8%; text-align: center;">דירוג</th>
                     <th>מפלגה</th>
                     <th>ראש המפלגה</th>
-                    <th style="text-align: center;">מנדטים בסקרים</th>
+                    <th style="text-align: center;">מנדטים</th>
                     <th style="text-align: center;">ציון התאמה כולל</th>
                     <th>נושא חזק ביותר</th>
                     <th>נושא חלש ביותר</th>
@@ -446,7 +575,6 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
             </thead>
             <tbody>
 """
-    
     for p_id, p_data in parties.items():
         rank = p_data.get("rank", "-")
         name = p_data.get("name_he", p_id)
@@ -484,9 +612,9 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
         </table>
     </div>
 
-    <h2 class="section-title">📊 מטריצת ציונים לפי 9 הנושאים (-100 עד +100)</h2>
+    <h2 class="section-title">📊 מטריצת ציונים לפי נושאים (-100 עד +100)</h2>
     <div class="table-responsive">
-        <table>
+        <table id="matrixTable">
             <thead>
                 <tr>
                     <th>מפלגה</th>
@@ -517,6 +645,7 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
     </div>
 
     <h2 class="section-title">🔍 ניתוח מעמיק, מועמדים ומקורות לפי מפלגה</h2>
+    <div id="partiesContainer">
 """
 
     for p_id, p_data in parties.items():
@@ -525,6 +654,8 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
         overall = p_data.get("overall_score", 0.0)
         badge = get_score_badge_html(overall)
         mandates = p_data.get("poll_mandates", "-")
+        static_data = p_data.get("static_data", {})
+        candidates = static_data.get("candidates", [])
         
         html += f"""
     <div class="card" id="party-{p_id}">
@@ -537,6 +668,34 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
             </div>
         </div>
 """
+        # Static candidates roster display
+        if candidates:
+            html += """
+        <details class="candidates-accordion" style="margin-bottom: 16px; border: 1px solid var(--border); border-radius: 8px;">
+            <summary class="topic-summary" style="background-color: #f1f5f9;">
+                <span>👥 נבחרת המועמדים ורקע מעשי (נתונים סטטיים מאומתים)</span>
+                <span style="font-size: 0.85rem; color: var(--text-secondary);">הצג מועמדים</span>
+            </summary>
+            <div class="topic-details">
+                <div style="display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 12px;">
+"""
+            for c in candidates:
+                pos = c.get("position", "-")
+                c_name = c.get("name", "")
+                is_real = c.get("is_realistic_zone", False)
+                real_cls = "realistic" if is_real else ""
+                real_badge = "★ " if is_real else ""
+                html += f'                    <span class="candidate-tag {real_cls}" title="{c_name}">#{pos} {real_badge}{c_name}</span>\n'
+
+            html += """
+                </div>
+                <div style="font-size: 0.88rem; color: var(--text-secondary);">
+                    <em>★ מועמדים בטווח המנדטים הריאלי לפי סקרי הבחירות העדכניים.</em>
+                </div>
+            </div>
+        </details>
+"""
+
         for t in topics:
             t_id = t["id"]
             t_eval = p_data.get("topics", {}).get(t_id, {})
@@ -597,10 +756,98 @@ def generate_html_dashboard(result: Dict[str, Any]) -> str:
         html += "    </div>\n"
 
     html += f"""
+    </div>
+
     <div class="footer">
-        <p>מערכת אנליזה לבחירות לכנסת ה-26 | פותח כ-Antigravity Skill | תאריך עדכון: {date_str}</p>
+        <p>מערכת אנליזה לבחירות לכנסת ה-26 | פותח כ-Antigravity Multi-Agent Skill | תאריך עדכון: {date_str}</p>
     </div>
 </div>
+
+<!-- Embedded Profile Data for Dynamic Client-Side Switching -->
+<script id="electionProfilesData" type="application/json">
+{profiles_json_str}
+</script>
+
+<script>
+const profilesData = JSON.parse(document.getElementById('electionProfilesData').textContent);
+
+function getBadgeHtml(score) {{
+    const sign = score > 0 ? "+" : "";
+    let cls = "neutral";
+    if (score >= 40) cls = "positive";
+    else if (score > 0) cls = "mild-positive";
+    else if (score > -40 && score < 0) cls = "mild-negative";
+    else if (score <= -40) cls = "negative";
+    return `<span class="badge ${{cls}}">${{sign}}${{Number(score).toFixed(1)}}</span>`;
+}}
+
+function switchProfile(profileId) {{
+    const prof = profilesData[profileId];
+    if (!prof) return;
+
+    // 1. Update Description
+    const descEl = document.getElementById('profileDescription');
+    if (descEl) descEl.textContent = prof.profile_description || '';
+
+    // 2. Sort Parties
+    const partiesList = Object.entries(prof.parties).map(([id, p]) => ({{ id, ...p }}));
+    partiesList.sort((a, b) => b.overall_score - a.overall_score);
+
+    // 3. Update Top 3 Cards
+    const cardsEl = document.getElementById('leaderboardCards');
+    if (cardsEl) {{
+        const top3 = partiesList.slice(0, 3);
+        let cardsHtml = '';
+        top3.forEach((p, idx) => {{
+            cardsHtml += `
+            <div class="leaderboard-card">
+                <div class="card-rank">#${{idx + 1}}</div>
+                <h3 style="margin-bottom: 4px;">${{p.name_he}}</h3>
+                <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 12px;">ראש המפלגה: ${{p.leader}}</div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 8px;">
+                    <span>ציון התאמה כולל:</span>
+                    ${{getBadgeHtml(p.overall_score)}}
+                </div>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-top: 6px; font-size: 0.88rem; color: var(--text-secondary);">
+                    <span>מנדטים בסקרים:</span>
+                    <strong>${{p.poll_mandates}} מנדטים</strong>
+                </div>
+            </div>`;
+        }});
+        cardsEl.innerHTML = cardsHtml;
+    }}
+
+    // 4. Update Overview Table
+    const tableBody = document.querySelector('#overviewTable tbody');
+    if (tableBody) {{
+        let rowsHtml = '';
+        partiesList.forEach((p, idx) => {{
+            const tScores = Object.entries(p.topic_scores || {{}});
+            let bestStr = '-', worstStr = '-';
+            if (tScores.length > 0) {{
+                tScores.sort((a, b) => b[1] - a[1]);
+                const best = tScores[0];
+                const worst = tScores[tScores.length - 1];
+                const bestTopic = prof.topics.find(t => t.id === best[0]);
+                const worstTopic = prof.topics.find(t => t.id === worst[0]);
+                bestStr = `${{bestTopic ? bestTopic.title : best[0]}} (${{best[1] > 0 ? '+' : ''}}${{best[1]}})`;
+                worstStr = `${{worstTopic ? worstTopic.title : worst[0]}} (${{worst[1] > 0 ? '+' : ''}}${{worst[1]}})`;
+            }}
+            rowsHtml += `
+            <tr>
+                <td style="text-align: center; font-weight: bold; font-size: 1.1rem; color: var(--accent);">#${{idx + 1}}</td>
+                <td style="font-weight: bold; font-size: 1.05rem;">${{p.name_he}}</td>
+                <td>${{p.leader}}</td>
+                <td style="text-align: center;">${{p.poll_mandates}}</td>
+                <td style="text-align: center;">${{getBadgeHtml(p.overall_score)}}</td>
+                <td style="color: var(--pos-text);">${{bestStr}}</td>
+                <td style="color: var(--neg-text);">${{worstStr}}</td>
+            </tr>`;
+        }});
+        tableBody.innerHTML = rowsHtml;
+    }}
+}}
+</script>
 </body>
 </html>
 """

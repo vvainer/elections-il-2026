@@ -1,0 +1,126 @@
+{
+  "party_id": "right_winter",
+  "party_name_he": "ימין ממלכתי / וינטר",
+  "total_candidates_registered": 7,
+  "candidates": [
+    {
+      "position": 1,
+      "name": "עופר וינטר",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ימין ממלכתי / וינטר",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ימין ממלכתי / וינטר"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 2,
+      "name": "משה כהן",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ימין ממלכתי / וינטר",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ימין ממלכתי / וינטר"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 3,
+      "name": "דוד בן סימון",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ימין ממלכתי / וינטר",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ימין ממלכתי / וינטר"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 4,
+      "name": "רועי שרון (ביטחוני)",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ימין ממלכתי / וינטר",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ימין ממלכתי / וינטר"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 5,
+      "name": "יוסי פרידמן",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ימין ממלכתי / וינטר",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ימין ממלכתי / וינטר"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 6,
+      "name": "שרית חדד-לוי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ימין ממלכתי / וינטר",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ימין ממלכתי / וינטר"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 7,
+      "name": "אבינועם כהן",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ימין ממלכתי / וינטר",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ימין ממלכתי / וינטר"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    }
+  ]
+}

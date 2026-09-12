@@ -1,10 +1,13 @@
 #!/usr/bin/env python3
 """
 Election Analysis Scoring Engine - Knesset 2026
-Implements the 6-criteria normalized weighting model and topic-weighted aggregation.
+Implements the 6-criteria normalized weighting model, topic-weighted aggregation,
+and integrates static party & candidate background data.
 """
 
-from typing import Dict, Any, List
+import os
+import json
+from typing import Dict, Any, List, Optional
 
 CRITERIA_WEIGHTS = {
     "c1_platform": 15.0,
@@ -25,7 +28,6 @@ def calculate_topic_score(criteria_scores: Dict[str, float]) -> float:
     weighted_sum = 0.0
     for crit_key, raw_weight in CRITERIA_WEIGHTS.items():
         score = criteria_scores.get(crit_key, 0.0)
-        # clamp between -100 and 100
         score = max(-100.0, min(100.0, float(score)))
         weighted_sum += score * raw_weight
     
@@ -51,13 +53,57 @@ def calculate_party_overall_score(
         
     return round(weighted_sum / total_topic_weight, 2)
 
+def load_static_party_data(party_id: str, static_kb_dir: str) -> Dict[str, Any]:
+    """
+    Loads static data for a party: party.json, candidates.json, manifesto.md
+    """
+    p_dir = os.path.join(static_kb_dir, "parties", party_id)
+    if not os.path.exists(p_dir):
+        return {}
+
+    data = {}
+    party_file = os.path.join(p_dir, "party.json")
+    if os.path.exists(party_file):
+        try:
+            with open(party_file, "r", encoding="utf-8") as f:
+                data["party_info"] = json.load(f)
+        except Exception:
+            pass
+
+    cand_file = os.path.join(p_dir, "candidates.json")
+    if os.path.exists(cand_file):
+        try:
+            with open(cand_file, "r", encoding="utf-8") as f:
+                cand_json = json.load(f)
+                data["candidates"] = cand_json.get("candidates", [])
+                data["total_candidates"] = cand_json.get("total_candidates_registered", len(data["candidates"]))
+        except Exception:
+            pass
+
+    man_file = os.path.join(p_dir, "manifesto.md")
+    if os.path.exists(man_file):
+        try:
+            with open(man_file, "r", encoding="utf-8") as f:
+                data["manifesto_text"] = f.read()
+        except Exception:
+            pass
+
+    return data
+
 def evaluate_full_dataset(
     eval_data: Dict[str, Any], 
-    profile_data: Dict[str, Any]
+    profile_data: Dict[str, Any],
+    static_kb_dir: Optional[str] = None
 ) -> Dict[str, Any]:
     """
-    Computes all topic scores, party overall scores, and ranks for the entire dataset.
+    Computes all topic scores, party overall scores, and ranks for the entire dataset
+    against a given user profile. Enriches parties with static background data if available.
     """
+    if static_kb_dir is None:
+        default_static = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "static")
+        if os.path.exists(default_static):
+            static_kb_dir = default_static
+
     topics_list = profile_data.get("topics", [])
     topic_weights = {t["id"]: float(t.get("weight", 1.0)) for t in topics_list}
     
@@ -81,7 +127,7 @@ def evaluate_full_dataset(
             
         overall_score = calculate_party_overall_score(topic_scores, topic_weights)
         
-        evaluated_parties[party_id] = {
+        party_obj = {
             "name_he": p_info.get("name_he", party_id),
             "leader": p_info.get("leader", ""),
             "poll_mandates": p_info.get("poll_mandates", 0),
@@ -89,6 +135,14 @@ def evaluate_full_dataset(
             "topic_scores": topic_scores,
             "topics": evaluated_topics
         }
+
+        # Enrich with static data if available
+        if static_kb_dir:
+            static_info = load_static_party_data(party_id, static_kb_dir)
+            if static_info:
+                party_obj["static_data"] = static_info
+
+        evaluated_parties[party_id] = party_obj
         
     # Rank parties by overall score descending
     sorted_parties = sorted(
@@ -104,7 +158,9 @@ def evaluate_full_dataset(
         
     return {
         "date": eval_data.get("date", ""),
+        "profile_id": profile_data.get("profile_id", "default"),
         "profile_name": profile_data.get("profile_name", "Default Profile"),
+        "profile_description": profile_data.get("description", ""),
         "topics": topics_list,
         "topic_weights": topic_weights,
         "parties": ranked_parties

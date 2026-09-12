@@ -67,15 +67,16 @@ def stage_merge(date_str: str, source: str = "validated"):
     ]
     return run_cmd(cmd)
 
-def stage_build(date_str: str, profile: str = "config/profiles/default.yaml"):
+def stage_build(date_str: str, profile: str = ""):
     eval_file = os.path.join(PROJECT_ROOT, "data", "evaluations", f"{date_str}.json")
     cmd = [
         sys.executable,
         os.path.join(SCRIPTS_DIR, "run_analysis.py"),
         "--date", date_str,
-        "--profile", profile,
         "--eval-file", eval_file
     ]
+    if profile:
+        cmd.extend(["--profile", profile])
     return run_cmd(cmd)
 
 def stage_validate_ui(date_str: str, strict: bool = True):
@@ -121,7 +122,7 @@ def main():
     parser.add_argument("--source", default="validated", help="Source folder for topics ('validated' or 'staging')")
     parser.add_argument("--skip-http", action="store_true", help="Skip HTTP network checks during validation")
     parser.add_argument("--strict", action="store_true", help="Fail immediately if link or schema errors occur")
-    parser.add_argument("--profile", default="config/profiles/default.yaml", help="Path to profile config")
+    parser.add_argument("--profile", default="", help="Path to profile config (default evaluates all profiles in config/profiles)")
     parser.add_argument("--auto-push", action="store_true", help="Automatically git commit and push after building")
     args = parser.parse_args()
 

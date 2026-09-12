@@ -1,0 +1,143 @@
+{
+  "party_id": "raam",
+  "party_name_he": "רע״ם",
+  "total_candidates_registered": 8,
+  "candidates": [
+    {
+      "position": 1,
+      "name": "מנסור עבאס",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 2,
+      "name": "וליד טאהא",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 3,
+      "name": "ואליד אלהואשלה",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 4,
+      "name": "אימאן ח'טיב-יאסין",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 5,
+      "name": "יאסר חוג'יראת",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 6,
+      "name": "עבד אל-כרים גמל",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 7,
+      "name": "מוחמד אבו עפאש",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 8,
+      "name": "עבדאללה סלאמה",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת רע״ם",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת רע״ם"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    }
+  ]
+}

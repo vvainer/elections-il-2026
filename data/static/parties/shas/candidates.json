@@ -1,0 +1,177 @@
+{
+  "party_id": "shas",
+  "party_name_he": "ש״ס",
+  "total_candidates_registered": 10,
+  "candidates": [
+    {
+      "position": 1,
+      "name": "אריה דרעי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 2,
+      "name": "יעקב מרגי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 3,
+      "name": "מיכאל מלכיאלי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 4,
+      "name": "חיים ביטון",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 5,
+      "name": "משה ארבל",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 6,
+      "name": "ינון אזולאי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 7,
+      "name": "יוסי טייב",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 8,
+      "name": "אוריאל בוסו",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 9,
+      "name": "נתנאל חייק",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 10,
+      "name": "יונתן מישרקי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ש״ס",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ש״ס"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    }
+  ]
+}

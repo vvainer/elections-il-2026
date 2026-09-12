@@ -1,0 +1,182 @@
+{
+  "party_id": "yisrael_beiteinu",
+  "party_name_he": "ישראל ביתנו",
+  "total_candidates_registered": 10,
+  "candidates": [
+    {
+      "position": 1,
+      "name": "אביגדור ליברמן",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "תואר ראשון ביחסים בינלאומיים ומדעי המדינה מהאוניברסיטה העברית",
+        "career": "מנכ\"ל משרד ראש הממשלה (1996-1997), איש עסקים",
+        "public_service": "שר האוצר (2021-2022), שר הביטחון, שר החוץ, המשנה לרה\"מ",
+        "key_votes": [
+          "ביטול סבסוד מעונות יום לאברכים שאינם עובדים",
+          "מיסוי כלים חד-פעמיים ושתייה מתוקה",
+          "התפטרות מתיק הביטחון ב-2018 עקב הססנות מול חמאס"
+        ],
+        "major_achievements": [
+          "סיום שנת 2022 בעודף תקציבי היסטורי באוצר",
+          "העלאת שכר חיילי החובה ב-50%"
+        ],
+        "notable_failures_or_controversies": [
+          "הבטחת חיסול איסמעיל הנייה תוך 48 שעות שלא מומשה, חקירות פליליות בעבר"
+        ]
+      }
+    },
+    {
+      "position": 2,
+      "name": "עודד פורר",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 3,
+      "name": "יבגני סובה",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 4,
+      "name": "שרון ניר",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 5,
+      "name": "יוליה מלינובסקי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 6,
+      "name": "חמד עמאר",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 7,
+      "name": "אלכס קושניר",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 8,
+      "name": "אלינה ברדץ' יאלוב",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 9,
+      "name": "יוסי שיין",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 10,
+      "name": "בוריס שינדלר",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ישראל ביתנו",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ישראל ביתנו"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+{
+  "version": "1.0.0",
+  "description": "Evaluation criteria, weighting mathematics, and scoring guidelines for the Knesset 2026 election analysis system.",
+  "scoring_scale": {
+    "min": -100.0,
+    "neutral": 0.0,
+    "max": 100.0,
+    "description": "Continuous numerical scale from -100.0 (diametric opposition / complete failure) to +100.0 (complete alignment / flawless execution record). 0.0 indicates neutrality, absence of stance, or an unaddressed topic."
+  },
+  "criteria": [
+    {
+      "id": "c1_platform",
+      "name_he": "מצע המפלגה",
+      "name_en": "Party Platform",
+      "raw_weight_percent": 15.0,
+      "normalized_weight": 0.13636363636363635,
+      "description_he": "המצע הרשמי, ניירות עמדה רשמיים, והתחייבויות כתובות שפורסמו על ידי המפלגה."
+    },
+    {
+      "id": "c2_leader_statements",
+      "name_he": "אמירות וכתיבה של ראש המפלגה",
+      "name_en": "Leader Statements & Writings",
+      "raw_weight_percent": 15.0,
+      "normalized_weight": 0.13636363636363635,
+      "description_he": "הצהרות, נאומים, ראיונות עומק, מאמרים, ספרים ופוסטים רשמיים של מנהיג/ת המפלגה."
+    },
+    {
+      "id": "c3_leader_actions",
+      "name_he": "ניסיון מעשי ופעילות של ראש המפלגה",
+      "name_en": "Leader Track Record & Actions",
+      "raw_weight_percent": 30.0,
+      "normalized_weight": 0.2727272727272727,
+      "description_he": "רקורד ביצועי, ניסיון ניהולי ומיניסטריאלי, רקורד הצבעות בכנסת, עקביות מול הבטחות עבר ושינויי עמדות לאורך זמן (הקריטריון בעל המשקל הגבוה ביותר)."
+    },
+    {
+      "id": "c4_candidates_statements",
+      "name_he": "אמירות וכתיבה של מועמדים ריאליים",
+      "name_en": "Realistic Candidates Statements",
+      "raw_weight_percent": 10.0,
+      "normalized_weight": 0.09090909090909091,
+      "description_he": "הצהרות ועמדות מנומקות של מועמדי הרשימה הממוקמים בטווח המנדטים הריאלי."
+    },
+    {
+      "id": "c5_candidates_actions",
+      "name_he": "ניסיון מעשי ופעילות של מועמדים ריאליים",
+      "name_en": "Realistic Candidates Actions & Track Record",
+      "raw_weight_percent": 20.0,
+      "normalized_weight": 0.18181818181818182,
+      "description_he": "רקע מקצועי, ציבורי וחקיקתי, הישגים מוכחים ודפוסי הצבעה של המועמדים בטווח הריאלי."
+    },
+    {
+      "id": "c6_designated_executive",
+      "name_he": "מועמד ריאלי ייעודי לתפקיד ביצועי",
+      "name_en": "Designated Executive Appointee",
+      "raw_weight_percent": 20.0,
+      "normalized_weight": 0.18181818181818182,
+      "description_he": "קיומו של מועמד מובהק במקום ריאלי המיועד לתיק או לתפקיד הביצועי הרלוונטי ומידת התאמתו לעמדת היעד."
+    }
+  ],
+  "total_raw_weight": 110.0,
+  "normalization_factor": 110.0
+}

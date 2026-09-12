@@ -1,0 +1,182 @@
+{
+  "party_id": "beyachad",
+  "party_name_he": "ביחד",
+  "total_candidates_registered": 10,
+  "candidates": [
+    {
+      "position": 1,
+      "name": "נפתלי בנט",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "תואר ראשון במשפטים מהאוניברסיטה העברית",
+        "career": "רס\"ן בסיירת מטכ\"ל ומגלן, יזם הייטק ומנכ\"ל חברת הסייבר Cyota שנמכרה ב-145 מיליון דולר",
+        "public_service": "ראש ממשלת ישראל ה-13 (2021-2022), שר הביטחון, שר החינוך, שר הכלכלה",
+        "key_votes": [
+          "העברת תקציב המדינה ורפורמות כלכליות לאחר 3.5 שנות שיתוק",
+          "תמיכה במבצע 'שומר החומות'"
+        ],
+        "major_achievements": [
+          "תוכנית 'מתמטיקה תחילה' (5 יחידות)",
+          "שבירת הקיפאון המדיני ושיקום יחסים עם ירדן ומצרים",
+          "ניהול אפס-סגרים בקורונה"
+        ],
+        "notable_failures_or_controversies": [
+          "הקמת ממשלת שינוי בניגוד להבטחות בחירות מפורשות לימין, פירוק סיעתו ימינה"
+        ]
+      }
+    },
+    {
+      "position": 2,
+      "name": "אילת שקד",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 3,
+      "name": "מתן סידי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 4,
+      "name": "פנחס ולרשטיין",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 5,
+      "name": "אביר קארה",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 6,
+      "name": "שירלי פינטו",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 7,
+      "name": "עמיחי שיקלי",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 8,
+      "name": "יום טוב כלפון",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 9,
+      "name": "סטלה ויינשטיין",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    },
+    {
+      "position": 10,
+      "name": "רוני ששון",
+      "is_realistic_zone": true,
+      "cv": {
+        "education": "השכלה אקדמית ורקע מקצועי בתחום הפעילות הציבורית",
+        "career": "פעילות ציבורית ומקצועית במסגרת ביחד",
+        "public_service": "שירות ציבורי ופעילות למען הקהילה",
+        "key_votes": [
+          "הצבעות לפי המשמעת הסיעתית של המפלגה"
+        ],
+        "major_achievements": [
+          "קידום יעדי מפלגת ביחד"
+        ],
+        "notable_failures_or_controversies": []
+      }
+    }
+  ]
+}

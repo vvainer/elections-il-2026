@@ -19,10 +19,11 @@ description: >-
 
 ---
 
-## 📅 שלב הכנה: תאריך ונתוני סקרים
+## 📅 שלב הכנה: תאריך, מאגר סטטי ונתוני סקרים
 1. קבע את תאריך הסבב הנוכחי (`DATE = YYYY-MM-DD`, לדוגמה: `2026-09-12`).
-2. ודא כי קובץ `config/polls.yaml` מעודכן בסקרי השבוע האחרון (ממוצע מנדטים וסף מקומות ריאליים).
-3. ודא כי תיקיות היעד קיימות:
+2. ודא כי מאגר המידע הסטטי מאומת ותקין: `python3 scripts/build_static_kb.py --verify`. (במידת הצורך השתמש במיומנות `build-static-kb`).
+3. ודא כי קובץ `config/polls.yaml` מעודכן בסקרי השבוע האחרון (ממוצע מנדטים וסף מקומות ריאליים).
+4. ודא כי תיקיות היעד קיימות:
    - `data/staging/{DATE}/topics/`
    - `data/validated/{DATE}/topics/`
    - `data/validation_logs/{DATE}/snapshots/`
@@ -144,20 +145,22 @@ python3 scripts/validate_links.py data/staging/{DATE}/topics --report data/valid
 
 ---
 
-## 📊 שלב 3: מיזוג ובניית דוחות (`report_rebuilder`)
+## 📊 שלב 3: מיזוג ובניית דוחות מרובי-פרופילים (`report_rebuilder`)
 
 הפעל את סוכן `report_rebuilder` באמצעות `invoke_subagent`:
 1. **מיזוג**: הרצת `python3 scripts/merge_topics.py` למיזוג כל 9 הקבצים המאומתים למסד נתונים מרכזי:
    ```bash
    python3 scripts/merge_topics.py --topics-dir data/validated/{DATE}/topics --output data/evaluations/{DATE}.json --date {DATE}
    ```
-2. **חישוב ציונים והפקת דוחות**:
+2. **חישוב ציונים והפקת דוחות עבור כל פרופילי עולם הערכים**:
    ```bash
    python3 scripts/run_analysis.py --date {DATE}
    ```
-   הסקריפט מייצר:
-   - דוח Markdown מפורט: `reports/{DATE}/report.md`
-   - דשבורד RTL רספונסיבי: `docs/index.html`
+   הסקריפט:
+   - מאתר ומעריך את כל הפרופילים המוגדרים ב-`config/profiles/*.yaml` (למשל ברירת מחדל, ליברלי-כלכלי, ופרופילים אישיים שנוצרו במיומנות `interview-worldview`).
+   - מצליב ומטמיע את נתוני הרקע הסטטיים של המועמדים (קו״ח, הצבעות, הישגים) מתוך `data/static/parties/`.
+   - מייצר דוחות Markdown מפורטים לכל פרופיל: `reports/{DATE}/<profile_stem>.md` ו-`reports/{DATE}/report.md`.
+   - מייצר דשבורד RTL רספונסיבי ב-`docs/index.html` הכולל בורר פרופילים דינמי (`<select id="profileSelect">`) המעדכן את לוח התוצאות, המטריצה והציונים בזמן אמת.
 3. **תקציר מנהלים בעברית**:
    ניסוח סקירה תמציתית (Executive Synthesis) הכוללת את לוח המובילים, פערים עיקריים בין הגושים ותובנות מפתח. הסקירה מוטמעת בראש `report.md`.
 
